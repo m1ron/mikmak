@@ -2,7 +2,23 @@
  * Project: Mikmak Studio
  * File: Main styles
  */
-@import url(https://fonts.googleapis.com/css?family=Raleway:400,200,300,600,700);
+/* ==========================================================================
+   _FONTS
+   ========================================================================== */
+@font-face {
+  font-family: 'BentonSans';
+  src: url('../fonts/bentonsans-medium-sc-webfont.eot');
+  src: url('../fonts/bentonsans-medium-sc-webfont.woff') format('woff'), url('../fonts/bentonsans-medium-sc-webfont.ttf') format('truetype'), url('../fonts/bentonsans-medium-sc-webfont.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'BentonSans';
+  src: url('../fonts/bentonsans-bold-sc-webfont.eot');
+  src: url('../fonts/bentonsans-bold-sc-webfont.woff') format('woff'), url('../fonts/bentonsans-bold-sc-webfont.ttf') format('truetype'), url('../fonts/bentonsans-bold-sc-webfont.svg') format('svg');
+  font-weight: bold;
+  font-style: normal;
+}
 /* ==========================================================================
    _GENERAL STYLES
    ========================================================================== */
@@ -15,8 +31,8 @@ html {
   height: 100%;
   padding: 0;
   margin: 0;
-  font: 10px/14px 'Raleway', Arial, sans-serif;
-  color: #444;
+  font: 11px 'BentonSans', Arial, sans-serif;
+  color: #000;
   background: #fff;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -24,12 +40,8 @@ html {
 body {
   width: 100%;
   min-width: 320px;
-  min-height: 100%;
-  margin: 0 auto;
-  background: #fff;
-}
-body.index {
   height: 100%;
+  background: #f38333;
 }
 /* ==========================================================================
    _TEXT STYLES
@@ -46,9 +58,10 @@ ol {
   outline: -webkit-focus-ring-color auto 0;
 }
 a {
-  color: #444;
+  color: #000;
   outline: none;
   text-decoration: none;
+  transition: color 0.2s ease;
 }
 a:hover,
 a:focus {
@@ -284,5 +297,144 @@ h6 {
 fieldset {
   padding: 0;
   margin: 0;
+  border: none;
+}
+/* ==========================================================================
+   _HEADER
+   ========================================================================== */
+.header {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  cursor: default;
+}
+.header .logo {
+  width: 75px;
+  height: 75px;
+  padding: 0;
+  margin: 0;
+  display: block;
+  position: absolute;
+  top: 15px;
+  left: 20px;
+}
+@media (min-width: 750px) {
+  .header .logo {
+    width: 150px;
+    height: 150px;
+  }
+}
+.header .logo img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.header .language {
+  margin: 0;
+  display: block;
+  position: absolute;
+  top: 30px;
+  right: 75px;
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: bold;
+  color: #fff;
+  letter-spacing: .1em;
+}
+.header .language a {
+  color: #fff;
+}
+.header .language a.active {
+  color: #000;
+  cursor: default;
+}
+.header .language a:hover,
+.header .language a:focus {
+  color: #000;
+  text-decoration: none;
+}
+.header .toggle {
+  width: 37px;
+  height: 37px;
+  border: 3px solid #000;
+  display: block;
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  background: #fff;
+}
+.header .toggle:before,
+.header .toggle:after {
+  width: 20px;
+  height: 3px;
+  margin: -1px 0 0 -10px;
+  display: block;
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  overflow: hidden;
+  content: '';
+  background: #000;
+}
+.header .toggle:after {
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg);
+  -webkit-backface-visibility: hidden;
+}
+.header .toggle:hover {
+  background: #000;
+}
+.header .toggle:hover:before,
+.header .toggle:hover:after {
+  background: #fff;
+}
+/* ==========================================================================
+   _NAV
+   ========================================================================== */
+.nav {
+  width: 225px;
+  border: 3px solid #000;
+  display: none;
+  position: absolute;
+  top: 55px;
+  right: 25px;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 14px;
+  text-transform: uppercase;
+  letter-spacing: .15em;
+  transition: opacity 0.3s;
+  opacity: 0;
+  z-index: 100;
+  background: #fff;
+}
+.nav-pre .nav {
+  display: block;
+}
+.nav-open .nav {
+  opacity: 1;
+}
+.nav .menu {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.nav .menu > li > a {
+  padding: 4px 8px;
+  border-top: 3px solid #000;
+  display: block;
+  transition: none;
+}
+.nav .menu > li > a:focus,
+.nav .menu > li > a:hover {
+  text-decoration: none;
+  color: #fff;
+  background: #000;
+}
+.nav .menu > li:first-child > a {
   border: none;
 }

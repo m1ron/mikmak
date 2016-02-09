@@ -16,22 +16,12 @@
 @lg: ~"(min-width: 1280px)";
 @xl: ~"(min-width: 1560px)";
 
-@font-family: 'Raleway', Arial, sans-serif;
-@font-georgia: 'Georgia', serif;
+@font-family: 'BentonSans', Arial, sans-serif;
 @font-awesome: 'FontAwesome', sans-serif;
 
 @color-black: #000;
-@color-gray-darkest: #222;
-@color-gray-darker: #333;
-@color-gray-dark: #444;
-@color-gray-medium: #666;
-@color-gray-light: #7f7f7f;
-@color-gray-light-more: #8a8a8a;
-@color-gray-lighter: #999;
-@color-gray-lighter-more: #bbb;
-@color-gray-lightest: #eee;
-@color-notwhite: #f3f3f3;
 @color-white: #fff;
+@color-page-1: #f38333;
 
 @margin-sm: 14px;
 @margin-md: 18px;
@@ -39,6 +29,7 @@
 
 @duration: .2s ease;
 @images: '../img';
+
 // ==========================================================================
 // _MIXINS
 // ========================================================================== */
@@ -54,44 +45,23 @@
   transform: rotate(@deg);
   -webkit-backface-visibility: hidden;
 }
-// SCALE
-.scale(@rate) {
-  -webkit-transform: scale(@rate);
-  -moz-transform: scale(@rate);
-  -ms-transform: scale(@rate);
-  -o-transform: scale(@rate);
-  transform: scale(@rate);
-  -webkit-backface-visibility: hidden;
+/* ==========================================================================
+   _FONTS
+   ========================================================================== */
+@font-face {
+  font-family: 'BentonSans';
+  src: url('../fonts/bentonsans-medium-sc-webfont.eot');
+  src: url('../fonts/bentonsans-medium-sc-webfont.woff') format('woff'), url('../fonts/bentonsans-medium-sc-webfont.ttf') format('truetype'), url('../fonts/bentonsans-medium-sc-webfont.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
 }
-// SCALE-Y
-.scaleY(@rate) {
-  -webkit-transform: scaleY(@rate);
-  -moz-transform: scaleY(@rate);
-  -ms-transform: scaleY(@rate);
-  -o-transform: scaleY(@rate);
-  transform: scaleY(@rate);
-  -webkit-backface-visibility: hidden;
+@font-face {
+  font-family: 'BentonSans';
+  src: url('../fonts/bentonsans-bold-sc-webfont.eot');
+  src: url('../fonts/bentonsans-bold-sc-webfont.woff') format('woff'), url('../fonts/bentonsans-bold-sc-webfont.ttf') format('truetype'), url('../fonts/bentonsans-bold-sc-webfont.svg') format('svg');
+  font-weight: bold;
+  font-style: normal;
 }
-// TRANSITION
-.transition(@rate) {
-  -webkit-transition: -webkit-transform @rate;
-  -moz-transition: -moz-transform @rate;
-  -ms-transition: -ms-transform @rate;
-  -o-transition: -o-transform @rate;
-  transition: transform @rate;
-}
-// TRANSITION+OPACITY
-.transition-opacity(@rate) {
-  -webkit-transition: -webkit-transform @rate, opacity @rate;
-  -moz-transition: -moz-transform @rate, opacity @rate;
-  -ms-transition: -ms-transform @rate, opacity @rate;
-  -o-transition: -o-transform @rate, opacity @rate;
-  transition: transform @rate, opacity @rate;
-}
-// ==========================================================================
-// _FONTS
-// ========================================================================== */
-@import url(https://fonts.googleapis.com/css?family=Raleway:400,200,300,600,700);
 /* ==========================================================================
    _GENERAL STYLES
    ========================================================================== */
@@ -104,8 +74,8 @@ html {
   height: 100%;
   padding: 0;
   margin: 0;
-  font: 10px/14px @font-family;
-  color: @color-gray-dark;
+  font: 11px @font-family;
+  color: @color-black;
   background: @color-white;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -113,11 +83,8 @@ html {
 body {
   width: 100%;
   min-width: @min-width;
-  min-height: 100%;
-  margin: 0 auto;
-  background: @color-white;
-
-  &.index { height: 100%; }
+  height: 100%;
+  background: @color-page-1;
 }
 /* ==========================================================================
    _TEXT STYLES
@@ -131,9 +98,10 @@ ul, ol {
 }
 :focus { outline: -webkit-focus-ring-color auto 0; }
 a {
-  color: @color-gray-dark;
+  color: @color-black;
   outline: none;
   text-decoration: none;
+  transition: color @duration;
   &:hover, &:focus { outline: none; text-decoration: underline; }
 }
 audio, canvas, img, video { vertical-align: middle; }
@@ -287,3 +255,129 @@ h6 {&:extend(.h6); }
    _FORMS
    ========================================================================== */
 fieldset { padding: 0; margin: 0; border: none; }
+/* ==========================================================================
+   _HEADER
+   ========================================================================== */
+.header {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  cursor: default;
+
+  .logo {
+    width: 75px;
+    height: 75px;
+    padding: 0;
+    margin: 0;
+    display: block;
+    position: absolute;
+    top: 15px;
+    left: 20px;
+
+    @media @sm {
+      width: 150px;
+      height: 150px;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+  }
+
+  .language {
+    margin: 0;
+    display: block;
+    position: absolute;
+    top: 30px;
+    right: 75px;
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: bold;
+    color: @color-white;
+    letter-spacing: .1em;
+
+    a {
+      color: @color-white;
+      &.active { color: @color-black; cursor: default; }
+      &:hover, &:focus { color: #000; text-decoration: none; }
+    }
+  }
+
+  .toggle {
+    width: 37px;
+    height: 37px;
+    border: 3px solid @color-black;
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    background: @color-white;
+
+    &:before, &:after {
+      width: 20px;
+      height: 3px;
+      margin: -1px 0 0 -10px;
+      display: block;
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      overflow: hidden;
+      content: '';
+      background: @color-black;
+    }
+    &:after { .rotate(90deg); }
+    &:hover {
+      background: @color-black;
+      &:before, &:after { background: @color-white; }
+    }
+  }
+}
+/* ==========================================================================
+   _NAV
+   ========================================================================== */
+.nav {
+  @duration-menu: .3s;
+  width: 225px;
+  border: 3px solid @color-black;
+  display: none;
+  position: absolute;
+  top: 55px;
+  right: 25px;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 14px;
+  text-transform: uppercase;
+  letter-spacing: .15em;
+  transition: opacity @duration-menu;
+  opacity: 0;
+  z-index: 100;
+  background: @color-white;
+
+  .nav-pre & { display: block; }
+  .nav-open & { opacity: 1; }
+
+  .menu {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+
+    > li {
+      > a {
+        padding: 4px 8px;
+        border-top: 3px solid @color-black;
+        display: block;
+        transition: none;
+
+        &:focus, &:hover {
+          text-decoration: none;
+          color: #fff;
+          background: @color-black;
+        }
+      }
+      &:first-child > a { border: none; }
+    }
+  }
+}

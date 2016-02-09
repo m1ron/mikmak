@@ -39,23 +39,15 @@ $(document).ready(function () {
 
 
 	/** Fullpage */
-	$('.fullpage').each(function () {
-		$(this).fullpage({
-			menu: '#dots',
-			css3: true,
-			touchSensitivity: 10,
-			scrollOverflow: true,
-			keyboardScrolling: false,
-			animateAnchor: false,
-			recordHistory: false,
-			verticalCentered: true,
-			resize: false,
-			scrollingSpeed: 1000
-		});
-		$('.down', this).on('click', function (event) {
-			$.fn.fullpage.moveSectionDown();
-			event.preventDefault();
-		});
-		$.fn.fullpage.setAllowScrolling(false);
+	$('.fullpage').fullpage({
+		menu: '#dots',
+		css3: true,
+		touchSensitivity: 10,
+		scrollOverflow: true,
+		keyboardScrolling: false,
+		animateAnchor: false,
+		recordHistory: false,
+		resize: false,
+		scrollingSpeed: 1000
 	});
 });

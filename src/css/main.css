@@ -41,7 +41,7 @@ body {
   width: 100%;
   min-width: 320px;
   height: 100%;
-  background: #f38333;
+  background: #f4863f;
 }
 /* ==========================================================================
    _TEXT STYLES
@@ -74,7 +74,9 @@ img,
 video {
   vertical-align: middle;
 }
-/* Headings */
+/* ==========================================================================
+   _HEADINGS
+   ========================================================================== */
 .heading-default,
 .h1,
 .h2,
@@ -266,6 +268,14 @@ h6 {
 .hidden {
   display: none;
 }
+.unselectable {
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: -moz-none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
 /* Wrapper */
 .wrapper {
   width: 100%;
@@ -307,6 +317,7 @@ fieldset {
   top: 0;
   right: 0;
   left: 0;
+  z-index: 10;
   cursor: default;
 }
 .header .logo {
@@ -409,7 +420,7 @@ fieldset {
   letter-spacing: .15em;
   transition: opacity 0.3s;
   opacity: 0;
-  z-index: 100;
+  z-index: 10;
   background: #fff;
 }
 .nav-pre .nav {
@@ -437,4 +448,103 @@ fieldset {
 }
 .nav .menu > li:first-child > a {
   border: none;
+}
+/* ==========================================================================
+   _FULLPAGE
+   ========================================================================== */
+.fullpage {
+  position: relative;
+  z-index: 5;
+  cursor: default;
+}
+.fullpage .section {
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+}
+@supports (overflow:-webkit-marquee) and (justify-content:inherit) {
+  .fullpage .section {
+    -webkit-transform-style: preserve-3d;
+    -webkit-backface-visibility: hidden;
+  }
+}
+.fullpage .section-1 {
+  background-color: #f4863f;
+  background-image: url('../img/temp/1.jpg');
+}
+.fullpage .section-2 {
+  background-color: #fdb93a;
+  background-image: url('../img/temp/2.jpg');
+}
+.fullpage .section-3 {
+  background-color: #c4c3bf;
+  background-image: url('../img/temp/3.jpg');
+}
+.fullpage .section-4 {
+  background-color: #1f976d;
+  background-image: url('../img/temp/4.jpg');
+}
+.fullpage .section-5 {
+  background-color: #7080bc;
+  background-image: url('../img/temp/5.jpg');
+}
+.fullpage .section-6 {
+  background-color: #fbb44c;
+  background-image: url('../img/temp/6.jpg');
+}
+.fullpage .section-7 {
+  background-color: #e3a1c4;
+  background-image: url('../img/temp/7.jpg');
+}
+.fullpage .section-8 {
+  background-color: #f2806c;
+  background-image: url('../img/temp/8.jpg');
+}
+.dots {
+  width: 219px;
+  padding: 0;
+  margin: auto;
+  list-style: none;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  bottom: 30px;
+  left: 0;
+  z-index: 10;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: -moz-none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+@media (min-width: 750px) {
+  .dots {
+    width: 683px;
+    bottom: 40px;
+  }
+}
+.dots > li {
+  display: block;
+  float: left;
+}
+.dots > li:not(:first-child) {
+  margin-left: -3px;
+}
+.dots > li > a {
+  width: 30px;
+  height: 10px;
+  border: 3px solid #000;
+  display: block;
+  background: #fff;
+}
+@media (min-width: 750px) {
+  .dots > li > a {
+    width: 88px;
+    height: 15px;
+  }
+}
+.dots > li.active a {
+  background: #000;
 }

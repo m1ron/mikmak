@@ -21,7 +21,15 @@
 
 @color-black: #000;
 @color-white: #fff;
-@color-page-1: #f38333;
+
+@color-section-1: #f4863f;
+@color-section-2: #fdb93a;
+@color-section-3: #c4c3bf;
+@color-section-4: #1f976d;
+@color-section-5: #7080bc;
+@color-section-6: #fbb44c;
+@color-section-7: #e3a1c4;
+@color-section-8: #f2806c;
 
 @margin-sm: 14px;
 @margin-md: 18px;
@@ -84,7 +92,7 @@ body {
   width: 100%;
   min-width: @min-width;
   height: 100%;
-  background: @color-page-1;
+  background: @color-section-1;
 }
 /* ==========================================================================
    _TEXT STYLES
@@ -105,7 +113,9 @@ a {
   &:hover, &:focus { outline: none; text-decoration: underline; }
 }
 audio, canvas, img, video { vertical-align: middle; }
-/* Headings */
+/* ==========================================================================
+   _HEADINGS
+   ========================================================================== */
 .heading-default {
   margin: 0;
   line-height: normal;
@@ -233,6 +243,7 @@ h6 {&:extend(.h6); }
 .clearfix { display: table; content: '\0020'; clear: both; }
 .before { display: block; content: '\0020'; overflow: hidden; }
 .hidden { display: none; }
+.unselectable { -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: -moz-none; -ms-user-select: none; -o-user-select: none; user-select: none; }
 /* Wrapper */
 .wrapper {
   width: 100%;
@@ -263,6 +274,7 @@ fieldset { padding: 0; margin: 0; border: none; }
   top: 0;
   right: 0;
   left: 0;
+  z-index: 10;
   cursor: default;
 
   .logo {
@@ -353,7 +365,7 @@ fieldset { padding: 0; margin: 0; border: none; }
   letter-spacing: .15em;
   transition: opacity @duration-menu;
   opacity: 0;
-  z-index: 100;
+  z-index: 10;
   background: @color-white;
 
   .nav-pre & { display: block; }
@@ -378,6 +390,76 @@ fieldset { padding: 0; margin: 0; border: none; }
         }
       }
       &:first-child > a { border: none; }
+    }
+  }
+}
+/* ==========================================================================
+   _FULLPAGE
+   ========================================================================== */
+.fullpage {
+  position: relative;
+  z-index: 5;
+  cursor: default;
+
+  .section {
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+
+    @supports (overflow:-webkit-marquee) and (justify-content:inherit) {
+      & { -webkit-transform-style: preserve-3d; -webkit-backface-visibility: hidden; }
+    }
+
+    &-1 { background-color: @color-section-1; background-image: url('@{images}/temp/1.jpg'); }
+    &-2 { background-color: @color-section-2; background-image: url('@{images}/temp/2.jpg'); }
+    &-3 { background-color: @color-section-3; background-image: url('@{images}/temp/3.jpg'); }
+    &-4 { background-color: @color-section-4; background-image: url('@{images}/temp/4.jpg'); }
+    &-5 { background-color: @color-section-5; background-image: url('@{images}/temp/5.jpg'); }
+    &-6 { background-color: @color-section-6; background-image: url('@{images}/temp/6.jpg'); }
+    &-7 { background-color: @color-section-7; background-image: url('@{images}/temp/7.jpg'); }
+    &-8 { background-color: @color-section-8; background-image: url('@{images}/temp/8.jpg'); }
+  }
+}
+.dots {
+  width: 219px;
+  padding: 0;
+  margin: auto;
+  list-style: none;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  bottom: 30px;
+  left: 0;
+  z-index: 10;
+  .unselectable;
+
+  @media @sm {
+    width: 683px;
+    bottom: 40px;
+  }
+
+  > li {
+    display: block;
+    float: left;
+
+    &:not(:first-child) { margin-left: -3px; }
+
+    > a {
+      width: 30px;
+      height: 10px;
+      border: 3px solid @color-black;
+      display: block;
+      background: @color-white;
+
+      @media @sm {
+        width: 88px;
+        height: 15px;
+      }
+    }
+
+    &.active {
+      a { background: @color-black; }
     }
   }
 }

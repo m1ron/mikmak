@@ -42,6 +42,7 @@
 <body>
 
 	<header class="header">
+		<h1 class="hidden">Mikmak Studio</h1>
 		<figure class="logo"><img src="img/logo.svg" alt="Mikmak Studio"></figure>
 		<p class="language"><a href="#">FR</a>/<a href="#" class="active">EN</a></p>
 		<a href="#nav" class="toggle"></a>
@@ -59,26 +60,57 @@
 		</ul>
 	</nav>
 
-	<main class="fullpage">
-		<section class="section section-1 active" data-anchor="section-1"></section>
-		<section class="section section-2" data-anchor="section-2"></section>
-		<section class="section section-3" data-anchor="section-3"></section>
-		<section class="section section-4" data-anchor="section-4"></section>
-		<section class="section section-5" data-anchor="section-5"></section>
-		<section class="section section-6" data-anchor="section-6"></section>
-		<section class="section section-7" data-anchor="section-7"></section>
-		<section class="section section-8" data-anchor="section-8"></section>
+	<main class="main">
+		<section id="about" class="section">
+			<a href="#">
+				<p class="text">Choose a Beautiful Idea</p>
+				<h2 class="heading">About Us</h2>
+			</a>
+		</section>
+		<section id="process" class="section">
+			<a href="#">
+				<p class="text">Cut in Slices</p>
+				<h2 class="heading">Our Process</h2>
+			</a>
+		</section>
+		<section id="news" class="section">
+			<a href="#">
+				<p class="text">Fry Over High Heat</p>
+				<h2 class="heading">News</h2>
+			</a>
+		</section>
+		<section id="skills" class="section">
+			<a href="#">
+				<p class="text">Add Seasoning</p>
+				<h2 class="heading">Our Skills</h2>
+			</a>
+		</section>
+		<section id="viralize" class="section">
+			<a href="#">
+				<p class="text">Arrange The Plate</p>
+				<h2 class="heading">Viralize</h2>
+			</a>
+		</section>
+		<section id="references" class="section">
+			<a href="#">
+				<p class="text">Enjoy Your Meal</p>
+				<h2 class="heading">Our References</h2>
+			</a>
+		</section>
+		<section id="contact" class="section">
+			<a href="#">
+				<p class="text">A Dessert?</p>
+				<h2 class="heading">Contact</h2>
+			</a>
+		</section>
 
-		<ul id="dots" class="dots">
-			<li data-menuanchor="section-1" class="active"><a href="#section-1"></a></li>
-			<li data-menuanchor="section-2"><a href="#section-2"></a></li>
-			<li data-menuanchor="section-3"><a href="#section-3"></a></li>
-			<li data-menuanchor="section-4"><a href="#section-4"></a></li>
-			<li data-menuanchor="section-5"><a href="#section-5"></a></li>
-			<li data-menuanchor="section-6"><a href="#section-6"></a></li>
-			<li data-menuanchor="section-7"><a href="#section-7"></a></li>
-			<li data-menuanchor="section-8"><a href="#section-8"></a></li>
-		</ul>
+		<div class="video">
+			<video id="video" preload poster="./video/index.jpg">
+				<source src="./video/index.mp4" type="video/mp4">
+				<!-- source src="./video/index.webm" type="video/webm">
+				<source src="./video/index.ogv" type="video/ogg" -->
+			</video>
+		</div>
 	</main>
 
 	<script src="js/vendor/jquery.min.js"></script>

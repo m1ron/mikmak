@@ -48,6 +48,7 @@ module.exports = function (grunt) {
 						src: [
 							src.vendor + 'html5shiv/dist/html5shiv.min.js',
 							src.vendor + 'jquery/dist/jquery.min.js',
+							src.vendor + 'jquery/dist/jquery.min.map',
 							src.vendor + 'jquery.browser/dist/jquery.browser.min.js',
 							src.vendor + 'fastclick/lib/fastclick.js',
 							src.vendor + 'jquery-mousewheel/jquery.mousewheel.min.js'
@@ -79,7 +80,7 @@ module.exports = function (grunt) {
 						src: [
 							'css/{,*/}*.css',
 							'img/{,*/}*.*',
-							'js/{,*/}*.js',
+							'js/{,*/}*.*',
 							'fonts/{,*/}*.*',
 							'video/{,*/}*.*',
 							'{,*/}*.html'
@@ -157,15 +158,6 @@ module.exports = function (grunt) {
 					ext: '.min.js'
 				}]
 			}
-			/*dist: {
-			 files: [{
-			 expand: true,
-			 cwd: dist.js,
-			 src: '*.js',
-			 dest: 'dist/js',
-			 ext: ".min.js"
-			 }]
-			 }*/
 		},
 		watch: {
 			options: {

@@ -16,7 +16,6 @@
 * Fastlick
 * PureCSS
 * Font Awesome
-* Fullpage
 
 
 ###Installation

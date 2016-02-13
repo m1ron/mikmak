@@ -50,10 +50,7 @@ module.exports = function (grunt) {
 							src.vendor + 'jquery/dist/jquery.min.js',
 							src.vendor + 'jquery.browser/dist/jquery.browser.min.js',
 							src.vendor + 'fastclick/lib/fastclick.js',
-							src.vendor + 'jquery-mousewheel/jquery.mousewheel.min.js',
-							src.vendor + 'fullpage.js/vendors/jquery.easings.min.js',
-							src.vendor + 'fullpage.js/vendors/jquery.slimscroll.min.js',
-							src.vendor + 'fullpage.js/dist/jquery.fullpage.min.js'
+							src.vendor + 'jquery-mousewheel/jquery.mousewheel.min.js'
 						],
 						dest: src.js + 'vendor'
 					}, {
@@ -63,13 +60,6 @@ module.exports = function (grunt) {
 							src.vendor + 'fontawesome/css/font-awesome.min.css'
 						],
 						dest: src.css + 'vendor'
-					}, {
-						expand: true,
-						flatten: true,
-						src: [
-							src.vendor + 'fullpage.js/jquery.fullPage.css'
-						],
-						dest: src.css + 'temp'
 					}, {
 						expand: true,
 						flatten: true,
@@ -109,10 +99,7 @@ module.exports = function (grunt) {
 							src.js + 'custom.js',
 							src.js + 'vendor/jquery.browser.min.js',
 							src.js + 'vendor/fastclick.min.js',
-							src.js + 'vendor/jquery.mousewheel.min.js',
-							src.js + 'vendor/jquery.easings.min.js',
-							src.js + 'vendor/jquery.slimscroll.min.js',
-							src.js + 'vendor/jquery.fullpage.min.js'
+							src.js + 'vendor/jquery.mousewheel.min.js'
 						],
 						dest: src.js + 'plugins.js'
 					}, {

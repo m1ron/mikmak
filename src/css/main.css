@@ -435,25 +435,25 @@ fieldset {
   background: #000;
 }
 .main .section#about {
-  margin: -220px 0 0 100px;
+  margin: -13.5vw 0 0 6vw;
 }
 .main .section#process {
-  margin: -180px 0 0 -275px;
+  margin: -10.5vw 0 0 -17vw;
 }
 .main .section#news {
-  margin: -35px 0 0 250px;
+  margin: -2vw 0 0 19vw;
 }
 .main .section#skills {
-  margin: 95px 0 0 230px;
+  margin: 8vw 0 0 17vw;
 }
 .main .section#viralize {
-  margin: -60px 0 0 -500px;
+  margin: -2vw 0 0 -35.5vw;
 }
 .main .section#references {
-  margin: -90px 0 0 -300px;
+  margin: -4vw 0 0 -18vw;
 }
 .main .section#contact {
-  margin: -200px 0 0 170px;
+  margin: -13vw 0 0 11vw;
 }
 .dots {
   width: 219px;

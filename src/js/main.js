@@ -46,37 +46,36 @@ function initVideo() {
 	var self = $(this);
 
 	window.v = {};
+	v.self = self;
 	v.disabled = false;
-	v.jqvideo = $('video', self);
-	v.video = v.jqvideo[0];
+	v.jqforward = $('.forward', self);
+	v.forward = v.jqforward[0];
+	v.jqbackward = $('.backward', self);
+	v.backward = v.jqbackward[0];
 	v.active = 0;
 	v.next = 1;
 
 
-	/**
-	 * On dot click
-	 **/
-	function Click(e) {
+	/** On dot click */
+	function onClick(e) {
 		var a = $(this), li = a.closest('li');
-		if (!li.hasClass('played') && !li.hasClass('active') && !v.disabled) {
-			Play(a.data('section'));
+		if (!li.hasClass('active') && !v.disabled) {
+			playVideo(a.data('section'));
 			li.prevAll().andSelf().addClass('played');
+			li.nextAll().removeClass('played');
 			li.siblings('.active').removeClass('active');
 		}
 		e.preventDefault();
 	}
 
 
-	/**
-	 * Play video section (integer)
-	 **/
-	function Play(index) {
-		//console.log(v.sections[index].time);
-		//console.log(v.video.currentTime);
-		var duration = v.sections[index].time - v.video.currentTime;
+	/** Play video section (integer) */
+	function playVideo(index) {
+		var duration = v.sections[index].time - v.forward.currentTime;
+		v.self.addClass('loaded');
 		if (index - v.active > 1) {
 			for (var i = v.active + 1; i < index; i++) {
-				duration = duration + (v.sections[i].time - v.video.currentTime);
+				duration = duration + (v.sections[i].time - v.forward.currentTime);
 			}
 		}
 		v.disabled = true;
@@ -86,26 +85,30 @@ function initVideo() {
 			$('.section.pre').removeClass('pre');
 		}, 200);
 
-		console.log('#' + v.sections[index].id + ' ' + v.sections[index].time + 's' + ' with ' + duration);
-		v.video.play();
-		Playing.call(this, index, duration)
+		if (+duration >= 0) {
+			v.forward.play();
+			playForward.call(this, index, duration);
+		} else {
+			v.backward.play();
+			playBackward.call(this, index, duration);
+		}
 	}
 
 
-	/**
-	 * On video started paying
-	 **/
-	function Playing(index, duration) {
-		v.jqvideo.off('playing', Playing);
-		console.log('playing: ' + duration);
+	/** On video paying forward */
+	function playForward(index, duration) {
+		v.jqforward.show();
+		v.jqbackward.hide();
+		console.log('FW #' + index + ' from ' + v.forward.currentTime + 's' + ' to ' + v.sections[index].time + 's');
 		var c, interval = setInterval(function () {
-			c = v.video.currentTime;
+			c = v.forward.currentTime;
 			if (c >= v.sections[index].time - .3) {
-				Pre();
+				onPause();
 				if (c >= v.sections[index].time) {
 					clearInterval(interval);
-					v.video.pause();
-					console.log('end:' + v.video.currentTime);
+					v.forward.pause();
+					v.backward.currentTime = Math.abs(+v.forward.currentTime - +v.forward.duration);
+					console.log('forward: ' + v.forward.currentTime + ' backward: ' + v.backward.currentTime);
 					v.disabled = false;
 				}
 			}
@@ -113,10 +116,29 @@ function initVideo() {
 	}
 
 
-	/**
-	 * On video paused
-	 **/
-	function Pre() {
+	/** On video paying backward */
+	function playBackward(index, duration) {
+		v.jqforward.hide();
+		v.jqbackward.show();
+		duration = Math.abs(duration);
+		console.log('BW #' + index + ' from ' + v.backward.currentTime + 's' + ' to ' + (v.forward.duration - v.sections[index].time) + 's');
+		var c, interval = setInterval(function () {
+			c = v.backward.currentTime;
+			if (c >= (v.forward.duration - v.sections[index].time) - .3) {
+				onPause();
+				if (c >= (v.forward.duration - v.sections[index].time)) {
+					clearInterval(interval);
+					v.backward.pause();
+					v.forward.currentTime = Math.abs(+v.backward.currentTime - +v.forward.duration);
+					console.log('forward: ' + v.forward.currentTime + ' backward: ' + v.backward.currentTime);
+					v.disabled = false;
+				}
+			}
+		}, 5);
+	}
+
+	/** On video paused */
+	function onPause() {
 		v.dots.find('li').eq(v.active).addClass('active').find('a').each(function () {
 			var target = $($(this).attr('href'));
 			target.addClass('pre');
@@ -140,16 +162,14 @@ function initVideo() {
 		{time: 25.6, id: 'contact', title: 'Contact'},
 		{time: 28.6, id: 'finish', title: 'Finish'}
 	];
-	//console.log(v.sections);
 
 	/** Generate dots */
 	v.dots = $('<ul/>').addClass('dots');
 	for (i = 0; i < v.sections.length; i++) {
 		$('<li/>').append('<a href="#' + v.sections[i].id + '" data-section="' + i + '" title="' + v.sections[i].title + '"/>').appendTo(v.dots);
 	}
-	$('a', v.dots).on('click', Click);
+	$('a', v.dots).on('click', onClick);
 	v.dots.appendTo(self);
 
-	/** Play preloader */
-	Play(1);
+	playVideo(1);
 }

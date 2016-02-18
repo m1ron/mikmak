@@ -505,7 +505,6 @@ fieldset {
 }
 .dots > li.played a {
   background: #ccc;
-  cursor: default;
 }
 .dots > li.active a {
   background: #000;
@@ -532,7 +531,7 @@ fieldset {
   user-select: none;
 }
 .video video {
-  width: 100%;
+  width: 150%;
   height: auto;
   display: block;
   position: absolute;
@@ -543,4 +542,8 @@ fieldset {
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   z-index: 1;
+  transition: opacity .6s;
+}
+.video video.backward {
+  display: none;
 }

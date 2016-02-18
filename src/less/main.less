@@ -467,7 +467,7 @@ fieldset { padding: 0; margin: 0; border: none; }
     }
 
     &.played {
-      a { background: @color-light; cursor: default; }
+      a { background: @color-light; }
     }
     &.active {
       a { background: @color-black; }
@@ -491,7 +491,7 @@ fieldset { padding: 0; margin: 0; border: none; }
   .unselectable;
 
   & video {
-    width: 100%;
+    width: 150%;
     height: auto;
     display: block;
     position: absolute;
@@ -502,5 +502,8 @@ fieldset { padding: 0; margin: 0; border: none; }
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     z-index: 1;
+    transition: opacity .6s;
+
+    &.backward { display: none; }
   }
 }

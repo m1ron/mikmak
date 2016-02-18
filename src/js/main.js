@@ -137,6 +137,7 @@ function initVideo() {
 		}, 5);
 	}
 
+
 	/** On video paused */
 	function onPause() {
 		v.dots.find('li').eq(v.active).addClass('active').find('a').each(function () {
@@ -148,6 +149,15 @@ function initVideo() {
 		});
 		v.disabled = false;
 	}
+
+
+	/** On first touch */
+	function onTouch() {
+		v.forward.play();
+	}
+
+
+	$(document).on('touchstart', onTouch);
 
 
 	/** Video sections array */

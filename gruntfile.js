@@ -36,7 +36,7 @@ module.exports = function (grunt) {
 
 		clean: {
 			pre: [dist.root, src.css, src.js + 'vendor'],
-			after: [src.fonts + 'FontAwesome.otf', src.js + 'vendor/fastclick.js', src.css + 'temp'],
+			after: [src.fonts + 'FontAwesome.otf', src.js + 'vendor/fastclick.js', src.css + 'temp', dist.js + 'custom.js'],
 			dist: [dist.js + 'custom.js']
 		},
 		copy: {

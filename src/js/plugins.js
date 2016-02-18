@@ -22,10 +22,6 @@
 	}
 }());
 
-// Place any jQuery/helper plugins in here.
-window.paceOptions = {
-	restartOnRequestAfter: false
-};
 
 
 /*!

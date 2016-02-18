@@ -153,12 +153,9 @@ function initVideo() {
 
 	/** On first touch */
 	function onTouch() {
-		v.forward.play();
+		playVideo(1);
+		$(document).off('touchstart', onTouch);
 	}
-
-
-	$(document).on('touchstart', onTouch);
-
 
 	/** Video sections array */
 	v.sections = [
@@ -182,4 +179,5 @@ function initVideo() {
 	v.dots.appendTo(self);
 
 	playVideo(1);
+	$(document).on('touchstart', onTouch);
 }

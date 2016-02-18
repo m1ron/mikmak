@@ -8,8 +8,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="format-detection" content="telephone=no">
 
-	<link rel="stylesheet" href="css/pure.css">
-	<link rel="stylesheet" href="css/plugins.css">
+	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/main.css">
 
 	<link rel="apple-touch-icon" sizes="57x57" href="img/favicon/apple-touch-icon-57x57.png">
@@ -35,11 +34,10 @@
 	<meta name="theme-color" content="#ffffff">
 
 	<!--[if lte IE 9]>
-	<link rel="stylesheet" href="css/ie.css">
 	<script src="js/vendor/html5shiv.min.js"></script>
 	<![endif]-->
 </head>
-<body>
+<body class="preloading preloading-hidden loading loading-hidden">
 
 	<header class="header">
 		<h1 class="hidden">Mikmak Studio</h1>
@@ -105,16 +103,18 @@
 		</section>
 
 		<div class="video">
-			<video class="forward" preload muted controls>
+			<video class="forward" preload="auto" muted>
 				<source src="video/forward.mp4" type="video/mp4">
 				<source src="video/forward.webm" type="video/webm">
 			</video>
-			<video class="backward" preload muted controls>
+			<video class="backward" preload="auto" muted>
 				<source src="video/backward.mp4" type="video/mp4">
 				<source src="video/backward.webm" type="video/webm">
 			</video>
 		</div>
 	</main>
+
+	<div class="preloader"></div>
 
 	<script src="js/vendor/jquery.min.js"></script>
 	<script src="js/plugins.js"></script>

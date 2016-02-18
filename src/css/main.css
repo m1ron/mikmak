@@ -41,7 +41,7 @@ body {
   width: 100%;
   min-width: 320px;
   height: 100%;
-  background: #f65c8b;
+  background: #d8c8ad;
 }
 /* ==========================================================================
    _TEXT STYLES
@@ -173,14 +173,6 @@ h6 {
     max-width: 1560px;
   }
 }
-/* PureCSS styles */
-.pure-g {
-  font-family: inherit;
-  letter-spacing: inherit;
-}
-.pure-g [class*="pure-u"] {
-  font-family: inherit;
-}
 /* ==========================================================================
    _FORMS
    ========================================================================== */
@@ -193,12 +185,20 @@ fieldset {
    _HEADER
    ========================================================================== */
 .header {
+  display: none;
   position: fixed;
   top: 0;
   right: 0;
   left: 0;
   z-index: 10;
   cursor: default;
+  transition: opacity 0.2s ease;
+}
+.loading-hidden .header {
+  display: none;
+}
+.loading .header {
+  opacity: 0;
 }
 .header .logo {
   width: 75px;
@@ -209,6 +209,12 @@ fieldset {
   position: absolute;
   top: 15px;
   left: 20px;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: -moz-none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
 }
 @media (min-width: 750px) {
   .header .logo {
@@ -515,7 +521,6 @@ fieldset {
   width: 100%;
   height: 100%;
   overflow: hidden;
-  display: block;
   position: fixed;
   top: 0;
   right: 0;
@@ -547,4 +552,439 @@ fieldset {
 }
 .video video.visible {
   opacity: 1;
+}
+/* ==========================================================================
+   _PRELOADER
+   ========================================================================== */
+@-webkit-keyframes preloader-animation {
+  0% {
+    background-position: 0 0px;
+  }
+  4% {
+    background-position: 0 -200px;
+  }
+  8% {
+    background-position: 0 -400px;
+  }
+  12% {
+    background-position: 0 -600px;
+  }
+  16% {
+    background-position: 0 -800px;
+  }
+  20% {
+    background-position: 0 -1000px;
+  }
+  24% {
+    background-position: 0 -1200px;
+  }
+  28% {
+    background-position: 0 -1400px;
+  }
+  32% {
+    background-position: 0 -1600px;
+  }
+  36% {
+    background-position: 0 -1800px;
+  }
+  40% {
+    background-position: 0 -2000px;
+  }
+  44% {
+    background-position: 0 -2200px;
+  }
+  48% {
+    background-position: 0 -2400px;
+  }
+  52% {
+    background-position: 0 -2600px;
+  }
+  56% {
+    background-position: 0 -2800px;
+  }
+  60% {
+    background-position: 0 -3000px;
+  }
+  64% {
+    background-position: 0 -3200px;
+  }
+  68% {
+    background-position: 0 -3400px;
+  }
+  72% {
+    background-position: 0 -3600px;
+  }
+  76% {
+    background-position: 0 -3800px;
+  }
+  80% {
+    background-position: 0 -4000px;
+  }
+  84% {
+    background-position: 0 -4200px;
+  }
+  88% {
+    background-position: 0 -4400px;
+  }
+  92% {
+    background-position: 0 -4600px;
+  }
+  96% {
+    background-position: 0 -4800px;
+  }
+  100% {
+    background-position: 0 -5000px;
+  }
+}
+@-moz-keyframes preloader-animation {
+  0% {
+    background-position: 0 0px;
+  }
+  4% {
+    background-position: 0 -200px;
+  }
+  8% {
+    background-position: 0 -400px;
+  }
+  12% {
+    background-position: 0 -600px;
+  }
+  16% {
+    background-position: 0 -800px;
+  }
+  20% {
+    background-position: 0 -1000px;
+  }
+  24% {
+    background-position: 0 -1200px;
+  }
+  28% {
+    background-position: 0 -1400px;
+  }
+  32% {
+    background-position: 0 -1600px;
+  }
+  36% {
+    background-position: 0 -1800px;
+  }
+  40% {
+    background-position: 0 -2000px;
+  }
+  44% {
+    background-position: 0 -2200px;
+  }
+  48% {
+    background-position: 0 -2400px;
+  }
+  52% {
+    background-position: 0 -2600px;
+  }
+  56% {
+    background-position: 0 -2800px;
+  }
+  60% {
+    background-position: 0 -3000px;
+  }
+  64% {
+    background-position: 0 -3200px;
+  }
+  68% {
+    background-position: 0 -3400px;
+  }
+  72% {
+    background-position: 0 -3600px;
+  }
+  76% {
+    background-position: 0 -3800px;
+  }
+  80% {
+    background-position: 0 -4000px;
+  }
+  84% {
+    background-position: 0 -4200px;
+  }
+  88% {
+    background-position: 0 -4400px;
+  }
+  92% {
+    background-position: 0 -4600px;
+  }
+  96% {
+    background-position: 0 -4800px;
+  }
+  100% {
+    background-position: 0 -5000px;
+  }
+}
+@-ms-keyframes preloader-animation {
+  0% {
+    background-position: 0 0px;
+  }
+  4% {
+    background-position: 0 -200px;
+  }
+  8% {
+    background-position: 0 -400px;
+  }
+  12% {
+    background-position: 0 -600px;
+  }
+  16% {
+    background-position: 0 -800px;
+  }
+  20% {
+    background-position: 0 -1000px;
+  }
+  24% {
+    background-position: 0 -1200px;
+  }
+  28% {
+    background-position: 0 -1400px;
+  }
+  32% {
+    background-position: 0 -1600px;
+  }
+  36% {
+    background-position: 0 -1800px;
+  }
+  40% {
+    background-position: 0 -2000px;
+  }
+  44% {
+    background-position: 0 -2200px;
+  }
+  48% {
+    background-position: 0 -2400px;
+  }
+  52% {
+    background-position: 0 -2600px;
+  }
+  56% {
+    background-position: 0 -2800px;
+  }
+  60% {
+    background-position: 0 -3000px;
+  }
+  64% {
+    background-position: 0 -3200px;
+  }
+  68% {
+    background-position: 0 -3400px;
+  }
+  72% {
+    background-position: 0 -3600px;
+  }
+  76% {
+    background-position: 0 -3800px;
+  }
+  80% {
+    background-position: 0 -4000px;
+  }
+  84% {
+    background-position: 0 -4200px;
+  }
+  88% {
+    background-position: 0 -4400px;
+  }
+  92% {
+    background-position: 0 -4600px;
+  }
+  96% {
+    background-position: 0 -4800px;
+  }
+  100% {
+    background-position: 0 -5000px;
+  }
+}
+@-o-keyframes preloader-animation {
+  0% {
+    background-position: 0 0px;
+  }
+  4% {
+    background-position: 0 -200px;
+  }
+  8% {
+    background-position: 0 -400px;
+  }
+  12% {
+    background-position: 0 -600px;
+  }
+  16% {
+    background-position: 0 -800px;
+  }
+  20% {
+    background-position: 0 -1000px;
+  }
+  24% {
+    background-position: 0 -1200px;
+  }
+  28% {
+    background-position: 0 -1400px;
+  }
+  32% {
+    background-position: 0 -1600px;
+  }
+  36% {
+    background-position: 0 -1800px;
+  }
+  40% {
+    background-position: 0 -2000px;
+  }
+  44% {
+    background-position: 0 -2200px;
+  }
+  48% {
+    background-position: 0 -2400px;
+  }
+  52% {
+    background-position: 0 -2600px;
+  }
+  56% {
+    background-position: 0 -2800px;
+  }
+  60% {
+    background-position: 0 -3000px;
+  }
+  64% {
+    background-position: 0 -3200px;
+  }
+  68% {
+    background-position: 0 -3400px;
+  }
+  72% {
+    background-position: 0 -3600px;
+  }
+  76% {
+    background-position: 0 -3800px;
+  }
+  80% {
+    background-position: 0 -4000px;
+  }
+  84% {
+    background-position: 0 -4200px;
+  }
+  88% {
+    background-position: 0 -4400px;
+  }
+  92% {
+    background-position: 0 -4600px;
+  }
+  96% {
+    background-position: 0 -4800px;
+  }
+  100% {
+    background-position: 0 -5000px;
+  }
+}
+@keyframes preloader-animation {
+  0% {
+    background-position: 0 0px;
+  }
+  4% {
+    background-position: 0 -200px;
+  }
+  8% {
+    background-position: 0 -400px;
+  }
+  12% {
+    background-position: 0 -600px;
+  }
+  16% {
+    background-position: 0 -800px;
+  }
+  20% {
+    background-position: 0 -1000px;
+  }
+  24% {
+    background-position: 0 -1200px;
+  }
+  28% {
+    background-position: 0 -1400px;
+  }
+  32% {
+    background-position: 0 -1600px;
+  }
+  36% {
+    background-position: 0 -1800px;
+  }
+  40% {
+    background-position: 0 -2000px;
+  }
+  44% {
+    background-position: 0 -2200px;
+  }
+  48% {
+    background-position: 0 -2400px;
+  }
+  52% {
+    background-position: 0 -2600px;
+  }
+  56% {
+    background-position: 0 -2800px;
+  }
+  60% {
+    background-position: 0 -3000px;
+  }
+  64% {
+    background-position: 0 -3200px;
+  }
+  68% {
+    background-position: 0 -3400px;
+  }
+  72% {
+    background-position: 0 -3600px;
+  }
+  76% {
+    background-position: 0 -3800px;
+  }
+  80% {
+    background-position: 0 -4000px;
+  }
+  84% {
+    background-position: 0 -4200px;
+  }
+  88% {
+    background-position: 0 -4400px;
+  }
+  92% {
+    background-position: 0 -4600px;
+  }
+  96% {
+    background-position: 0 -4800px;
+  }
+  100% {
+    background-position: 0 -5000px;
+  }
+}
+.preloader {
+  width: 200px;
+  height: 200px;
+  margin: auto;
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+  background: url('../img/preloader.jpg');
+  background-size: 200px 5200px;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: step-start;
+  animation-name: preloader-animation;
+}
+.loading-hidden .preloader {
+  opacity: 1;
+}
+.loading .preloader {
+  display: block;
+}
+.preloading-hidden .preloader {
+  display: none;
+}
+.preloading .preloader {
+  opacity: 0;
 }

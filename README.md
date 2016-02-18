@@ -10,12 +10,10 @@
 
 ###Components
 
-* Html5shiv
+* Normalize.css
 * jQuery
-* jQuery.browser
+* Html5shiv
 * Fastlick
-* PureCSS
-* Font Awesome
 
 
 ###Installation

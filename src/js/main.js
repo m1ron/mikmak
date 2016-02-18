@@ -3,14 +3,43 @@
 
 /** On document ready */
 $(document).ready(function () {
+	window.body = $('body');
+	window.images = 'img/';
+
+	/** Start preloader */
+	initPreloader();
 
 	/** Fastclick */
 	FastClick.attach(document.body);
 
+});
+
+
+/**
+ *  Initialize preloader
+ * */
+function initPreloader() {
+	function showPreloader() {
+		body.removeClass('preloading-hidden');
+		setTimeout(function () {
+			body.removeClass('preloading');
+		}, 10);
+		img = false;
+	}
+
+	var img = new Image();
+	$(img).on('load', showPreloader);
+	img.src = images + 'preloader.jpg';
+}
+
+
+/**
+ *  Initialize UI
+ * */
+function initUI() {
+
 	/** Header */
 	$('.header').each(function () {
-		var body = $('body');
-
 		function Handler(event) {
 			var target = $(event.target);
 			if (target.closest('.nav').length === 0) {
@@ -33,11 +62,13 @@ $(document).ready(function () {
 	});
 
 	/** Video */
-	$('.video').each(initVideo);
-});
+	//$('.video').each(initVideo);
+}
 
 
-/** Initialize video*/
+/**
+ * Initialize video
+ * */
 function initVideo() {
 	var self = $(this);
 
@@ -161,8 +192,12 @@ function initVideo() {
 
 	/** On first touch */
 	function onTouch() {
-		playVideo(1);
-		$(document).off('touchstart', onTouch);
+		v.forward.play();
+		v.backward.play();
+		setTimeout(function () {
+			v.backward.pause();
+			$(document).off('touchstart', onTouch);
+		}, 10);
 	}
 
 
@@ -206,6 +241,6 @@ function initVideo() {
 	v.dots.appendTo(self);
 
 	/* Horizontal carousel */
-	//.on('touchstart', onTouch);
+	$(document).on('touchstart', onTouch);
 	playVideo(1);
 }

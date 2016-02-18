@@ -97,8 +97,8 @@ function initVideo() {
 
 	/** On video paying forward */
 	function playForward(index, duration) {
-		v.jqforward.show();
-		v.jqbackward.hide();
+		v.jqforward.addClass('visible');
+		v.jqbackward.removeClass('visible');
 		console.log('FW #' + index + ' from ' + v.forward.currentTime + 's' + ' to ' + v.sections[index].time + 's');
 		var c, interval = setInterval(function () {
 			c = v.forward.currentTime;
@@ -118,8 +118,8 @@ function initVideo() {
 
 	/** On video paying backward */
 	function playBackward(index, duration) {
-		v.jqforward.hide();
-		v.jqbackward.show();
+		v.jqforward.removeClass('visible');
+		v.jqbackward.addClass('visible');
 		duration = Math.abs(duration);
 		console.log('BW #' + index + ' from ' + v.backward.currentTime + 's' + ' to ' + (v.forward.duration - v.sections[index].time) + 's');
 		var c, interval = setInterval(function () {

@@ -23,15 +23,15 @@
 @color-light: #ccc;
 @color-white: #fff;
 
-@color-section-0: #fe467d;
-@color-section-1: #f4863f;
-@color-section-2: #fdb93a;
-@color-section-3: #c4c3bf;
-@color-section-4: #21996e;
-@color-section-5: #7080bc;
-@color-section-6: #fbb44c;
-@color-section-7: #e3a1c4;
-@color-section-8: #f2806c;
+@color-section-0: #f65c8b;
+@color-section-1: #f78a42;
+@color-section-2: #f9c543;
+@color-section-3: #d5d3d0;
+@color-section-4: #3fa972;
+@color-section-5: #8e95fb;
+@color-section-6: #f9bf57;
+@color-section-7: #faa9e5;
+@color-section-8: #f78378;
 
 @margin-sm: 14px;
 @margin-md: 18px;
@@ -502,8 +502,7 @@ fieldset { padding: 0; margin: 0; border: none; }
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     z-index: 1;
-    transition: opacity .6s;
-
-    &.backward { display: none; }
+    opacity: 0;
+    &.visible { opacity: 1; }
   }
 }

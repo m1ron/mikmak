@@ -41,7 +41,7 @@ body {
   width: 100%;
   min-width: 320px;
   height: 100%;
-  background: #fe467d;
+  background: #f65c8b;
 }
 /* ==========================================================================
    _TEXT STYLES
@@ -542,8 +542,8 @@ fieldset {
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   z-index: 1;
-  transition: opacity .6s;
+  opacity: 0;
 }
-.video video.backward {
-  display: none;
+.video video.visible {
+  opacity: 1;
 }

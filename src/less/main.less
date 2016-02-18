@@ -196,17 +196,12 @@ fieldset { padding: 0; margin: 0; border: none; }
    _HEADER
    ========================================================================== */
 .header {
-  display: none;
   position: fixed;
   top: 0;
   right: 0;
   left: 0;
   z-index: 10;
   cursor: default;
-  transition: opacity @duration;
-
-  .loading-hidden & { display: none; }
-  .loading & { opacity: 0; }
 
   .logo {
     width: 75px;
@@ -534,8 +529,6 @@ fieldset { padding: 0; margin: 0; border: none; }
   }
 }
 .preloader {
-  width: 200px;
-  height: 200px;
   margin: auto;
   display: none;
   position: fixed;
@@ -543,18 +536,34 @@ fieldset { padding: 0; margin: 0; border: none; }
   right: 0;
   bottom: 0;
   left: 0;
-  z-index: 100;
-  background: url('@{images}/preloader.jpg');
-  background-size: @preloader-width @preloader-width * (@preloader-keyframes + 1);
+  z-index: 500;
+  background: @color-preloader;
+  transition: opacity .4s ease;
   opacity: 0;
-  transition: opacity @duration;
-  animation-duration: @preloader-duration;
-  animation-iteration-count: infinite;
-  animation-timing-function: step-start;
-  animation-name: preloader-animation;
+
+  &:before {
+    width: 200px;
+    height: 200px;
+    margin: auto;
+    display: block;
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: @color-preloader url('@{images}/preloader.jpg') center center no-repeat;
+    background-size: @preloader-width @preloader-width * (@preloader-keyframes + 1);
+    animation-duration: @preloader-duration;
+    animation-iteration-count: infinite;
+    animation-timing-function: step-start;
+    animation-name: preloader-animation;
+    transition: opacity @duration;
+
+    .preloading-hidden & { display: none; }
+    .preloading & { opacity: 0; }
+  }
 
   .loading-hidden & { opacity: 1; }
   .loading & { display: block; }
-  .preloading-hidden & { display: none; }
-  .preloading & { opacity: 0; }
 }

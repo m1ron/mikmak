@@ -14,6 +14,7 @@
 * jQuery
 * Html5shiv
 * Fastlick
+* jQuery.html5Loader
 
 
 ###Installation

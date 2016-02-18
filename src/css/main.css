@@ -185,20 +185,12 @@ fieldset {
    _HEADER
    ========================================================================== */
 .header {
-  display: none;
   position: fixed;
   top: 0;
   right: 0;
   left: 0;
   z-index: 10;
   cursor: default;
-  transition: opacity 0.2s ease;
-}
-.loading-hidden .header {
-  display: none;
-}
-.loading .header {
-  opacity: 0;
 }
 .header .logo {
   width: 75px;
@@ -957,8 +949,6 @@ fieldset {
   }
 }
 .preloader {
-  width: 200px;
-  height: 200px;
   margin: auto;
   display: none;
   position: fixed;
@@ -966,25 +956,39 @@ fieldset {
   right: 0;
   bottom: 0;
   left: 0;
-  z-index: 100;
-  background: url('../img/preloader.jpg');
-  background-size: 200px 5200px;
+  z-index: 500;
+  background: #d8c8ad;
+  transition: opacity .4s ease;
   opacity: 0;
-  transition: opacity 0.2s ease;
+}
+.preloader:before {
+  width: 200px;
+  height: 200px;
+  margin: auto;
+  display: block;
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: #d8c8ad url('../img/preloader.jpg') center center no-repeat;
+  background-size: 200px 5200px;
   animation-duration: 1s;
   animation-iteration-count: infinite;
   animation-timing-function: step-start;
   animation-name: preloader-animation;
+  transition: opacity 0.2s ease;
+}
+.preloading-hidden .preloader:before {
+  display: none;
+}
+.preloading .preloader:before {
+  opacity: 0;
 }
 .loading-hidden .preloader {
   opacity: 1;
 }
 .loading .preloader {
   display: block;
-}
-.preloading-hidden .preloader {
-  display: none;
-}
-.preloading .preloader {
-  opacity: 0;
 }

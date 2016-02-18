@@ -50,7 +50,8 @@ module.exports = function (grunt) {
 							src.vendor + 'jquery/dist/jquery.min.js',
 							src.vendor + 'jquery/dist/jquery.min.map',
 							src.vendor + 'fastclick/lib/fastclick.js',
-							src.vendor + 'jquery-mousewheel/jquery.mousewheel.min.js'
+							src.vendor + 'jquery-mousewheel/jquery.mousewheel.min.js',
+							src.vendor + 'jquery.html5loader/src/jquery.html5Loader.min.js'
 						],
 						dest: src.js + 'vendor'
 					},
@@ -92,7 +93,8 @@ module.exports = function (grunt) {
 						src: [
 							src.js + 'custom.js',
 							src.js + 'vendor/fastclick.min.js',
-							src.js + 'vendor/jquery.mousewheel.min.js'
+							src.js + 'vendor/jquery.mousewheel.min.js',
+							src.js + 'vendor/jquery.html5Loader.min.js'
 						],
 						dest: src.js + 'plugins.js'
 					}

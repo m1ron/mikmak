@@ -9,25 +9,21 @@ $(document).ready(function () {
 
 	/** Header */
 	$('.header').each(function () {
-		var body = $('body'), time = 300;
+		var body = $('body');
 
 		function Handler(event) {
 			var target = $(event.target);
-			if (target.closest('.pure-menu').length === 0) {
+			if (target.closest('.nav').length === 0) {
 				Toggle(event);
 			}
 		}
 
 		function Toggle(e) {
 			if (body.hasClass('nav-open')) {
-				body.removeClass('nav-open').unbind('touchstart click', Handler);
-				setTimeout(function () {
-					body.removeClass('nav-pre');
-				}, time);
+				body.removeClass('nav-open').off('click', Handler);
 			} else {
-				body.addClass('nav-pre');
 				setTimeout(function () {
-					body.addClass('nav-open').bind('touchstart click', Handler);
+					body.addClass('nav-open').on('click', Handler);
 				}, 10);
 			}
 			e.preventDefault();
@@ -108,17 +104,17 @@ function initVideo() {
 
 		var to = +v.sections[index].time;
 
-		console.log('FW #' + index + ' from ' + v.forward.currentTime + 's' + ' to ' + to + 's');
+		//console.log('FW #' + index + ' from ' + v.forward.currentTime + 's' + ' to ' + to + 's');
 		setTimeout(function () {
 			v.backward.currentTime = v.duration - to;
-		}, 100);
+		}, 50);
 
 		v.interval = setInterval(function () {
 			var c = v.forward.currentTime;
 			if (c >= to) {
 				v.forward.pause();
 				onPause();
-				console.log('forward: ' + v.forward.currentTime + ' backward: ' + v.backward.currentTime);
+				//console.log('forward: ' + v.forward.currentTime + ' backward: ' + v.backward.currentTime);
 			}
 		}, 20);
 	}
@@ -132,17 +128,17 @@ function initVideo() {
 		duration = Math.abs(duration);
 		var to = +(v.duration - v.sections[index].time);
 
-		console.log('BW #' + index + ' from ' + v.backward.currentTime + 's' + ' to ' + to + 's');
+		//console.log('BW #' + index + ' from ' + v.backward.currentTime + 's' + ' to ' + to + 's');
 		setTimeout(function () {
 			v.forward.currentTime = v.duration - to;
-		}, 100);
+		}, 50);
 
 		v.interval = setInterval(function () {
 			var c = v.backward.currentTime;
 			if (c >= to) {
 				v.backward.pause();
 				onPause();
-				console.log('forward: ' + v.forward.currentTime + ' backward: ' + v.backward.currentTime);
+				//console.log('forward: ' + v.forward.currentTime + ' backward: ' + v.backward.currentTime);
 			}
 		}, 20);
 	}
@@ -192,7 +188,7 @@ function initVideo() {
 		{time: 0, id: 'preloader', title: 'Preloader'},
 		{time: 2.5, id: 'about', title: 'About us'},
 		{time: 5.15, id: 'process', title: 'Our process'},
-		{time: 7.5, id: 'news', title: 'News'},
+		{time: 7.3, id: 'news', title: 'News'},
 		{time: 9.65, id: 'skills', title: 'Our skills'},
 		{time: 20.2, id: 'viralize', title: 'Viralize'},
 		{time: 23, id: 'references', title: 'References'},

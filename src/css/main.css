@@ -300,16 +300,11 @@ fieldset {
   line-height: 14px;
   text-transform: uppercase;
   letter-spacing: .15em;
-  transition: opacity 0.3s;
-  opacity: 0;
   z-index: 10;
   background: #fff;
 }
-.nav-pre .nav {
-  display: block;
-}
 .nav-open .nav {
-  opacity: 1;
+  display: block;
 }
 .nav .menu {
   padding: 0;
@@ -535,8 +530,10 @@ fieldset {
   user-select: none;
 }
 .video video {
-  width: 150%;
+  width: 200%;
+  max-width: 3200px;
   height: auto;
+  max-height: 1800px;
   display: block;
   position: absolute;
   left: 50%;

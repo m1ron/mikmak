@@ -54,6 +54,8 @@ function initVideo() {
 	v.backward = v.jqbackward[0];
 	v.active = 0;
 	v.next = 1;
+	v.duration = 28.88;
+	v.interval = [];
 
 
 	/** On dot click */
@@ -61,9 +63,6 @@ function initVideo() {
 		var a = $(this), li = a.closest('li');
 		if (!li.hasClass('active') && !v.disabled) {
 			playVideo(a.data('section'));
-			li.prevAll().andSelf().addClass('played');
-			li.nextAll().removeClass('played');
-			li.siblings('.active').removeClass('active');
 		}
 		e.preventDefault();
 	}
@@ -71,14 +70,21 @@ function initVideo() {
 
 	/** Play video section (integer) */
 	function playVideo(index) {
+		v.disabled = true;
+		$(document).off('mousewheel', onWheel);
+
 		var duration = v.sections[index].time - v.forward.currentTime;
-		v.self.addClass('loaded');
+
+		var li = v.dots.find('li').eq(index);
+		li.prevAll().andSelf().addClass('played');
+		li.nextAll().removeClass('played');
+		li.siblings('.active').removeClass('active');
+
 		if (index - v.active > 1) {
 			for (var i = v.active + 1; i < index; i++) {
 				duration = duration + (v.sections[i].time - v.forward.currentTime);
 			}
 		}
-		v.disabled = true;
 		v.active = index;
 		$('.section.active').removeClass('active');
 		setTimeout(function () {
@@ -99,20 +105,22 @@ function initVideo() {
 	function playForward(index, duration) {
 		v.jqforward.addClass('visible');
 		v.jqbackward.removeClass('visible');
-		console.log('FW #' + index + ' from ' + v.forward.currentTime + 's' + ' to ' + v.sections[index].time + 's');
-		var c, interval = setInterval(function () {
-			c = v.forward.currentTime;
-			if (c >= v.sections[index].time - .3) {
+
+		var to = +v.sections[index].time;
+
+		console.log('FW #' + index + ' from ' + v.forward.currentTime + 's' + ' to ' + to + 's');
+		setTimeout(function () {
+			v.backward.currentTime = v.duration - to;
+		}, 100);
+
+		v.interval = setInterval(function () {
+			var c = v.forward.currentTime;
+			if (c >= to) {
+				v.forward.pause();
 				onPause();
-				if (c >= v.sections[index].time) {
-					clearInterval(interval);
-					v.forward.pause();
-					v.backward.currentTime = Math.abs(+v.forward.currentTime - +v.forward.duration);
-					console.log('forward: ' + v.forward.currentTime + ' backward: ' + v.backward.currentTime);
-					v.disabled = false;
-				}
+				console.log('forward: ' + v.forward.currentTime + ' backward: ' + v.backward.currentTime);
 			}
-		}, 5);
+		}, 20);
 	}
 
 
@@ -120,26 +128,31 @@ function initVideo() {
 	function playBackward(index, duration) {
 		v.jqforward.removeClass('visible');
 		v.jqbackward.addClass('visible');
+
 		duration = Math.abs(duration);
-		console.log('BW #' + index + ' from ' + v.backward.currentTime + 's' + ' to ' + (v.forward.duration - v.sections[index].time) + 's');
-		var c, interval = setInterval(function () {
-			c = v.backward.currentTime;
-			if (c >= (v.forward.duration - v.sections[index].time) - .3) {
+		var to = +(v.duration - v.sections[index].time);
+
+		console.log('BW #' + index + ' from ' + v.backward.currentTime + 's' + ' to ' + to + 's');
+		setTimeout(function () {
+			v.forward.currentTime = v.duration - to;
+		}, 100);
+
+		v.interval = setInterval(function () {
+			var c = v.backward.currentTime;
+			if (c >= to) {
+				v.backward.pause();
 				onPause();
-				if (c >= (v.forward.duration - v.sections[index].time)) {
-					clearInterval(interval);
-					v.backward.pause();
-					v.forward.currentTime = Math.abs(+v.backward.currentTime - +v.forward.duration);
-					console.log('forward: ' + v.forward.currentTime + ' backward: ' + v.backward.currentTime);
-					v.disabled = false;
-				}
+				console.log('forward: ' + v.forward.currentTime + ' backward: ' + v.backward.currentTime);
 			}
-		}, 5);
+		}, 20);
 	}
 
 
 	/** On video paused */
 	function onPause() {
+		clearInterval(v.interval);
+		$(document).on('mousewheel', onWheel);
+		v.disabled = false;
 		v.dots.find('li').eq(v.active).addClass('active').find('a').each(function () {
 			var target = $($(this).attr('href'));
 			target.addClass('pre');
@@ -147,7 +160,6 @@ function initVideo() {
 				target.addClass('active');
 			}, 20);
 		});
-		v.disabled = false;
 	}
 
 
@@ -156,6 +168,24 @@ function initVideo() {
 		playVideo(1);
 		$(document).off('touchstart', onTouch);
 	}
+
+
+	/** On mousewheel */
+	function onWheel(event) {
+		if (!v.disabled) {
+			if (event.deltaY > 0) {
+				if (v.active > 1) {
+					playVideo(v.active - 1);
+				}
+			} else if (event.deltaY < 0) {
+				if (v.active < v.sections.length - 1) {
+					playVideo(v.active + 1);
+				}
+			}
+		}
+		event.preventDefault();
+	}
+
 
 	/** Video sections array */
 	v.sections = [
@@ -170,6 +200,7 @@ function initVideo() {
 		{time: 28.6, id: 'finish', title: 'Finish'}
 	];
 
+
 	/** Generate dots */
 	v.dots = $('<ul/>').addClass('dots');
 	for (i = 0; i < v.sections.length; i++) {
@@ -178,6 +209,7 @@ function initVideo() {
 	$('a', v.dots).on('click', onClick);
 	v.dots.appendTo(self);
 
+	/* Horizontal carousel */
+	//.on('touchstart', onTouch);
 	playVideo(1);
-	$(document).on('touchstart', onTouch);
 }

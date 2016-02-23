@@ -98,11 +98,13 @@ function initUI() {
 		onBeforeLoad: function () {
 		},
 		onComplete: function () {
-			body.removeClass('loading-hidden');
-			playVideo(1);
 			setTimeout(function () {
-				body.removeClass('loading');
-			}, 400);
+				body.removeClass('loading-hidden');
+				playVideo(1);
+				setTimeout(function () {
+					body.removeClass('loading');
+				}, 400);
+			}, 3000);
 		},
 		onElementLoaded: function (obj, elm) {
 		},
@@ -146,7 +148,7 @@ function initVideo() {
 		/** Play video section (integer) */
 		window.playVideo = function (index) {
 			v.disabled = true;
-			$(document).off('mousewheel', onWheel);
+			$(document).off('mousewheel', onWheel).off('touchstart', onTouchStart).off('touchmove', onTouchMove);
 
 			var duration = v.sections[index].time - v.forward.currentTime;
 
@@ -168,16 +170,16 @@ function initVideo() {
 
 			if (+duration >= 0) {
 				v.forward.play();
-				playForward.call(this, index, duration);
+				playForward.call(this, index);
 			} else {
 				v.backward.play();
-				playBackward.call(this, index, duration);
+				playBackward.call(this, index);
 			}
-		}
+		};
 
 
 		/** On video paying forward */
-		function playForward(index, duration) {
+		function playForward(index) {
 			v.jqforward.addClass('visible');
 			v.jqbackward.removeClass('visible');
 
@@ -200,11 +202,10 @@ function initVideo() {
 
 
 		/** On video paying backward */
-		function playBackward(index, duration) {
+		function playBackward(index) {
 			v.jqforward.removeClass('visible');
 			v.jqbackward.addClass('visible');
 
-			duration = Math.abs(duration);
 			var to = +(v.duration - v.sections[index].time);
 
 			//console.log('BW #' + index + ' from ' + v.backward.currentTime + 's' + ' to ' + to + 's');
@@ -226,7 +227,7 @@ function initVideo() {
 		/** On video paused */
 		function onPause() {
 			clearInterval(v.interval);
-			$(document).on('mousewheel', onWheel);
+			$(document).on('mousewheel', onWheel).on('touchstart', onTouchStart).on('touchmove', onTouchMove);
 			v.disabled = false;
 			v.dots.find('li').eq(v.active).addClass('active').find('a').each(function () {
 				var target = $($(this).attr('href'));
@@ -235,17 +236,6 @@ function initVideo() {
 					target.addClass('active');
 				}, 20);
 			});
-		}
-
-
-		/** On first touch */
-		function onTouch() {
-			v.forward.play();
-			v.backward.play();
-			setTimeout(function () {
-				v.backward.pause();
-				$(document).off('touchstart', onTouch);
-			}, 10);
 		}
 
 
@@ -260,6 +250,34 @@ function initVideo() {
 					if (v.active < v.sections.length - 1) {
 						playVideo(v.active + 1);
 					}
+				}
+			}
+			event.preventDefault();
+		}
+
+
+		window.startTouchX = 0;
+		window.startTouchY = 0;
+
+		/** On touchstart */
+		function onTouchStart(event) {
+			startTouchX = event.originalEvent.touches[0].pageX;
+			startTouchY = event.originalEvent.touches[0].pageY;
+			//console.log('start ' + event.originalEvent.touches[0].pageX + " - " + event.originalEvent.touches[0].pageY);
+			event.preventDefault();
+		}
+
+		/** On touchmove */
+		function onTouchMove(event) {
+			//console.log('move ' + event.originalEvent.touches[0].pageX + " - " + event.originalEvent.touches[0].pageY);
+			if (((event.originalEvent.touches[0].pageX - startTouchX) > 9) || ((event.originalEvent.touches[0].pageY - startTouchY) > 9)) {
+				if (v.active > 1) {
+					playVideo(v.active - 1);
+				}
+			}
+			if (((startTouchX - event.originalEvent.touches[0].pageX) > 9) || ((startTouchY - event.originalEvent.touches[0].pageY) > 9)) {
+				if (v.active < v.sections.length - 1) {
+					playVideo(v.active + 1);
 				}
 			}
 			event.preventDefault();
@@ -287,8 +305,5 @@ function initVideo() {
 		}
 		$('a', v.dots).on('click', onClick);
 		v.dots.appendTo(self);
-
-		/* Horizontal carousel */
-		$(document).on('touchstart', onTouch);
 	});
 }

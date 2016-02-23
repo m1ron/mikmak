@@ -1,16 +1,22 @@
 /*jslint nomen: true, regexp: true, unparam: true, sloppy: true, white: true, node: true */
 /*global window, console, document, $, jQuery, google */
 
+
+window.path = {
+	img: './img/',
+	video: './video/'
+};
+
+
 /** On document ready */
 $(document).ready(function () {
 	window.body = $('body');
-	window.images = 'img/';
-
-	/** Start preloader */
-	initPreloader();
 
 	/** Fastclick */
 	FastClick.attach(document.body);
+
+	/** Start preloader */
+	initPreloader();
 
 });
 
@@ -21,16 +27,47 @@ $(document).ready(function () {
 function initPreloader() {
 	function showPreloader() {
 		body.removeClass('preloading-hidden');
+
 		setTimeout(function () {
 			body.removeClass('preloading');
-			initUI();
-		}, 10);
+			$.html5Loader({
+				filesToLoad: {
+					"files": [
+						{
+							"type": "VIDEO",
+							"sources": {
+								"h264": {"source": window.path.video + 'forward.mp4', "size": 3707.360},
+								"webm": {"source": window.path.video + 'forward.webm', "size": 1309.349}
+							}
+						},
+						{
+							"type": "VIDEO",
+							"sources": {
+								"h264": {"source": window.path.video + 'backward.mp4', "size": 3700.735},
+								"webm": {"source": window.path.video + 'backward.webm', "size": 1216.921}
+							}
+						}
+					]
+				},
+				onComplete: function () {
+					var int = setInterval(function () {
+						if (!body.hasClass('loading-timeout')) {
+							initUI();
+							clearInterval(int);
+						}
+					}, 50);
+				}
+			});
+		}, 100);
+		setTimeout(function () {
+			body.removeClass('loading-timeout');
+		}, 4000);
 		img = false;
 	}
 
 	var img = new Image();
 	$(img).on('load', showPreloader);
-	img.src = images + 'preloader.jpg';
+	img.src = window.path.img + 'preloader.jpg';
 }
 
 
@@ -38,6 +75,19 @@ function initPreloader() {
  *  Initialize UI
  * */
 function initUI() {
+
+	setTimeout(function () {
+		body.removeClass('loading-hidden').removeClass('loading-timeout');
+		setTimeout(function () {
+			playVideo(1);
+			setTimeout(function () {
+				body.removeClass('ui-hidden')
+			}, 2000);
+		}, 500);
+		setTimeout(function () {
+			body.removeClass('loading');
+		}, 2000);
+	}, 50);
 
 	initVideo();
 
@@ -62,54 +112,6 @@ function initUI() {
 		}
 
 		$('.toggle', this).on('click', Toggle);
-	});
-
-	$.html5Loader({
-		filesToLoad: {
-			"files": [
-				{
-					"type": "VIDEO",
-					"sources": {
-						"h264": {
-							"source": "./video/forward.mp4",
-							"size": 3707.360
-						},
-						"webm": {
-							"source": "./video/forward.webm",
-							"size": 1309.349
-						}
-					}
-				},
-				{
-					"type": "VIDEO",
-					"sources": {
-						"h264": {
-							"source": "./video/backward.mp4",
-							"size": 3700.735
-						},
-						"webm": {
-							"source": "./video/backward.webm",
-							"size": 1216.921
-						}
-					}
-				}
-			]
-		},
-		onBeforeLoad: function () {
-		},
-		onComplete: function () {
-			setTimeout(function () {
-				body.removeClass('loading-hidden');
-				playVideo(1);
-				setTimeout(function () {
-					body.removeClass('loading');
-				}, 400);
-			}, 3000);
-		},
-		onElementLoaded: function (obj, elm) {
-		},
-		onUpdate: function (percentage) {
-		}
 	});
 }
 

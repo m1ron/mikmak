@@ -88,6 +88,7 @@ html {
   margin: 0;
   font: 11px @font-family;
   color: @color-black;
+  overflow: hidden;
   background: @color-white;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -96,7 +97,8 @@ body {
   width: 100%;
   min-width: @min-width;
   height: 100%;
-  background: @color-preloader;
+  overflow: hidden;
+  background: @color-section-0;
 }
 /* ==========================================================================
    _TEXT STYLES
@@ -193,6 +195,10 @@ h6 {&:extend(.h6); }
   left: 0;
   z-index: 10;
   cursor: default;
+  opacity: 1;
+  transition: opacity @duration;
+
+  .ui-hidden & { opacity: 0; }
 
   .logo {
     width: 75px;
@@ -426,11 +432,15 @@ h6 {&:extend(.h6); }
   left: 0;
   z-index: 10;
   .unselectable;
+  opacity: 1;
+  transition: opacity @duration;
 
   @media @sm {
     width: 683px;
     bottom: 40px;
   }
+
+  .ui-hidden & { opacity: 0; }
 
   > li {
     display: block;
@@ -533,9 +543,10 @@ h6 {&:extend(.h6); }
   bottom: 0;
   left: 0;
   z-index: 500;
-  background: @color-preloader;
-  transition: opacity .4s ease;
   opacity: 0;
+  background: @color-preloader;
+  transition: opacity 1.5s .5s ease;
+  .unselectable;
 
   &:before {
     width: @preloader-width;
@@ -548,16 +559,17 @@ h6 {&:extend(.h6); }
     right: 0;
     bottom: 0;
     left: 0;
+    opacity: 0;
     background: @color-preloader url('@{images}/preloader.jpg') center center no-repeat;
     background-size: @preloader-width @preloader-width * (@preloader-keyframes + 1);
     animation-duration: @preloader-duration;
     animation-iteration-count: infinite;
     animation-timing-function: step-start;
     animation-name: preloader-animation;
-    transition: opacity @duration;
+    transition: opacity .5s ease;
 
-    .preloading-hidden & { display: none; }
-    .preloading & { opacity: 0; }
+    .preloading-hidden & { opacity: 0 !important; }
+    .loading-hidden & { opacity: 1; }
   }
 
   .loading-hidden & { opacity: 1; }

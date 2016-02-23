@@ -159,7 +159,6 @@ h6 {
 /* Wrapper */
 .wrapper {
   width: 100%;
-  max-width: 970px;
   padding: 0 15px;
   margin: 0 auto;
 }
@@ -167,19 +166,6 @@ h6 {
   display: table;
   content: '\0020';
   clear: both;
-}
-@media (min-width: 1560px) {
-  .wrapper {
-    max-width: 1560px;
-  }
-}
-/* ==========================================================================
-   _FORMS
-   ========================================================================== */
-fieldset {
-  padding: 0;
-  margin: 0;
-  border: none;
 }
 /* ==========================================================================
    _HEADER
@@ -527,9 +513,9 @@ fieldset {
   user-select: none;
 }
 .video video {
-  width: 200%;
+  width: auto;
   max-width: 3200px;
-  height: auto;
+  height: 100%;
   max-height: 1800px;
   display: block;
   position: absolute;
@@ -544,6 +530,12 @@ fieldset {
 }
 .video video.visible {
   opacity: 1;
+}
+@media (min-width: 970px) {
+  .video video {
+    width: 200%;
+    height: auto;
+  }
 }
 /* ==========================================================================
    _PRELOADER

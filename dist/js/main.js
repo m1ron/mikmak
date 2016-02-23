@@ -242,11 +242,11 @@ function initVideo() {
 		/** On mousewheel */
 		function onWheel(event) {
 			if (!v.disabled) {
-				if (event.deltaY > 0) {
+				if ((event.deltaY > 0) || (event.deltaX > 0)) {
 					if (v.active > 1) {
 						playVideo(v.active - 1);
 					}
-				} else if (event.deltaY < 0) {
+				} else if ((event.deltaY < 0) || (event.deltaX < 0)) {
 					if (v.active < v.sections.length - 1) {
 						playVideo(v.active + 1);
 					}

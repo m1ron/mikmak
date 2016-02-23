@@ -2,22 +2,41 @@
 /*global window, console, document, $, jQuery, google */
 
 
-window.path = {
-	img: './img/',
-	video: './video/'
-};
-
-
 /** On document ready */
 $(document).ready(function () {
+
+	window.v = {};
 	window.body = $('body');
 
-	/** Fastclick */
-	FastClick.attach(document.body);
+	/** Paths array */
+	v.path = {
+		img: './img/',
+		audio: './audio/',
+		video: './video/'
+	};
+
+	/** Audio files array */
+	v.audio = [
+		{time: 1.9, src: v.path.audio + 'lamp', mp3: 22, volume: .15},
+		{time: 4.95, src: v.path.audio + 'knife', mp3: 19, volume: .2},
+		{time: 5.2, src: v.path.audio + 'pan', mp3: 50, volume: .2},
+		{time: 8.2, src: v.path.audio + 'pepper', mp3: 21, volume: .15},
+		{time: 9.7, src: v.path.audio + 'sauce', mp3: 63, volume: .2},
+		{time: 27, src: v.path.audio + 'cash', mp3: 38, volume: .2},
+		{time: 27.7, src: v.path.audio + 'coins', mp3: 18, volume: .4}
+	];
+
+	/** Video files array */
+	v.video = [
+		{src: v.path.video + 'forward', mp4: 3707.360, webm: 1309.349},
+		{src: v.path.video + 'backward', mp4: 3700.735, webm: 1216.921}
+	];
 
 	/** Start preloader */
 	initPreloader();
 
+	/** Fastclick */
+	FastClick.attach(document.body);
 });
 
 
@@ -32,22 +51,7 @@ function initPreloader() {
 			body.removeClass('preloading');
 			$.html5Loader({
 				filesToLoad: {
-					"files": [
-						{
-							"type": "VIDEO",
-							"sources": {
-								"h264": {"source": window.path.video + 'forward.mp4', "size": 3707.360},
-								"webm": {"source": window.path.video + 'forward.webm', "size": 1309.349}
-							}
-						},
-						{
-							"type": "VIDEO",
-							"sources": {
-								"h264": {"source": window.path.video + 'backward.mp4', "size": 3700.735},
-								"webm": {"source": window.path.video + 'backward.webm', "size": 1216.921}
-							}
-						}
-					]
+					"files": files
 				},
 				onComplete: function () {
 					var int = setInterval(function () {
@@ -65,9 +69,19 @@ function initPreloader() {
 		img = false;
 	}
 
+	/** Build files array for html5loader */
+	var files = [];
+	$(v.audio).each(function (i) {
+		files.push({"type": "AUDIO", "sources": {"mp3": {"source": v.audio[i].src + '.mp3', "size": v.audio[i].mp3}}})
+	});
+	$(v.video).each(function (i) {
+		files.push({"type": "VIDEO", "sources": {"h264": {"source": v.video[i].src + '.mp4', "size": v.video[i].mp4}, "webm": {"source": v.video[i].src + '.webm', "size": v.video[i].webm}}})
+	});
+	//console.log(files);
+
 	var img = new Image();
 	$(img).on('load', showPreloader);
-	img.src = window.path.img + 'preloader.jpg';
+	img.src = window.v.path.img + 'preloader.jpg';
 }
 
 
@@ -124,7 +138,6 @@ function initVideo() {
 
 		var self = $(this);
 
-		window.v = {};
 		v.self = self;
 		v.disabled = false;
 		v.jqforward = $('.forward', self);
@@ -185,7 +198,7 @@ function initVideo() {
 			v.jqforward.addClass('visible');
 			v.jqbackward.removeClass('visible');
 
-			var to = +v.sections[index].time;
+			var to = +v.sections[index].time, a = false;
 
 			//console.log('FW #' + index + ' from ' + v.forward.currentTime + 's' + ' to ' + to + 's');
 			setTimeout(function () {
@@ -194,11 +207,22 @@ function initVideo() {
 
 			v.interval = setInterval(function () {
 				var c = v.forward.currentTime;
+				a = false;
 				if (c >= to) {
 					v.forward.pause();
 					onPause();
 					//console.log('forward: ' + v.forward.currentTime + ' backward: ' + v.backward.currentTime);
 				}
+				$(v.audio).each(function (i) {
+					if (this.played === false && a === false) {
+						a = true;
+						if (c >= v.audio[i].time) {
+							console.log('played: ' + i);
+							v.audio[i].node[0].play();
+							v.audio[i].played = true;
+						}
+					}
+				});
 			}, 20);
 		}
 
@@ -298,6 +322,15 @@ function initVideo() {
 			{time: 25.6, id: 'contact', title: 'Contact'},
 			{time: 28.6, id: 'finish', title: 'Finish'}
 		];
+
+
+		/** Building audio array */
+		$(v.audio).each(function (i) {
+			v.audio[i].node = $('<audio/>').addClass('audio').append('<source src="' + v.audio[i].src + '.mp3" type="audio/mpeg" preload>');
+			v.audio[i].node[0].volume = v.audio[i].volume;
+			v.audio[i].node.appendTo(self);
+			v.audio[i].played = false;
+		});
 
 
 		/** Generate dots */

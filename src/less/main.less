@@ -503,10 +503,24 @@ h6 {&:extend(.h6); }
     opacity: 0;
     &.visible { opacity: 1; }
 
+    /*
+    &.backward {
+      width: 100px;
+      height: 50px;
+      margin-top: -400px !important;
+      margin-right: -300px !important;
+      z-index: 100 !important;
+      opacity: 1 !important;
+    }
+    */
+
     @media @md {
       width: 200%;
       height: auto;
     }
+  }
+  .audio {
+    display: none;
   }
 }
 /* ==========================================================================

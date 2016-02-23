@@ -77,6 +77,7 @@ module.exports = function (grunt) {
 							'js/{,*/}*.*',
 							'fonts/{,*/}*.*',
 							'video/{,*/}*.*',
+							'audio/{,*/}*.*',
 							'{,*/}*.html'
 						]
 					}

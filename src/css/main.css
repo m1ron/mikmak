@@ -539,6 +539,16 @@ h6 {
   transform: translate(-50%, -50%);
   z-index: 1;
   opacity: 0;
+  /*
+    &.backward {
+      width: 100px;
+      height: 50px;
+      margin-top: -400px !important;
+      margin-right: -300px !important;
+      z-index: 100 !important;
+      opacity: 1 !important;
+    }
+    */
 }
 .video video.visible {
   opacity: 1;
@@ -548,6 +558,9 @@ h6 {
     width: 200%;
     height: auto;
   }
+}
+.video .audio {
+  display: none;
 }
 /* ==========================================================================
    _PRELOADER

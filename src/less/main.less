@@ -186,6 +186,72 @@ h6 {&:extend(.h6); }
   &:after { .clearfix; }
 }
 /* ==========================================================================
+   _PRELOADER
+   ========================================================================== */
+@preloader-width: 400px;
+@preloader-keyframes: 25;
+@preloader-duration: 1.2s / 30 * @preloader-keyframes;
+.keyframes(@name) {
+  @-webkit-keyframes @name { .-frames(-webkit-); }
+  @-moz-keyframes @name { .-frames(-moz-); }
+  @-ms-keyframes @name { .-frames(-ms-); }
+  @-o-keyframes @name { .-frames(-o-); }
+  @keyframes @name { .-frames(); }
+}
+.percent(@n, @i: 0, @p: @i * 100% / @preloader-keyframes) when (@i =< @n) {
+  @{p} {
+    background-position: 0 -(@i * @preloader-width);
+  }
+  .percent(@n, (@i + 1));
+}
+& {
+  .keyframes(preloader-animation);
+  .-frames(@-...) {
+    .percent(@preloader-keyframes);
+  }
+}
+.preloader {
+  margin: auto;
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 500;
+  opacity: 0;
+  background: @color-preloader;
+  transition: opacity 1.5s .5s ease;
+  .unselectable;
+
+  &:before {
+    width: @preloader-width;
+    height: @preloader-width;
+    margin: auto;
+    display: block;
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    background: @color-preloader url('@{images}/preloader.jpg') center center no-repeat;
+    background-size: @preloader-width @preloader-width * (@preloader-keyframes + 1);
+    animation-duration: @preloader-duration;
+    animation-iteration-count: infinite;
+    animation-timing-function: step-start;
+    animation-name: preloader-animation;
+    transition: opacity .5s ease;
+
+    .preloading-hidden & { opacity: 0 !important; }
+    .loading-hidden & { opacity: 1; }
+  }
+
+  .loading-hidden & { opacity: 1; }
+  .loading & { display: block; }
+}
+/* ==========================================================================
    _HEADER
    ========================================================================== */
 .header {
@@ -316,10 +382,9 @@ h6 {&:extend(.h6); }
   }
 }
 /* ==========================================================================
-   _FULLPAGE
+   _MAIN
    ========================================================================== */
 .main {
-  @duration-section: .4s;
   width: 100%;
   height: 100%;
   position: fixed;
@@ -330,8 +395,22 @@ h6 {&:extend(.h6); }
   z-index: 5;
   cursor: default;
   .unselectable;
+}
+.page {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+}
+/* ==========================================================================
+   _INDEX
+   ========================================================================== */
+.sections {
+  @duration-section: .4s;
+  width: 100%;
+  height: 100%;
+  position: relative;
 
-  .section {
+  > .section {
     display: none;
     opacity: 0;
     position: absolute;
@@ -344,7 +423,7 @@ h6 {&:extend(.h6); }
     &.pre { display: block; }
     &.active { opacity: 1; transition: opacity @duration-section; }
 
-    a {
+    > a {
       border: 3px solid @color-black;
       display: block;
       position: relative;
@@ -411,21 +490,21 @@ h6 {&:extend(.h6); }
       }
     }
 
-    &#about { margin: -13.5vw 0 0 6vw; }
-    &#process { margin: -10.5vw 0 0 -17vw; }
-    &#news { margin: -2vw 0 0 19vw; }
-    &#skills { margin: 8vw 0 0 17vw; }
-    &#viralize { margin: -2vw 0 0 -35.5vw; }
-    &#references { margin: -4vw 0 0 -18vw; }
-    &#contact { margin: -13vw 0 0 11vw; }
+    &-about { margin: -13.5vw 0 0 6vw; }
+    &-process { margin: -10.5vw 0 0 -17vw; }
+    &-news { margin: -2vw 0 0 19vw; }
+    &-skills { margin: 8vw 0 0 17vw; }
+    &-viralize { margin: -2vw 0 0 -35.5vw; }
+    &-references { margin: -4vw 0 0 -18vw; }
+    &-contact { margin: -13vw 0 0 11vw; }
   }
 }
+/** Dots */
 .dots {
   width: 219px;
-  padding: 0;
   margin: auto;
-  list-style: none;
   overflow: hidden;
+  display: block;
   position: fixed;
   right: 0;
   bottom: 30px;
@@ -442,38 +521,38 @@ h6 {&:extend(.h6); }
 
   .ui-hidden & { opacity: 0; }
 
-  > li {
+  > a {
+    width: 30px;
+    height: 10px;
+    border: 3px solid @color-black;
     display: block;
     float: left;
+    overflow: hidden;
+    text-indent: -1000px;
+    background: @color-white;
+    transition: background-color @duration;
+
+    @media @sm {
+      width: 88px;
+      height: 15px;
+    }
 
     &:first-child { display: none; }
     &:not(:nth-child(2)) { margin-left: -3px; }
-
-    > a {
-      width: 30px;
-      height: 10px;
-      border: 3px solid @color-black;
-      display: block;
-      background: @color-white;
-      transition: background-color @duration;
-
-      @media @sm {
-        width: 88px;
-        height: 15px;
-      }
-    }
-
-    &.played {
-      a { background: @color-light; }
-    }
-    &.active {
-      a { background: @color-black; }
-    }
+    &.played { background: @color-light; }
+    &.active { background: @color-black; }
   }
 }
 /* ==========================================================================
    _VIDEO
    ========================================================================== */
+.audio {
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  z-index: 0;
+}
 .video {
   width: 100%;
   height: 100%;
@@ -483,7 +562,7 @@ h6 {&:extend(.h6); }
   right: 0;
   bottom: 0;
   left: 0;
-  z-index: 1;
+  z-index: 0;
   .unselectable;
 
   & video {
@@ -503,16 +582,16 @@ h6 {&:extend(.h6); }
     opacity: 0;
     &.visible { opacity: 1; }
 
-    /*
     &.backward {
-      width: 100px;
-      height: 50px;
+      /*
+      width: 400px;
+      height: 200px;
       margin-top: -400px !important;
       margin-right: -300px !important;
       z-index: 100 !important;
       opacity: 1 !important;
+      */
     }
-    */
 
     @media @md {
       width: 200%;
@@ -522,70 +601,4 @@ h6 {&:extend(.h6); }
   .audio {
     display: none;
   }
-}
-/* ==========================================================================
-   _PRELOADER
-   ========================================================================== */
-@preloader-width: 400px;
-@preloader-keyframes: 25;
-@preloader-duration: 1.2s / 30 * @preloader-keyframes;
-.keyframes(@name) {
-  @-webkit-keyframes @name { .-frames(-webkit-); }
-  @-moz-keyframes @name { .-frames(-moz-); }
-  @-ms-keyframes @name { .-frames(-ms-); }
-  @-o-keyframes @name { .-frames(-o-); }
-  @keyframes @name { .-frames(); }
-}
-.percent(@n, @i: 0, @p: @i * 100% / @preloader-keyframes) when (@i =< @n) {
-  @{p} {
-    background-position: 0 -(@i * @preloader-width);
-  }
-  .percent(@n, (@i + 1));
-}
-& {
-  .keyframes(preloader-animation);
-  .-frames(@-...) {
-    .percent(@preloader-keyframes);
-  }
-}
-.preloader {
-  margin: auto;
-  display: none;
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 500;
-  opacity: 0;
-  background: @color-preloader;
-  transition: opacity 1.5s .5s ease;
-  .unselectable;
-
-  &:before {
-    width: @preloader-width;
-    height: @preloader-width;
-    margin: auto;
-    display: block;
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    opacity: 0;
-    background: @color-preloader url('@{images}/preloader.jpg') center center no-repeat;
-    background-size: @preloader-width @preloader-width * (@preloader-keyframes + 1);
-    animation-duration: @preloader-duration;
-    animation-iteration-count: infinite;
-    animation-timing-function: step-start;
-    animation-name: preloader-animation;
-    transition: opacity .5s ease;
-
-    .preloading-hidden & { opacity: 0 !important; }
-    .loading-hidden & { opacity: 1; }
-  }
-
-  .loading-hidden & { opacity: 1; }
-  .loading & { display: block; }
 }

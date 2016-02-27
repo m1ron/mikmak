@@ -170,399 +170,6 @@ h6 {
   clear: both;
 }
 /* ==========================================================================
-   _HEADER
-   ========================================================================== */
-.header {
-  position: fixed;
-  top: 0;
-  right: 0;
-  left: 0;
-  z-index: 10;
-  cursor: default;
-  opacity: 1;
-  transition: opacity 0.2s ease;
-}
-.ui-hidden .header {
-  opacity: 0;
-}
-.header .logo {
-  width: 75px;
-  height: 75px;
-  padding: 0;
-  margin: 0;
-  display: block;
-  position: absolute;
-  top: 15px;
-  left: 20px;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: -moz-none;
-  -ms-user-select: none;
-  -o-user-select: none;
-  user-select: none;
-}
-@media (min-width: 750px) {
-  .header .logo {
-    width: 150px;
-    height: 150px;
-  }
-}
-.header .logo img {
-  width: 100%;
-  height: 100%;
-  display: block;
-}
-.header .language {
-  margin: 0;
-  display: block;
-  position: absolute;
-  top: 30px;
-  right: 75px;
-  font-size: 12px;
-  line-height: 18px;
-  font-weight: bold;
-  color: #fff;
-  letter-spacing: .1em;
-}
-.header .language a {
-  color: #fff;
-}
-.header .language a.active {
-  color: #000;
-  cursor: default;
-}
-.header .language a:hover,
-.header .language a:focus {
-  color: #000;
-  text-decoration: none;
-}
-.header .toggle {
-  width: 37px;
-  height: 37px;
-  border: 3px solid #000;
-  display: block;
-  position: absolute;
-  top: 20px;
-  right: 25px;
-  background: #fff;
-  transition: background-color 0.1s;
-}
-.header .toggle:before,
-.header .toggle:after {
-  width: 20px;
-  height: 3px;
-  margin: -1px 0 0 -10px;
-  display: block;
-  position: absolute;
-  top: 15px;
-  left: 15px;
-  overflow: hidden;
-  content: '';
-  background: #000;
-  transition: background-color 0.1s;
-}
-.header .toggle:after {
-  -webkit-transform: rotate(90deg);
-  -moz-transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
-  -o-transform: rotate(90deg);
-  transform: rotate(90deg);
-  -webkit-backface-visibility: hidden;
-}
-.header .toggle:hover {
-  background: #000;
-}
-.header .toggle:hover:before,
-.header .toggle:hover:after {
-  background: #fff;
-}
-/* ==========================================================================
-   _NAV
-   ========================================================================== */
-.nav {
-  width: 225px;
-  border: 3px solid #000;
-  display: none;
-  position: absolute;
-  top: 55px;
-  right: 25px;
-  font-size: 12px;
-  font-weight: bold;
-  line-height: 14px;
-  text-transform: uppercase;
-  letter-spacing: .15em;
-  z-index: 10;
-  background: #fff;
-}
-.nav-open .nav {
-  display: block;
-}
-.nav .menu {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-}
-.nav .menu > li > a {
-  padding: 4px 8px;
-  border-top: 3px solid #000;
-  display: block;
-  transition: color 0.1s, background-color 0.1s;
-}
-.nav .menu > li > a:focus,
-.nav .menu > li > a:hover {
-  color: #fff;
-  text-decoration: none;
-  background: #000;
-}
-.nav .menu > li:first-child > a {
-  border: none;
-}
-/* ==========================================================================
-   _FULLPAGE
-   ========================================================================== */
-.main {
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 5;
-  cursor: default;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: -moz-none;
-  -ms-user-select: none;
-  -o-user-select: none;
-  user-select: none;
-}
-.main .section {
-  display: none;
-  opacity: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  z-index: 20;
-  background: #fff;
-  transition: opacity .2s;
-}
-.main .section.pre {
-  display: block;
-}
-.main .section.active {
-  opacity: 1;
-  transition: opacity 0.4s;
-}
-.main .section a {
-  border: 3px solid #000;
-  display: block;
-  position: relative;
-  z-index: 5;
-  text-transform: uppercase;
-  transition: background-color 0.1s, color 0.1s;
-}
-.main .section a:before,
-.main .section a:after {
-  width: 14px;
-  height: 3px;
-  margin: -1px -7px 0 0;
-  display: block;
-  position: absolute;
-  bottom: 12px;
-  right: 16px;
-  z-index: 10;
-  overflow: hidden;
-  content: '';
-  background: #fff;
-  transition: background-color 0.1s;
-}
-.main .section a:after {
-  -webkit-transform: rotate(90deg);
-  -moz-transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
-  -o-transform: rotate(90deg);
-  transform: rotate(90deg);
-  -webkit-backface-visibility: hidden;
-}
-.main .section a .text {
-  padding: 6px 36px 5px 7px;
-  margin: 0;
-  font-size: 15px;
-  line-height: 18px;
-  font-weight: bold;
-  letter-spacing: .125em;
-  color: inherit;
-  display: block;
-}
-.main .section a .heading {
-  padding: 9px 36px 5px 7px;
-  border-top: 3px solid #000;
-  margin: 0;
-  font-size: 11px;
-  line-height: 14px;
-  font-style: normal;
-  font-weight: bold;
-  letter-spacing: .125em;
-  color: inherit;
-  display: block;
-}
-.main .section a .heading:before {
-  width: 38px;
-  height: 34px;
-  display: block;
-  content: '';
-  position: absolute;
-  right: -3px;
-  bottom: -3px;
-  z-index: 1;
-  background: #000;
-}
-.main .section a:focus,
-.main .section a:hover {
-  color: #fff;
-  text-decoration: none;
-  background: #000;
-}
-.main .section#about {
-  margin: -13.5vw 0 0 6vw;
-}
-.main .section#process {
-  margin: -10.5vw 0 0 -17vw;
-}
-.main .section#news {
-  margin: -2vw 0 0 19vw;
-}
-.main .section#skills {
-  margin: 8vw 0 0 17vw;
-}
-.main .section#viralize {
-  margin: -2vw 0 0 -35.5vw;
-}
-.main .section#references {
-  margin: -4vw 0 0 -18vw;
-}
-.main .section#contact {
-  margin: -13vw 0 0 11vw;
-}
-.dots {
-  width: 219px;
-  padding: 0;
-  margin: auto;
-  list-style: none;
-  overflow: hidden;
-  position: fixed;
-  right: 0;
-  bottom: 30px;
-  left: 0;
-  z-index: 10;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: -moz-none;
-  -ms-user-select: none;
-  -o-user-select: none;
-  user-select: none;
-  opacity: 1;
-  transition: opacity 0.2s ease;
-}
-@media (min-width: 750px) {
-  .dots {
-    width: 683px;
-    bottom: 40px;
-  }
-}
-.ui-hidden .dots {
-  opacity: 0;
-}
-.dots > li {
-  display: block;
-  float: left;
-}
-.dots > li:first-child {
-  display: none;
-}
-.dots > li:not(:nth-child(2)) {
-  margin-left: -3px;
-}
-.dots > li > a {
-  width: 30px;
-  height: 10px;
-  border: 3px solid #000;
-  display: block;
-  background: #fff;
-  transition: background-color 0.2s ease;
-}
-@media (min-width: 750px) {
-  .dots > li > a {
-    width: 88px;
-    height: 15px;
-  }
-}
-.dots > li.played a {
-  background: #ccc;
-}
-.dots > li.active a {
-  background: #000;
-}
-/* ==========================================================================
-   _VIDEO
-   ========================================================================== */
-.video {
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 1;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: -moz-none;
-  -ms-user-select: none;
-  -o-user-select: none;
-  user-select: none;
-}
-.video video {
-  width: auto;
-  max-width: 3200px;
-  height: 100%;
-  max-height: 1800px;
-  display: block;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  z-index: 1;
-  opacity: 0;
-  /*
-    &.backward {
-      width: 100px;
-      height: 50px;
-      margin-top: -400px !important;
-      margin-right: -300px !important;
-      z-index: 100 !important;
-      opacity: 1 !important;
-    }
-    */
-}
-.video video.visible {
-  opacity: 1;
-}
-@media (min-width: 970px) {
-  .video video {
-    width: 200%;
-    height: auto;
-  }
-}
-.video .audio {
-  display: none;
-}
-/* ==========================================================================
    _PRELOADER
    ========================================================================== */
 @-webkit-keyframes preloader-animation {
@@ -1015,4 +622,416 @@ h6 {
 }
 .loading .preloader {
   display: block;
+}
+/* ==========================================================================
+   _HEADER
+   ========================================================================== */
+.header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 10;
+  cursor: default;
+  opacity: 1;
+  transition: opacity 0.2s ease;
+}
+.ui-hidden .header {
+  opacity: 0;
+}
+.header .logo {
+  width: 75px;
+  height: 75px;
+  padding: 0;
+  margin: 0;
+  display: block;
+  position: absolute;
+  top: 15px;
+  left: 20px;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: -moz-none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+@media (min-width: 750px) {
+  .header .logo {
+    width: 150px;
+    height: 150px;
+  }
+}
+.header .logo img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.header .language {
+  margin: 0;
+  display: block;
+  position: absolute;
+  top: 30px;
+  right: 75px;
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: bold;
+  color: #fff;
+  letter-spacing: .1em;
+}
+.header .language a {
+  color: #fff;
+}
+.header .language a.active {
+  color: #000;
+  cursor: default;
+}
+.header .language a:hover,
+.header .language a:focus {
+  color: #000;
+  text-decoration: none;
+}
+.header .toggle {
+  width: 37px;
+  height: 37px;
+  border: 3px solid #000;
+  display: block;
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  background: #fff;
+  transition: background-color 0.1s;
+}
+.header .toggle:before,
+.header .toggle:after {
+  width: 20px;
+  height: 3px;
+  margin: -1px 0 0 -10px;
+  display: block;
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  overflow: hidden;
+  content: '';
+  background: #000;
+  transition: background-color 0.1s;
+}
+.header .toggle:after {
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg);
+  -webkit-backface-visibility: hidden;
+}
+.header .toggle:hover {
+  background: #000;
+}
+.header .toggle:hover:before,
+.header .toggle:hover:after {
+  background: #fff;
+}
+/* ==========================================================================
+   _NAV
+   ========================================================================== */
+.nav {
+  width: 225px;
+  border: 3px solid #000;
+  display: none;
+  position: absolute;
+  top: 55px;
+  right: 25px;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 14px;
+  text-transform: uppercase;
+  letter-spacing: .15em;
+  z-index: 10;
+  background: #fff;
+}
+.nav-open .nav {
+  display: block;
+}
+.nav .menu {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.nav .menu > li > a {
+  padding: 4px 8px;
+  border-top: 3px solid #000;
+  display: block;
+  transition: color 0.1s, background-color 0.1s;
+}
+.nav .menu > li > a:focus,
+.nav .menu > li > a:hover {
+  color: #fff;
+  text-decoration: none;
+  background: #000;
+}
+.nav .menu > li:first-child > a {
+  border: none;
+}
+/* ==========================================================================
+   _MAIN
+   ========================================================================== */
+.main {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 5;
+  cursor: default;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: -moz-none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+.page {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+}
+/* ==========================================================================
+   _INDEX
+   ========================================================================== */
+.sections {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.sections > .section {
+  display: none;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 20;
+  background: #fff;
+  transition: opacity .2s;
+}
+.sections > .section.pre {
+  display: block;
+}
+.sections > .section.active {
+  opacity: 1;
+  transition: opacity 0.4s;
+}
+.sections > .section > a {
+  border: 3px solid #000;
+  display: block;
+  position: relative;
+  z-index: 5;
+  text-transform: uppercase;
+  transition: background-color 0.1s, color 0.1s;
+}
+.sections > .section > a:before,
+.sections > .section > a:after {
+  width: 14px;
+  height: 3px;
+  margin: -1px -7px 0 0;
+  display: block;
+  position: absolute;
+  bottom: 12px;
+  right: 16px;
+  z-index: 10;
+  overflow: hidden;
+  content: '';
+  background: #fff;
+  transition: background-color 0.1s;
+}
+.sections > .section > a:after {
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg);
+  -webkit-backface-visibility: hidden;
+}
+.sections > .section > a .text {
+  padding: 6px 36px 5px 7px;
+  margin: 0;
+  font-size: 15px;
+  line-height: 18px;
+  font-weight: bold;
+  letter-spacing: .125em;
+  color: inherit;
+  display: block;
+}
+.sections > .section > a .heading {
+  padding: 9px 36px 5px 7px;
+  border-top: 3px solid #000;
+  margin: 0;
+  font-size: 11px;
+  line-height: 14px;
+  font-style: normal;
+  font-weight: bold;
+  letter-spacing: .125em;
+  color: inherit;
+  display: block;
+}
+.sections > .section > a .heading:before {
+  width: 38px;
+  height: 34px;
+  display: block;
+  content: '';
+  position: absolute;
+  right: -3px;
+  bottom: -3px;
+  z-index: 1;
+  background: #000;
+}
+.sections > .section > a:focus,
+.sections > .section > a:hover {
+  color: #fff;
+  text-decoration: none;
+  background: #000;
+}
+.sections > .section-about {
+  margin: -13.5vw 0 0 6vw;
+}
+.sections > .section-process {
+  margin: -10.5vw 0 0 -17vw;
+}
+.sections > .section-news {
+  margin: -2vw 0 0 19vw;
+}
+.sections > .section-skills {
+  margin: 8vw 0 0 17vw;
+}
+.sections > .section-viralize {
+  margin: -2vw 0 0 -35.5vw;
+}
+.sections > .section-references {
+  margin: -4vw 0 0 -18vw;
+}
+.sections > .section-contact {
+  margin: -13vw 0 0 11vw;
+}
+/** Dots */
+.dots {
+  width: 219px;
+  margin: auto;
+  overflow: hidden;
+  display: block;
+  position: fixed;
+  right: 0;
+  bottom: 30px;
+  left: 0;
+  z-index: 10;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: -moz-none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  opacity: 1;
+  transition: opacity 0.2s ease;
+}
+@media (min-width: 750px) {
+  .dots {
+    width: 683px;
+    bottom: 40px;
+  }
+}
+.ui-hidden .dots {
+  opacity: 0;
+}
+.dots > a {
+  width: 30px;
+  height: 10px;
+  border: 3px solid #000;
+  display: block;
+  float: left;
+  overflow: hidden;
+  text-indent: -1000px;
+  background: #fff;
+  transition: background-color 0.2s ease;
+}
+@media (min-width: 750px) {
+  .dots > a {
+    width: 88px;
+    height: 15px;
+  }
+}
+.dots > a:first-child {
+  display: none;
+}
+.dots > a:not(:nth-child(2)) {
+  margin-left: -3px;
+}
+.dots > a.played {
+  background: #ccc;
+}
+.dots > a.active {
+  background: #000;
+}
+/* ==========================================================================
+   _VIDEO
+   ========================================================================== */
+.audio {
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  z-index: 0;
+}
+.video {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 0;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: -moz-none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+.video video {
+  width: auto;
+  max-width: 3200px;
+  height: 100%;
+  max-height: 1800px;
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  opacity: 0;
+}
+.video video.visible {
+  opacity: 1;
+}
+.video video.backward {
+  /*
+      width: 400px;
+      height: 200px;
+      margin-top: -400px !important;
+      margin-right: -300px !important;
+      z-index: 100 !important;
+      opacity: 1 !important;
+      */
+}
+@media (min-width: 970px) {
+  .video video {
+    width: 200%;
+    height: auto;
+  }
+}
+.video .audio {
+  display: none;
 }

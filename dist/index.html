@@ -41,80 +41,83 @@
 
 	<header class="header">
 		<h1 class="hidden">Mikmak Studio</h1>
-		<figure class="logo"><img src="img/logo.svg" alt="Mikmak Studio"></figure>
+		<figure class="logo"><img src="img/logo.svg" width="150" height="150" alt="Mikmak Studio"></figure>
 		<p class="language"><a href="#">FR</a>/<a href="#" class="active">EN</a></p>
 		<a href="#nav" class="toggle"></a>
 	</header>
 
 	<nav id="nav" class="nav">
 		<ul class="menu">
-			<li><a href="#">About us</a></li>
-			<li><a href="#">Our process</a></li>
-			<li><a href="#">News</a></li>
-			<li><a href="#">Our skills</a></li>
-			<li><a href="#">Viralize</a></li>
-			<li><a href="#">Our references</a></li>
-			<li><a href="#">Contact</a></li>
+			<li><a href="#about">About us</a></li>
+			<li><a href="#process">Our process</a></li>
+			<li><a href="#news">News</a></li>
+			<li><a href="#skills">Our skills</a></li>
+			<li><a href="#viralize">Viralize</a></li>
+			<li><a href="#references">Our references</a></li>
+			<li><a href="#contact">Contact</a></li>
 		</ul>
 	</nav>
 
-	<main class="main">
-		<section id="about" class="section">
-			<a href="#">
-				<p class="text">Choose a Beautiful Idea</p>
-				<h2 class="heading">About Us</h2>
-			</a>
-		</section>
-		<section id="process" class="section">
-			<a href="#">
-				<p class="text">Cut in Slices</p>
-				<h2 class="heading">Our Process</h2>
-			</a>
-		</section>
-		<section id="news" class="section">
-			<a href="#">
-				<p class="text">Fry Over High Heat</p>
-				<h2 class="heading">News</h2>
-			</a>
-		</section>
-		<section id="skills" class="section">
-			<a href="#">
-				<p class="text">Add Seasoning</p>
-				<h2 class="heading">Our Skills</h2>
-			</a>
-		</section>
-		<section id="viralize" class="section">
-			<a href="#">
-				<p class="text">Arrange The Plate</p>
-				<h2 class="heading">Viralize</h2>
-			</a>
-		</section>
-		<section id="references" class="section">
-			<a href="#">
-				<p class="text">Enjoy Your Meal</p>
-				<h2 class="heading">Our References</h2>
-			</a>
-		</section>
-		<section id="contact" class="section">
-			<a href="#">
-				<p class="text">A Dessert?</p>
-				<h2 class="heading">Contact</h2>
-			</a>
-		</section>
-
-		<div class="video">
-			<video class="forward" preload="auto" muted>
-				<source src="video/forward.mp4" type="video/mp4">
-				<source src="video/forward.webm" type="video/webm">
-			</video>
-			<video class="backward" preload="auto" muted>
-				<source src="video/backward.mp4" type="video/mp4">
-				<source src="video/backward.webm" type="video/webm">
-			</video>
-		</div>
-	</main>
-
 	<div class="preloader"></div>
+
+	<main class="main">
+		<section id="index" class="page page-index">
+			<ul class="sections">
+				<li class="section section-about">
+					<a href="#about">
+						<p class="text">Choose a Beautiful Idea</p>
+						<p class="heading">About Us</p>
+					</a>
+				</li>
+				<li class="section section-process">
+					<a href="#process">
+						<p class="text">Cut in Slices</p>
+						<p class="heading">Our Process</p>
+					</a>
+				</li>
+				<li class="section section-news">
+					<a href="#news">
+						<p class="text">Fry Over High Heat</p>
+						<p class="heading">News</p>
+					</a>
+				</li>
+				<li class="section section-skills">
+					<a href="#skills">
+						<p class="text">Add Seasoning</p>
+						<p class="heading">Our Skills</p>
+					</a>
+				</li>
+				<li class="section section-viralize">
+					<a href="#viralize">
+						<p class="text">Arrange The Plate</p>
+						<p class="heading">Viralize</p>
+					</a>
+				</li>
+				<li class="section section-references">
+					<a href="#references">
+						<p class="text">Enjoy Your Meal</p>
+						<p class="heading">Our References</p>
+					</a>
+				</li>
+				<li class="section section-contact">
+					<a href="#contact">
+						<p class="text">A Dessert?</p>
+						<p class="heading">Contact</p>
+					</a>
+				</li>
+			</ul>
+			<div class="video">
+				<video class="forward" preload="auto" muted>
+					<source src="video/forward.mp4" type="video/mp4">
+					<source src="video/forward.webm" type="video/webm">
+				</video>
+				<video class="backward" preload="auto" muted>
+					<source src="video/backward.mp4" type="video/mp4">
+					<source src="video/backward.webm" type="video/webm">
+				</video>
+			</div>
+		</section>
+	</main>
 
 	<script src="js/vendor/jquery.min.js"></script>
 	<script src="js/plugins.js"></script>

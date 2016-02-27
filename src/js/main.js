@@ -29,7 +29,9 @@ $(document).ready(function () {
 	/** Video files array */
 	v.video = [
 		{name: 'forward', src: v.path.video + 'forward', mp4: 3707.360, webm: 1309.349},
-		{name: 'backward', src: v.path.video + 'backward', mp4: 3700.735, webm: 1216.921}
+		{name: 'backward', src: v.path.video + 'backward', mp4: 3700.735, webm: 1216.921},
+		{name: 'process', src: v.path.video + 'process', mp4: 543.333, webm: 182.958},
+		{name: 'process-loop', src: v.path.video + 'process-loop', mp4: 320.474, webm: 61.036}
 	];
 
 	/** Start preloader */
@@ -42,7 +44,7 @@ $(document).ready(function () {
 
 /**
  *  Initialize preloader
- * */
+ **/
 function initPreloader() {
 	function showPreloader() {
 		body.removeClass('preloading-hidden');
@@ -88,7 +90,6 @@ function initPreloader() {
 	$(v.video).each(function (i) {
 		files.push({"type": "VIDEO", "sources": {"h264": {"source": v.video[i].src + '.mp4', "size": v.video[i].mp4}, "webm": {"source": v.video[i].src + '.webm', "size": v.video[i].webm}}})
 	});
-	//console.log(files);
 
 	var img = new Image();
 	$(img).on('load', showPreloader);
@@ -98,7 +99,7 @@ function initPreloader() {
 
 /**
  *  Initialize UI
- * */
+ **/
 function initUI() {
 
 	/** Header */
@@ -106,22 +107,51 @@ function initUI() {
 		function Handler(event) {
 			var target = $(event.target);
 			if (target.closest('.nav').length === 0) {
-				Toggle(event);
+				navToggle();
 			}
 		}
 
-		function Toggle(e) {
-			if (body.hasClass('nav-open')) {
-				body.removeClass('nav-open').off('click', Handler);
-			} else {
+		window.navToggle = function () {
+			if (body.hasClass('inner')) {
+				var target = $('.page.active');
+				//$('.loop', target)[0].stop();
+				body.removeClass('inner')
+				target.removeClass('active');
 				setTimeout(function () {
-					body.addClass('nav-open').on('click', Handler);
-				}, 10);
+					target.removeClass('pre');
+				}, 500);
+			} else {
+				if (body.hasClass('nav-open')) {
+					body.removeClass('nav-open').off('click', Handler);
+				} else {
+					setTimeout(function () {
+						body.addClass('nav-open').on('click', Handler);
+					}, 10);
+				}
 			}
-			e.preventDefault();
-		}
+			event.preventDefault();
+		};
 
-		$('.toggle', this).on('click', Toggle);
+		$('.toggle', this).on('click', navToggle);
+	});
+
+	/** Menu */
+	$('.menu').each(function () {
+		$('a', this).on('click', function (event) {
+			var target = $(this).attr('href');
+			if ($(this).closest('.nav').length > 0) {
+				navToggle();
+			}
+			if ($(target).length > 0) {
+				body.addClass('inner');
+				$(target).addClass('pre');
+				setTimeout(function () {
+					$(target).addClass('active');
+					$('.intro', target)[0].play();
+				}, 20);
+			}
+			event.preventDefault();
+		});
 	});
 
 	initIndex();
@@ -130,7 +160,7 @@ function initUI() {
 
 /**
  * Initialize index page
- * */
+ **/
 function initIndex() {
 	$('.page-index').each(function () {
 		var self = $(this), startTouchX = 0, startTouchY = 0;
@@ -141,8 +171,8 @@ function initIndex() {
 		/** Video sections array */
 		v.sections = [
 			{time: 0, id: 'preloader', title: 'Preloader'},
-			{time: 2.8, id: 'about', title: 'About us'},
-			{time: 5.15, id: 'process', title: 'Our process'},
+			{time: 3.4, id: 'about', title: 'About us'},
+			{time: 5.2, id: 'process', title: 'Our process'},
 			{time: 7.3, id: 'news', title: 'News'},
 			{time: 9.65, id: 'skills', title: 'Our skills'},
 			{time: 20.2, id: 'viralize', title: 'Viralize'},

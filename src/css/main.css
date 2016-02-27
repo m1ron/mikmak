@@ -2,6 +2,14 @@
  * Project: Mikmak Studio
  * File: Main styles
  */
+/* TRANSLATE */
+.transition-none {
+  -webkit-transition: none;
+  -moz-transition: none;
+  -ms-transition: none;
+  -o-transition: none;
+  transition: none;
+}
 /* ==========================================================================
    _FONTS
    ========================================================================== */
@@ -575,7 +583,7 @@ h6 {
 .preloader {
   margin: auto;
   display: none;
-  position: fixed;
+  position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
@@ -627,7 +635,7 @@ h6 {
    _HEADER
    ========================================================================== */
 .header {
-  position: fixed;
+  position: absolute;
   top: 0;
   right: 0;
   left: 0;
@@ -699,7 +707,19 @@ h6 {
   top: 20px;
   right: 25px;
   background: #fff;
-  transition: background-color 0.1s;
+  -webkit-transition: -webkit-transform 0.2s ease;
+  -moz-transition: -moz-transform 0.2s ease;
+  -ms-transition: -ms-transform 0.2s ease;
+  -o-transition: -o-transform 0.2s ease;
+  transition: transform 0.2s ease;
+}
+.inner .header .toggle {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+  -webkit-backface-visibility: hidden;
 }
 .header .toggle:before,
 .header .toggle:after {
@@ -777,13 +797,25 @@ h6 {
 .main {
   width: 100%;
   height: 100%;
-  position: fixed;
+  position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
+  overflow: hidden;
   z-index: 5;
   cursor: default;
+}
+.page {
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  z-index: 5;
+  transition: left .5s;
   -webkit-user-select: none;
   -khtml-user-select: none;
   -moz-user-select: -moz-none;
@@ -791,17 +823,27 @@ h6 {
   -o-user-select: none;
   user-select: none;
 }
-.page {
-  width: 100%;
-  height: 100%;
-  position: fixed;
+.page.pre {
+  opacity: 1;
+  display: block;
+}
+.page.active {
+  left: 0;
+}
+.page .content {
+  position: relative;
+  z-index: 10;
+  display: none;
 }
 /* ==========================================================================
-   _INDEX
+   _SECTIONS
    ========================================================================== */
 .sections {
   width: 100%;
   height: 100%;
+  padding: 0;
+  margin: 0;
+  list-style: none;
   position: relative;
 }
 .sections > .section {
@@ -912,64 +954,6 @@ h6 {
 .sections > .section-contact {
   margin: -13vw 0 0 11vw;
 }
-/** Dots */
-.dots {
-  width: 219px;
-  margin: auto;
-  overflow: hidden;
-  display: block;
-  position: fixed;
-  right: 0;
-  bottom: 30px;
-  left: 0;
-  z-index: 10;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: -moz-none;
-  -ms-user-select: none;
-  -o-user-select: none;
-  user-select: none;
-  opacity: 1;
-  transition: opacity 0.2s ease;
-}
-@media (min-width: 750px) {
-  .dots {
-    width: 683px;
-    bottom: 40px;
-  }
-}
-.ui-hidden .dots {
-  opacity: 0;
-}
-.dots > a {
-  width: 30px;
-  height: 10px;
-  border: 3px solid #000;
-  display: block;
-  float: left;
-  overflow: hidden;
-  text-indent: -1000px;
-  background: #fff;
-  transition: background-color 0.2s ease;
-}
-@media (min-width: 750px) {
-  .dots > a {
-    width: 88px;
-    height: 15px;
-  }
-}
-.dots > a:first-child {
-  display: none;
-}
-.dots > a:not(:nth-child(2)) {
-  margin-left: -3px;
-}
-.dots > a.played {
-  background: #ccc;
-}
-.dots > a.active {
-  background: #000;
-}
 /* ==========================================================================
    _VIDEO
    ========================================================================== */
@@ -980,11 +964,17 @@ h6 {
   position: absolute;
   z-index: 0;
 }
+.audio audio {
+  opacity: 0;
+}
+/** Video */
 .video {
   width: 100%;
   height: 100%;
+  padding: 0;
+  margin: 0;
   overflow: hidden;
-  position: fixed;
+  position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
@@ -1034,4 +1024,74 @@ h6 {
 }
 .video .audio {
   display: none;
+}
+/** Dots */
+.dots {
+  width: 219px;
+  margin: auto;
+  overflow: hidden;
+  display: block;
+  position: absolute;
+  right: 0;
+  bottom: 30px;
+  left: 0;
+  z-index: 10;
+  opacity: 1;
+  transition: opacity 0.2s ease;
+}
+@media (min-width: 750px) {
+  .dots {
+    width: 683px;
+    bottom: 40px;
+  }
+}
+.ui-hidden .dots {
+  opacity: 0;
+}
+.dots > a {
+  width: 30px;
+  height: 10px;
+  border: 3px solid #000;
+  display: block;
+  float: left;
+  overflow: hidden;
+  text-indent: -1000px;
+  background: #fff;
+  transition: background-color 0.2s ease;
+}
+@media (min-width: 750px) {
+  .dots > a {
+    width: 88px;
+    height: 15px;
+  }
+}
+.dots > a:first-child {
+  display: none;
+}
+.dots > a:not(:nth-child(2)) {
+  margin-left: -3px;
+}
+.dots > a.played {
+  background: #ccc;
+}
+.dots > a.active {
+  background: #000;
+}
+/* ==========================================================================
+   _PAGES
+   ========================================================================== */
+/** Index */
+.page-index {
+  z-index: 1;
+  display: block;
+  opacity: 1;
+  background: #f65c8b;
+  left: 0;
+}
+/** Process */
+.page-process {
+  background: #7cc74c;
+}
+.page-process video {
+  width: 100%;
 }

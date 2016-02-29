@@ -14,9 +14,7 @@
 			console.log(key + " -> " + browser[key]);
 			if (browser[key]) {
 				var e = document.getElementsByTagName("body")[0];
-				var a = document.createAttribute("browser");
-				a.value = key;
-				e.setAttributeNode(a);
+				e.setAttribute("browser", key);
 			}
 		}
 	}
@@ -189,7 +187,6 @@ function initUI() {
 				}, longDelay);
 			}, smallDelay);
 		}
-		event.preventDefault();
 	}
 
 	/** Close inner page */

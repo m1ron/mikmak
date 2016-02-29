@@ -39,7 +39,7 @@ html {
   height: 100%;
   padding: 0;
   margin: 0;
-  font: 11px 'BentonSans', Arial, sans-serif;
+  font: 13px/15px Helvetica, Arial, sans-serif;
   color: #000;
   overflow: hidden;
   background: #fff;
@@ -51,7 +51,7 @@ body {
   min-width: 320px;
   height: 100%;
   overflow: hidden;
-  background: #f78a40;
+  background: #ff477f;
 }
 /* ==========================================================================
    _TEXT STYLES
@@ -101,6 +101,7 @@ h4,
 h5,
 h6 {
   margin: 0;
+  font-family: 'BentonSans', Arial, sans-serif;
   line-height: normal;
   font-weight: 300;
   color: #000;
@@ -763,9 +764,7 @@ h6 {
   position: absolute;
   top: 55px;
   right: 25px;
-  font-size: 12px;
-  font-weight: bold;
-  line-height: 14px;
+  font: bold 12px/14px 'BentonSans', Arial, sans-serif;
   text-transform: uppercase;
   letter-spacing: .15em;
   z-index: 10;
@@ -808,83 +807,6 @@ h6 {
   overflow: hidden;
   z-index: 5;
   cursor: default;
-}
-.page {
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  display: none;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 5;
-  transition: opacity 1s;
-}
-.page:before {
-  content: '';
-  display: block;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 9;
-}
-.page .content {
-  width: 310px;
-  padding: 10px 18px;
-  border: 3px solid #000;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  z-index: 15;
-  font-family: Helvetica, Arial, sans-serif;
-  font-size: 13px;
-  line-height: 15px;
-  background: #fff;
-  opacity: 0;
-  transition: opacity 0.75s 2.5s;
-  cursor: default;
-}
-.page .content .heading {
-  padding: 5px 18px 4px;
-  border-bottom: 3px solid #000;
-  margin: -10px -18px 10px;
-  font-size: 13px;
-  line-height: 15px;
-  font-weight: bold;
-  position: relative;
-  letter-spacing: .2em;
-  text-transform: none;
-  display: block;
-}
-.page .content .heading:before {
-  width: 76px;
-  border-left: 3px solid #000;
-  display: block;
-  content: '';
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACkAAAAnCAMAAACltJG0AAAAdVBMVEX///8aFxseHB8hHiL39/fMzMypqKn5+fnx8PGzsrNPTVBKSEtJR0praWz29vYoJSkcGBy9u718en3t7e3q6uqOjI5bWVsyMDMxMDPj4uQuKy+GhYdGQ0bm5ubf39+hoKFUU1W+vb6GhId1c3ZycXNzcHM+PT/uzfrvAAAAtUlEQVQ4y+3Uyw6CMBQE0KlUFHmIClaKID7//xNtqrQJiXEWTdw4y5uTmcCi6HdjqvMQCZPZMencsYvTyN5OcFnM9y+YbaQ7FsnKwjRe/uGvIOhG0NNgYQ4WrsFCgQmUn6AA2WgkC0sQ0xYqkI2qBtd4qCv4xsDQT2fhGoNP878nxMeoyTQH4aa/wAYsbMFCDRYKsNBI89hXckzxhrptpEt/MVCg1MN165I/7EsRZTd/u6f29gTnzh5OYxND3AAAAABJRU5ErkJggg==') repeat-x 0 0;
-  background-size: auto 100%;
-}
-.page .content p {
-  margin-bottom: 15px;
-}
-.page .content p:last-child {
-  margin-bottom: 0;
-}
-.page.pre {
-  display: block;
-}
-.page.active {
-  opacity: 1;
-  transition: opacity 0.5s;
-}
-.page.active .content {
-  opacity: 1;
 }
 /* ==========================================================================
    _SECTIONS
@@ -949,9 +871,7 @@ h6 {
 .sections > .section > a .text {
   padding: 6px 36px 5px 7px;
   margin: 0;
-  font-size: 15px;
-  line-height: 18px;
-  font-weight: bold;
+  font: bold 15px/18px 'BentonSans', Arial, sans-serif;
   letter-spacing: .125em;
   color: inherit;
   display: block;
@@ -1040,21 +960,24 @@ h6 {
   user-select: none;
 }
 .video video {
-  width: 1600px;
-  height: 1152px;
+  width: 100%;
+  max-width: 1600px;
+  height: auto;
+  max-height: 1152px;
   border: none;
   display: block;
   position: absolute;
   left: 50%;
   top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
   z-index: 1;
-  opacity: 0;
-  background-color: transparent !important;
+  -webkit-transform: translate(-50%, -50%) scale(1.01);
+  -moz-transform: translate(-50%, -50%) scale(1.01);
+  -ms-transform: translate(-50%, -50%) scale(1.01);
+  -o-transform: translate(-50%, -50%) scale(1.01);
+  transform: translate(-50%, -50%) scale(1.01);
   -webkit-backface-visibility: hidden;
+  background-color: transparent !important;
+  opacity: 0;
 }
 .video video.visible {
   opacity: 1;
@@ -1068,6 +991,12 @@ h6 {
       z-index: 100 !important;
       opacity: 1 !important;
       */
+}
+.video.video-index video {
+  width: 200%;
+  max-width: 3200px;
+  height: auto;
+  max-height: 1800px;
 }
 .video .audio {
   display: none;
@@ -1128,26 +1057,130 @@ h6 {
    _PAGES
    ========================================================================== */
 .page {
+  width: 100%;
+  height: 100%;
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  -webkit-transform: translate3d(100%, 0, 0);
+  -moz-transform: translate3d(100%, 0, 0);
+  -ms-transform: translate3d(100%, 0, 0);
+  -o-transform: translate3d(100%, 0, 0);
+  transform: translate3d(100%, 0, 0);
+  -webkit-backface-visibility: hidden;
+  -webkit-transition: -webkit-transform 0.5s ease-in-out;
+  -moz-transition: -moz-transform 0.5s ease-in-out;
+  -ms-transition: -ms-transform 0.5s ease-in-out;
+  -o-transition: -o-transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
   /** Index */
   /** Process */
+}
+body[browser="chrome"] .page {
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  -webkit-transition: none;
+  -moz-transition: none;
+  -ms-transition: none;
+  -o-transition: none;
+  transition: none;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+.page:before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 9;
+}
+.page .content {
+  width: 310px;
+  padding: 10px 18px;
+  border: 3px solid #000;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 15;
+  background: #fff;
+  opacity: 0;
+  transition: opacity 0.5s 2s ease-in-out;
+  cursor: default;
+}
+.page .content .heading {
+  padding: 5px 18px 4px;
+  border-bottom: 3px solid #000;
+  margin: -10px -18px 10px;
+  font-size: 13px;
+  line-height: 15px;
+  font-weight: bold;
+  position: relative;
+  letter-spacing: .2em;
+  text-transform: none;
+  display: block;
+}
+.page .content .heading:before {
+  width: 76px;
+  border-left: 3px solid #000;
+  display: block;
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACkAAAAnCAMAAACltJG0AAAAdVBMVEX///8aFxseHB8hHiL39/fMzMypqKn5+fnx8PGzsrNPTVBKSEtJR0praWz29vYoJSkcGBy9u718en3t7e3q6uqOjI5bWVsyMDMxMDPj4uQuKy+GhYdGQ0bm5ubf39+hoKFUU1W+vb6GhId1c3ZycXNzcHM+PT/uzfrvAAAAtUlEQVQ4y+3Uyw6CMBQE0KlUFHmIClaKID7//xNtqrQJiXEWTdw4y5uTmcCi6HdjqvMQCZPZMencsYvTyN5OcFnM9y+YbaQ7FsnKwjRe/uGvIOhG0NNgYQ4WrsFCgQmUn6AA2WgkC0sQ0xYqkI2qBtd4qCv4xsDQT2fhGoNP878nxMeoyTQH4aa/wAYsbMFCDRYKsNBI89hXckzxhrptpEt/MVCg1MN165I/7EsRZTd/u6f29gTnzh5OYxND3AAAAABJRU5ErkJggg==') repeat-x 0 0;
+  background-size: auto 100%;
+}
+.page .content p {
+  margin-bottom: 15px;
+}
+.page .content p:last-child {
+  margin-bottom: 0;
+}
+.page.pre {
+  display: block;
+}
+.page.active {
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  -webkit-backface-visibility: hidden;
+}
+.page.active .content {
+  opacity: 1;
+}
+body[browser="chrome"] .page.active {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
 }
 .page-index {
   z-index: 1;
   display: block;
-  opacity: 1;
-  background: #f65c8b;
+  opacity: 1 !important;
+  background: #ff477f;
   -webkit-user-select: none;
   -khtml-user-select: none;
   -moz-user-select: -moz-none;
   -ms-user-select: none;
   -o-user-select: none;
   user-select: none;
-}
-.page-index .video video {
-  width: 200%;
-  max-width: 3200px;
-  height: auto;
-  max-height: 1800px;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  -webkit-backface-visibility: hidden;
 }
 .page-process {
   background: #7dc74c;
@@ -1156,6 +1189,6 @@ h6 {
   width: 370px;
   margin: -1.3vw 0 0 16.7vw;
 }
-.page-process .video .loop {
-  margin-top: -29px;
+body[browser="safari"] .page-process {
+  background: #8ecb5c;
 }

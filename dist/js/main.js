@@ -1,6 +1,26 @@
 /*jslint nomen: true, regexp: true, unparam: true, sloppy: true, white: true, node: true */
 /*global window, console, document, $, jQuery, google */
 
+(function () {
+	window.browser = {};
+	browser.opera = (!!window.opr && !!opr.addons) || !!window.opera || navigator.userAgent.indexOf(' OPR/') >= 0;
+	browser.firefox = typeof InstallTrigger !== 'undefined';
+	browser.safari = Object.prototype.toString.call(window.HTMLElement).indexOf('Constructor') > 0;
+	browser.ie = /*@cc_on!@*/false || !!document.documentMode;
+	browser.edge = !browser.ie && !!window.StyleMedia;
+	browser.chrome = !!window.chrome && !!window.chrome.webstore;
+	for (var key in browser) {
+		if (browser.hasOwnProperty(key)) {
+			console.log(key + " -> " + browser[key]);
+			if (browser[key]) {
+				var e = document.getElementsByTagName("body")[0];
+				var a = document.createAttribute("browser");
+				a.value = key;
+				e.setAttributeNode(a);
+			}
+		}
+	}
+})();
 
 /** On document ready */
 $(document).ready(function () {
@@ -18,19 +38,19 @@ $(document).ready(function () {
 
 	/** Audio files array */
 	v.audio = [
-		{time: 1.9, src: v.path.audio + 'lamp', mp3: 22, volume: .15},
-		{time: 4.95, src: v.path.audio + 'knife', mp3: 19, volume: .2},
-		{time: 5.2, src: v.path.audio + 'pan', mp3: 50, volume: .2},
-		{time: 8.2, src: v.path.audio + 'pepper', mp3: 21, volume: .15},
-		{time: 9.7, src: v.path.audio + 'sauce', mp3: 63, volume: .2},
-		{time: 27, src: v.path.audio + 'cash', mp3: 38, volume: .2},
-		{time: 27.7, src: v.path.audio + 'coins', mp3: 18, volume: .4}
+		{name: 'lamp', time: 1.9, mp3: 22, volume: .15},
+		{name: 'knife', time: 4.95, mp3: 19, volume: .2},
+		{name: 'pan', time: 5.2, mp3: 50, volume: .2},
+		{name: 'pepper', time: 8.2, mp3: 21, volume: .15},
+		{name: 'sauce', time: 9.7, mp3: 63, volume: .2},
+		{name: 'cash', time: 27, mp3: 38, volume: .2},
+		{name: 'coins', time: 27.7, mp3: 18, volume: .4}
 	];
 
 	/** Video files array */
 	v.video = [
-		{name: 'forward', src: v.path.video + 'forward', mp4: 4749.513, webm: 1309.349, duration: 28.88},
-		{name: 'backward', src: v.path.video + 'backward', mp4: 4013.301, webm: 1216.921, duration: 28.88},
+		{name: 'index-forward', src: v.path.video + 'index-forward', mp4: 4749.513, webm: 1309.349, duration: 28.88},
+		{name: 'index-backward', src: v.path.video + 'index-backward', mp4: 4013.301, webm: 1216.921, duration: 28.88},
 		{name: 'process-intro', src: v.path.video + 'process-intro', mp4: 543.333, webm: 182.958, duration: 2.36},
 		{name: 'process-loop', src: v.path.video + 'process-loop', mp4: 320.474, webm: 61.036, duration: 2.6}
 	];
@@ -42,11 +62,11 @@ $(document).ready(function () {
 	 ];
 	 */
 
-	/** Start preloader */
-	initPreloader();
-
 	/** Fastclick */
 	FastClick.attach(document.body);
+
+	/** Start preloader */
+	initPreloader();
 });
 
 
@@ -95,7 +115,7 @@ function initPreloader() {
 	/** Build files array for html5loader */
 	var files = [];
 	$(v.audio).each(function (i) {
-		files.push({"type": "AUDIO", "sources": {"mp3": {"source": v.audio[i].src + '.mp3', "size": v.audio[i].mp3}}})
+		files.push({"type": "AUDIO", "sources": {"mp3": {"source": v.path.audio + v.audio[i].name + '.mp3', "size": v.audio[i].mp3}}})
 	});
 	$(v.video).each(function (i) {
 		files.push({"type": "VIDEO", "sources": {"h264": {"source": v.video[i].src + '.mp4', "size": v.video[i].mp4}, "webm": {"source": v.video[i].src + '.webm', "size": v.video[i].webm}}})
@@ -131,16 +151,7 @@ function initUI() {
 	/** On header click */
 	function toggleAction(event) {
 		if (body.hasClass('inner')) {// Go to inner oage
-			var target = $('.page.active');
-			//$('.loop', target)[0].stop();
-			body.removeClass('inner');
-			target.removeClass('active');
-			setTimeout(function () {
-				target.removeClass('pre');
-				$('.intro', target).addClass('visible')[0].currentTime = 0;
-				$('.loop', target).removeClass('visible')[0].currentTime = 0;
-				v.disabled = false;
-			}, longDelay);
+			closeInner();
 		} else {// Open nav
 			if (body.hasClass('nav-open')) {
 				body.removeClass('nav-open').off('click', menuHandler);
@@ -155,7 +166,13 @@ function initUI() {
 
 	/** On menu click */
 	function menuAction(event) {
-		var target = $($(this).attr('href')), intro = $('.intro', target), loop = $('.loop', target);
+		openInner($($(this).attr('href')));
+		event.preventDefault();
+	}
+
+	/** Open inner page */
+	function openInner(target) {
+		var intro = $('.intro', target), loop = $('.loop', target);
 		if (target.length > 0) {
 			v.disabled = true;
 			body.addClass('inner').removeClass('nav-open').off('click', menuHandler);
@@ -173,6 +190,20 @@ function initUI() {
 			}, smallDelay);
 		}
 		event.preventDefault();
+	}
+
+	/** Close inner page */
+	function closeInner() {
+		var target = $('.page.active');
+		//$('.loop', target)[0].stop();
+		body.removeClass('inner');
+		target.removeClass('active');
+		setTimeout(function () {
+			target.removeClass('pre');
+			$('.intro', target).addClass('visible')[0].currentTime = 0;
+			$('.loop', target).removeClass('visible')[0].currentTime = 0;
+			v.disabled = false;
+		}, longDelay);
 	}
 
 	/** Header */
@@ -215,7 +246,7 @@ function initIndex() {
 		/** Building audio tags */
 		v.audioWrap = $('<div class="audio"/>');
 		$(v.audio).each(function (i) {
-			v.audio[i].node = $('<audio/>').append('<source src="' + v.audio[i].src + '.mp3" type="audio/mpeg" preload>');
+			v.audio[i].node = $('<audio/>').append('<source src="' + v.path.audio + v.audio[i].name + '.mp3" type="audio/mpeg" preload>');
 			v.audio[i].node[0].volume = v.audio[i].volume;
 			v.audio[i].node.appendTo(v.audioWrap);
 			v.audio[i].played = false;

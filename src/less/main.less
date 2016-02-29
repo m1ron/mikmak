@@ -639,10 +639,9 @@ h6 {&:extend(.h6); }
   .unselectable;
 
   & video {
-    width: 100%;
-    max-width: 1600px;
-    height: auto;
-    max-height: 1052px;
+    width: 1600px;
+    height: 1152px;
+    border: none;
     display: block;
     position: absolute;
     left: 50%;
@@ -653,6 +652,8 @@ h6 {&:extend(.h6); }
     transform: translate(-50%, -50%);
     z-index: 1;
     opacity: 0;
+    background-color: transparent !important;
+    -webkit-backface-visibility: hidden;
     &.visible { opacity: 1; }
 
     &.backward {

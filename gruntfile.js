@@ -78,7 +78,7 @@ module.exports = function (grunt) {
 							'fonts/{,*/}*.*',
 							'video/{,*/}*.*',
 							'audio/{,*/}*.*',
-							'{,*/}*.*'
+							'{,*/}*.html'
 						]
 					}
 				]

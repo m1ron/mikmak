@@ -129,7 +129,6 @@ html {
   background: @color-white;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  //‑webkit‑text‑size‑adjust: 100%;
 }
 body {
   width: 100%;
@@ -317,6 +316,11 @@ h6 {&:extend(.h6); }
     .unselectable;
 
     @media @sm {
+      width: 120px;
+      height: 120px;
+    }
+
+    @media @lg {
       width: 150px;
       height: 150px;
     }
@@ -472,8 +476,62 @@ h6 {&:extend(.h6); }
       display: block;
       position: relative;
       z-index: 5;
+      font: bold 11px/16px @font-bentonsans;
+      letter-spacing: .125em;
       text-transform: uppercase;
       transition: background-color @duration-small, color @duration-small;
+
+      .text, .heading {
+        padding: 5px 30px 3px 6px;
+        margin: 0;
+        color: inherit;
+        display: block;
+        position: relative;
+
+        @media @lg {
+          padding-top: 7px;
+          padding-right: 36px;
+          padding-bottom: 5px;
+          padding-left: 7px;
+        }
+      }
+
+      .text {
+        font-size: 13px;
+        line-height: 16px;
+
+        @media @lg {
+          font-size: 15px;
+          line-height: 18px;
+        }
+      }
+
+      .heading {
+        border-top: 3px solid @color-black;
+        font-size: 10px;
+        line-height: 14px;
+
+        @media @lg {
+          font-size: 11px;
+          line-height: 16px;
+        }
+
+        &:before {
+          width: 29px;
+          display: block;
+          content: '';
+          position: absolute;
+          top: -3px;
+          right: -3px;
+          bottom: -3px;
+          z-index: 1;
+          background: @color-black;
+
+          @media @lg {
+            width: 38px;
+          }
+        }
+      }
 
       &:before, &:after {
         width: 14px;
@@ -481,49 +539,20 @@ h6 {&:extend(.h6); }
         margin: -1px -7px 0 0;
         display: block;
         position: absolute;
-        bottom: 12px;
-        right: 16px;
+        bottom: 10px;
+        right: 12px;
         z-index: 10;
         overflow: hidden;
         content: '';
         background: @color-white;
         transition: background-color @duration-small;
-      }
-      &:after { .rotate(90deg); }
 
-      .text {
-        padding: 6px 36px 5px 7px;
-        margin: 0;
-        font: bold 15px/18px @font-bentonsans;
-        letter-spacing: .125em;
-        color: inherit;
-        display: block;
-      }
-
-      .heading {
-        padding: 9px 36px 5px 7px;
-        border-top: 3px solid @color-black;
-        margin: 0;
-        font-size: 11px;
-        line-height: 14px;
-        font-style: normal;
-        font-weight: bold;
-        letter-spacing: .125em;
-        color: inherit;
-        display: block;
-
-        &:before {
-          width: 38px;
-          height: 34px;
-          display: block;
-          content: '';
-          position: absolute;
-          right: -3px;
-          bottom: -3px;
-          z-index: 1;
-          background: @color-black;
+        @media @lg {
+          bottom: 12px;
+          right: 16px;
         }
       }
+      &:after { .rotate(90deg); }
 
       &:focus, &:hover {
         color: @color-white;
@@ -533,12 +562,22 @@ h6 {&:extend(.h6); }
     }
 
     &-about { margin: -13.5vw 0 0 6vw; }
-    &-process { margin: -10.5vw 0 0 -17vw; }
-    &-news { margin: -2vw 0 0 19vw; }
-    &-skills { margin: 8vw 0 0 17vw; }
+    &-process { margin: -11vw 6vw 0 0; left: auto; right: 50%; }
+    &-news { margin: -2vw 0 0 16vw; }
+    &-skills { margin: 7vw 0 0 16vw; }
     &-viralize { margin: -2vw 0 0 -35.5vw; }
-    &-references { margin: -4vw 0 0 -18vw; }
-    &-contact { margin: -13vw 0 0 11vw; }
+    &-references { margin: -4vw 10vw 0 0; left: auto; right: 50%; }
+    &-contact { margin: -12vw 0 0 11vw; }
+
+    .portrait & {
+      &-about { margin-top: -21vw; }
+      &-process { margin-top: -18vw; }
+      &-news { margin: -13vw 0 0 12vw; }
+      &-skills { margin-top: 15vw; }
+      &-viralize { margin-top: -10vw; }
+      &-references { margin-top: -10vw; }
+      &-contact { margin-top: -16vw; }
+    }
   }
 }
 /* ==========================================================================
@@ -600,6 +639,11 @@ h6 {&:extend(.h6); }
     max-width: 3200px;
     height: auto;
     max-height: 1800px;
+
+    .portrait & {
+      width: auto;
+      height: 100%;
+    }
   }
   .audio { display: none; }
 }
@@ -682,28 +726,46 @@ h6 {&:extend(.h6); }
 
   .content {
     width: 310px;
-    padding: 10px 18px;
+    padding: 10px 14px;
     border: 3px solid @color-black;
     position: absolute;
     top: 50%;
     left: 50%;
     z-index: 15;
+    font-size: 12px;
+    line-height: 14px;
     background: @color-white;
-    opacity: 0;
     transition: opacity @duration-content;
+    opacity: 0;
     cursor: default;
 
-    .heading {
-      padding: 5px 18px 4px;
-      border-bottom: 3px solid @color-black;
-      margin: -10px -18px 10px;
+    @media @lg {
+      width: 370px;
+      padding: 10px 18px;
       font-size: 13px;
       line-height: 15px;
+    }
+
+    .heading {
+      padding: 4px 14px 3px;
+      border-bottom: 3px solid @color-black;
+      margin: -10px -14px 10px;
+      font-size: 12px;
+      line-height: 14px;
       font-weight: bold;
       position: relative;
-      letter-spacing: .2em;
+      letter-spacing: .1em;
       text-transform: none;
       display: block;
+
+      @media @lg {
+        padding: 5px 18px 4px;
+        margin-right: -18px;
+        margin-left: -18px;
+        font-size: 13px;
+        line-height: 15px;
+        letter-spacing: .2em;
+      }
 
       &:before {
         width: 76px;
@@ -751,8 +813,18 @@ h6 {&:extend(.h6); }
     background: @color-page-2;
 
     .content {
-      width: 370px;
-      margin: -1.3vw 0 0 16.7vw;
+      left: auto;
+      right: 5%;
+
+      .portrait & {
+        margin-top: 12vh;
+      }
+
+      @media @lg {
+        margin: -1.3vw 0 0 16.7vw;
+        left: 50%;
+        right: auto;
+      }
     }
   }
 

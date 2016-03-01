@@ -666,6 +666,12 @@ h6 {
 }
 @media (min-width: 750px) {
   .header .logo {
+    width: 120px;
+    height: 120px;
+  }
+}
+@media (min-width: 1280px) {
+  .header .logo {
     width: 150px;
     height: 150px;
   }
@@ -842,8 +848,64 @@ h6 {
   display: block;
   position: relative;
   z-index: 5;
+  font: bold 11px/16px 'BentonSans', Arial, sans-serif;
+  letter-spacing: .125em;
   text-transform: uppercase;
   transition: background-color 0.1s, color 0.1s;
+}
+.sections > .section > a .text,
+.sections > .section > a .heading {
+  padding: 5px 30px 3px 6px;
+  margin: 0;
+  color: inherit;
+  display: block;
+  position: relative;
+}
+@media (min-width: 1280px) {
+  .sections > .section > a .text,
+  .sections > .section > a .heading {
+    padding-top: 7px;
+    padding-right: 36px;
+    padding-bottom: 5px;
+    padding-left: 7px;
+  }
+}
+.sections > .section > a .text {
+  font-size: 13px;
+  line-height: 16px;
+}
+@media (min-width: 1280px) {
+  .sections > .section > a .text {
+    font-size: 15px;
+    line-height: 18px;
+  }
+}
+.sections > .section > a .heading {
+  border-top: 3px solid #000;
+  font-size: 10px;
+  line-height: 14px;
+}
+@media (min-width: 1280px) {
+  .sections > .section > a .heading {
+    font-size: 11px;
+    line-height: 16px;
+  }
+}
+.sections > .section > a .heading:before {
+  width: 29px;
+  display: block;
+  content: '';
+  position: absolute;
+  top: -3px;
+  right: -3px;
+  bottom: -3px;
+  z-index: 1;
+  background: #000;
+}
+@media (min-width: 1280px) {
+  .sections > .section > a .heading:before {
+    width: 38px;
+  }
 }
 .sections > .section > a:before,
 .sections > .section > a:after {
@@ -852,13 +914,20 @@ h6 {
   margin: -1px -7px 0 0;
   display: block;
   position: absolute;
-  bottom: 12px;
-  right: 16px;
+  bottom: 10px;
+  right: 12px;
   z-index: 10;
   overflow: hidden;
   content: '';
   background: #fff;
   transition: background-color 0.1s;
+}
+@media (min-width: 1280px) {
+  .sections > .section > a:before,
+  .sections > .section > a:after {
+    bottom: 12px;
+    right: 16px;
+  }
 }
 .sections > .section > a:after {
   -webkit-transform: rotate(90deg);
@@ -867,37 +936,6 @@ h6 {
   -o-transform: rotate(90deg);
   transform: rotate(90deg);
   -webkit-backface-visibility: hidden;
-}
-.sections > .section > a .text {
-  padding: 6px 36px 5px 7px;
-  margin: 0;
-  font: bold 15px/18px 'BentonSans', Arial, sans-serif;
-  letter-spacing: .125em;
-  color: inherit;
-  display: block;
-}
-.sections > .section > a .heading {
-  padding: 9px 36px 5px 7px;
-  border-top: 3px solid #000;
-  margin: 0;
-  font-size: 11px;
-  line-height: 14px;
-  font-style: normal;
-  font-weight: bold;
-  letter-spacing: .125em;
-  color: inherit;
-  display: block;
-}
-.sections > .section > a .heading:before {
-  width: 38px;
-  height: 34px;
-  display: block;
-  content: '';
-  position: absolute;
-  right: -3px;
-  bottom: -3px;
-  z-index: 1;
-  background: #000;
 }
 .sections > .section > a:focus,
 .sections > .section > a:hover {
@@ -909,22 +947,47 @@ h6 {
   margin: -13.5vw 0 0 6vw;
 }
 .sections > .section-process {
-  margin: -10.5vw 0 0 -17vw;
+  margin: -11vw 6vw 0 0;
+  left: auto;
+  right: 50%;
 }
 .sections > .section-news {
-  margin: -2vw 0 0 19vw;
+  margin: -2vw 0 0 16vw;
 }
 .sections > .section-skills {
-  margin: 8vw 0 0 17vw;
+  margin: 7vw 0 0 16vw;
 }
 .sections > .section-viralize {
   margin: -2vw 0 0 -35.5vw;
 }
 .sections > .section-references {
-  margin: -4vw 0 0 -18vw;
+  margin: -4vw 10vw 0 0;
+  left: auto;
+  right: 50%;
 }
 .sections > .section-contact {
-  margin: -13vw 0 0 11vw;
+  margin: -12vw 0 0 11vw;
+}
+.portrait .sections > .section-about {
+  margin-top: -21vw;
+}
+.portrait .sections > .section-process {
+  margin-top: -18vw;
+}
+.portrait .sections > .section-news {
+  margin: -13vw 0 0 12vw;
+}
+.portrait .sections > .section-skills {
+  margin-top: 15vw;
+}
+.portrait .sections > .section-viralize {
+  margin-top: -10vw;
+}
+.portrait .sections > .section-references {
+  margin-top: -10vw;
+}
+.portrait .sections > .section-contact {
+  margin-top: -16vw;
 }
 /* ==========================================================================
    _VIDEO
@@ -997,6 +1060,10 @@ h6 {
   max-width: 3200px;
   height: auto;
   max-height: 1800px;
+}
+.portrait .video.video-index video {
+  width: auto;
+  height: 100%;
 }
 .video .audio {
   display: none;
@@ -1105,28 +1172,48 @@ body[browser="chrome"] .page {
 }
 .page .content {
   width: 310px;
-  padding: 10px 18px;
+  padding: 10px 14px;
   border: 3px solid #000;
   position: absolute;
   top: 50%;
   left: 50%;
   z-index: 15;
+  font-size: 12px;
+  line-height: 14px;
   background: #fff;
-  opacity: 0;
   transition: opacity 0.5s 2s ease-in-out;
+  opacity: 0;
   cursor: default;
 }
+@media (min-width: 1280px) {
+  .page .content {
+    width: 370px;
+    padding: 10px 18px;
+    font-size: 13px;
+    line-height: 15px;
+  }
+}
 .page .content .heading {
-  padding: 5px 18px 4px;
+  padding: 4px 14px 3px;
   border-bottom: 3px solid #000;
-  margin: -10px -18px 10px;
-  font-size: 13px;
-  line-height: 15px;
+  margin: -10px -14px 10px;
+  font-size: 12px;
+  line-height: 14px;
   font-weight: bold;
   position: relative;
-  letter-spacing: .2em;
+  letter-spacing: .1em;
   text-transform: none;
   display: block;
+}
+@media (min-width: 1280px) {
+  .page .content .heading {
+    padding: 5px 18px 4px;
+    margin-right: -18px;
+    margin-left: -18px;
+    font-size: 13px;
+    line-height: 15px;
+    letter-spacing: .2em;
+  }
 }
 .page .content .heading:before {
   width: 76px;
@@ -1186,8 +1273,18 @@ body[browser="chrome"] .page.active {
   background: #7dc74c;
 }
 .page-process .content {
-  width: 370px;
-  margin: -1.3vw 0 0 16.7vw;
+  left: auto;
+  right: 5%;
+}
+.portrait .page-process .content {
+  margin-top: 12vh;
+}
+@media (min-width: 1280px) {
+  .page-process .content {
+    margin: -1.3vw 0 0 16.7vw;
+    left: 50%;
+    right: auto;
+  }
 }
 body[browser="safari"] .page-process {
   background: #8ecb5c;

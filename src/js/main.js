@@ -1,7 +1,21 @@
 /*jslint nomen: true, regexp: true, unparam: true, sloppy: true, white: true, node: true */
 /*global window, console, document, $, jQuery, google */
 
-(function () {
+var g = document.getElementsByTagName('body')[0], e = document.documentElement;
+
+/** Detect portrait mode */
+function detectPortrait() {
+	if ((window.innerWidth || e.clientWidth || g.clientWidth) < (window.innerHeight || e.clientHeight || g.clientHeight)) {
+		if (+g.className.indexOf('portrait') < 0) {
+			g.className += ' portrait';
+		}
+	} else {
+		g.className = g.className.replace('portrait', '');
+	}
+}
+
+/** Detect browser */
+function detectBrowser() {
 	window.browser = {};
 	browser.opera = (!!window.opr && !!opr.addons) || !!window.opera || navigator.userAgent.indexOf(' OPR/') >= 0;
 	browser.firefox = typeof InstallTrigger !== 'undefined';
@@ -11,13 +25,21 @@
 	browser.chrome = !!window.chrome && !!window.chrome.webstore;
 	for (var key in browser) {
 		if (browser.hasOwnProperty(key)) {
-			console.log(key + " -> " + browser[key]);
+			//console.log(key + " -> " + browser[key]);
 			if (browser[key]) {
-				var e = document.getElementsByTagName("body")[0];
-				e.setAttribute("browser", key);
+				document.getElementsByTagName('body')[0].setAttribute("browser", key);
 			}
 		}
 	}
+}
+
+function onResize() {
+	detectPortrait();
+}
+
+(function () {
+	detectPortrait();
+	detectBrowser();
 })();
 
 /** On document ready */
@@ -25,6 +47,7 @@ $(document).ready(function () {
 
 	window.v = {};
 	window.body = $('body');
+	$(window).on('resize', onResize);
 
 	/** Paths array */
 	v.path = {

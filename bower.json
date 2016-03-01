@@ -22,6 +22,7 @@
     "fastclick": "~1.0.6",
     "jquery-mousewheel": "~3.1.13",
     "normalize-css": "^3.0.3",
-    "jquery.html5loader": "^1.8.0"
+    "jquery.html5loader": "^1.8.0",
+    "fullpage.js": "fullpage#^2.7.8"
   }
 }

@@ -36,7 +36,7 @@ module.exports = function (grunt) {
 
 		clean: {
 			pre: [dist.root, src.css, src.js + 'vendor'],
-			after: [src.js + 'vendor/fastclick.js', src.css + 'temp', dist.js + 'custom.js'],
+			after: [src.js + 'vendor/fastclick.js', src.css + 'temp', src.css + 'vendor/normalize.css', dist.js + 'custom.js'],
 			dist: [dist.js + 'custom.js']
 		},
 		copy: {
@@ -51,17 +51,18 @@ module.exports = function (grunt) {
 							src.vendor + 'jquery/dist/jquery.min.map',
 							src.vendor + 'fastclick/lib/fastclick.js',
 							src.vendor + 'jquery-mousewheel/jquery.mousewheel.min.js',
-							src.vendor + 'jquery.html5loader/src/jquery.html5Loader.min.js'
+							src.vendor + 'jquery.html5loader/src/jquery.html5Loader.min.js',
+							src.vendor + 'fullpage.js/dist/jquery.fullpage.min.js'
 						],
 						dest: src.js + 'vendor'
-					},
-					{
+					}, {
 						expand: true,
 						flatten: true,
 						src: [
-							src.vendor + 'normalize-css/normalize.css'
+							src.vendor + 'normalize-css/normalize.css',
+							src.vendor + 'fullpage.js/dist/jquery.fullpage.min.css'
 						],
-						dest: src.css + 'temp'
+						dest: src.css + 'vendor'
 					}
 				]
 			},
@@ -95,9 +96,16 @@ module.exports = function (grunt) {
 							src.js + 'custom.js',
 							src.js + 'vendor/fastclick.min.js',
 							src.js + 'vendor/jquery.mousewheel.min.js',
-							src.js + 'vendor/jquery.html5Loader.min.js'
+							src.js + 'vendor/jquery.html5Loader.min.js',
+							src.js + 'vendor/jquery.fullpage.min.js'
 						],
 						dest: src.js + 'plugins.js'
+					}, {
+						src: [
+							src.css + 'vendor/normalize.min.css',
+							src.css + 'vendor/jquery.fullpage.min.css'
+						],
+						dest: src.css + 'plugins.css'
 					}
 				]
 			}
@@ -111,9 +119,9 @@ module.exports = function (grunt) {
 					{
 						expand: true,
 						flatten: true,
-						src: src.css + 'temp/normalize.css',
-						dest: src.css,
-						ext: '.css'
+						src: src.css + 'vendor/normalize.css',
+						dest: src.css + 'vendor',
+						ext: '.min.css'
 					}
 				]
 			}

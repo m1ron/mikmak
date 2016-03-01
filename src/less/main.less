@@ -144,6 +144,7 @@ body {
   width: 100%;
   min-width: @min-width;
   height: 100%;
+  min-height: @min-width;
   overflow: hidden;
   background: @color-page-0;
 }
@@ -292,6 +293,10 @@ h6 {&:extend(.h6); }
     animation-name: preloader-animation;
     transition: opacity .5s ease;
     .scale(.5);
+
+    @media only screen and (min-device-width: 320px) and (max-device-width: 380px) {
+      display: none;
+    }
 
     @media (max-width: 380px) {
       left: -50px;
@@ -537,7 +542,7 @@ h6 {&:extend(.h6); }
       }
 
       .text, .heading {
-        padding: 4px 30px 2px 4px;
+        padding: 3px 30px 3px 4px;
         margin: 0;
         color: inherit;
         display: block;
@@ -838,9 +843,13 @@ h6 {&:extend(.h6); }
   top: 0;
   left: 0;
   z-index: 5;
-  background-position: center center;
+  background-position: 50% 15%;
   background-repeat: no-repeat;
   background-size: cover;
+
+  @media @sm {
+    background-position: 50% 50%;
+  }
 
   .portrait & {
     background-size: contain;

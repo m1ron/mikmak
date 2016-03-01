@@ -50,6 +50,7 @@ body {
   width: 100%;
   min-width: 320px;
   height: 100%;
+  min-height: 320px;
   overflow: hidden;
   background: #ff477f;
 }
@@ -626,6 +627,11 @@ h6 {
   transform: scale(0.5);
   -webkit-backface-visibility: hidden;
 }
+@media only screen and (min-device-width: 320px) and (max-device-width: 380px) {
+  .preloader:before {
+    display: none;
+  }
+}
 @media (max-width: 380px) {
   .preloader:before {
     left: -50px;
@@ -923,7 +929,7 @@ body:not(.mobile) .sections > .section.active {
 }
 .sections > .section .area .text,
 .sections > .section .area .heading {
-  padding: 4px 30px 2px 4px;
+  padding: 3px 30px 3px 4px;
   margin: 0;
   color: inherit;
   display: block;
@@ -1263,11 +1269,16 @@ body:not(.mobile) .dots > a:not(:nth-child(2)) {
   top: 0;
   left: 0;
   z-index: 5;
-  background-position: center center;
+  background-position: 50% 15%;
   background-repeat: no-repeat;
   background-size: cover;
   /** Index */
   /** Process */
+}
+@media (min-width: 750px) {
+  .page {
+    background-position: 50% 50%;
+  }
 }
 .portrait .page {
   background-size: contain;

@@ -175,7 +175,7 @@ function initPreloader() {
 
 	var img = new Image(), preloader = $('.preloader');
 	$(img).on('load', showPreloader);
-	img.src = window.v.path.sequence + 'preloader.jpg';
+	img.src = window.v.path.img + 'preloader.jpg';
 }
 
 

@@ -613,7 +613,7 @@ h6 {
   bottom: 0;
   left: -10px;
   opacity: 0;
-  background: #d8c8ad url('../img/sequence/preloader.jpg') center center no-repeat;
+  background: #d8c8ad url('../img/preloader.jpg') center center no-repeat;
   background-size: 400px 10400px;
   animation-duration: 1s;
   animation-iteration-count: infinite;
@@ -1007,13 +1007,13 @@ body:not(.mobile) .sections > .section.active {
   background-size: 100% auto !important;
 }
 .mobile .sections > .section-about {
-  background: #f4853d url('../img/sections/about.jpg') center center no-repeat;
+  background: #f4853d url('../img/sections/about.png') center center no-repeat;
 }
 .sections > .section-about .area {
   margin: -13.5vw 0 0 6vw;
 }
 .mobile .sections > .section-process {
-  background: #fbbd32 url('../img/sections/process.jpg') center center no-repeat;
+  background: #fbbd32 url('../img/sections/process.png') center center no-repeat;
 }
 .sections > .section-process .area {
   margin: -11vw 6vw 0 0;
@@ -1021,25 +1021,25 @@ body:not(.mobile) .sections > .section.active {
   right: 50%;
 }
 .mobile .sections > .section-news {
-  background: #d0ccc9 url('../img/sections/news.jpg') center center no-repeat;
+  background: #d0ccc9 url('../img/sections/news.png') center center no-repeat;
 }
 .sections > .section-news .area {
   margin: -2vw 0 0 18vw;
 }
 .mobile .sections > .section-skills {
-  background: #189365 url('../img/sections/skills.jpg') center center no-repeat;
+  background: #189365 url('../img/sections/skills.png') center center no-repeat;
 }
 .sections > .section-skills .area {
   margin: 7vw 0 0 16vw;
 }
 .mobile .sections > .section-viralize {
-  background: #7c84bf url('../img/sections/viralize.jpg') center center no-repeat;
+  background: #7c84bf url('../img/sections/viralize.png') center center no-repeat;
 }
 .sections > .section-viralize .area {
   margin: -2vw 0 0 -35.5vw;
 }
 .mobile .sections > .section-references {
-  background: #fcb741 url('../img/sections/references.jpg') center center no-repeat;
+  background: #fcb741 url('../img/sections/references.png') center center no-repeat;
 }
 .sections > .section-references .area {
   margin: -4vw 10vw 0 0;
@@ -1047,7 +1047,7 @@ body:not(.mobile) .sections > .section.active {
   right: 50%;
 }
 .mobile .sections > .section-contact {
-  background: #ebaacc url('../img/sections/contact.jpg') center center no-repeat;
+  background: #ebaacc url('../img/sections/contact.png') center center no-repeat;
 }
 .sections > .section-contact .area {
   margin: -12vw 0 0 11vw;
@@ -1448,10 +1448,10 @@ body[browser="chrome"]:not(.mobile) .page.active {
   user-select: none;
 }
 .page-process {
-  background-color: #78b849;
+  background-color: #7dc74c;
 }
 .mobile .page-process {
-  background-image: url('../img/pages/process.jpg');
+  background-image: url('../img/pages/process.png');
 }
 .page-process .content {
   left: auto;

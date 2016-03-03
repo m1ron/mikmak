@@ -48,6 +48,10 @@ function detectMobile() {
 
 function onResize() {
 	detectPortrait();
+	if (mobile && (typeof $.fn.fullpage != 'undefined')) {
+		console.log('resize');
+		$.fn.fullpage.reBuild();
+	}
 }
 
 (function () {

@@ -426,11 +426,16 @@ h6 {&:extend(.h6); }
   position: absolute;
   top: 55px;
   right: 25px;
-  font: bold 12px/14px @font-bentonsans;
+  font: bold 11px/12px @font-bentonsans;
   text-transform: uppercase;
   letter-spacing: .15em;
   z-index: 10;
   background: @color-white;
+
+  @media @sm {
+    font-size: 12px;
+    line-height: 14px;
+  }
 
   .nav-open & { display: block; }
 
@@ -942,7 +947,6 @@ h6 {&:extend(.h6); }
       width: auto;
       left: 20px;
     }
-
 
     @media @sm {
       top: 50%;

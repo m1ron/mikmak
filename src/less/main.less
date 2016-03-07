@@ -10,6 +10,9 @@
 @md-width: 970px;
 @lg-width: 1560px;
 
+@i5: ~"(max-width: 320px)";
+@i6: ~"(max-width: 414px)";
+@i6y: ~"(max-height: 414px)";
 @xss: ~"(max-width: 568px)";
 @xs: ~"(min-width: 568px)";
 @smm: ~"(max-width: 750px)";
@@ -38,7 +41,13 @@
 @color-section-8: #f78378;
 
 @color-page-0: #ff477f;
+@color-page-1: #5f9fab;
 @color-page-2: #7dc74c;
+@color-page-3: #ec84ac;
+@color-page-4: #c6b8bb;
+@color-page-5: #e9675e;
+@color-page-6: #959595;
+@color-page-7: #f9ee99;
 
 @color-page-2-safari: #8ecb5c;
 
@@ -294,12 +303,12 @@ h6 {&:extend(.h6); }
     transition: opacity .5s ease;
     .scale(.5);
 
-    @media only screen and (min-device-width: 320px) and (max-device-width: 380px) {
-      display: none;
-    }
-
-    @media (max-width: 380px) {
-      left: -50px;
+    @media @i5 {
+      width: 100%;
+      top: 0;
+      left: 0;
+      background: @color-preloader url('@{images}/preloader.gif') center center no-repeat;
+      animation: none;
     }
 
     @media @sm {
@@ -616,7 +625,7 @@ h6 {&:extend(.h6); }
 
     .mobile & {
       background-size: contain !important;
-      @media (max-height: 414px) {
+      @media @i6y {
         background-size: auto 90% !important;
       }
     }
@@ -905,7 +914,7 @@ h6 {&:extend(.h6); }
       top: 40px;
       bottom: 210px;
 
-      @media (max-height: 414px) {
+      @media @i6y {
         top: 0;
         right: 250px;
         bottom: 0;
@@ -943,7 +952,7 @@ h6 {&:extend(.h6); }
     @media @xss {
       width: 250px;
     }
-    @media (max-width: 414px) {
+    @media @i6 {
       width: auto;
       left: 20px;
     }
@@ -955,10 +964,7 @@ h6 {&:extend(.h6); }
       left: 50%;
 
       .space {
-        padding: 0;
-        margin: 0;
-        max-height: none;
-        overflow: hidden;
+        max-height: 250px;
       }
     }
 
@@ -978,7 +984,7 @@ h6 {&:extend(.h6); }
       font-weight: bold;
       position: relative;
       letter-spacing: .1em;
-      text-transform: none;
+      text-transform: uppercase;
       display: block;
 
       @media @lg {
@@ -1033,21 +1039,92 @@ h6 {&:extend(.h6); }
     .unselectable;
   }
 
+  /** About */
+  &-about {
+    background-color: @color-page-1;
+    .mobile & {
+      &:before { background-image: url('@{images}/pages/about.png'); }
+    }
+    .content {
+      .portrait & { margin-top: 12vh; }
+      @media @lg {
+        margin: -1.3vw 0 0 16.7vw;
+      }
+    }
+  }
+
   /** Process */
   &-process {
     background-color: @color-page-2;
-
     .mobile & {
-      &:before {
-        background-image: url('@{images}/pages/process.png');
+      &:before { background-image: url('@{images}/pages/process.png'); }
+    }
+    .content {
+      .portrait & { margin-top: 12vh; }
+      @media @lg {
+        margin: -1.3vw 0 0 16.7vw;
       }
     }
+  }
 
+  /** News */
+  &-news {
+    background-color: @color-page-3;
+    .mobile & {
+      &:before { background-image: url('@{images}/pages/news.png'); }
+    }
     .content {
-      .portrait & {
-        margin-top: 12vh;
+      .portrait & { margin-top: 12vh; }
+      @media @lg {
+        margin: -1.3vw 0 0 16.7vw;
       }
+    }
+  }
 
+  /** Skills */
+  &-skills {
+    background-color: @color-page-4;
+    .mobile & {
+      &:before { background-image: url('@{images}/pages/skills.png'); }
+    }
+    .content {
+      .portrait & { margin-top: 12vh; }
+      @media @lg {
+        margin: -1.3vw 0 0 16.7vw;
+      }
+    }
+  }
+
+  /** Viralize */
+  &-viralize {
+    background-color: @color-page-5;
+    .mobile & {
+      &:before { background-image: url('@{images}/pages/viralize.png'); }
+    }
+    .content {
+      .portrait & { margin-top: 12vh; }
+      @media @lg {
+        margin: -1.3vw 0 0 16.7vw;
+      }
+    }
+  }
+
+  /** References */
+  &-references {
+    background-color: @color-page-6;
+    .mobile & {
+      &:before { background-image: url('@{images}/pages/references.png'); }
+    }
+  }
+
+  /** Contact */
+  &-contact {
+    background-color: @color-page-7;
+    .mobile & {
+      &:before { background-image: url('@{images}/pages/contact.png'); }
+    }
+    .content {
+      .portrait & { margin-top: 12vh; }
       @media @lg {
         margin: -1.3vw 0 0 16.7vw;
       }
@@ -1055,8 +1132,6 @@ h6 {&:extend(.h6); }
   }
 
   body[browser="safari"] & {
-    &-process {
-      background-color: @color-page-2-safari;
-    }
+    &-process { background-color: @color-page-2-safari; }
   }
 }

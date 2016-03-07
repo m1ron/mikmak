@@ -627,14 +627,13 @@ h6 {
   transform: scale(0.5);
   -webkit-backface-visibility: hidden;
 }
-@media only screen and (min-device-width: 320px) and (max-device-width: 380px) {
+@media (max-width: 320px) {
   .preloader:before {
-    display: none;
-  }
-}
-@media (max-width: 380px) {
-  .preloader:before {
-    left: -50px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: #d8c8ad url('../img/preloader.gif') center center no-repeat;
+    animation: none;
   }
 }
 @media (min-width: 750px) {
@@ -1301,7 +1300,13 @@ body:not(.mobile) .dots > a:not(:nth-child(2)) {
   left: 0;
   z-index: 5;
   /** Index */
+  /** About */
   /** Process */
+  /** News */
+  /** Skills */
+  /** Viralize */
+  /** References */
+  /** Contact */
 }
 .portrait .page {
   background-size: contain;
@@ -1404,10 +1409,7 @@ body[browser="chrome"]:not(.mobile) .page {
     left: 50%;
   }
   .page .content .space {
-    padding: 0;
-    margin: 0;
-    max-height: none;
-    overflow: hidden;
+    max-height: 250px;
   }
 }
 @media (min-width: 1280px) {
@@ -1427,7 +1429,7 @@ body[browser="chrome"]:not(.mobile) .page {
   font-weight: bold;
   position: relative;
   letter-spacing: .1em;
-  text-transform: none;
+  text-transform: uppercase;
   display: block;
 }
 @media (min-width: 1280px) {
@@ -1491,6 +1493,20 @@ body[browser="chrome"]:not(.mobile) .page.active {
   -o-user-select: none;
   user-select: none;
 }
+.page-about {
+  background-color: #5f9fab;
+}
+.mobile .page-about:before {
+  background-image: url('../img/pages/about.png');
+}
+.portrait .page-about .content {
+  margin-top: 12vh;
+}
+@media (min-width: 1280px) {
+  .page-about .content {
+    margin: -1.3vw 0 0 16.7vw;
+  }
+}
 .page-process {
   background-color: #7dc74c;
 }
@@ -1502,6 +1518,68 @@ body[browser="chrome"]:not(.mobile) .page.active {
 }
 @media (min-width: 1280px) {
   .page-process .content {
+    margin: -1.3vw 0 0 16.7vw;
+  }
+}
+.page-news {
+  background-color: #ec84ac;
+}
+.mobile .page-news:before {
+  background-image: url('../img/pages/news.png');
+}
+.portrait .page-news .content {
+  margin-top: 12vh;
+}
+@media (min-width: 1280px) {
+  .page-news .content {
+    margin: -1.3vw 0 0 16.7vw;
+  }
+}
+.page-skills {
+  background-color: #c6b8bb;
+}
+.mobile .page-skills:before {
+  background-image: url('../img/pages/skills.png');
+}
+.portrait .page-skills .content {
+  margin-top: 12vh;
+}
+@media (min-width: 1280px) {
+  .page-skills .content {
+    margin: -1.3vw 0 0 16.7vw;
+  }
+}
+.page-viralize {
+  background-color: #e9675e;
+}
+.mobile .page-viralize:before {
+  background-image: url('../img/pages/viralize.png');
+}
+.portrait .page-viralize .content {
+  margin-top: 12vh;
+}
+@media (min-width: 1280px) {
+  .page-viralize .content {
+    margin: -1.3vw 0 0 16.7vw;
+  }
+}
+.page-references {
+  background-color: #959595;
+}
+.mobile .page-references:before {
+  background-image: url('../img/pages/references.png');
+}
+.page-contact {
+  background-color: #f9ee99;
+}
+.mobile .page-contact:before {
+  background-image: url('../img/pages/contact.png');
+}
+.portrait .page-contact .content {
+  margin-top: 12vh;
+}
+@media (min-width: 1280px) {
+  .page-contact .content {
     margin: -1.3vw 0 0 16.7vw;
   }
 }

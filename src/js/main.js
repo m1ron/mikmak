@@ -94,8 +94,20 @@ $(document).ready(function () {
 	v.video = [
 		{name: 'index-forward', src: v.path.video + 'index-forward', mp4: 4749.513, webm: 1309.349, duration: 28.88},
 		{name: 'index-backward', src: v.path.video + 'index-backward', mp4: 4013.301, webm: 1216.921, duration: 28.88},
+		{name: 'about-intro', src: v.path.video + 'about-intro', mp4: 634.701, webm: 201.710, duration: 2.36},
+		{name: 'about-loop', src: v.path.video + 'about-loop', mp4: 369.265, webm: 79.154, duration: 2.8},
 		{name: 'process-intro', src: v.path.video + 'process-intro', mp4: 543.333, webm: 182.958, duration: 2.36},
-		{name: 'process-loop', src: v.path.video + 'process-loop', mp4: 320.474, webm: 61.036, duration: 2.6}
+		{name: 'process-loop', src: v.path.video + 'process-loop', mp4: 320.474, webm: 61.036, duration: 2.6},
+		{name: 'news-intro', src: v.path.video + 'news-intro', mp4: 929.289, webm: 335.333, duration: 2.56},
+		{name: 'news-loop', src: v.path.video + 'news-loop', mp4: 468.418, webm: 117.753, duration: 2.56},
+		{name: 'skills-intro', src: v.path.video + 'skills-intro', mp4: 642.597, webm: 202.903, duration: 2.56},
+		{name: 'skills-loop', src: v.path.video + 'skills-loop', mp4: 532.625, webm: 140.351, duration: 2.6},
+		{name: 'viralize-intro', src: v.path.video + 'viralize-intro', mp4: 1001.844, webm: 319.256, duration: 2.56},
+		{name: 'viralize-loop', src: v.path.video + 'viralize-loop', mp4: 640.254, webm: 218.743, duration: 2.08},
+		{name: 'references-intro', src: v.path.video + 'references-intro', mp4: 359.206, webm: 93.870, duration: 2.56},
+		{name: 'references-loop', src: v.path.video + 'references-loop', mp4: 246.142, webm: 52.603, duration: 2.6},
+		{name: 'contact-intro', src: v.path.video + 'contact-intro', mp4: 491.160, webm: 196.676, duration: 2.56},
+		{name: 'contact-loop', src: v.path.video + 'contact-loop', mp4: 197.780, webm: 50.846, duration: 2.6}
 	];
 
 	/*
@@ -177,9 +189,12 @@ function initPreloader() {
 	 });
 	 */
 
-	var img = new Image(), preloader = $('.preloader');
+	var img = new Image(), preloader = $('.preloader'), n = 'preloader.jpg';
 	$(img).on('load', showPreloader);
-	img.src = window.v.path.img + 'preloader.jpg';
+	if ($(window).width() === 320) {
+		n = 'preloader.gif';
+	}
+	img.src = window.v.path.img + n;
 }
 
 
@@ -199,7 +214,7 @@ function initUI() {
 	}
 
 	/** On header click */
-	function toggleAction(event) {
+	function toggleAction() {
 		if (body.hasClass('inner')) {// Go to inner oage
 			closeInner();
 		} else {// Open nav
@@ -211,7 +226,7 @@ function initUI() {
 				}, smallDelay);
 			}
 		}
-		event.preventDefault();
+		return false;
 	}
 
 	/** On menu click */
@@ -491,8 +506,8 @@ function initVideo() {
 						playVideo(v.active + 1);
 					}
 				}
+				event.preventDefault();
 			}
-			event.preventDefault();
 		}
 
 		/** On touch start */

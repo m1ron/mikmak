@@ -51,8 +51,9 @@ module.exports = function (grunt) {
 							src.vendor + 'jquery/dist/jquery.min.map',
 							src.vendor + 'fastclick/lib/fastclick.js',
 							src.vendor + 'jquery-mousewheel/jquery.mousewheel.min.js',
+							src.vendor + 'fullpage.js/dist/jquery.fullpage.min.js',
 							src.vendor + 'jquery.html5loader/src/jquery.html5Loader.min.js',
-							src.vendor + 'fullpage.js/dist/jquery.fullpage.min.js'
+							src.vendor + 'perfect-scrollbar/js/min/perfect-scrollbar.jquery.min.js'
 						],
 						dest: src.js + 'vendor'
 					}, {
@@ -61,6 +62,7 @@ module.exports = function (grunt) {
 						src: [
 							src.vendor + 'normalize-css/normalize.css',
 							src.vendor + 'font-awesome/css/font-awesome.min.css',
+							src.vendor + 'perfect-scrollbar/css/perfect-scrollbar.min.css',
 							src.vendor + 'fullpage.js/dist/jquery.fullpage.min.css'
 						],
 						dest: src.css + 'vendor'
@@ -105,13 +107,15 @@ module.exports = function (grunt) {
 							src.js + 'vendor/fastclick.min.js',
 							src.js + 'vendor/jquery.mousewheel.min.js',
 							src.js + 'vendor/jquery.html5Loader.min.js',
-							src.js + 'vendor/jquery.fullpage.min.js'
+							src.js + 'vendor/jquery.fullpage.min.js',
+							src.js + 'vendor/perfect-scrollbar.jquery.min.js'
 						],
 						dest: src.js + 'plugins.js'
 					}, {
 						src: [
 							src.css + 'vendor/normalize.min.css',
 							src.css + 'vendor/font-awesome.min.css',
+							src.css + 'vendor/perfect-scrollbar.min.css',
 							src.css + 'vendor/jquery.fullpage.min.css'
 						],
 						dest: src.css + 'plugins.css'

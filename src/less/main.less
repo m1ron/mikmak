@@ -981,11 +981,12 @@ h6 {&:extend(.h6); }
     }
 
     .space {
-      padding: 10px 14px;
-      margin: -10px -14px;
+      padding: 3px 7px;
+      margin: -3px -7px;
       max-height: 55vh;
       overflow: hidden;
       overflow-y: scroll;
+      position: relative;
       -webkit-overflow-scrolling: touch;
 
       @media @i6 {
@@ -993,6 +994,39 @@ h6 {&:extend(.h6); }
       }
       @media @sm {
         max-height: 25vh;
+      }
+
+      &.ps-container {
+        padding-right: 21px;
+
+        > .ps-scrollbar-y-rail {
+          width: 13px;
+          border: 5px solid @color-white;
+          border-radius: 0;
+          right: 0 !important;
+          opacity: 1 !important;
+          background: @color-white;
+
+          &:before {
+            border: 3px solid @color-black;
+            display: block;
+            content: '';
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            bottom: -5px;
+            left: -5px;
+            z-index: 5;
+          }
+
+          > .ps-scrollbar-y {
+            width: 3px;
+            border-radius: 0;
+            z-index: 10;
+            opacity: 1 !important;
+            background: @color-black;
+          }
+        }
       }
     }
 
@@ -1033,7 +1067,7 @@ h6 {&:extend(.h6); }
 
     p {
       margin-bottom: 15px;
-      &:last-child { margin-bottom: 0; }
+      &:last-of-type { margin-bottom: 0; }
     }
   }
 
@@ -1240,6 +1274,14 @@ h6 {&:extend(.h6); }
       width: 20px;
       height: 20px;
       display: block;
+      color: @color-black;
+      background: @color-white;
+      transition: color @duration, background-color @duration;
+
+      &:hover {
+        color: @color-white;
+        background: @color-black;
+      }
     }
   }
 }

@@ -252,6 +252,7 @@ function initUI() {
 			target.addClass('pre');
 			setTimeout(function () {
 				target.addClass('active');
+				$('.ps-container', target).perfectScrollbar('update');
 				setTimeout(function () {
 					if (!mobile) {
 						intro[0].play();
@@ -259,7 +260,7 @@ function initUI() {
 							intro.removeClass('visible');
 							loop[0].play();
 							loop.addClass('visible');
-						}, +intro[0].duration * 1000 + 10);
+						}, +intro[0].duration * 1000 + 500);
 					}
 				}, longDelay);
 			}, smallDelay);
@@ -291,6 +292,10 @@ function initUI() {
 	/** Menu */
 	$('.menu').each(function () {
 		$('a', this).on('click', menuAction);
+	});
+
+	$('.white .space').perfectScrollbar({
+		suppressScrollX: true
 	});
 
 	if (mobile) {

@@ -264,8 +264,8 @@ h6 {&:extend(.h6); }
 & {
   .keyframes(preloader-animation);
   .-frames(@-...) {
-    .percent(@preloader-keyframes);
-  }
+  .percent(@preloader-keyframes);
+}
 }
 .preloader {
   margin: auto;
@@ -1390,11 +1390,12 @@ h6 {&:extend(.h6); }
    _PORTFOLIO
    ========================================================================== */
 .portfolio {
+  margin: 0 -10px;
   clear: both;
 
   .links {
     padding: 0;
-    margin: 0;
+    margin: 44px 0 20px;
     list-style: none;
     font: bold 11px/12px @font-bentonsans;
     text-transform: uppercase;
@@ -1403,13 +1404,11 @@ h6 {&:extend(.h6); }
     &:after { .clearfix; }
 
     > li {
-      width: 12.5%;
-      margin: 0 -7px 0 0;
+      width: 12.25%;
       display: inline-block;
 
-      &:last-of-type { margin-right: 0; }
-
       > a {
+        margin: 0 -3px;
         padding: 4px;
         background: @color-white;
         border: 3px solid @color-black;
@@ -1420,6 +1419,134 @@ h6 {&:extend(.h6); }
           color: @color-white;
           text-decoration: none;
           background: @color-black;
+        }
+      }
+
+      &:first-child {
+        a { margin-left: 0; }
+      }
+      &:last-child {
+        a { margin-right: 0; }
+      }
+    }
+  }
+
+  .list {
+    margin: 0 -5px;
+    &:after {.clearfix;}
+
+    .panel {
+      width: 25%;
+      padding: 5px;
+      float: left;
+
+      .head {
+        margin-bottom: -3px;
+        padding: 4px;
+        font-size: 11px;
+        font-weight: bold;
+        text-transform: uppercase;
+        text-align: center;
+        background: @color-white;
+        border: 3px solid @color-black;
+      }
+
+      .panel-space {
+        padding: 30px 34px;
+        background: #e1586e;
+        border: 3px solid @color-black;
+        position: relative;
+        cursor: pointer;
+
+        &:before {
+          .before;
+          .color-black(.7);
+          opacity: 0;
+          background: @color;
+          position: absolute;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          right: 0;
+          transition: opacity @duration;
+        }
+
+        .picture {
+          margin: 0 auto;
+          .color-black(.5);
+          border: 3px solid @color-black;
+          box-shadow: 6px 6px 0 0 @color;
+          position: relative;
+
+          &:before, &:after {
+            .before;
+            clear:both;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            .color-black(.5);
+            position: absolute;
+            z-index: 1;
+          }
+          &:before { left: -3px; bottom: -9px; border-width: 0 6px 6px 0; border-color: transparent @color transparent transparent;}
+          &:after { right: -9px; top: -3px; border-width: 6px 0 0 6px; border-color: transparent transparent transparent @color;}
+
+          img {
+            width: 100%;
+            display: block;
+            height: auto;
+          }
+        }
+
+        .info {
+          opacity: 0;
+          overflow-y: scroll;
+          background: @color-white;
+          border: 3px solid @color-black;
+          margin: auto auto;
+          position: absolute;
+          top: 30px;
+          left: 34px;
+          right: 34px;
+          bottom: 30px;
+          transition: opacity @duration;
+
+          .name {
+            margin: 0;
+            padding: 4px 8px;
+            font-weight: bold;
+            text-transform: uppercase;
+            text-align: center;
+            letter-spacing: .3em;
+            border-bottom: 3px solid @color-black;
+          }
+
+          .client {
+            padding: 4px 8px;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 8px;
+            position: relative;
+            border-bottom: 3px solid @color-black;
+
+            &:after {.clearfix;}
+
+            .date {
+              display: block;
+              padding: 4px 12px;
+              letter-spacing: .1em;
+              position: absolute;
+              top: 0;
+              right: 0;
+              bottom: 0;
+              border-left: 3px solid @color-black;
+            }
+          }
+        }
+
+        &:hover {
+          &:before {opacity: 1;}
+          .info { opacity: 1; }
         }
       }
     }

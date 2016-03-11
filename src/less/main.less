@@ -1053,20 +1053,6 @@ h6 {&:extend(.h6); }
         letter-spacing: .2em;
       }
 
-      &:before {
-        width: 76px;
-        border-left: 3px solid @color-black;
-        display: block;
-        content: '';
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACkAAAAnCAMAAACltJG0AAAAdVBMVEX///8aFxseHB8hHiL39/fMzMypqKn5+fnx8PGzsrNPTVBKSEtJR0praWz29vYoJSkcGBy9u718en3t7e3q6uqOjI5bWVsyMDMxMDPj4uQuKy+GhYdGQ0bm5ubf39+hoKFUU1W+vb6GhId1c3ZycXNzcHM+PT/uzfrvAAAAtUlEQVQ4y+3Uyw6CMBQE0KlUFHmIClaKID7//xNtqrQJiXEWTdw4y5uTmcCi6HdjqvMQCZPZMencsYvTyN5OcFnM9y+YbaQ7FsnKwjRe/uGvIOhG0NNgYQ4WrsFCgQmUn6AA2WgkC0sQ0xYqkI2qBtd4qCv4xsDQT2fhGoNP878nxMeoyTQH4aa/wAYsbMFCDRYKsNBI89hXckzxhrptpEt/MVCg1MN165I/7EsRZTd/u6f29gTnzh5OYxND3AAAAABJRU5ErkJggg==') repeat-x 0 0;
-        background-size: auto 100%;
-        opacity: 0;
-      }
-
       .corner {
         width: 76px;
         background: @color-black;
@@ -1201,6 +1187,7 @@ h6 {&:extend(.h6); }
   /** News */
   &-news {
     background-color: @color-page-3;
+    overflow-y: scroll;
     .mobile & {
       &:before {
         background-image: url('@{images}/pages/news.png');
@@ -1351,6 +1338,45 @@ h6 {&:extend(.h6); }
       &:hover {
         color: @color-white;
         background: @color-black;
+      }
+    }
+  }
+}
+/* ==========================================================================
+   _PORTFOLIO
+   ========================================================================== */
+.portfolio {
+  clear: both;
+
+  .links {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    font: bold 11px/12px @font-bentonsans;
+    text-transform: uppercase;
+    text-align: center;
+    
+    &:after {.clearfix;}
+
+    > li {
+      width: 12.5%;
+      margin: 0 -7px 0 0;
+      display: inline-block;
+      
+      &:last-of-type { margin-right: 0;}
+
+      > a {
+        padding: 4px;
+        background: @color-white;
+        border: 3px solid @color-black;
+        display: block;
+        transition: color @duration-small, background-color @duration-small;
+
+        &:focus, &:hover {
+          color: @color-white;
+          text-decoration: none;
+          background: @color-black;
+        }
       }
     }
   }

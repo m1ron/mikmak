@@ -1512,19 +1512,6 @@ body[browser="chrome"]:not(.mobile) .page {
     letter-spacing: .2em;
   }
 }
-.page .white .heading:before {
-  width: 76px;
-  border-left: 3px solid #000;
-  display: block;
-  content: '';
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACkAAAAnCAMAAACltJG0AAAAdVBMVEX///8aFxseHB8hHiL39/fMzMypqKn5+fnx8PGzsrNPTVBKSEtJR0praWz29vYoJSkcGBy9u718en3t7e3q6uqOjI5bWVsyMDMxMDPj4uQuKy+GhYdGQ0bm5ubf39+hoKFUU1W+vb6GhId1c3ZycXNzcHM+PT/uzfrvAAAAtUlEQVQ4y+3Uyw6CMBQE0KlUFHmIClaKID7//xNtqrQJiXEWTdw4y5uTmcCi6HdjqvMQCZPZMencsYvTyN5OcFnM9y+YbaQ7FsnKwjRe/uGvIOhG0NNgYQ4WrsFCgQmUn6AA2WgkC0sQ0xYqkI2qBtd4qCv4xsDQT2fhGoNP878nxMeoyTQH4aa/wAYsbMFCDRYKsNBI89hXckzxhrptpEt/MVCg1MN165I/7EsRZTd/u6f29gTnzh5OYxND3AAAAABJRU5ErkJggg==') repeat-x 0 0;
-  background-size: auto 100%;
-  opacity: 0;
-}
 .page .white .heading .corner {
   width: 76px;
   background: #000;
@@ -1682,6 +1669,7 @@ body[browser="chrome"]:not(.mobile) .page.active {
 }
 .page-news {
   background-color: #ec84ac;
+  overflow-y: scroll;
 }
 .mobile .page-news:before {
   background-image: url('../img/pages/news.png');
@@ -1832,5 +1820,45 @@ body[browser="safari"] .page-contact {
 }
 .social li a:hover {
   color: #fff;
+  background: #000;
+}
+/* ==========================================================================
+   _PORTFOLIO
+   ========================================================================== */
+.portfolio {
+  clear: both;
+}
+.portfolio .links {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  font: bold 11px/12px 'BentonSans', Arial, sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+}
+.portfolio .links:after {
+  display: table;
+  content: '';
+  clear: both;
+}
+.portfolio .links > li {
+  width: 12.5%;
+  margin: 0 -7px 0 0;
+  display: inline-block;
+}
+.portfolio .links > li:last-of-type {
+  margin-right: 0;
+}
+.portfolio .links > li > a {
+  padding: 4px;
+  background: #fff;
+  border: 3px solid #000;
+  display: block;
+  transition: color 0.1s, background-color 0.1s;
+}
+.portfolio .links > li > a:focus,
+.portfolio .links > li > a:hover {
+  color: #fff;
+  text-decoration: none;
   background: #000;
 }

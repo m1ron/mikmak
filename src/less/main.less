@@ -1064,6 +1064,74 @@ h6 {&:extend(.h6); }
         bottom: 0;
         background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACkAAAAnCAMAAACltJG0AAAAdVBMVEX///8aFxseHB8hHiL39/fMzMypqKn5+fnx8PGzsrNPTVBKSEtJR0praWz29vYoJSkcGBy9u718en3t7e3q6uqOjI5bWVsyMDMxMDPj4uQuKy+GhYdGQ0bm5ubf39+hoKFUU1W+vb6GhId1c3ZycXNzcHM+PT/uzfrvAAAAtUlEQVQ4y+3Uyw6CMBQE0KlUFHmIClaKID7//xNtqrQJiXEWTdw4y5uTmcCi6HdjqvMQCZPZMencsYvTyN5OcFnM9y+YbaQ7FsnKwjRe/uGvIOhG0NNgYQ4WrsFCgQmUn6AA2WgkC0sQ0xYqkI2qBtd4qCv4xsDQT2fhGoNP878nxMeoyTQH4aa/wAYsbMFCDRYKsNBI89hXckzxhrptpEt/MVCg1MN165I/7EsRZTd/u6f29gTnzh5OYxND3AAAAABJRU5ErkJggg==') repeat-x 0 0;
         background-size: auto 100%;
+        opacity: 0;
+      }
+
+      .corner {
+        width: 76px;
+        background: @color-black;
+        display: block;
+        position: absolute;
+        top: -3px;
+        right: -3px;
+        bottom: -3px;
+        overflow: hidden;
+
+        > span {
+          position: absolute;
+          top: 3px;
+          bottom: 3px;
+          right: 3px;
+          left: 3px;
+          overflow: hidden;
+
+          &:before {
+            .before;
+            clear: both;
+            width: 9px;
+            height: 140px;
+            margin: auto auto;
+            background: @color-white;
+            border: 3px solid @color-white;
+            box-shadow: inset 0 0 0 3px @color-black;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            .rotate(45deg);
+          }
+
+          > span {
+            width: 63px;
+            height: 140px;
+            display: block;
+            border: 3px solid @color-white;
+            box-shadow: inset 0 0 0 3px @color-black;
+            .rotate(45deg);
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto auto;
+
+            &:before, &:after {
+              .before;
+              clear: both;
+              width: 9px;
+              background: @color-white;
+              border: 3px solid @color-white;
+              box-shadow: inset 0 0 0 3px @color-black;
+              position: absolute;
+              top: 0;
+              bottom: 0;
+            }
+
+            &:before { left: 3px; }
+            &:after { right: 3px; }
+          }
+        }
       }
     }
 
@@ -1158,7 +1226,7 @@ h6 {&:extend(.h6); }
       .white {
         width: 605px;
         margin-right: 0;
-        .space { max-height: 130px; }
+        .space { max-height: 135px; }
       }
       .video {
         video {

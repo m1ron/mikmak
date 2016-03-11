@@ -294,7 +294,7 @@ function initUI() {
 			target.addClass('pre');
 			setTimeout(function () {
 				target.addClass('active');
-				$('.ps-container', target).perfectScrollbar('update');
+				$('.ps-container:visible').perfectScrollbar('update');
 				setTimeout(function () {
 					if (!mobile) {
 						intro[0].play();
@@ -336,11 +336,16 @@ function initUI() {
 		$('a', this).on('click', menuAction);
 	});
 
-	$('.white').each(function () {
-		$('.space', this).perfectScrollbar({
+	$('.page').each(function () {
+		if ($(this).is('.page-scrollable')) {
+			$(this).perfectScrollbar({
+				suppressScrollX: true
+			});
+		}
+		$('.white .space', this).perfectScrollbar({
 			suppressScrollX: true
 		});
-		$('.heading', this).append('<span class="corner"><span><span></span></span></span>');
+		$('.white .heading, .portfolio .url', this).append('<span class="corner"><span><span></span></span></span>');
 	});
 
 	if (mobile) {
@@ -500,7 +505,7 @@ function initVideo() {
 						if (c >= v.audio[i].time) {
 							//console.log('played: ' + i);
 							v.audio[i].node[0].play();
-							v.audio[i].played = true;
+							//v.audio[i].played = true;
 						}
 					}
 				});

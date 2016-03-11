@@ -15,6 +15,7 @@
 @i6y: ~"(max-height: 414px)";
 @xss: ~"(max-width: 568px)";
 @xs: ~"(min-width: 568px)";
+@xsi6: ~"(min-width: 650px)";
 @smm: ~"(max-width: 750px)";
 @sm: ~"(min-width: 750px)";
 @md: ~"(min-width: 970px)";
@@ -264,8 +265,8 @@ h6 {&:extend(.h6); }
 & {
   .keyframes(preloader-animation);
   .-frames(@-...) {
-  .percent(@preloader-keyframes);
-}
+    .percent(@preloader-keyframes);
+  }
 }
 .preloader {
   margin: auto;
@@ -561,20 +562,20 @@ h6 {&:extend(.h6); }
       }
 
       .text, .heading {
-        padding: 3px 30px 3px 4px;
+        padding: 3px 34px 3px 4px;
         margin: 0;
         color: inherit;
         display: block;
         position: relative;
 
         @media @sm {
-          padding: 4px 30px 3px 6px;
+          padding: 4px 34px 3px 6px;
           letter-spacing: .125em;
         }
 
         @media @lg {
           padding-top: 6px;
-          padding-right: 36px;
+          padding-right: 44px;
           padding-bottom: 4px;
           padding-left: 7px;
         }
@@ -665,7 +666,7 @@ h6 {&:extend(.h6); }
             background: @color-black;
 
             @media @md {
-              font-size: 13px;
+              font-size: 14px;
             }
           }
 
@@ -1028,9 +1029,9 @@ h6 {&:extend(.h6); }
       padding: 2px 10px;
       margin: -2px -10px;
       max-height: 55vh;
-      overflow: hidden;
-      overflow-y: scroll;
       position: relative;
+      overflow: hidden;
+      overflow-y: auto;
       -webkit-overflow-scrolling: touch;
 
       @media @i6 {
@@ -1096,77 +1097,10 @@ h6 {&:extend(.h6); }
         line-height: 15px;
         letter-spacing: .2em;
       }
-
-      .corner {
-        width: 76px;
-        background: @color-black;
-        display: block;
-        position: absolute;
-        top: -3px;
-        right: -3px;
-        bottom: -3px;
-        overflow: hidden;
-
-        > span {
-          position: absolute;
-          top: 3px;
-          bottom: 3px;
-          right: 3px;
-          left: 3px;
-          overflow: hidden;
-
-          &:before {
-            .before;
-            clear: both;
-            width: 9px;
-            height: 140px;
-            margin: auto auto;
-            background: @color-white;
-            border: 3px solid @color-white;
-            box-shadow: inset 0 0 0 3px @color-black;
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            .rotate(45deg);
-          }
-
-          > span {
-            width: 63px;
-            height: 140px;
-            display: block;
-            border: 3px solid @color-white;
-            box-shadow: inset 0 0 0 3px @color-black;
-            .rotate(45deg);
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            margin: auto auto;
-
-            &:before, &:after {
-              .before;
-              clear: both;
-              width: 9px;
-              background: @color-white;
-              border: 3px solid @color-white;
-              box-shadow: inset 0 0 0 3px @color-black;
-              position: absolute;
-              top: 0;
-              bottom: 0;
-            }
-
-            &:before { left: 3px; }
-            &:after { right: 3px; }
-          }
-        }
-      }
     }
 
     p {
-      margin-bottom: 15px;
+      margin-bottom: 12px;
       &:last-of-type { margin-bottom: 0; }
     }
   }
@@ -1179,6 +1113,25 @@ h6 {&:extend(.h6); }
     body[browser="chrome"]:not(.mobile) & {
       opacity: 1;
       transition: opacity @duration-page;
+    }
+  }
+
+  &-scrollable {
+    overflow: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+
+    .content {
+      @media @xsi6 {
+        max-width: 580px;
+        .white { width: 100%; }
+      }
+      @media @md {
+        max-width: 850px;
+      }
+      @media @lg {
+        max-width: 1120px;
+      }
     }
   }
 
@@ -1231,31 +1184,39 @@ h6 {&:extend(.h6); }
   /** News */
   &-news {
     background-color: @color-page-3;
-    overflow-y: scroll;
     .mobile & {
       &:before {
         background-image: url('@{images}/pages/news.png');
+        @media @sm {
+          margin-top: -45vh;
+        }
+      }
+      @media @xs {
+        .content {
+          .white { width: 45%; }
+        }
       }
       @media @sm {
-        &:before { margin-top: -45vh; }
-        .content { padding-top: 45vh; }
+        .content {
+          padding-top: 45vh;
+          .white { width: 65%; }
+        }
       }
       @media @md {
-        .white {
-          width: 450px;
-          margin-right: 8vw;
-        }
+        .content { padding-top: 50vh; }
+      }
+      @media @lg {
+        .content { padding-top: 60vh; }
       }
     }
 
     @media @md {
       .content {
-        max-width: 1100px;
         padding-top: 40vh;
         margin: 0 auto;
       }
       .white {
-        width: 605px;
+        width: 605px !important;
         margin-right: 0;
         .space { max-height: 140px; }
       }
@@ -1306,7 +1267,33 @@ h6 {&:extend(.h6); }
   &-references {
     background-color: @color-page-6;
     .mobile & {
-      &:before { background-image: url('@{images}/pages/references.png'); }
+      &:before {
+        background-image: url('@{images}/pages/references.png');
+        @media @sm {
+          margin-top: -20vh;
+        }
+      }
+      @media @xs {
+        padding-top: 30vh;
+      }
+      @media @sm {
+        .content { padding-top: 27vh; }
+      }
+      @media @md {
+        .content { padding-top: 35vh; }
+      }
+      @media @xl {
+        .content { padding-top: 40vh; }
+      }
+    }
+
+    @media @sm {
+      .video {
+        video {
+          margin-top: -15vh;
+          max-height: 1000px;
+        }
+      }
     }
   }
 
@@ -1387,32 +1374,113 @@ h6 {&:extend(.h6); }
   }
 }
 /* ==========================================================================
+   _SCROLLBAR
+   ========================================================================== */
+&.ps-container {
+  > .ps-scrollbar-y-rail {
+    width: 12px;
+    border: 3px solid transparent;
+    right: 0 !important;
+    opacity: .5 !important;
+    background: none;
+
+    > .ps-scrollbar-y {
+      width: 6px;
+      background: @color-black;
+    }
+  }
+}
+/* ==========================================================================
+   _CORNER
+   ========================================================================== */
+.corner {
+  width: 76px;
+  border: 3px solid @color-black;
+  display: block;
+  overflow: hidden;
+  position: absolute;
+  top: -3px;
+  right: -3px;
+  bottom: -3px;
+  background: @color-white;
+
+  span, span:before, span:after {
+    border: 3px solid @color-black;
+    content: '';
+    display: block;
+    overflow: hidden;
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    right: 3px;
+    bottom: 3px;
+    z-index: 1;
+    background: @color-black;
+    box-shadow: inset 0 0 0 3px @color-white;
+  }
+
+  span {
+    &:after, > span { top: 9px; right: 9px; bottom: 9px; left: 9px; z-index: 2; }
+    > span { z-index: 3; }
+  }
+
+  > span {
+    width: 63px;
+    height: 130px;
+    top: -53px;
+    .rotate(45deg);
+  }
+}
+/* ==========================================================================
    _PORTFOLIO
    ========================================================================== */
 .portfolio {
-  margin: 0 -10px;
+  width: 100%;
+  padding-top: 40px;
+  margin-bottom: 40px;
   clear: both;
+  cursor: default;
 
-  .links {
+  &:after { .clearfix; }
+
+  .tabs {
     padding: 0;
-    margin: 44px 0 20px;
+    margin: 0 0 20px;
     list-style: none;
     font: bold 11px/12px @font-bentonsans;
     text-transform: uppercase;
+    white-space: nowrap;
     text-align: center;
 
     &:after { .clearfix; }
 
     > li {
-      width: 12.25%;
-      display: inline-block;
+      width: 50%;
+      float: left;
+      margin-right: -3px;
+      margin-bottom: 3px;
+      &:last-child { margin-right: 0; }
+
+      @media @xsi6 {
+        width: 138px;
+        &:first-child, &:nth-child(5n) { width: 135px; }
+      }
+      @media @md {
+        &, &:nth-child(5n) { width: 205px; }
+        &:first-child, &:nth-child(5n) { width: 204px; }
+      }
+      @media @lg {
+        &, &:nth-child(5n) { width: 138px; }
+        &:first-child { width: 135px; }
+      }
 
       > a {
-        margin: 0 -3px;
+        height: 26px;
         padding: 4px;
-        background: @color-white;
         border: 3px solid @color-black;
         display: block;
+        overflow: hidden;
+        background: @color-white;
         transition: color @duration-small, background-color @duration-small;
 
         &:focus, &:hover {
@@ -1421,133 +1489,198 @@ h6 {&:extend(.h6); }
           background: @color-black;
         }
       }
-
-      &:first-child {
-        a { margin-left: 0; }
-      }
-      &:last-child {
-        a { margin-right: 0; }
-      }
     }
   }
 
   .list {
-    margin: 0 -5px;
-    &:after {.clearfix;}
+    margin: 0;
+    &:after { .clearfix; }
 
     .panel {
-      width: 25%;
-      padding: 5px;
-      float: left;
+      width: 260px;
+      padding: 56px 34px 30px;
+      border: 3px solid @color-black;
+      margin: 5px auto;
+      position: relative;
+      background: #e1586e;
 
-      .head {
-        margin-bottom: -3px;
-        padding: 4px;
-        font-size: 11px;
-        font-weight: bold;
-        text-transform: uppercase;
-        text-align: center;
-        background: @color-white;
-        border: 3px solid @color-black;
+      @media @xsi6 {
+        margin: 5px;
+        float: left;
       }
 
-      .panel-space {
-        padding: 30px 34px;
-        background: #e1586e;
+      .heading {
+        padding: 4px;
         border: 3px solid @color-black;
+        margin: 0;
+        font: bold 11px/12px @font-bentonsans;
+        text-transform: uppercase;
+        text-align: center;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        position: absolute;
+        top: -3px;
+        right: -3px;
+        left: -3px;
+        z-index: 15;
+        background: @color-white;
+      }
+
+      .picture {
+        padding: 0;
+        margin: 0 auto;
+        .color-black(.5);
+        border: 3px solid @color-black;
+        box-shadow: 6px 6px 0 0 @color;
         position: relative;
-        cursor: pointer;
+        z-index: 3;
 
-        &:before {
+        &:before, &:after {
           .before;
-          .color-black(.7);
-          opacity: 0;
-          background: @color;
-          position: absolute;
-          top: 0;
-          left: 0;
-          bottom: 0;
-          right: 0;
-          transition: opacity @duration;
-        }
-
-        .picture {
-          margin: 0 auto;
+          clear: both;
+          width: 0;
+          height: 0;
+          border-style: solid;
           .color-black(.5);
-          border: 3px solid @color-black;
-          box-shadow: 6px 6px 0 0 @color;
-          position: relative;
-
-          &:before, &:after {
-            .before;
-            clear:both;
-            width: 0;
-            height: 0;
-            border-style: solid;
-            .color-black(.5);
-            position: absolute;
-            z-index: 1;
-          }
-          &:before { left: -3px; bottom: -9px; border-width: 0 6px 6px 0; border-color: transparent @color transparent transparent;}
-          &:after { right: -9px; top: -3px; border-width: 6px 0 0 6px; border-color: transparent transparent transparent @color;}
-
-          img {
-            width: 100%;
-            display: block;
-            height: auto;
-          }
-        }
-
-        .info {
-          opacity: 0;
-          overflow-y: scroll;
-          background: @color-white;
-          border: 3px solid @color-black;
-          margin: auto auto;
           position: absolute;
-          top: 30px;
-          left: 34px;
-          right: 34px;
-          bottom: 30px;
-          transition: opacity @duration;
+          z-index: 1;
+        }
+        &:before { left: -3px; bottom: -9px; border-width: 0 6px 6px 0; border-color: transparent @color transparent transparent; }
+        &:after { right: -9px; top: -3px; border-width: 6px 0 0 6px; border-color: transparent transparent transparent @color; }
 
-          .name {
-            margin: 0;
-            padding: 4px 8px;
-            font-weight: bold;
-            text-transform: uppercase;
-            text-align: center;
-            letter-spacing: .3em;
-            border-bottom: 3px solid @color-black;
-          }
+        img {
+          width: 180px;
+          height: 227px;
+          display: block;
+        }
+      }
 
-          .client {
-            padding: 4px 8px;
-            font-weight: bold;
-            text-transform: uppercase;
-            font-size: 8px;
-            position: relative;
-            border-bottom: 3px solid @color-black;
+      .flip {
+        border: 3px solid @color-black;
+        margin: auto;
+        position: absolute;
+        top: 56px;
+        left: 34px;
+        bottom: 30px;
+        right: 34px;
+        z-index: 10;
+        background: @color-white;
+        transition: opacity @duration;
+        opacity: 0;
 
-            &:after {.clearfix;}
+        .name, .client, .date, .url, .tags {
+          position: relative;
+          display: block;
+          font-family: @font-bentonsans;
+          font-weight: bold;
+          text-transform: uppercase;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
 
-            .date {
-              display: block;
-              padding: 4px 12px;
-              letter-spacing: .1em;
-              position: absolute;
-              top: 0;
-              right: 0;
-              bottom: 0;
-              border-left: 3px solid @color-black;
-            }
+        .head {
+          margin: 0;
+          border-bottom: 3px solid @color-black;
+          overflow: hidden;
+        }
+
+        .name {
+          height: 24px;
+          padding: 4px;
+          border-bottom: 3px solid @color-black;
+          margin: 0;
+          font-size: 12px;
+          line-height: 14px;
+          letter-spacing: .25em;
+          text-align: center;
+        }
+
+        .client {
+          width: 120px;
+          padding: 4px 8px;
+          margin: 0;
+          float: left;
+          font-size: 9px;
+          line-height: 12px;
+          letter-spacing: .1em;
+        }
+
+        .date {
+          width: 60px;
+          padding: 4px;
+          border-left: 3px solid @color-black;
+          margin: 0;
+          float: right;
+          text-align: center;
+          font-size: 10px;
+          line-height: 12px;
+          letter-spacing: .1em;
+        }
+
+        .text {
+          width: 100%;
+          padding: 12px 15px 0 15px;
+          height: 122px;
+          margin-bottom: 12px;
+          overflow: hidden;
+          font-size: 10px;
+          line-height: 12px;
+
+          p:last-child { margin: 0; }
+        }
+
+        .foot {
+          margin: 0;
+          overflow: hidden;
+        }
+
+        .url {
+          border-top: 3px solid @color-black;
+          border-bottom: 3px solid @color-black;
+          padding: 4px 8px;
+          font-size: 9px;
+          line-height: 12px;
+          letter-spacing: .1em;
+          background: @color-white;
+          transition: background-color @duration, color @duration;
+
+          .corner { width: 48px; }
+
+          &:hover {
+            text-decoration: none;
+            color: @color-white;
+            background: @color-black;
           }
         }
 
-        &:hover {
-          &:before {opacity: 1;}
-          .info { opacity: 1; }
+        .tags {
+          padding: 4px 8px;
+          font-size: 9px;
+          line-height: 12px;
+          letter-spacing: .1em;
+          text-align: center;
         }
+      }
+
+      &:before {
+        .before;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 5;
+        .color-black(.7);
+        background: @color;
+        transition: opacity @duration;
+        opacity: 0;
+      }
+
+      &:hover {
+        .flip { opacity: 1; }
+        &:before { opacity: 1; }
       }
     }
   }

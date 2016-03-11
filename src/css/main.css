@@ -946,7 +946,7 @@ body:not(.mobile) .sections > .section.active {
 }
 .sections > .section .area .text,
 .sections > .section .area .heading {
-  padding: 3px 30px 3px 4px;
+  padding: 3px 34px 3px 4px;
   margin: 0;
   color: inherit;
   display: block;
@@ -955,7 +955,7 @@ body:not(.mobile) .sections > .section.active {
 @media (min-width: 750px) {
   .sections > .section .area .text,
   .sections > .section .area .heading {
-    padding: 4px 30px 3px 6px;
+    padding: 4px 34px 3px 6px;
     letter-spacing: .125em;
   }
 }
@@ -963,7 +963,7 @@ body:not(.mobile) .sections > .section.active {
   .sections > .section .area .text,
   .sections > .section .area .heading {
     padding-top: 6px;
-    padding-right: 36px;
+    padding-right: 44px;
     padding-bottom: 4px;
     padding-left: 7px;
   }
@@ -1061,7 +1061,7 @@ body:not(.mobile) .sections > .section.active {
 }
 @media (min-width: 970px) {
   .sections > .section-intro .area .link .text {
-    font-size: 13px;
+    font-size: 14px;
   }
 }
 .sections > .section-intro .area .link .heading {
@@ -1490,9 +1490,9 @@ body[browser="chrome"]:not(.mobile) .page {
   padding: 2px 10px;
   margin: -2px -10px;
   max-height: 55vh;
-  overflow: hidden;
-  overflow-y: scroll;
   position: relative;
+  overflow: hidden;
+  overflow-y: auto;
   -webkit-overflow-scrolling: touch;
 }
 @media (max-width: 414px) {
@@ -1556,88 +1556,8 @@ body[browser="chrome"]:not(.mobile) .page {
     letter-spacing: .2em;
   }
 }
-.page .white .heading .corner {
-  width: 76px;
-  background: #000;
-  display: block;
-  position: absolute;
-  top: -3px;
-  right: -3px;
-  bottom: -3px;
-  overflow: hidden;
-}
-.page .white .heading .corner > span {
-  position: absolute;
-  top: 3px;
-  bottom: 3px;
-  right: 3px;
-  left: 3px;
-  overflow: hidden;
-}
-.page .white .heading .corner > span:before {
-  display: block;
-  content: '';
-  overflow: hidden;
-  clear: both;
-  width: 9px;
-  height: 140px;
-  margin: auto auto;
-  background: #fff;
-  border: 3px solid #fff;
-  box-shadow: inset 0 0 0 3px #000;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  -webkit-transform: rotate(45deg);
-  -moz-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  -o-transform: rotate(45deg);
-  transform: rotate(45deg);
-  -webkit-backface-visibility: hidden;
-}
-.page .white .heading .corner > span > span {
-  width: 63px;
-  height: 140px;
-  display: block;
-  border: 3px solid #fff;
-  box-shadow: inset 0 0 0 3px #000;
-  -webkit-transform: rotate(45deg);
-  -moz-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  -o-transform: rotate(45deg);
-  transform: rotate(45deg);
-  -webkit-backface-visibility: hidden;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  margin: auto auto;
-}
-.page .white .heading .corner > span > span:before,
-.page .white .heading .corner > span > span:after {
-  display: block;
-  content: '';
-  overflow: hidden;
-  clear: both;
-  width: 9px;
-  background: #fff;
-  border: 3px solid #fff;
-  box-shadow: inset 0 0 0 3px #000;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-}
-.page .white .heading .corner > span > span:before {
-  left: 3px;
-}
-.page .white .heading .corner > span > span:after {
-  right: 3px;
-}
 .page .white p {
-  margin-bottom: 15px;
+  margin-bottom: 12px;
 }
 .page .white p:last-of-type {
   margin-bottom: 0;
@@ -1659,6 +1579,29 @@ body[browser="chrome"]:not(.mobile) .page {
 body[browser="chrome"]:not(.mobile) .page.active {
   opacity: 1;
   transition: opacity 0.5s ease-in-out;
+}
+.page-scrollable {
+  overflow: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+@media (min-width: 650px) {
+  .page-scrollable .content {
+    max-width: 580px;
+  }
+  .page-scrollable .content .white {
+    width: 100%;
+  }
+}
+@media (min-width: 970px) {
+  .page-scrollable .content {
+    max-width: 850px;
+  }
+}
+@media (min-width: 1280px) {
+  .page-scrollable .content {
+    max-width: 1120px;
+  }
 }
 .page-index {
   z-index: 1;
@@ -1713,7 +1656,6 @@ body[browser="chrome"]:not(.mobile) .page.active {
 }
 .page-news {
   background-color: #ec84ac;
-  overflow-y: scroll;
 }
 .mobile .page-news:before {
   background-image: url('../img/pages/news.png');
@@ -1722,24 +1664,37 @@ body[browser="chrome"]:not(.mobile) .page.active {
   .mobile .page-news:before {
     margin-top: -45vh;
   }
+}
+@media (min-width: 568px) {
+  .mobile .page-news .content .white {
+    width: 45%;
+  }
+}
+@media (min-width: 750px) {
   .mobile .page-news .content {
     padding-top: 45vh;
   }
+  .mobile .page-news .content .white {
+    width: 65%;
+  }
 }
 @media (min-width: 970px) {
-  .mobile .page-news .white {
-    width: 450px;
-    margin-right: 8vw;
+  .mobile .page-news .content {
+    padding-top: 50vh;
+  }
+}
+@media (min-width: 1280px) {
+  .mobile .page-news .content {
+    padding-top: 60vh;
   }
 }
 @media (min-width: 970px) {
   .page-news .content {
-    max-width: 1100px;
     padding-top: 40vh;
     margin: 0 auto;
   }
   .page-news .white {
-    width: 605px;
+    width: 605px !important;
     margin-right: 0;
   }
   .page-news .white .space {
@@ -1791,6 +1746,37 @@ body[browser="chrome"]:not(.mobile) .page.active {
 }
 .mobile .page-references:before {
   background-image: url('../img/pages/references.png');
+}
+@media (min-width: 750px) {
+  .mobile .page-references:before {
+    margin-top: -20vh;
+  }
+}
+@media (min-width: 568px) {
+  .mobile .page-references {
+    padding-top: 30vh;
+  }
+}
+@media (min-width: 750px) {
+  .mobile .page-references .content {
+    padding-top: 27vh;
+  }
+}
+@media (min-width: 970px) {
+  .mobile .page-references .content {
+    padding-top: 35vh;
+  }
+}
+@media (min-width: 1560px) {
+  .mobile .page-references .content {
+    padding-top: 40vh;
+  }
+}
+@media (min-width: 750px) {
+  .page-references .video video {
+    margin-top: -15vh;
+    max-height: 1000px;
+  }
 }
 .page-contact {
   background-color: #f9ee99;
@@ -1867,51 +1853,154 @@ body[browser="safari"] .page-contact {
   background: #000;
 }
 /* ==========================================================================
+   _SCROLLBAR
+   ========================================================================== */
+.ps-container > .ps-scrollbar-y-rail {
+  width: 12px;
+  border: 3px solid transparent;
+  right: 0 !important;
+  opacity: .5 !important;
+  background: none;
+}
+.ps-container > .ps-scrollbar-y-rail > .ps-scrollbar-y {
+  width: 6px;
+  background: #000;
+}
+/* ==========================================================================
+   _CORNER
+   ========================================================================== */
+.corner {
+  width: 76px;
+  border: 3px solid #000;
+  display: block;
+  overflow: hidden;
+  position: absolute;
+  top: -3px;
+  right: -3px;
+  bottom: -3px;
+  background: #fff;
+}
+.corner span,
+.corner span:before,
+.corner span:after {
+  border: 3px solid #000;
+  content: '';
+  display: block;
+  overflow: hidden;
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  right: 3px;
+  bottom: 3px;
+  z-index: 1;
+  background: #000;
+  box-shadow: inset 0 0 0 3px #fff;
+}
+.corner span:after,
+.corner span > span {
+  top: 9px;
+  right: 9px;
+  bottom: 9px;
+  left: 9px;
+  z-index: 2;
+}
+.corner span > span {
+  z-index: 3;
+}
+.corner > span {
+  width: 63px;
+  height: 130px;
+  top: -53px;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+  -webkit-backface-visibility: hidden;
+}
+/* ==========================================================================
    _PORTFOLIO
    ========================================================================== */
 .portfolio {
-  margin: 0 -10px;
+  width: 100%;
+  padding-top: 40px;
+  margin-bottom: 40px;
   clear: both;
+  cursor: default;
 }
-.portfolio .links {
-  padding: 0;
-  margin: 44px 0 20px;
-  list-style: none;
-  font: bold 11px/12px 'BentonSans', Arial, sans-serif;
-  text-transform: uppercase;
-  text-align: center;
-}
-.portfolio .links:after {
+.portfolio:after {
   display: table;
   content: '';
   clear: both;
 }
-.portfolio .links > li {
-  width: 12.25%;
-  display: inline-block;
+.portfolio .tabs {
+  padding: 0;
+  margin: 0 0 20px;
+  list-style: none;
+  font: bold 11px/12px 'BentonSans', Arial, sans-serif;
+  text-transform: uppercase;
+  white-space: nowrap;
+  text-align: center;
 }
-.portfolio .links > li > a {
-  margin: 0 -3px;
+.portfolio .tabs:after {
+  display: table;
+  content: '';
+  clear: both;
+}
+.portfolio .tabs > li {
+  width: 50%;
+  float: left;
+  margin-right: -3px;
+  margin-bottom: 3px;
+}
+.portfolio .tabs > li:last-child {
+  margin-right: 0;
+}
+@media (min-width: 650px) {
+  .portfolio .tabs > li {
+    width: 138px;
+  }
+  .portfolio .tabs > li:first-child,
+  .portfolio .tabs > li:nth-child(5n) {
+    width: 135px;
+  }
+}
+@media (min-width: 970px) {
+  .portfolio .tabs > li,
+  .portfolio .tabs > li:nth-child(5n) {
+    width: 205px;
+  }
+  .portfolio .tabs > li:first-child,
+  .portfolio .tabs > li:nth-child(5n) {
+    width: 204px;
+  }
+}
+@media (min-width: 1280px) {
+  .portfolio .tabs > li,
+  .portfolio .tabs > li:nth-child(5n) {
+    width: 138px;
+  }
+  .portfolio .tabs > li:first-child {
+    width: 135px;
+  }
+}
+.portfolio .tabs > li > a {
+  height: 26px;
   padding: 4px;
-  background: #fff;
   border: 3px solid #000;
   display: block;
+  overflow: hidden;
+  background: #fff;
   transition: color 0.1s, background-color 0.1s;
 }
-.portfolio .links > li > a:focus,
-.portfolio .links > li > a:hover {
+.portfolio .tabs > li > a:focus,
+.portfolio .tabs > li > a:hover {
   color: #fff;
   text-decoration: none;
   background: #000;
 }
-.portfolio .links > li:first-child a {
-  margin-left: 0;
-}
-.portfolio .links > li:last-child a {
-  margin-right: 0;
-}
 .portfolio .list {
-  margin: 0 -5px;
+  margin: 0;
 }
 .portfolio .list:after {
   display: table;
@@ -1919,48 +2008,46 @@ body[browser="safari"] .page-contact {
   clear: both;
 }
 .portfolio .list .panel {
-  width: 25%;
-  padding: 5px;
-  float: left;
+  width: 260px;
+  padding: 56px 34px 30px;
+  border: 3px solid #000;
+  margin: 5px auto;
+  position: relative;
+  background: #e1586e;
 }
-.portfolio .list .panel .head {
-  margin-bottom: -3px;
+@media (min-width: 650px) {
+  .portfolio .list .panel {
+    margin: 5px;
+    float: left;
+  }
+}
+.portfolio .list .panel .heading {
   padding: 4px;
-  font-size: 11px;
-  font-weight: bold;
+  border: 3px solid #000;
+  margin: 0;
+  font: bold 11px/12px 'BentonSans', Arial, sans-serif;
   text-transform: uppercase;
   text-align: center;
-  background: #fff;
-  border: 3px solid #000;
-}
-.portfolio .list .panel .panel-space {
-  padding: 30px 34px;
-  background: #e1586e;
-  border: 3px solid #000;
-  position: relative;
-  cursor: pointer;
-}
-.portfolio .list .panel .panel-space:before {
-  display: block;
-  content: '';
+  white-space: nowrap;
   overflow: hidden;
-  opacity: 0;
-  background: rgba(0, 0, 0, 0.7);
+  text-overflow: ellipsis;
   position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  transition: opacity 0.2s ease;
+  top: -3px;
+  right: -3px;
+  left: -3px;
+  z-index: 15;
+  background: #fff;
 }
-.portfolio .list .panel .panel-space .picture {
+.portfolio .list .panel .picture {
+  padding: 0;
   margin: 0 auto;
   border: 3px solid #000;
   box-shadow: 6px 6px 0 0 rgba(0, 0, 0, 0.5);
   position: relative;
+  z-index: 3;
 }
-.portfolio .list .panel .panel-space .picture:before,
-.portfolio .list .panel .panel-space .picture:after {
+.portfolio .list .panel .picture:before,
+.portfolio .list .panel .picture:after {
   display: block;
   content: '';
   overflow: hidden;
@@ -1971,71 +2058,143 @@ body[browser="safari"] .page-contact {
   position: absolute;
   z-index: 1;
 }
-.portfolio .list .panel .panel-space .picture:before {
+.portfolio .list .panel .picture:before {
   left: -3px;
   bottom: -9px;
   border-width: 0 6px 6px 0;
   border-color: transparent rgba(0, 0, 0, 0.5) transparent transparent;
 }
-.portfolio .list .panel .panel-space .picture:after {
+.portfolio .list .panel .picture:after {
   right: -9px;
   top: -3px;
   border-width: 6px 0 0 6px;
   border-color: transparent transparent transparent rgba(0, 0, 0, 0.5);
 }
-.portfolio .list .panel .panel-space .picture img {
-  width: 100%;
+.portfolio .list .panel .picture img {
+  width: 180px;
+  height: 227px;
   display: block;
-  height: auto;
 }
-.portfolio .list .panel .panel-space .info {
-  opacity: 0;
-  overflow-y: scroll;
-  background: #fff;
+.portfolio .list .panel .flip {
   border: 3px solid #000;
-  margin: auto auto;
+  margin: auto;
   position: absolute;
-  top: 30px;
+  top: 56px;
   left: 34px;
-  right: 34px;
   bottom: 30px;
+  right: 34px;
+  z-index: 10;
+  background: #fff;
   transition: opacity 0.2s ease;
+  opacity: 0;
 }
-.portfolio .list .panel .panel-space .info .name {
-  margin: 0;
-  padding: 4px 8px;
-  font-weight: bold;
-  text-transform: uppercase;
-  text-align: center;
-  letter-spacing: .3em;
-  border-bottom: 3px solid #000;
-}
-.portfolio .list .panel .panel-space .info .client {
-  padding: 4px 8px;
-  font-weight: bold;
-  text-transform: uppercase;
-  font-size: 8px;
+.portfolio .list .panel .flip .name,
+.portfolio .list .panel .flip .client,
+.portfolio .list .panel .flip .date,
+.portfolio .list .panel .flip .url,
+.portfolio .list .panel .flip .tags {
   position: relative;
-  border-bottom: 3px solid #000;
-}
-.portfolio .list .panel .panel-space .info .client:after {
-  display: table;
-  content: '';
-  clear: both;
-}
-.portfolio .list .panel .panel-space .info .client .date {
   display: block;
-  padding: 4px 12px;
+  font-family: 'BentonSans', Arial, sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.portfolio .list .panel .flip .head {
+  margin: 0;
+  border-bottom: 3px solid #000;
+  overflow: hidden;
+}
+.portfolio .list .panel .flip .name {
+  height: 24px;
+  padding: 4px;
+  border-bottom: 3px solid #000;
+  margin: 0;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: .25em;
+  text-align: center;
+}
+.portfolio .list .panel .flip .client {
+  width: 120px;
+  padding: 4px 8px;
+  margin: 0;
+  float: left;
+  font-size: 9px;
+  line-height: 12px;
   letter-spacing: .1em;
+}
+.portfolio .list .panel .flip .date {
+  width: 60px;
+  padding: 4px;
+  border-left: 3px solid #000;
+  margin: 0;
+  float: right;
+  text-align: center;
+  font-size: 10px;
+  line-height: 12px;
+  letter-spacing: .1em;
+}
+.portfolio .list .panel .flip .text {
+  width: 100%;
+  padding: 12px 15px 0 15px;
+  height: 122px;
+  margin-bottom: 12px;
+  overflow: hidden;
+  font-size: 10px;
+  line-height: 12px;
+}
+.portfolio .list .panel .flip .text p:last-child {
+  margin: 0;
+}
+.portfolio .list .panel .flip .foot {
+  margin: 0;
+  overflow: hidden;
+}
+.portfolio .list .panel .flip .url {
+  border-top: 3px solid #000;
+  border-bottom: 3px solid #000;
+  padding: 4px 8px;
+  font-size: 9px;
+  line-height: 12px;
+  letter-spacing: .1em;
+  background: #fff;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+.portfolio .list .panel .flip .url .corner {
+  width: 48px;
+}
+.portfolio .list .panel .flip .url:hover {
+  text-decoration: none;
+  color: #fff;
+  background: #000;
+}
+.portfolio .list .panel .flip .tags {
+  padding: 4px 8px;
+  font-size: 9px;
+  line-height: 12px;
+  letter-spacing: .1em;
+  text-align: center;
+}
+.portfolio .list .panel:before {
+  display: block;
+  content: '';
+  overflow: hidden;
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
-  border-left: 3px solid #000;
+  left: 0;
+  z-index: 5;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 0.2s ease;
+  opacity: 0;
 }
-.portfolio .list .panel .panel-space:hover:before {
+.portfolio .list .panel:hover .flip {
   opacity: 1;
 }
-.portfolio .list .panel .panel-space:hover .info {
+.portfolio .list .panel:hover:before {
   opacity: 1;
 }

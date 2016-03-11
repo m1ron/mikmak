@@ -1259,14 +1259,22 @@ body:not(.mobile) .sections > .section.active {
   left: 50%;
   top: 50%;
   z-index: 1;
-  -webkit-transform: translate(-50%, -50%) scale(1.01);
-  -moz-transform: translate(-50%, -50%) scale(1.01);
-  -ms-transform: translate(-50%, -50%) scale(1.01);
-  -o-transform: translate(-50%, -50%) scale(1.01);
-  transform: translate(-50%, -50%) scale(1.01);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   -webkit-backface-visibility: hidden;
   background-color: transparent !important;
   opacity: 0;
+}
+body[browser="safari"] .video video {
+  -webkit-transform: translate(-50%, -50%) scale(1.05);
+  -moz-transform: translate(-50%, -50%) scale(1.05);
+  -ms-transform: translate(-50%, -50%) scale(1.05);
+  -o-transform: translate(-50%, -50%) scale(1.05);
+  transform: translate(-50%, -50%) scale(1.05);
+  -webkit-backface-visibility: hidden;
 }
 .video video.visible {
   opacity: 1;
@@ -1701,7 +1709,7 @@ body[browser="chrome"]:not(.mobile) .page.active {
     max-height: 140px;
   }
   .page-news .video video {
-    max-height: 1000px;
+    max-height: 999px;
     margin-top: -32.6vh;
   }
 }
@@ -1775,7 +1783,7 @@ body[browser="chrome"]:not(.mobile) .page.active {
 @media (min-width: 750px) {
   .page-references .video video {
     margin-top: -15vh;
-    max-height: 1000px;
+    max-height: 999px;
   }
 }
 .page-contact {

@@ -1028,6 +1028,53 @@ body:not(.mobile) .sections > .section.active {
 .portrait .sections > .section {
   background-size: 100% auto !important;
 }
+.mobile .sections > .section-intro {
+  background: #ff477f url('../img/sections/intro.png') center center no-repeat;
+}
+.sections > .section-intro .area {
+  width: 270px;
+  margin: -20vh 0 0 -135px;
+  top: 50%;
+  left: 50%;
+  right: auto;
+}
+@media (min-width: 970px) {
+  .sections > .section-intro .area {
+    width: 320px;
+    margin-left: -160px;
+  }
+}
+.sections > .section-intro .area .link {
+  text-align: center;
+}
+.sections > .section-intro .area .link:before,
+.sections > .section-intro .area .link:after {
+  display: none;
+}
+.sections > .section-intro .area .link .text {
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #fff;
+  font-size: 12px;
+  letter-spacing: .3em;
+  background: #000;
+}
+@media (min-width: 970px) {
+  .sections > .section-intro .area .link .text {
+    font-size: 13px;
+  }
+}
+.sections > .section-intro .area .link .heading {
+  padding-left: 5px;
+  padding-right: 5px;
+  text-transform: none;
+  color: #000 !important;
+  background: #fff !important;
+}
+.sections > .section-intro .area .link .heading:before,
+.sections > .section-intro .area .link .heading:after {
+  display: none;
+}
 .mobile .sections > .section-about {
   background: #f4853d url('../img/sections/about.png') center center no-repeat;
 }
@@ -1094,71 +1141,74 @@ body:not(.mobile) .sections > .section.active {
 .sections > .section-contact .area {
   margin: -12vw 0 0 11vw;
 }
+.mobile .sections > .section-finish {
+  background: #f78378 url('../img/sections/thankyou.png') center center no-repeat;
+}
 @media (max-width: 750px) {
-  .portrait .sections > .section .area {
+  .portrait .sections > .section:not(.section-intro) .area {
     margin-left: 0 !important;
     margin-right: 0 !important;
     left: auto;
     right: 5%;
   }
 }
-.portrait .sections > .section-about .area {
+.portrait .sections > .section:not(.section-intro)-about .area {
   margin-top: -21vw;
 }
 @media (max-width: 750px) {
-  .portrait .sections > .section-about .area {
+  .portrait .sections > .section:not(.section-intro)-about .area {
     margin-top: -33vw;
   }
 }
-.portrait .sections > .section-process .area {
+.portrait .sections > .section:not(.section-intro)-process .area {
   margin-top: -18vw;
 }
 @media (max-width: 750px) {
-  .portrait .sections > .section-process .area {
+  .portrait .sections > .section:not(.section-intro)-process .area {
     margin-top: -24vw;
     right: auto;
     left: 5%;
   }
 }
-.portrait .sections > .section-news .area {
+.portrait .sections > .section:not(.section-intro)-news .area {
   margin: -13vw 0 0 12vw;
 }
 @media (max-width: 750px) {
-  .portrait .sections > .section-news .area {
+  .portrait .sections > .section:not(.section-intro)-news .area {
     margin-top: -24vw;
   }
 }
-.portrait .sections > .section-skills .area {
+.portrait .sections > .section:not(.section-intro)-skills .area {
   margin-top: 15vw;
 }
 @media (max-width: 750px) {
-  .portrait .sections > .section-skills .area {
+  .portrait .sections > .section:not(.section-intro)-skills .area {
     margin-top: 30vw;
   }
 }
-.portrait .sections > .section-viralize .area {
+.portrait .sections > .section:not(.section-intro)-viralize .area {
   margin-top: -10vw;
 }
 @media (max-width: 750px) {
-  .portrait .sections > .section-viralize .area {
+  .portrait .sections > .section:not(.section-intro)-viralize .area {
     margin-top: -15vw;
   }
 }
-.portrait .sections > .section-references .area {
+.portrait .sections > .section:not(.section-intro)-references .area {
   margin-top: -10vw;
 }
 @media (max-width: 750px) {
-  .portrait .sections > .section-references .area {
+  .portrait .sections > .section:not(.section-intro)-references .area {
     margin-top: -12vw;
     right: auto;
     left: 5%;
   }
 }
-.portrait .sections > .section-contact .area {
+.portrait .sections > .section:not(.section-intro)-contact .area {
   margin-top: -16vw;
 }
 @media (max-width: 750px) {
-  .portrait .sections > .section-contact .area {
+  .portrait .sections > .section:not(.section-intro)-contact .area {
     margin-top: -23vw;
   }
 }
@@ -1246,7 +1296,7 @@ body:not(.mobile) .sections > .section.active {
 }
 /** Dots */
 .dots {
-  width: 219px;
+  width: 246px;
   margin: auto;
   overflow: hidden;
   display: block;
@@ -1261,7 +1311,7 @@ body:not(.mobile) .sections > .section.active {
 }
 @media (min-width: 750px) {
   .dots {
-    width: 683px;
+    width: 696px;
     bottom: 40px;
   }
 }
@@ -1280,17 +1330,11 @@ body:not(.mobile) .sections > .section.active {
 }
 @media (min-width: 750px) {
   .dots > a {
-    width: 88px;
+    width: 80px;
     height: 15px;
   }
 }
-body:not(.mobile) .dots > a:first-child {
-  display: none;
-}
-body.mobile .dots > a:not(:nth-child(1)) {
-  margin-left: -3px;
-}
-body:not(.mobile) .dots > a:not(:nth-child(2)) {
+.dots > a:not(:nth-child(1)) {
   margin-left: -3px;
 }
 .dots > a.played {
@@ -1699,7 +1743,7 @@ body[browser="chrome"]:not(.mobile) .page.active {
     margin-right: 0;
   }
   .page-news .white .space {
-    max-height: 135px;
+    max-height: 140px;
   }
   .page-news .video video {
     max-height: 1000px;

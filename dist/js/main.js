@@ -336,7 +336,7 @@ function initUI() {
 		$('a', this).on('click', menuAction);
 	});
 
-	$('.white').each(function(){
+	$('.white').each(function () {
 		$('.space', this).perfectScrollbar({
 			suppressScrollX: true
 		});
@@ -400,7 +400,7 @@ function initVideo() {
 
 		/** Video sections array */
 		v.sections = [
-			{time: 0, id: 'preloader', title: 'Preloader'},
+			{time: .4, id: 'intro', title: 'Intro'},
 			{time: 3.4, id: 'about', title: 'About us'},
 			{time: 5.2, id: 'process', title: 'Our process'},
 			{time: 7.3, id: 'news', title: 'News'},
@@ -548,7 +548,7 @@ function initVideo() {
 		function onWheelStart(event) {
 			if (!v.disabled) {
 				if ((event.deltaY > 0) || (event.deltaX > 0)) {
-					if (v.active > 1) {
+					if (v.active > 0) {
 						playVideo(v.active - 1);
 					}
 				} else if ((event.deltaY < 0) || (event.deltaX < 0)) {
@@ -592,6 +592,6 @@ function initVideo() {
 			e.preventDefault();
 		}
 
-		playVideo(1);
+		playVideo(0);
 	});
 }

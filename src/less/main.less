@@ -981,8 +981,8 @@ h6 {&:extend(.h6); }
     }
 
     .space {
-      padding: 3px 7px;
-      margin: -3px -7px;
+      padding: 2px 10px;
+      margin: -2px -10px;
       max-height: 55vh;
       overflow: hidden;
       overflow-y: scroll;
@@ -997,7 +997,9 @@ h6 {&:extend(.h6); }
       }
 
       &.ps-container {
-        padding-right: 21px;
+        &.ps-active-y {
+          padding-right: 21px;
+        }
 
         > .ps-scrollbar-y-rail {
           width: 13px;
@@ -1123,7 +1125,7 @@ h6 {&:extend(.h6); }
       .white {
         width: 360px;
         margin-right: 9.5vh;
-        .space { max-height: 220px; }
+        .space { max-height: 250px; }
       }
     }
   }
@@ -1156,7 +1158,7 @@ h6 {&:extend(.h6); }
       .white {
         width: 605px;
         margin-right: 0;
-        .space { max-height: 120px; }
+        .space { max-height: 130px; }
       }
       .video {
         video {

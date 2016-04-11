@@ -136,6 +136,8 @@
   box-sizing: border-box;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   -webkit-backface-visibility: hidden;
+  -webkit-transform: scale(1);
+  -webkit-transform-style: preserve-3d;
 }
 html {
   width: 100%;
@@ -733,62 +735,63 @@ h6 {&:extend(.h6); }
       .mobile & { background: @color-section-8 url('@{images}/sections/thankyou.png') center center no-repeat; }
     }
 
-    .portrait &:not(.section-intro) {
-      .area {
-        @media @smm {
-          margin-left: 0 !important;
-          margin-right: 0 !important;
-          left: auto;
-          right: 5%;
-        }
-      }
+    .portrait & {
       &-about {
         .area {
           margin-top: -21vw;
-          @media @smm {
-            margin-top: -33vw;
+          @media @i6 {
+            width: 230px;
+            margin: -35vw 0 0 -115px;
+            right: auto;
           }
         }
       }
       &-process {
         .area {
           margin-top: -18vw;
-          @media @smm {
-            margin-top: -24vw;
+          @media @i6 {
+            width: 220px;
+            margin: 18vw 0 0 -110px;
+            left: 50%;
             right: auto;
-            left: 5%;
           }
         }
       }
       &-news {
         .area {
           margin: -13vw 0 0 12vw;
-          @media @smm {
-            margin-top: -24vw;
+          @media @i6 {
+            width: 170px;
+            margin: -32vw 0 0 -85px;
+            right: auto;
           }
         }
       }
       &-skills {
         .area {
           margin-top: 15vw;
-          @media @smm {
-            margin-top: 30vw;
+          @media @i6 {
+            width: 160px;
+            margin: 35vw 0 0 -80px;
+            right: auto;
           }
         }
       }
       &-viralize {
         .area {
           margin-top: -10vw;
-          @media @smm {
-            margin-top: -15vw;
+          @media @i6 {
+            width: 210px;
+            margin: -25vw 0 0 -105px;
+            right: auto;
           }
         }
       }
       &-references {
         .area {
           margin-top: -10vw;
-          @media @smm {
-            margin-top: -12vw;
+          @media @i6 {
+            margin-top: -15vw;
             right: auto;
             left: 5%;
           }
@@ -797,8 +800,10 @@ h6 {&:extend(.h6); }
       &-contact {
         .area {
           margin-top: -16vw;
-          @media @smm {
-            margin-top: -23vw;
+          @media @i6 {
+            width: 150px;
+            margin: -35vw 0 0 -75px;
+            right: auto;
           }
         }
       }

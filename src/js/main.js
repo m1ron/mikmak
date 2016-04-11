@@ -502,10 +502,11 @@ function initVideo() {
 				$(v.audio).each(function (i) {
 					if (this.played === false && a === false) {
 						a = true;
+						//console.log(c + ' ' + v.audio[i].time);
 						if (c >= v.audio[i].time) {
 							//console.log('played: ' + i);
 							v.audio[i].node[0].play();
-							//v.audio[i].played = true;
+							v.audio[i].played = true;
 						}
 					}
 				});
@@ -524,6 +525,16 @@ function initVideo() {
 				v.forward.currentTime = v.duration - to;
 				//console.log('v.duration: ' + (v.duration - to));
 			}, 50);
+
+			var i = v.audio.length - 1;
+			while (i >= 0) {
+				if ((v.audio[i].played === true)) {
+					//console.log('reverted: ' + i);
+					v.audio[i].played = false;
+					break;
+				}
+				i--;
+			}
 
 			v.interval = setInterval(function () {
 				var c = v.backward.currentTime;

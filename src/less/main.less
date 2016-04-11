@@ -339,7 +339,7 @@ h6 {&:extend(.h6); }
   opacity: 1;
   transition: opacity @duration;
 
-  .mobile & { position: fixed; }
+  .simple & { position: fixed; }
 
   .ui-hidden & { opacity: 0; }
 
@@ -452,7 +452,7 @@ h6 {&:extend(.h6); }
     line-height: 14px;
   }
 
-  .mobile & { position: fixed; }
+  .simple & { position: fixed; }
   .nav-open & { display: block; }
 
   .menu {
@@ -487,7 +487,7 @@ h6 {&:extend(.h6); }
   overflow: hidden;
   z-index: 5;
   cursor: default;
-  .mobile & { position: fixed; }
+  .simple & { position: fixed; }
 }
 /* ==========================================================================
    _SECTIONS
@@ -508,7 +508,7 @@ h6 {&:extend(.h6); }
     position: relative;
     z-index: 20;
 
-    body:not(.mobile) & {
+    body:not(.simple) & {
       display: none;
       opacity: 0;
       transition: opacity .2s;
@@ -631,7 +631,7 @@ h6 {&:extend(.h6); }
       }
     }
 
-    .mobile & {
+    .simple & {
       background-size: contain !important;
       @media @i6y {
         background-size: auto 90% !important;
@@ -641,7 +641,7 @@ h6 {&:extend(.h6); }
       background-size: 100% auto !important;
     }
     &-intro {
-      .mobile & { background: @color-section-0 url('@{images}/sections/intro.png') center center no-repeat; }
+      .simple & { background: @color-section-0 url('@{images}/sections/intro.png') center center no-repeat; }
 
       .area {
         width: 270px;
@@ -684,7 +684,7 @@ h6 {&:extend(.h6); }
       }
     }
     &-about {
-      .mobile & { background: @color-section-1 url('@{images}/sections/about.png') center center no-repeat; }
+      .simple & { background: @color-section-1 url('@{images}/sections/about.png') center center no-repeat; }
       .area {
         margin: -13.5vw 0 0 6vw;
         @media @xss {
@@ -693,11 +693,11 @@ h6 {&:extend(.h6); }
       }
     }
     &-process {
-      .mobile & { background: @color-section-2 url('@{images}/sections/process.png') center center no-repeat; }
+      .simple & { background: @color-section-2 url('@{images}/sections/process.png') center center no-repeat; }
       .area { margin: -11vw 6vw 0 0; left: auto; right: 50%; }
     }
     &-news {
-      .mobile & { background: @color-section-3 url('@{images}/sections/news.png') center center no-repeat; }
+      .simple & { background: @color-section-3 url('@{images}/sections/news.png') center center no-repeat; }
       .area {
         margin: -2vw 0 0 18vw;
         @media @xss {
@@ -706,7 +706,7 @@ h6 {&:extend(.h6); }
       }
     }
     &-skills {
-      .mobile & { background: @color-section-4 url('@{images}/sections/skills.png') center center no-repeat; }
+      .simple & { background: @color-section-4 url('@{images}/sections/skills.png') center center no-repeat; }
       .area {
         margin: 7vw 0 0 16vw;
         @media @xss {
@@ -715,7 +715,7 @@ h6 {&:extend(.h6); }
       }
     }
     &-viralize {
-      .mobile & { background: @color-section-5 url('@{images}/sections/viralize.png') center center no-repeat; }
+      .simple & { background: @color-section-5 url('@{images}/sections/viralize.png') center center no-repeat; }
       .area {
         margin: -2vw 0 0 -35.5vw;
         @media @xss {
@@ -724,15 +724,15 @@ h6 {&:extend(.h6); }
       }
     }
     &-references {
-      .mobile & { background: @color-section-6 url('@{images}/sections/references.png') center center no-repeat; }
+      .simple & { background: @color-section-6 url('@{images}/sections/references.png') center center no-repeat; }
       .area { margin: -4vw 10vw 0 0; left: auto; right: 50%; }
     }
     &-contact {
-      .mobile & { background: @color-section-7 url('@{images}/sections/contact.png') center center no-repeat; }
+      .simple & { background: @color-section-7 url('@{images}/sections/contact.png') center center no-repeat; }
       .area { margin: -12vw 0 0 11vw; }
     }
     &-finish {
-      .mobile & { background: @color-section-8 url('@{images}/sections/thankyou.png') center center no-repeat; }
+      .simple & { background: @color-section-8 url('@{images}/sections/thankyou.png') center center no-repeat; }
     }
 
     .portrait & {
@@ -836,7 +836,7 @@ h6 {&:extend(.h6); }
   z-index: 0;
   .unselectable;
 
-  .mobile & { display: none; }
+  .simple & { display: none; }
 
   & video {
     width: 100%;
@@ -940,7 +940,7 @@ h6 {&:extend(.h6); }
   left: 0;
   z-index: 5;
 
-  .mobile & {
+  .simple & {
     position: fixed;
   }
 
@@ -949,7 +949,7 @@ h6 {&:extend(.h6); }
     .transition-translate(@duration-page);
   }
 
-  body[browser="chrome"]:not(.mobile) & {
+  body[browser="chrome"]:not(.simple) & {
     .translate(0, 0, 0);
     .transition-none;
     opacity: 0;
@@ -995,7 +995,7 @@ h6 {&:extend(.h6); }
     z-index: 50;
     cursor: default;
 
-    .mobile & { transition-delay: .5s; }
+    .simple & { transition-delay: .5s; }
 
     @media @i6 {
       .portrait & { padding-top: 55vh; }
@@ -1119,7 +1119,7 @@ h6 {&:extend(.h6); }
     .translate(0, 0, 0);
     .content { opacity: 1; }
 
-    body[browser="chrome"]:not(.mobile) & {
+    body[browser="chrome"]:not(.simple) & {
       opacity: 1;
       transition: opacity @duration-page;
     }
@@ -1159,7 +1159,7 @@ h6 {&:extend(.h6); }
   /** About */
   &-about {
     background-color: @color-page-1;
-    .mobile & {
+    .simple & {
       &:before { background-image: url('@{images}/pages/about.png'); }
     }
 
@@ -1176,7 +1176,7 @@ h6 {&:extend(.h6); }
   /** Process */
   &-process {
     background-color: @color-page-2;
-    .mobile & {
+    .simple & {
       &:before { background-image: url('@{images}/pages/process.png'); }
     }
 
@@ -1193,7 +1193,7 @@ h6 {&:extend(.h6); }
   /** News */
   &-news {
     background-color: @color-page-3;
-    .mobile & {
+    .simple & {
       &:before {
         background-image: url('@{images}/pages/news.png');
         @media @sm {
@@ -1241,7 +1241,7 @@ h6 {&:extend(.h6); }
   /** Skills */
   &-skills {
     background-color: @color-page-4;
-    .mobile & {
+    .simple & {
       &:before { background-image: url('@{images}/pages/skills.png'); }
     }
 
@@ -1258,7 +1258,7 @@ h6 {&:extend(.h6); }
   /** Viralize */
   &-viralize {
     background-color: @color-page-5;
-    .mobile & {
+    .simple & {
       &:before { background-image: url('@{images}/pages/viralize.png'); }
     }
 
@@ -1275,7 +1275,7 @@ h6 {&:extend(.h6); }
   /** References */
   &-references {
     background-color: @color-page-6;
-    .mobile & {
+    .simple & {
       &:before {
         background-image: url('@{images}/pages/references.png');
         @media @sm {
@@ -1309,7 +1309,7 @@ h6 {&:extend(.h6); }
   /** Contact */
   &-contact {
     background-color: @color-page-7;
-    .mobile & {
+    .simple & {
       &:before { background-image: url('@{images}/pages/contact.png'); }
     }
 

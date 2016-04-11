@@ -676,7 +676,7 @@ h6 {
   opacity: 1;
   transition: opacity 0.2s ease;
 }
-.mobile .header {
+.simple .header {
   position: fixed;
 }
 .ui-hidden .header {
@@ -818,7 +818,7 @@ h6 {
     line-height: 14px;
   }
 }
-.mobile .nav {
+.simple .nav {
   position: fixed;
 }
 .nav-open .nav {
@@ -855,7 +855,7 @@ h6 {
   z-index: 5;
   cursor: default;
 }
-.mobile .main {
+.simple .main {
   position: fixed;
 }
 /* ==========================================================================
@@ -876,15 +876,15 @@ h6 {
   position: relative;
   z-index: 20;
 }
-body:not(.mobile) .sections > .section {
+body:not(.simple) .sections > .section {
   display: none;
   opacity: 0;
   transition: opacity .2s;
 }
-body:not(.mobile) .sections > .section.pre {
+body:not(.simple) .sections > .section.pre {
   display: block;
 }
-body:not(.mobile) .sections > .section.active {
+body:not(.simple) .sections > .section.active {
   opacity: 1;
   transition: opacity 0.4s;
 }
@@ -1019,18 +1019,18 @@ body:not(.mobile) .sections > .section.active {
     width: 38px;
   }
 }
-.mobile .sections > .section {
+.simple .sections > .section {
   background-size: contain !important;
 }
 @media (max-height: 414px) {
-  .mobile .sections > .section {
+  .simple .sections > .section {
     background-size: auto 90% !important;
   }
 }
 .portrait .sections > .section {
   background-size: 100% auto !important;
 }
-.mobile .sections > .section-intro {
+.simple .sections > .section-intro {
   background: #ff477f url('../img/sections/intro.png') center center no-repeat;
 }
 .sections > .section-intro .area {
@@ -1077,7 +1077,7 @@ body:not(.mobile) .sections > .section.active {
 .sections > .section-intro .area .link .heading:after {
   display: none;
 }
-.mobile .sections > .section-about {
+.simple .sections > .section-about {
   background: #f4853d url('../img/sections/about.png') center center no-repeat;
 }
 .sections > .section-about .area {
@@ -1088,7 +1088,7 @@ body:not(.mobile) .sections > .section.active {
     margin: -16vw 0 0 2vw;
   }
 }
-.mobile .sections > .section-process {
+.simple .sections > .section-process {
   background: #fbbd32 url('../img/sections/process.png') center center no-repeat;
 }
 .sections > .section-process .area {
@@ -1096,7 +1096,7 @@ body:not(.mobile) .sections > .section.active {
   left: auto;
   right: 50%;
 }
-.mobile .sections > .section-news {
+.simple .sections > .section-news {
   background: #d0ccc9 url('../img/sections/news.png') center center no-repeat;
 }
 .sections > .section-news .area {
@@ -1107,7 +1107,7 @@ body:not(.mobile) .sections > .section.active {
     margin: -12vw 0 0 8vw;
   }
 }
-.mobile .sections > .section-skills {
+.simple .sections > .section-skills {
   background: #189365 url('../img/sections/skills.png') center center no-repeat;
 }
 .sections > .section-skills .area {
@@ -1118,7 +1118,7 @@ body:not(.mobile) .sections > .section.active {
     margin-top: 1vw;
   }
 }
-.mobile .sections > .section-viralize {
+.simple .sections > .section-viralize {
   background: #7c84bf url('../img/sections/viralize.png') center center no-repeat;
 }
 .sections > .section-viralize .area {
@@ -1129,7 +1129,7 @@ body:not(.mobile) .sections > .section.active {
     margin-top: -10vw;
   }
 }
-.mobile .sections > .section-references {
+.simple .sections > .section-references {
   background: #fcb741 url('../img/sections/references.png') center center no-repeat;
 }
 .sections > .section-references .area {
@@ -1137,13 +1137,13 @@ body:not(.mobile) .sections > .section.active {
   left: auto;
   right: 50%;
 }
-.mobile .sections > .section-contact {
+.simple .sections > .section-contact {
   background: #ebaacc url('../img/sections/contact.png') center center no-repeat;
 }
 .sections > .section-contact .area {
   margin: -12vw 0 0 11vw;
 }
-.mobile .sections > .section-finish {
+.simple .sections > .section-finish {
   background: #f78378 url('../img/sections/thankyou.png') center center no-repeat;
 }
 .portrait .sections > .section-about .area {
@@ -1250,7 +1250,7 @@ body:not(.mobile) .sections > .section.active {
   -o-user-select: none;
   user-select: none;
 }
-.mobile .video {
+.simple .video {
   display: none;
 }
 .video video {
@@ -1377,7 +1377,7 @@ body[browser="safari"] .video video {
   /** References */
   /** Contact */
 }
-.mobile .page {
+.simple .page {
   position: fixed;
 }
 .page:not(.page-index) {
@@ -1393,7 +1393,7 @@ body[browser="safari"] .video video {
   -o-transition: -o-transform 0.5s ease-in-out;
   transition: transform 0.5s ease-in-out;
 }
-body[browser="chrome"]:not(.mobile) .page {
+body[browser="chrome"]:not(.simple) .page {
   -webkit-transform: translate3d(0, 0, 0);
   -moz-transform: translate3d(0, 0, 0);
   -ms-transform: translate3d(0, 0, 0);
@@ -1447,7 +1447,7 @@ body[browser="chrome"]:not(.mobile) .page {
   z-index: 50;
   cursor: default;
 }
-.mobile .page .content {
+.simple .page .content {
   transition-delay: .5s;
 }
 @media (max-width: 414px) {
@@ -1589,7 +1589,7 @@ body[browser="chrome"]:not(.mobile) .page {
 .page.active .content {
   opacity: 1;
 }
-body[browser="chrome"]:not(.mobile) .page.active {
+body[browser="chrome"]:not(.simple) .page.active {
   opacity: 1;
   transition: opacity 0.5s ease-in-out;
 }
@@ -1634,7 +1634,7 @@ body[browser="chrome"]:not(.mobile) .page.active {
 .page-about {
   background-color: #5f9fab;
 }
-.mobile .page-about:before {
+.simple .page-about:before {
   background-image: url('../img/pages/about.png');
 }
 @media (min-width: 970px) {
@@ -1652,7 +1652,7 @@ body[browser="chrome"]:not(.mobile) .page.active {
 .page-process {
   background-color: #7dc74c;
 }
-.mobile .page-process:before {
+.simple .page-process:before {
   background-image: url('../img/pages/process.png');
 }
 @media (min-width: 970px) {
@@ -1670,34 +1670,34 @@ body[browser="chrome"]:not(.mobile) .page.active {
 .page-news {
   background-color: #ec84ac;
 }
-.mobile .page-news:before {
+.simple .page-news:before {
   background-image: url('../img/pages/news.png');
 }
 @media (min-width: 750px) {
-  .mobile .page-news:before {
+  .simple .page-news:before {
     margin-top: -45vh;
   }
 }
 @media (min-width: 568px) {
-  .mobile .page-news .content .white {
+  .simple .page-news .content .white {
     width: 45%;
   }
 }
 @media (min-width: 750px) {
-  .mobile .page-news .content {
+  .simple .page-news .content {
     padding-top: 45vh;
   }
-  .mobile .page-news .content .white {
+  .simple .page-news .content .white {
     width: 65%;
   }
 }
 @media (min-width: 970px) {
-  .mobile .page-news .content {
+  .simple .page-news .content {
     padding-top: 50vh;
   }
 }
 @media (min-width: 1280px) {
-  .mobile .page-news .content {
+  .simple .page-news .content {
     padding-top: 60vh;
   }
 }
@@ -1721,7 +1721,7 @@ body[browser="chrome"]:not(.mobile) .page.active {
 .page-skills {
   background-color: #c6b8bb;
 }
-.mobile .page-skills:before {
+.simple .page-skills:before {
   background-image: url('../img/pages/skills.png');
 }
 @media (min-width: 970px) {
@@ -1739,7 +1739,7 @@ body[browser="chrome"]:not(.mobile) .page.active {
 .page-viralize {
   background-color: #e9675e;
 }
-.mobile .page-viralize:before {
+.simple .page-viralize:before {
   background-image: url('../img/pages/viralize.png');
 }
 @media (min-width: 970px) {
@@ -1757,31 +1757,31 @@ body[browser="chrome"]:not(.mobile) .page.active {
 .page-references {
   background-color: #959595;
 }
-.mobile .page-references:before {
+.simple .page-references:before {
   background-image: url('../img/pages/references.png');
 }
 @media (min-width: 750px) {
-  .mobile .page-references:before {
+  .simple .page-references:before {
     margin-top: -20vh;
   }
 }
 @media (min-width: 568px) {
-  .mobile .page-references {
+  .simple .page-references {
     padding-top: 30vh;
   }
 }
 @media (min-width: 750px) {
-  .mobile .page-references .content {
+  .simple .page-references .content {
     padding-top: 27vh;
   }
 }
 @media (min-width: 970px) {
-  .mobile .page-references .content {
+  .simple .page-references .content {
     padding-top: 35vh;
   }
 }
 @media (min-width: 1560px) {
-  .mobile .page-references .content {
+  .simple .page-references .content {
     padding-top: 40vh;
   }
 }
@@ -1794,7 +1794,7 @@ body[browser="chrome"]:not(.mobile) .page.active {
 .page-contact {
   background-color: #f9ee99;
 }
-.mobile .page-contact:before {
+.simple .page-contact:before {
   background-image: url('../img/pages/contact.png');
 }
 .page-contact .social {

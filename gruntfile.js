@@ -83,7 +83,7 @@ module.exports = function (grunt) {
 						cwd: '<%= config.src %>',
 						dest: '<%= config.dest %>',
 						src: [
-							'css/{,*/}*.css',
+							'css/{,*/}*.*',
 							'img/{,*/}*.*',
 							'js/{,*/}*.*',
 							'fonts/{,*/}*.*',

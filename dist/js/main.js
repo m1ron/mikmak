@@ -41,7 +41,7 @@ function detectVersion() {
 	if (check) {
 		version = 'simple';
 	}
-	version = 'simple';
+	version = 'mobile';
 	if (version === 'simple') {
 		$('body').addClass('simple');
 	} else if (version === 'mobile') {
@@ -89,6 +89,19 @@ $(document).ready(function () {
 		audio: './audio/',
 		video: './video/'
 	};
+
+	/** Video sections array */
+	v.sections = [
+		{time: .4, id: 'intro', title: 'Intro'},
+		{time: 3.4, id: 'about', title: 'About us'},
+		{time: 5.2, id: 'process', title: 'Our process'},
+		{time: 7.3, id: 'news', title: 'News'},
+		{time: 9.65, id: 'skills', title: 'Our skills'},
+		{time: 20.2, id: 'viralize', title: 'Viralize'},
+		{time: 23, id: 'references', title: 'References'},
+		{time: 25.6, id: 'contact', title: 'Contact'},
+		{time: 28.6, id: 'finish', title: 'Finish'}
+	];
 
 	/** Audio files array */
 	v.audio = [
@@ -406,13 +419,130 @@ function initSimple() {
 function initMobile() {
 	$('.page-index').each(function () {
 		console.log('Initializing image sequence version');
+		var self = $(this), startTouchX = 0, startTouchY = 0;
+		v.self = self;
+		v.disabled = false;
+		v.interval = [];
+
+		$('<figure>').addClass('sequence sequence-intro').attr('data-time', '0').appendTo(this);
+		v.sequence = $('.sequence', self);
+
+		v.duration = 28.88;
+		v.active = 0;
+		v.next = 1;
+		v.time = 0;
+		v.page = 1;
 
 		/** Generate dots */
-		var dots = $('<p/>').addClass('dots').attr('id', 'dots');
-		$('.sections .section').each(function (i) {
-			$('<a href="#' + $(this).data('anchor') + '" data-menuanchor="' + $(this).data('anchor') + '"/>').text(i).appendTo(dots);
-		});
-		dots.appendTo(this);
+		v.dots = $('<p/>').addClass('dots');
+		for (var i = 0; i < v.sections.length; i++) {
+			$('<a href="#' + v.sections[i].id + '" data-section="' + i + '" title="' + v.sections[i].title + '"/>').text(i).on('click', onDotsClick).appendTo(v.dots);
+		}
+		v.dots.appendTo(self);
+
+		/** Play video section (integer) */
+		function playMobile(index) {
+			v.disabled = true;
+			$(document).off('mousewheel', onWheelStart).off('touchstart', onTouchStart).off('touchmove', onTouchMove);
+
+			var a = v.dots.find('a').eq(index);
+			a.prevAll().andSelf().addClass('played');
+			a.nextAll().removeClass('played');
+			a.siblings('.active').removeClass('active');
+
+			var duration = v.sections[index].time - (v.time / 1000);
+			if (index - v.active > 1) {
+				for (var i = v.active + 1; i < index; i++) {
+					duration = duration + (v.sections[i].time - v.sections[v.active].time);
+				}
+			}
+
+			v.active = index;
+			$('.section.active').removeClass('active');
+			setTimeout(function () {
+				$('.section.pre').removeClass('pre');
+			}, 200);
+			duration = Math.floor(duration * 1000);
+			console.log('active ' + v.active + ' from ' + v.time + ' to ' + v.sections[index].time * 1000 + ' with ' + duration);
+
+			if (+duration >= 0) {
+				v.sequence.attr('class', 'sequence').addClass('sequence-' + v.sections[v.active].id).addClass('playing');
+				v.time = v.time + duration;
+				setTimeout(onMobilePaused, duration);
+			} else {
+				v.sequence.attr('class', 'sequence').addClass('sequence-' + v.sections[v.active].id).addClass('playing');
+				v.time = v.time - duration;
+				setTimeout(onMobilePaused, Math.abs(duration));
+			}
+		}
+
+
+		function onMobilePaused() {
+			if (v.active + 1 < v.sections.length) {
+				v.sequence.attr('class', 'sequence').addClass('sequence-' + v.sections[v.active + 1].id);
+			}
+			v.sequence.removeClass('playing');
+			$(document).on('mousewheel', onWheelStart).on('touchstart', onTouchStart).on('touchmove', onTouchMove);
+			v.disabled = false;
+			v.sequence.attr('data-time', v.sections[v.active].time);
+			v.dots.find('a').eq(v.active).addClass('active').each(function () {
+				var target = $($(this).attr('href').replace('#', '.section-'));
+				target.addClass('pre');
+				setTimeout(function () {
+					target.addClass('active');
+				}, 20);
+			});
+		}
+
+		/** On mouse wheel start */
+		function onWheelStart(event) {
+			if (!v.disabled) {
+				if ((event.deltaY > 0) || (event.deltaX > 0)) {
+					if (v.active > 0) {
+						playMobile(v.active - 1);
+					}
+				} else if ((event.deltaY < 0) || (event.deltaX < 0)) {
+					if (v.active < v.sections.length - 1) {
+						playMobile(v.active + 1);
+					}
+				}
+				event.preventDefault();
+			}
+		}
+
+		/** On touch start */
+		function onTouchStart(event) {
+			startTouchX = event.originalEvent.touches[0].pageX;
+			startTouchY = event.originalEvent.touches[0].pageY;
+			//console.log('start ' + event.originalEvent.touches[0].pageX + " - " + event.originalEvent.touches[0].pageY);
+			event.preventDefault();
+		}
+
+		/** On touch move */
+		function onTouchMove(event) {
+			//console.log('move ' + event.originalEvent.touches[0].pageX + " - " + event.originalEvent.touches[0].pageY);
+			if (((event.originalEvent.touches[0].pageX - startTouchX) > 9) || ((event.originalEvent.touches[0].pageY - startTouchY) > 9)) {
+				if (v.active > 1) {
+					playMobile(v.active - 1);
+				}
+			}
+			if (((startTouchX - event.originalEvent.touches[0].pageX) > 9) || ((startTouchY - event.originalEvent.touches[0].pageY) > 9)) {
+				if (v.active < v.sections.length - 1) {
+					playMobile(v.active + 1);
+				}
+			}
+			event.preventDefault();
+		}
+
+		/** On dots click */
+		function onDotsClick(e) {
+			if (!$(this).hasClass('active') && !v.disabled) {
+				playMobile(+$(this).data('section'));
+			}
+			e.preventDefault();
+		}
+
+		playMobile(0);
 	});
 }
 
@@ -427,19 +557,6 @@ function initVideo() {
 		v.self = self;
 		v.disabled = false;
 		v.interval = [];
-
-		/** Video sections array */
-		v.sections = [
-			{time: .4, id: 'intro', title: 'Intro'},
-			{time: 3.4, id: 'about', title: 'About us'},
-			{time: 5.2, id: 'process', title: 'Our process'},
-			{time: 7.3, id: 'news', title: 'News'},
-			{time: 9.65, id: 'skills', title: 'Our skills'},
-			{time: 20.2, id: 'viralize', title: 'Viralize'},
-			{time: 23, id: 'references', title: 'References'},
-			{time: 25.6, id: 'contact', title: 'Contact'},
-			{time: 28.6, id: 'finish', title: 'Finish'}
-		];
 
 		/** Building video tags */
 		/*

@@ -31,15 +31,17 @@
 @color-white: #fff;
 
 @color-preloader: #d8c8ad;
-@color-section-0: #ff477f;
-@color-section-1: #f4853d;
-@color-section-2: #fbbd32;
-@color-section-3: #d0ccc9;
-@color-section-4: #189365;
-@color-section-5: #7c84bf;
-@color-section-6: #fcb741;
-@color-section-7: #ebaacc;
-@color-section-8: #f78378;
+@color-section-0: #fc5b7f;
+@color-section-1: #fd842e;
+@color-section-2: #fdbb2c;
+@color-section-3: #cecdc9;
+@color-section-4: #189265;
+@color-section-5: #7d8cff;
+@color-section-6: #ffb73e;
+@color-section-7: #ffa7e3;
+@color-section-8: #ff8067;
+
+@m-color-section-0: #ff5c7f;
 
 @color-page-0: #ff477f;
 @color-page-1: #5f9fab;
@@ -926,6 +928,701 @@ h6 {&:extend(.h6); }
   }
 }
 /* ==========================================================================
+   _SEQUENCE
+   ========================================================================== */
+@sequence-width: 640px;
+@sequence-height: 360px;
+@sequence-cols: 10;
+@sequence-rows: 10;
+@sequence-duration: 28.8s;
+@sequence-pages: 6;
+@sequence-page-duration: 5s;
+@sequence-framerate: 20;
+@sequence-frames: 578;
+@sequence-keyframes: @sequence-cols * @sequence-rows;
+
+@keyframes sequence-intro {
+  0% { background-position: 0 (0 * @sequence-height); }
+  12.5% { background-position: 0 (-1 * @sequence-height); }
+  25% { background-position: 0 (-2 * @sequence-height); }
+  37.5% { background-position: 0 (-3 * @sequence-height); }
+  50% { background-position: 0 (-4 * @sequence-height); }
+  62.5% { background-position: 0 (-5 * @sequence-height); }
+  75% { background-position: 0 (-6 * @sequence-height); }
+  87.5% { background-position: 0 (-7 * @sequence-height); }
+  100% { background-position: 0 (-8 * @sequence-height); }
+}
+@keyframes sequence-about {
+  0% { background-position: 0 (-9 * @sequence-height); }
+  1.6667% { background-position: (-1 * @sequence-width) (0 * @sequence-height); }
+  3.3334% { background-position: (-1 * @sequence-width) (-1 * @sequence-height); }
+  5% { background-position: (-1 * @sequence-width) (-2 * @sequence-height); }
+  6.6667% { background-position: (-1 * @sequence-width) (-3 * @sequence-height); }
+  8.3334% { background-position: (-1 * @sequence-width) (-4 * @sequence-height); }
+  10% { background-position: (-1 * @sequence-width) (-5 * @sequence-height); }
+  11.6667% { background-position: (-1 * @sequence-width) (-6 * @sequence-height); }
+  13.3334% { background-position: (-1 * @sequence-width) (-7 * @sequence-height); }
+  15% { background-position: (-1 * @sequence-width) (-8 * @sequence-height); }
+  16.6667% { background-position: (-1 * @sequence-width) (-9 * @sequence-height); }
+  18.3334% { background-position: (-2 * @sequence-width) (0 * @sequence-height); }
+  20% { background-position: (-2 * @sequence-width) (-1 * @sequence-height); }
+  21.6667% { background-position: (-2 * @sequence-width) (-2 * @sequence-height); }
+  23.3334% { background-position: (-2 * @sequence-width) (-3 * @sequence-height); }
+  25% { background-position: (-2 * @sequence-width) (-4 * @sequence-height); }
+  26.6667% { background-position: (-2 * @sequence-width) (-5 * @sequence-height); }
+  28.3334% { background-position: (-2 * @sequence-width) (-6 * @sequence-height); }
+  30% { background-position: (-2 * @sequence-width) (-7 * @sequence-height); }
+  31.6667% { background-position: (-2 * @sequence-width) (-8 * @sequence-height); }
+  33.3334% { background-position: (-2 * @sequence-width) (-9 * @sequence-height); }
+  35% { background-position: (-3 * @sequence-width) (0 * @sequence-height); }
+  36.6667% { background-position: (-3 * @sequence-width) (-1 * @sequence-height); }
+  38.3334% { background-position: (-3 * @sequence-width) (-2 * @sequence-height); }
+  40% { background-position: (-3 * @sequence-width) (-3 * @sequence-height); }
+  41.6667% { background-position: (-3 * @sequence-width) (-4 * @sequence-height); }
+  43.3334% { background-position: (-3 * @sequence-width) (-5 * @sequence-height); }
+  45% { background-position: (-3 * @sequence-width) (-6 * @sequence-height); }
+  46.6667% { background-position: (-3 * @sequence-width) (-7 * @sequence-height); }
+  48.3334% { background-position: (-3 * @sequence-width) (-8 * @sequence-height); }
+  50% { background-position: (-3 * @sequence-width) (-9 * @sequence-height); }
+  51.6667% { background-position: (-4 * @sequence-width) (0 * @sequence-height); }
+  53.3334% { background-position: (-4 * @sequence-width) (-1 * @sequence-height); }
+  55% { background-position: (-4 * @sequence-width) (-2 * @sequence-height); }
+  56.6667% { background-position: (-4 * @sequence-width) (-3 * @sequence-height); }
+  58.3334% { background-position: (-4 * @sequence-width) (-4 * @sequence-height); }
+  60% { background-position: (-4 * @sequence-width) (-5 * @sequence-height); }
+  61.6667% { background-position: (-4 * @sequence-width) (-6 * @sequence-height); }
+  63.3334% { background-position: (-4 * @sequence-width) (-7 * @sequence-height); }
+  65% { background-position: (-4 * @sequence-width) (-8 * @sequence-height); }
+  66.6667% { background-position: (-4 * @sequence-width) (-9 * @sequence-height); }
+  68.3334% { background-position: (-5 * @sequence-width) (0 * @sequence-height); }
+  70% { background-position: (-5 * @sequence-width) (-1 * @sequence-height); }
+  71.6667% { background-position: (-5 * @sequence-width) (-2 * @sequence-height); }
+  73.3334% { background-position: (-5 * @sequence-width) (-3 * @sequence-height); }
+  75% { background-position: (-5 * @sequence-width) (-4 * @sequence-height); }
+  76.6667% { background-position: (-5 * @sequence-width) (-5 * @sequence-height); }
+  78.3334% { background-position: (-5 * @sequence-width) (-6 * @sequence-height); }
+  80% { background-position: (-5 * @sequence-width) (-7 * @sequence-height); }
+  81.6667% { background-position: (-5 * @sequence-width) (-8 * @sequence-height); }
+  83.3334% { background-position: (-5 * @sequence-width) (-9 * @sequence-height); }
+  85% { background-position: (-6 * @sequence-width) (0 * @sequence-height); }
+  86.6667% { background-position: (-6 * @sequence-width) (-1 * @sequence-height); }
+  88.3334% { background-position: (-6 * @sequence-width) (-2 * @sequence-height); }
+  90% { background-position: (-6 * @sequence-width) (-3 * @sequence-height); }
+  91.6667% { background-position: (-6 * @sequence-width) (-4 * @sequence-height); }
+  93.3334% { background-position: (-6 * @sequence-width) (-5 * @sequence-height); }
+  95% { background-position: (-6 * @sequence-width) (-6 * @sequence-height); }
+  96.6667% { background-position: (-6 * @sequence-width) (-7 * @sequence-height); }
+  98.3334% { background-position: (-6 * @sequence-width) (-8 * @sequence-height); }
+  100% { background-position: (-6 * @sequence-width) (-9 * @sequence-height); }
+}
+@keyframes sequence-process {
+  0% { background-position: (0 * @sequence-width) (0 * @sequence-height); }
+  2.77777778% { background-position: (0 * @sequence-width) (-1 * @sequence-height); }
+  5.55555556% { background-position: (0 * @sequence-width) (-2 * @sequence-height); }
+  8.33333333% { background-position: (0 * @sequence-width) (-3 * @sequence-height); }
+  11.11111111% { background-position: (0 * @sequence-width) (-4 * @sequence-height); }
+  13.88888889% { background-position: (0 * @sequence-width) (-5 * @sequence-height); }
+  16.66666667% { background-position: (0 * @sequence-width) (-6 * @sequence-height); }
+  19.44444444% { background-position: (0 * @sequence-width) (-7 * @sequence-height); }
+  22.22222222% { background-position: (0 * @sequence-width) (-8 * @sequence-height); }
+  25% { background-position: (0 * @sequence-width) (-9 * @sequence-height); }
+  27.77777778% { background-position: (-1 * @sequence-width) (0 * @sequence-height); }
+  30.55555556% { background-position: (-1 * @sequence-width) (-1 * @sequence-height); }
+  33.33333333% { background-position: (-1 * @sequence-width) (-2 * @sequence-height); }
+  36.11111111% { background-position: (-1 * @sequence-width) (-3 * @sequence-height); }
+  38.88888889% { background-position: (-1 * @sequence-width) (-4 * @sequence-height); }
+  41.66666667% { background-position: (-1 * @sequence-width) (-5 * @sequence-height); }
+  44.44444444% { background-position: (-1 * @sequence-width) (-6 * @sequence-height); }
+  47.22222222% { background-position: (-1 * @sequence-width) (-7 * @sequence-height); }
+  50% { background-position: (-1 * @sequence-width) (-8 * @sequence-height); }
+  52.77777778% { background-position: (-1 * @sequence-width) (-9 * @sequence-height); }
+  55.55555556% { background-position: (-2 * @sequence-width) (0 * @sequence-height); }
+  58.33333333% { background-position: (-2 * @sequence-width) (-1 * @sequence-height); }
+  61.11111111% { background-position: (-2 * @sequence-width) (-2 * @sequence-height); }
+  63.88888889% { background-position: (-2 * @sequence-width) (-3 * @sequence-height); }
+  66.66666667% { background-position: (-2 * @sequence-width) (-4 * @sequence-height); }
+  69.44444444% { background-position: (-2 * @sequence-width) (-5 * @sequence-height); }
+  72.22222222% { background-position: (-2 * @sequence-width) (-6 * @sequence-height); }
+  75% { background-position: (-2 * @sequence-width) (-7 * @sequence-height); }
+  77.77777778% { background-position: (-2 * @sequence-width) (-8 * @sequence-height); }
+  80.55555556% { background-position: (-2 * @sequence-width) (-9 * @sequence-height); }
+  83.33333333% { background-position: (-3 * @sequence-width) (0 * @sequence-height); }
+  86.11111111% { background-position: (-3 * @sequence-width) (-1 * @sequence-height); }
+  88.88888889% { background-position: (-3 * @sequence-width) (-2 * @sequence-height); }
+  91.66666667% { background-position: (-3 * @sequence-width) (-3 * @sequence-height); }
+  94.44444444% { background-position: (-3 * @sequence-width) (-3 * @sequence-height); }
+  97.22222222% { background-position: (-3 * @sequence-width) (-4 * @sequence-height); }
+  100% { background-position: (-3 * @sequence-width) (-5 * @sequence-height); }
+}
+@keyframes sequence-news {
+  0% { background-position: (-3 * @sequence-width) (-5 * @sequence-height); }
+  2.38095238% { background-position: (-3 * @sequence-width) (-6 * @sequence-height); }
+  4.76190476% { background-position: (-3 * @sequence-width) (-7 * @sequence-height); }
+  7.14285714% { background-position: (-3 * @sequence-width) (-8 * @sequence-height); }
+  9.52380952% { background-position: (-3 * @sequence-width) (-9 * @sequence-height); }
+  11.9047619% { background-position: (-4 * @sequence-width) (0 * @sequence-height); }
+  14.28571429% { background-position: (-4 * @sequence-width) (-1 * @sequence-height); }
+  16.66666667% { background-position: (-4 * @sequence-width) (-2 * @sequence-height); }
+  19.04761905% { background-position: (-4 * @sequence-width) (-3 * @sequence-height); }
+  21.42857143% { background-position: (-4 * @sequence-width) (-4 * @sequence-height); }
+  23.80952381% { background-position: (-4 * @sequence-width) (-5 * @sequence-height); }
+  26.19047619% { background-position: (-4 * @sequence-width) (-6 * @sequence-height); }
+  28.57142857% { background-position: (-4 * @sequence-width) (-7 * @sequence-height); }
+  30.95238095% { background-position: (-4 * @sequence-width) (-8 * @sequence-height); }
+  33.33333333% { background-position: (-4 * @sequence-width) (-9 * @sequence-height); }
+  35.71428571% { background-position: (-5 * @sequence-width) (0 * @sequence-height); }
+  38.0952381% { background-position: (-5 * @sequence-width) (-1 * @sequence-height); }
+  40.47619048% { background-position: (-5 * @sequence-width) (-2 * @sequence-height); }
+  42.85714286% { background-position: (-5 * @sequence-width) (-3 * @sequence-height); }
+  45.23809524% { background-position: (-5 * @sequence-width) (-4 * @sequence-height); }
+  47.61904762% { background-position: (-5 * @sequence-width) (-5 * @sequence-height); }
+  50% { background-position: (-5 * @sequence-width) (-6 * @sequence-height); }
+  52.38095238% { background-position: (-5 * @sequence-width) (-7 * @sequence-height); }
+  54.76190476% { background-position: (-5 * @sequence-width) (-8 * @sequence-height); }
+  57.14285714% { background-position: (-5 * @sequence-width) (-9 * @sequence-height); }
+  59.52380952% { background-position: (-6 * @sequence-width) (0 * @sequence-height); }
+  61.9047619% { background-position: (-6 * @sequence-width) (-1 * @sequence-height); }
+  64.28571429% { background-position: (-6 * @sequence-width) (-2 * @sequence-height); }
+  66.66666667% { background-position: (-6 * @sequence-width) (-3 * @sequence-height); }
+  69.04761905% { background-position: (-6 * @sequence-width) (-4 * @sequence-height); }
+  71.42857143% { background-position: (-6 * @sequence-width) (-5 * @sequence-height); }
+  73.80952381% { background-position: (-6 * @sequence-width) (-6 * @sequence-height); }
+  76.19047619% { background-position: (-6 * @sequence-width) (-7 * @sequence-height); }
+  78.57142857% { background-position: (-6 * @sequence-width) (-8 * @sequence-height); }
+  80.95238095% { background-position: (-6 * @sequence-width) (-9 * @sequence-height); }
+  83.33333333% { background-position: (-7 * @sequence-width) (0 * @sequence-height); }
+  85.71428571% { background-position: (-7 * @sequence-width) (-1 * @sequence-height); }
+  88.0952381% { background-position: (-7 * @sequence-width) (-2 * @sequence-height); }
+  90.47619048% { background-position: (-7 * @sequence-width) (-3 * @sequence-height); }
+  92.85714286% { background-position: (-7 * @sequence-width) (-4 * @sequence-height); }
+  95.23809524% { background-position: (-7 * @sequence-width) (-5 * @sequence-height); }
+  97.61904762% { background-position: (-7 * @sequence-width) (-6 * @sequence-height); }
+  100% { background-position: (-7 * @sequence-width) (-7 * @sequence-height); }
+}
+@keyframes sequence-skills {
+  0% { background-position: (0 * @sequence-width) (-8 * @sequence-height); }
+  2.12765957% { background-position: (0 * @sequence-width) (-9 * @sequence-height); }
+  4.25531915% { background-position: (-1 * @sequence-width) (0 * @sequence-height); }
+  6.38297872% { background-position: (-1 * @sequence-width) (-1 * @sequence-height); }
+  8.5106383% { background-position: (-1 * @sequence-width) (-2 * @sequence-height); }
+  10.63829787% { background-position: (-1 * @sequence-width) (-3 * @sequence-height); }
+  12.76595745% { background-position: (-1 * @sequence-width) (-4 * @sequence-height); }
+  14.89361702% { background-position: (-1 * @sequence-width) (-5 * @sequence-height); }
+  17.0212766% { background-position: (-1 * @sequence-width) (-6 * @sequence-height); }
+  19.14893617% { background-position: (-1 * @sequence-width) (-7 * @sequence-height); }
+  21.27659574% { background-position: (-1 * @sequence-width) (-8 * @sequence-height); }
+  23.40425532% { background-position: (-1 * @sequence-width) (-9 * @sequence-height); }
+  25.53191489% { background-position: (-2 * @sequence-width) (0 * @sequence-height); }
+  27.65957447% { background-position: (-2 * @sequence-width) (-1 * @sequence-height); }
+  29.78723404% { background-position: (-2 * @sequence-width) (-2 * @sequence-height); }
+  31.91489362% { background-position: (-2 * @sequence-width) (-3 * @sequence-height); }
+  34.04255319% { background-position: (-2 * @sequence-width) (-4 * @sequence-height); }
+  36.17021277% { background-position: (-2 * @sequence-width) (-5 * @sequence-height); }
+  38.29787234% { background-position: (-2 * @sequence-width) (-6 * @sequence-height); }
+  40.42553191% { background-position: (-2 * @sequence-width) (-7 * @sequence-height); }
+  42.55319149% { background-position: (-2 * @sequence-width) (-8 * @sequence-height); }
+  44.68085106% { background-position: (-2 * @sequence-width) (-9 * @sequence-height); }
+  46.80851064% { background-position: (-3 * @sequence-width) (0 * @sequence-height); }
+  48.93617021% { background-position: (-3 * @sequence-width) (-1 * @sequence-height); }
+  51.06382979% { background-position: (-3 * @sequence-width) (-2 * @sequence-height); }
+  53.19148936% { background-position: (-3 * @sequence-width) (-3 * @sequence-height); }
+  55.31914894% { background-position: (-3 * @sequence-width) (-4 * @sequence-height); }
+  57.44680851% { background-position: (-3 * @sequence-width) (-5 * @sequence-height); }
+  59.57446809% { background-position: (-3 * @sequence-width) (-6 * @sequence-height); }
+  61.70212766% { background-position: (-3 * @sequence-width) (-7 * @sequence-height); }
+  63.82978723% { background-position: (-3 * @sequence-width) (-8 * @sequence-height); }
+  65.95744681% { background-position: (-3 * @sequence-width) (-9 * @sequence-height); }
+  68.08510638% { background-position: (-4 * @sequence-width) (0 * @sequence-height); }
+  70.21276596% { background-position: (-4 * @sequence-width) (-1 * @sequence-height); }
+  72.34042553% { background-position: (-4 * @sequence-width) (-2 * @sequence-height); }
+  74.46808511% { background-position: (-4 * @sequence-width) (-3 * @sequence-height); }
+  76.59574468% { background-position: (-4 * @sequence-width) (-4 * @sequence-height); }
+  78.72340426% { background-position: (-4 * @sequence-width) (-5 * @sequence-height); }
+  80.85106383% { background-position: (-4 * @sequence-width) (-6 * @sequence-height); }
+  82.9787234% { background-position: (-4 * @sequence-width) (-7 * @sequence-height); }
+  85.10638298% { background-position: (-4 * @sequence-width) (-8 * @sequence-height); }
+  87.23404255% { background-position: (-4 * @sequence-width) (-9 * @sequence-height); }
+  89.36170213% { background-position: (-5 * @sequence-width) (0 * @sequence-height); }
+  91.4893617% { background-position: (-5 * @sequence-width) (-1 * @sequence-height); }
+  93.61702128% { background-position: (-5 * @sequence-width) (-2 * @sequence-height); }
+  95.74468085% { background-position: (-5 * @sequence-width) (-3 * @sequence-height); }
+  97.87234043% { background-position: (-5 * @sequence-width) (-4 * @sequence-height); }
+  100% { background-position: (-5 * @sequence-width) (-5 * @sequence-height); }
+}
+@keyframes sequence-viralize {
+  0% { background-position: (0 * @sequence-width) (-5 * @sequence-height); }
+  0.47619048% { background-position: (0 * @sequence-width) (-6 * @sequence-height); }
+  0.95238095% { background-position: (0 * @sequence-width) (-7 * @sequence-height); }
+  1.42857143% { background-position: (0 * @sequence-width) (-8 * @sequence-height); }
+  1.9047619% { background-position: (0 * @sequence-width) (-9 * @sequence-height); }
+  2.38095238% { background-position: (-1 * @sequence-width) (0 * @sequence-height); }
+  2.85714286% { background-position: (-1 * @sequence-width) (-1 * @sequence-height); }
+  3.33333333% { background-position: (-1 * @sequence-width) (-2 * @sequence-height); }
+  3.80952381% { background-position: (-1 * @sequence-width) (-3 * @sequence-height); }
+  4.28571429% { background-position: (-1 * @sequence-width) (-4 * @sequence-height); }
+  4.76190476% { background-position: (-1 * @sequence-width) (-5 * @sequence-height); }
+  5.23809524% { background-position: (-1 * @sequence-width) (-6 * @sequence-height); }
+  5.71428571% { background-position: (-1 * @sequence-width) (-7 * @sequence-height); }
+  6.19047619% { background-position: (-1 * @sequence-width) (-8 * @sequence-height); }
+  6.66666667% { background-position: (-1 * @sequence-width) (-9 * @sequence-height); }
+  7.14285714% { background-position: (-2 * @sequence-width) (0 * @sequence-height); }
+  7.61904762% { background-position: (-2 * @sequence-width) (-1 * @sequence-height); }
+  8.0952381% { background-position: (-2 * @sequence-width) (-2 * @sequence-height); }
+  8.57142857% { background-position: (-2 * @sequence-width) (-3 * @sequence-height); }
+  9.04761905% { background-position: (-2 * @sequence-width) (-4 * @sequence-height); }
+  9.52380952% { background-position: (-2 * @sequence-width) (-5 * @sequence-height); }
+  10% { background-position: (-2 * @sequence-width) (-6 * @sequence-height); }
+  10.47619048% { background-position: (-2 * @sequence-width) (-7 * @sequence-height); }
+  10.95238095% { background-position: (-2 * @sequence-width) (-8 * @sequence-height); }
+  11.42857143% { background-position: (-2 * @sequence-width) (-9 * @sequence-height); }
+  11.9047619% { background-position: (-3 * @sequence-width) (0 * @sequence-height); }
+  12.38095238% { background-position: (-3 * @sequence-width) (-1 * @sequence-height); }
+  12.85714286% { background-position: (-3 * @sequence-width) (-2 * @sequence-height); }
+  13.33333333% { background-position: (-3 * @sequence-width) (-3 * @sequence-height); }
+  13.80952381% { background-position: (-3 * @sequence-width) (-4 * @sequence-height); }
+  14.28571429% { background-position: (-3 * @sequence-width) (-5 * @sequence-height); }
+  14.76190476% { background-position: (-3 * @sequence-width) (-6 * @sequence-height); }
+  15.23809524% { background-position: (-3 * @sequence-width) (-7 * @sequence-height); }
+  15.71428571% { background-position: (-3 * @sequence-width) (-8 * @sequence-height); }
+  16.19047619% { background-position: (-3 * @sequence-width) (-9 * @sequence-height); }
+  16.66666667% { background-position: (-4 * @sequence-width) (0 * @sequence-height); }
+  17.14285714% { background-position: (-4 * @sequence-width) (-1 * @sequence-height); }
+  17.61904762% { background-position: (-4 * @sequence-width) (-2 * @sequence-height); }
+  18.0952381% { background-position: (-4 * @sequence-width) (-3 * @sequence-height); }
+  18.57142857% { background-position: (-4 * @sequence-width) (-4 * @sequence-height); }
+  19.04761905% { background-position: (-4 * @sequence-width) (-5 * @sequence-height); }
+  19.52380952% { background-position: (-4 * @sequence-width) (-6 * @sequence-height); }
+  20% { background-position: (-4 * @sequence-width) (-7 * @sequence-height); }
+  20.47619048% { background-position: (-4 * @sequence-width) (-8 * @sequence-height); }
+  20.95238095% { background-position: (-4 * @sequence-width) (-9 * @sequence-height); }
+  21.42857143% { background-position: (-5 * @sequence-width) (0 * @sequence-height); }
+  21.9047619% { background-position: (-5 * @sequence-width) (-1 * @sequence-height); }
+  22.38095238% { background-position: (-5 * @sequence-width) (-2 * @sequence-height); }
+  22.85714286% { background-position: (-5 * @sequence-width) (-3 * @sequence-height); }
+  23.33333333% { background-position: (-5 * @sequence-width) (-4 * @sequence-height); }
+  23.80952381% { background-position: (-5 * @sequence-width) (-5 * @sequence-height); }
+  24.28571429% { background-position: (-5 * @sequence-width) (-6 * @sequence-height); }
+  24.76190476% { background-position: (-5 * @sequence-width) (-7 * @sequence-height); }
+  25.23809524% { background-position: (-5 * @sequence-width) (-8 * @sequence-height); }
+  25.71428571% { background-position: (-5 * @sequence-width) (-9 * @sequence-height); }
+  26.19047619% { background-position: (-6 * @sequence-width) (0 * @sequence-height); }
+  26.66666667% { background-position: (-6 * @sequence-width) (-1 * @sequence-height); }
+  27.14285714% { background-position: (-6 * @sequence-width) (-2 * @sequence-height); }
+  27.61904762% { background-position: (-6 * @sequence-width) (-3 * @sequence-height); }
+  28.0952381% { background-position: (-6 * @sequence-width) (-4 * @sequence-height); }
+  28.57142857% { background-position: (-6 * @sequence-width) (-5 * @sequence-height); }
+  29.04761905% { background-position: (-6 * @sequence-width) (-6 * @sequence-height); }
+  29.52380952% { background-position: (-6 * @sequence-width) (-7 * @sequence-height); }
+  30% { background-position: (-6 * @sequence-width) (-8 * @sequence-height); }
+  30.47619048% { background-position: (-6 * @sequence-width) (-9 * @sequence-height); }
+  30.95238095% { background-position: (-7 * @sequence-width) (0 * @sequence-height); }
+  31.42857143% { background-position: (-7 * @sequence-width) (-1 * @sequence-height); }
+  31.9047619% { background-position: (-7 * @sequence-width) (-2 * @sequence-height); }
+  32.38095238% { background-position: (-7 * @sequence-width) (-3 * @sequence-height); }
+  32.85714286% { background-position: (-7 * @sequence-width) (-4 * @sequence-height); }
+  33.33333333% { background-position: (-7 * @sequence-width) (-5 * @sequence-height); }
+  33.80952381% { background-position: (-7 * @sequence-width) (-6 * @sequence-height); }
+  34.28571429% { background-position: (-7 * @sequence-width) (-7 * @sequence-height); }
+  34.76190476% { background-position: (-7 * @sequence-width) (-8 * @sequence-height); }
+  35.23809524% { background-position: (-7 * @sequence-width) (-9 * @sequence-height); }
+  35.71428571% { background-position: (-8 * @sequence-width) (0 * @sequence-height); }
+  36.19047619% { background-position: (-8 * @sequence-width) (-1 * @sequence-height); }
+  36.66666667% { background-position: (-8 * @sequence-width) (-2 * @sequence-height); }
+  37.14285714% { background-position: (-8 * @sequence-width) (-3 * @sequence-height); }
+  37.61904762% { background-position: (-8 * @sequence-width) (-4 * @sequence-height); }
+  38.0952381% { background-position: (-8 * @sequence-width) (-5 * @sequence-height); }
+  38.57142857% { background-position: (-8 * @sequence-width) (-6 * @sequence-height); }
+  39.04761905% { background-position: (-8 * @sequence-width) (-7 * @sequence-height); }
+  39.52380952% { background-position: (-8 * @sequence-width) (-8 * @sequence-height); }
+  40% { background-position: (-8 * @sequence-width) (-9 * @sequence-height); }
+  40.47619048% { background-position: (-9 * @sequence-width) (0 * @sequence-height); }
+  40.95238095% { background-position: (-9 * @sequence-width) (-1 * @sequence-height); }
+  41.42857143% { background-position: (-9 * @sequence-width) (-2 * @sequence-height); }
+  41.9047619% { background-position: (-9 * @sequence-width) (-3 * @sequence-height); }
+  42.38095238% { background-position: (-9 * @sequence-width) (-4 * @sequence-height); }
+  42.85714286% { background-position: (-9 * @sequence-width) (-5 * @sequence-height); }
+  43.33333333% { background-position: (-9 * @sequence-width) (-6 * @sequence-height); }
+  43.80952381% { background-position: (-9 * @sequence-width) (-7 * @sequence-height); }
+  44.28571429% { background-position: (-9 * @sequence-width) (-8 * @sequence-height); }
+  44.76190476% { background-position: (-9 * @sequence-width) (-9 * @sequence-height); }
+  45.23809524% { background-position: (-10 * @sequence-width) (0 * @sequence-height); }
+  45.71428571% { background-position: (-10 * @sequence-width) (-1 * @sequence-height); }
+  46.19047619% { background-position: (-10 * @sequence-width) (-2 * @sequence-height); }
+  46.66666667% { background-position: (-10 * @sequence-width) (-3 * @sequence-height); }
+  47.14285714% { background-position: (-10 * @sequence-width) (-4 * @sequence-height); }
+  47.61904762% { background-position: (-10 * @sequence-width) (-5 * @sequence-height); }
+  48.0952381% { background-position: (-10 * @sequence-width) (-6 * @sequence-height); }
+  48.57142857% { background-position: (-10 * @sequence-width) (-7 * @sequence-height); }
+  49.04761905% { background-position: (-10 * @sequence-width) (-8 * @sequence-height); }
+  49.52380952% { background-position: (-10 * @sequence-width) (-9 * @sequence-height); }
+  50% { background-position: (0 * @sequence-width) (-10 * @sequence-height); }
+  50.47619048% { background-position: (0 * @sequence-width) (-11 * @sequence-height); }
+  50.95238095% { background-position: (0 * @sequence-width) (-12 * @sequence-height); }
+  51.42857143% { background-position: (0 * @sequence-width) (-13 * @sequence-height); }
+  51.9047619% { background-position: (0 * @sequence-width) (-14 * @sequence-height); }
+  52.38095238% { background-position: (0 * @sequence-width) (-15 * @sequence-height); }
+  52.85714286% { background-position: (0 * @sequence-width) (-16 * @sequence-height); }
+  53.33333333% { background-position: (0 * @sequence-width) (-17 * @sequence-height); }
+  53.80952381% { background-position: (0 * @sequence-width) (-18 * @sequence-height); }
+  54.28571429% { background-position: (0 * @sequence-width) (-19 * @sequence-height); }
+  54.76190476% { background-position: (-1 * @sequence-width) (-10 * @sequence-height); }
+  55.23809524% { background-position: (-1 * @sequence-width) (-11 * @sequence-height); }
+  55.71428571% { background-position: (-1 * @sequence-width) (-12 * @sequence-height); }
+  56.19047619% { background-position: (-1 * @sequence-width) (-13 * @sequence-height); }
+  56.66666667% { background-position: (-1 * @sequence-width) (-14 * @sequence-height); }
+  57.14285714% { background-position: (-1 * @sequence-width) (-15 * @sequence-height); }
+  57.61904762% { background-position: (-1 * @sequence-width) (-16 * @sequence-height); }
+  58.0952381% { background-position: (-1 * @sequence-width) (-17 * @sequence-height); }
+  58.57142857% { background-position: (-1 * @sequence-width) (-18 * @sequence-height); }
+  59.04761905% { background-position: (-1 * @sequence-width) (-19 * @sequence-height); }
+  59.52380952% { background-position: (-2 * @sequence-width) (-10 * @sequence-height); }
+  60% { background-position: (-2 * @sequence-width) (-11 * @sequence-height); }
+  60.47619048% { background-position: (-2 * @sequence-width) (-12 * @sequence-height); }
+  60.95238095% { background-position: (-2 * @sequence-width) (-13 * @sequence-height); }
+  61.42857143% { background-position: (-2 * @sequence-width) (-14 * @sequence-height); }
+  61.9047619% { background-position: (-2 * @sequence-width) (-15 * @sequence-height); }
+  62.38095238% { background-position: (-2 * @sequence-width) (-16 * @sequence-height); }
+  62.85714286% { background-position: (-2 * @sequence-width) (-17 * @sequence-height); }
+  63.33333333% { background-position: (-2 * @sequence-width) (-18 * @sequence-height); }
+  63.80952381% { background-position: (-2 * @sequence-width) (-19 * @sequence-height); }
+  64.28571429% { background-position: (-3 * @sequence-width) (-10 * @sequence-height); }
+  64.76190476% { background-position: (-3 * @sequence-width) (-11 * @sequence-height); }
+  65.23809524% { background-position: (-3 * @sequence-width) (-12 * @sequence-height); }
+  65.71428571% { background-position: (-3 * @sequence-width) (-13 * @sequence-height); }
+  66.19047619% { background-position: (-3 * @sequence-width) (-14 * @sequence-height); }
+  66.66666667% { background-position: (-3 * @sequence-width) (-15 * @sequence-height); }
+  67.14285714% { background-position: (-3 * @sequence-width) (-16 * @sequence-height); }
+  67.61904762% { background-position: (-3 * @sequence-width) (-17 * @sequence-height); }
+  68.0952381% { background-position: (-3 * @sequence-width) (-18 * @sequence-height); }
+  68.57142857% { background-position: (-3 * @sequence-width) (-19 * @sequence-height); }
+  69.04761905% { background-position: (-4 * @sequence-width) (-10 * @sequence-height); }
+  69.52380952% { background-position: (-4 * @sequence-width) (-11 * @sequence-height); }
+  70% { background-position: (-4 * @sequence-width) (-12 * @sequence-height); }
+  70.47619048% { background-position: (-4 * @sequence-width) (-13 * @sequence-height); }
+  70.95238095% { background-position: (-4 * @sequence-width) (-14 * @sequence-height); }
+  71.42857143% { background-position: (-4 * @sequence-width) (-15 * @sequence-height); }
+  71.9047619% { background-position: (-4 * @sequence-width) (-16 * @sequence-height); }
+  72.38095238% { background-position: (-4 * @sequence-width) (-17 * @sequence-height); }
+  72.85714286% { background-position: (-4 * @sequence-width) (-18 * @sequence-height); }
+  73.33333333% { background-position: (-4 * @sequence-width) (-19 * @sequence-height); }
+  73.80952381% { background-position: (-5 * @sequence-width) (-10 * @sequence-height); }
+  74.28571429% { background-position: (-5 * @sequence-width) (-11 * @sequence-height); }
+  74.76190476% { background-position: (-5 * @sequence-width) (-12 * @sequence-height); }
+  75.23809524% { background-position: (-5 * @sequence-width) (-13 * @sequence-height); }
+  75.71428571% { background-position: (-5 * @sequence-width) (-14 * @sequence-height); }
+  76.19047619% { background-position: (-5 * @sequence-width) (-15 * @sequence-height); }
+  76.66666667% { background-position: (-5 * @sequence-width) (-16 * @sequence-height); }
+  77.14285714% { background-position: (-5 * @sequence-width) (-17 * @sequence-height); }
+  77.61904762% { background-position: (-5 * @sequence-width) (-18 * @sequence-height); }
+  78.0952381% { background-position: (-5 * @sequence-width) (-19 * @sequence-height); }
+  78.57142857% { background-position: (-6 * @sequence-width) (-10 * @sequence-height); }
+  79.04761905% { background-position: (-6 * @sequence-width) (-11 * @sequence-height); }
+  79.52380952% { background-position: (-6 * @sequence-width) (-12 * @sequence-height); }
+  80% { background-position: (-6 * @sequence-width) (-13 * @sequence-height); }
+  80.47619048% { background-position: (-6 * @sequence-width) (-14 * @sequence-height); }
+  80.95238095% { background-position: (-6 * @sequence-width) (-15 * @sequence-height); }
+  81.42857143% { background-position: (-6 * @sequence-width) (-16 * @sequence-height); }
+  81.9047619% { background-position: (-6 * @sequence-width) (-17 * @sequence-height); }
+  82.38095238% { background-position: (-6 * @sequence-width) (-18 * @sequence-height); }
+  82.85714286% { background-position: (-6 * @sequence-width) (-19 * @sequence-height); }
+  83.33333333% { background-position: (-7 * @sequence-width) (-10 * @sequence-height); }
+  83.80952381% { background-position: (-7 * @sequence-width) (-11 * @sequence-height); }
+  84.28571429% { background-position: (-7 * @sequence-width) (-12 * @sequence-height); }
+  84.76190476% { background-position: (-7 * @sequence-width) (-13 * @sequence-height); }
+  85.23809524% { background-position: (-7 * @sequence-width) (-14 * @sequence-height); }
+  85.71428571% { background-position: (-7 * @sequence-width) (-15 * @sequence-height); }
+  86.19047619% { background-position: (-7 * @sequence-width) (-16 * @sequence-height); }
+  86.66666667% { background-position: (-7 * @sequence-width) (-17 * @sequence-height); }
+  87.14285714% { background-position: (-7 * @sequence-width) (-18 * @sequence-height); }
+  87.61904762% { background-position: (-7 * @sequence-width) (-19 * @sequence-height); }
+  88.0952381% { background-position: (-8 * @sequence-width) (-10 * @sequence-height); }
+  88.57142857% { background-position: (-8 * @sequence-width) (-11 * @sequence-height); }
+  89.04761905% { background-position: (-8 * @sequence-width) (-12 * @sequence-height); }
+  89.52380952% { background-position: (-8 * @sequence-width) (-13 * @sequence-height); }
+  90% { background-position: (-8 * @sequence-width) (-14 * @sequence-height); }
+  90.47619048% { background-position: (-8 * @sequence-width) (-15 * @sequence-height); }
+  90.95238095% { background-position: (-8 * @sequence-width) (-16 * @sequence-height); }
+  91.42857143% { background-position: (-8 * @sequence-width) (-17 * @sequence-height); }
+  91.9047619% { background-position: (-8 * @sequence-width) (-18 * @sequence-height); }
+  92.38095238% { background-position: (-8 * @sequence-width) (-19 * @sequence-height); }
+  92.85714286% { background-position: (-9 * @sequence-width) (-10 * @sequence-height); }
+  93.33333333% { background-position: (-9 * @sequence-width) (-11 * @sequence-height); }
+  93.80952381% { background-position: (-9 * @sequence-width) (-12 * @sequence-height); }
+  94.28571429% { background-position: (-9 * @sequence-width) (-13 * @sequence-height); }
+  94.76190476% { background-position: (-9 * @sequence-width) (-14 * @sequence-height); }
+  95.23809524% { background-position: (-9 * @sequence-width) (-15 * @sequence-height); }
+  95.71428571% { background-position: (-9 * @sequence-width) (-16 * @sequence-height); }
+  96.19047619% { background-position: (-9 * @sequence-width) (-17 * @sequence-height); }
+  96.66666667% { background-position: (-9 * @sequence-width) (-18 * @sequence-height); }
+  97.14285714% { background-position: (-9 * @sequence-width) (-19 * @sequence-height); }
+  97.61904762% { background-position: (-10 * @sequence-width) (-10 * @sequence-height); }
+  98.0952381% { background-position: (-10 * @sequence-width) (-11 * @sequence-height); }
+  98.57142857% { background-position: (-10 * @sequence-width) (-12 * @sequence-height); }
+  99.04761905% { background-position: (-10 * @sequence-width) (-13 * @sequence-height); }
+  99.52380952% { background-position: (-10 * @sequence-width) (-14 * @sequence-height); }
+  100% { background-position: (-10 * @sequence-width) (-15 * @sequence-height); }
+}
+@keyframes sequence-references {
+  0% { background-position: (0 * @sequence-width) (-6 * @sequence-height); }
+  1.78571429% { background-position: (0 * @sequence-width) (-7 * @sequence-height); }
+  3.57142857% { background-position: (0 * @sequence-width) (-8 * @sequence-height); }
+  5.35714286% { background-position: (0 * @sequence-width) (-9 * @sequence-height); }
+  7.14285714% { background-position: (-1 * @sequence-width) (0 * @sequence-height); }
+  8.92857143% { background-position: (-1 * @sequence-width) (-1 * @sequence-height); }
+  10.71428571% { background-position: (-1 * @sequence-width) (-2 * @sequence-height); }
+  12.5% { background-position: (-1 * @sequence-width) (-3 * @sequence-height); }
+  14.28571429% { background-position: (-1 * @sequence-width) (-4 * @sequence-height); }
+  16.07142857% { background-position: (-1 * @sequence-width) (-5 * @sequence-height); }
+  17.85714286% { background-position: (-1 * @sequence-width) (-6 * @sequence-height); }
+  19.64285714% { background-position: (-1 * @sequence-width) (-7 * @sequence-height); }
+  21.42857143% { background-position: (-1 * @sequence-width) (-8 * @sequence-height); }
+  23.21428571% { background-position: (-1 * @sequence-width) (-9 * @sequence-height); }
+  25% { background-position: (-2 * @sequence-width) (0 * @sequence-height); }
+  26.78571429% { background-position: (-2 * @sequence-width) (-1 * @sequence-height); }
+  28.57142857% { background-position: (-2 * @sequence-width) (-2 * @sequence-height); }
+  30.35714286% { background-position: (-2 * @sequence-width) (-3 * @sequence-height); }
+  32.14285714% { background-position: (-2 * @sequence-width) (-4 * @sequence-height); }
+  33.92857143% { background-position: (-2 * @sequence-width) (-5 * @sequence-height); }
+  35.71428571% { background-position: (-2 * @sequence-width) (-6 * @sequence-height); }
+  37.5% { background-position: (-2 * @sequence-width) (-7 * @sequence-height); }
+  39.28571429% { background-position: (-2 * @sequence-width) (-8 * @sequence-height); }
+  41.07142857% { background-position: (-2 * @sequence-width) (-9 * @sequence-height); }
+  42.85714286% { background-position: (-3 * @sequence-width) (0 * @sequence-height); }
+  44.64285714% { background-position: (-3 * @sequence-width) (-1 * @sequence-height); }
+  46.42857143% { background-position: (-3 * @sequence-width) (-2 * @sequence-height); }
+  48.21428571% { background-position: (-3 * @sequence-width) (-3 * @sequence-height); }
+  50% { background-position: (-3 * @sequence-width) (-4 * @sequence-height); }
+  51.78571429% { background-position: (-3 * @sequence-width) (-5 * @sequence-height); }
+  53.57142857% { background-position: (-3 * @sequence-width) (-6 * @sequence-height); }
+  55.35714286% { background-position: (-3 * @sequence-width) (-7 * @sequence-height); }
+  57.14285714% { background-position: (-3 * @sequence-width) (-8 * @sequence-height); }
+  58.92857143% { background-position: (-3 * @sequence-width) (-9 * @sequence-height); }
+  60.71428571% { background-position: (-4 * @sequence-width) (0 * @sequence-height); }
+  62.5% { background-position: (-4 * @sequence-width) (-1 * @sequence-height); }
+  64.28571429% { background-position: (-4 * @sequence-width) (-2 * @sequence-height); }
+  66.07142857% { background-position: (-4 * @sequence-width) (-3 * @sequence-height); }
+  67.85714286% { background-position: (-4 * @sequence-width) (-4 * @sequence-height); }
+  69.64285714% { background-position: (-4 * @sequence-width) (-5 * @sequence-height); }
+  71.42857143% { background-position: (-4 * @sequence-width) (-6 * @sequence-height); }
+  73.21428571% { background-position: (-4 * @sequence-width) (-7 * @sequence-height); }
+  75% { background-position: (-4 * @sequence-width) (-8 * @sequence-height); }
+  76.78571429% { background-position: (-4 * @sequence-width) (-9 * @sequence-height); }
+  78.57142857% { background-position: (-5 * @sequence-width) (0 * @sequence-height); }
+  80.35714286% { background-position: (-5 * @sequence-width) (-1 * @sequence-height); }
+  82.14285714% { background-position: (-5 * @sequence-width) (-2 * @sequence-height); }
+  83.92857143% { background-position: (-5 * @sequence-width) (-3 * @sequence-height); }
+  85.71428571% { background-position: (-5 * @sequence-width) (-4 * @sequence-height); }
+  87.5% { background-position: (-5 * @sequence-width) (-5 * @sequence-height); }
+  89.28571429% { background-position: (-5 * @sequence-width) (-6 * @sequence-height); }
+  91.07142857% { background-position: (-5 * @sequence-width) (-7 * @sequence-height); }
+  92.85714286% { background-position: (-5 * @sequence-width) (-8 * @sequence-height); }
+  94.64285714% { background-position: (-5 * @sequence-width) (-9 * @sequence-height); }
+  96.42857143% { background-position: (-6 * @sequence-width) (0 * @sequence-height); }
+  98.21428571% { background-position: (-6 * @sequence-width) (-1 * @sequence-height); }
+  100% { background-position: (-6 * @sequence-width) (-2 * @sequence-height); }
+}
+@keyframes sequence-contact {
+  0% { background-position: (-6 * @sequence-width) (-3 * @sequence-height); }
+  1.92307692% { background-position: (-6 * @sequence-width) (-4 * @sequence-height); }
+  3.84615385% { background-position: (-6 * @sequence-width) (-5 * @sequence-height); }
+  5.76923077% { background-position: (-6 * @sequence-width) (-6 * @sequence-height); }
+  7.69230769% { background-position: (-6 * @sequence-width) (-7 * @sequence-height); }
+  9.61538462% { background-position: (-6 * @sequence-width) (-8 * @sequence-height); }
+  11.53846154% { background-position: (-6 * @sequence-width) (-9 * @sequence-height); }
+  13.46153846% { background-position: (-7 * @sequence-width) (0 * @sequence-height); }
+  15.38461538% { background-position: (-7 * @sequence-width) (-1 * @sequence-height); }
+  17.30769231% { background-position: (-7 * @sequence-width) (-2 * @sequence-height); }
+  19.23076923% { background-position: (-7 * @sequence-width) (-3 * @sequence-height); }
+  21.15384615% { background-position: (-7 * @sequence-width) (-4 * @sequence-height); }
+  23.07692308% { background-position: (-7 * @sequence-width) (-5 * @sequence-height); }
+  25% { background-position: (-7 * @sequence-width) (-6 * @sequence-height); }
+  26.92307692% { background-position: (-7 * @sequence-width) (-7 * @sequence-height); }
+  28.84615385% { background-position: (-7 * @sequence-width) (-8 * @sequence-height); }
+  30.76923077% { background-position: (-7 * @sequence-width) (-9 * @sequence-height); }
+  32.69230769% { background-position: (-8 * @sequence-width) (0 * @sequence-height); }
+  34.61538462% { background-position: (-8 * @sequence-width) (-1 * @sequence-height); }
+  36.53846154% { background-position: (-8 * @sequence-width) (-2 * @sequence-height); }
+  38.46153846% { background-position: (-8 * @sequence-width) (-3 * @sequence-height); }
+  40.38461538% { background-position: (-8 * @sequence-width) (-4 * @sequence-height); }
+  42.30769231% { background-position: (-8 * @sequence-width) (-5 * @sequence-height); }
+  44.23076923% { background-position: (-8 * @sequence-width) (-6 * @sequence-height); }
+  46.15384615% { background-position: (-8 * @sequence-width) (-7 * @sequence-height); }
+  48.07692308% { background-position: (-8 * @sequence-width) (-8 * @sequence-height); }
+  50% { background-position: (-8 * @sequence-width) (-9 * @sequence-height); }
+  51.92307692% { background-position: (-9 * @sequence-width) (0 * @sequence-height); }
+  53.84615385% { background-position: (-9 * @sequence-width) (-1 * @sequence-height); }
+  55.76923077% { background-position: (-9 * @sequence-width) (-2 * @sequence-height); }
+  57.69230769% { background-position: (-9 * @sequence-width) (-3 * @sequence-height); }
+  59.61538462% { background-position: (-9 * @sequence-width) (-4 * @sequence-height); }
+  61.53846154% { background-position: (-9 * @sequence-width) (-5 * @sequence-height); }
+  63.46153846% { background-position: (-9 * @sequence-width) (-6 * @sequence-height); }
+  65.38461538% { background-position: (-9 * @sequence-width) (-7 * @sequence-height); }
+  67.30769231% { background-position: (-9 * @sequence-width) (-8 * @sequence-height); }
+  69.23076923% { background-position: (-9 * @sequence-width) (-9 * @sequence-height); }
+  71.15384615% { background-position: (-10 * @sequence-width) (0 * @sequence-height); }
+  73.07692308% { background-position: (-10 * @sequence-width) (-1 * @sequence-height); }
+  75% { background-position: (-10 * @sequence-width) (-2 * @sequence-height); }
+  76.92307692% { background-position: (-10 * @sequence-width) (-3 * @sequence-height); }
+  78.84615385% { background-position: (-10 * @sequence-width) (-4 * @sequence-height); }
+  80.76923077% { background-position: (-10 * @sequence-width) (-5 * @sequence-height); }
+  82.69230769% { background-position: (-10 * @sequence-width) (-6 * @sequence-height); }
+  84.61538462% { background-position: (-10 * @sequence-width) (-7 * @sequence-height); }
+  86.53846154% { background-position: (-10 * @sequence-width) (-8 * @sequence-height); }
+  88.46153846% { background-position: (-10 * @sequence-width) (-9 * @sequence-height); }
+  90.38461538% { background-position: (-11 * @sequence-width) (0 * @sequence-height); }
+  92.30769231% { background-position: (-11 * @sequence-width) (-1 * @sequence-height); }
+  94.23076923% { background-position: (-11 * @sequence-width) (-2 * @sequence-height); }
+  96.15384615% { background-position: (-11 * @sequence-width) (-3 * @sequence-height); }
+  98.07692308% { background-position: (-11 * @sequence-width) (-4 * @sequence-height); }
+  100% { background-position: (-11 * @sequence-width) (-5 * @sequence-height); }
+}
+@keyframes sequence-finish {
+  0% { background-position: (0 * @sequence-width) (-6 * @sequence-height); }
+  1.66666667% { background-position: (0 * @sequence-width) (-7 * @sequence-height); }
+  3.33333333% { background-position: (0 * @sequence-width) (-8 * @sequence-height); }
+  5% { background-position: (0 * @sequence-width) (-9 * @sequence-height); }
+
+  6.66666667% { background-position: (-1 * @sequence-width) (0 * @sequence-height); }
+  8.33333333% { background-position: (-1 * @sequence-width) (-1 * @sequence-height); }
+  10% { background-position: (-1 * @sequence-width) (-2 * @sequence-height); }
+  11.66666667% { background-position: (-1 * @sequence-width) (-3 * @sequence-height); }
+  13.33333333% { background-position: (-1 * @sequence-width) (-4 * @sequence-height); }
+  15% { background-position: (-1 * @sequence-width) (-5 * @sequence-height); }
+  16.66666667% { background-position: (-1 * @sequence-width) (-6 * @sequence-height); }
+  18.33333333% { background-position: (-1 * @sequence-width) (-7 * @sequence-height); }
+  20% { background-position: (-1 * @sequence-width) (-8 * @sequence-height); }
+  21.66666667% { background-position: (-1 * @sequence-width) (-9 * @sequence-height); }
+
+  23.33333333% { background-position: (-2 * @sequence-width) (0 * @sequence-height); }
+  25% { background-position: (-2 * @sequence-width) (-1 * @sequence-height); }
+  26.66666667% { background-position: (-2 * @sequence-width) (-2 * @sequence-height); }
+  28.33333333% { background-position: (-2 * @sequence-width) (-3 * @sequence-height); }
+  30% { background-position: (-2 * @sequence-width) (-4 * @sequence-height); }
+  31.66666667% { background-position: (-2 * @sequence-width) (-5 * @sequence-height); }
+  33.33333333% { background-position: (-2 * @sequence-width) (-6 * @sequence-height); }
+  35% { background-position: (-2 * @sequence-width) (-7 * @sequence-height); }
+  36.66666667% { background-position: (-2 * @sequence-width) (-8 * @sequence-height); }
+  38.33333333% { background-position: (-2 * @sequence-width) (-9 * @sequence-height); }
+
+  40% { background-position: (-3 * @sequence-width) (0 * @sequence-height); }
+  41.66666667% { background-position: (-3 * @sequence-width) (-1 * @sequence-height); }
+  43.33333333% { background-position: (-3 * @sequence-width) (-2 * @sequence-height); }
+  45% { background-position: (-3 * @sequence-width) (-3 * @sequence-height); }
+  46.66666667% { background-position: (-3 * @sequence-width) (-4 * @sequence-height); }
+  48.33333333% { background-position: (-3 * @sequence-width) (-5 * @sequence-height); }
+  50% { background-position: (-3 * @sequence-width) (-6 * @sequence-height); }
+  51.66666667% { background-position: (-3 * @sequence-width) (-7 * @sequence-height); }
+  53.33333333% { background-position: (-3 * @sequence-width) (-8 * @sequence-height); }
+  55% { background-position: (-3 * @sequence-width) (-9 * @sequence-height); }
+
+  56.66666667% { background-position: (-4 * @sequence-width) (0 * @sequence-height); }
+  58.33333333% { background-position: (-4 * @sequence-width) (-1 * @sequence-height); }
+  60% { background-position: (-4 * @sequence-width) (-2 * @sequence-height); }
+  61.66666667% { background-position: (-4 * @sequence-width) (-3 * @sequence-height); }
+  63.33333333% { background-position: (-4 * @sequence-width) (-4 * @sequence-height); }
+  65% { background-position: (-4 * @sequence-width) (-5 * @sequence-height); }
+  66.66666667% { background-position: (-4 * @sequence-width) (-6 * @sequence-height); }
+  68.33333333% { background-position: (-4 * @sequence-width) (-7 * @sequence-height); }
+  70% { background-position: (-4 * @sequence-width) (-8 * @sequence-height); }
+  71.66666667% { background-position: (-4 * @sequence-width) (-9 * @sequence-height); }
+
+  73.33333333% { background-position: (-5 * @sequence-width) (0 * @sequence-height); }
+  75% { background-position: (-5 * @sequence-width) (-1 * @sequence-height); }
+  76.66666667% { background-position: (-5 * @sequence-width) (-2 * @sequence-height); }
+  78.33333333% { background-position: (-5 * @sequence-width) (-3 * @sequence-height); }
+  80% { background-position: (-5 * @sequence-width) (-4 * @sequence-height); }
+  81.66666667% { background-position: (-5 * @sequence-width) (-5 * @sequence-height); }
+  83.33333333% { background-position: (-5 * @sequence-width) (-6 * @sequence-height); }
+  85% { background-position: (-5 * @sequence-width) (-7 * @sequence-height); }
+  86.66666667% { background-position: (-5 * @sequence-width) (-8 * @sequence-height); }
+  88.33333333% { background-position: (-5 * @sequence-width) (-9 * @sequence-height); }
+
+  90% { background-position: (-6 * @sequence-width) (0 * @sequence-height); }
+  91.66666667% { background-position: (-6 * @sequence-width) (-1 * @sequence-height); }
+  93.33333333% { background-position: (-6 * @sequence-width) (-2 * @sequence-height); }
+  95% { background-position: (-6 * @sequence-width) (-3 * @sequence-height); }
+  96.66666667% { background-position: (-6 * @sequence-width) (-4 * @sequence-height); }
+  98.33333333% { background-position: (-6 * @sequence-width) (-5 * @sequence-height); }
+  100% { background-position: (-6 * @sequence-width) (-6 * @sequence-height); }
+}
+.sequence {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 0;
+  .unselectable;
+
+  &:before {
+    width: @sequence-width;
+    height: @sequence-height;
+    margin: -@sequence-height/2 0 0 -@sequence-width/2;
+    overflow: hidden;
+    display: block;
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 1;
+    background: url('@{images}/sequence/index-1.jpg') center center no-repeat;
+    background-size: @sequence-width * 7 @sequence-height * @sequence-rows;
+    animation: sequence-intro .4s step-start 0s infinite alternate;
+    animation-play-state: paused;
+    animation-fill-mode: both;
+
+    .playing& { animation-play-state: running; }
+    .paused& { animation-play-state: paused; }
+
+    .sequence-intro&, .sequence-about& {
+      background-image: url('@{images}/sequence/index-1.jpg');
+      background-size: @sequence-width * 7 @sequence-height * @sequence-rows;
+    }
+    .sequence-intro& { animation-name: sequence-intro; animation-duration: .4s; }
+    .sequence-about& { animation-name: sequence-about; animation-duration: 3s; }
+
+    .sequence-process&, .sequence-news& {
+      background-image: url('@{images}/sequence/index-2.jpg');
+      background-size: @sequence-width * 8 @sequence-height * @sequence-rows;
+    }
+    .sequence-process& { animation-name: sequence-process; animation-duration: 1.8s; }
+    .sequence-news& { animation-name: sequence-news; animation-duration: 2.1s; }
+
+    .sequence-skills& {
+      background-image: url('@{images}/sequence/index-3.jpg');
+      background-size: @sequence-width * 6 @sequence-height * @sequence-rows;
+      animation-name: sequence-skills;
+      animation-duration: 2.35s;
+    }
+
+    .sequence-viralize& {
+      background-image: url('@{images}/sequence/index-4.jpg');
+      background-size: @sequence-width * 11 @sequence-height * @sequence-rows * 2;
+      animation-name: sequence-viralize;
+      animation-duration: 10.55s;
+    }
+
+    .sequence-references&, .sequence-contact& {
+      background-image: url('@{images}/sequence/index-5.jpg');
+      background-size: @sequence-width * 12 @sequence-height * @sequence-rows;
+    }
+    .sequence-references& { animation-name: sequence-references; animation-duration: 2.8s; }
+    .sequence-contact& { animation-name: sequence-contact; animation-duration: 2.6s; }
+
+    .sequence-finish& {
+      background-image: url('@{images}/sequence/index-6.jpg');
+      background-size: @sequence-width * 7 @sequence-height * @sequence-rows;
+      animation-name: sequence-finish;
+      animation-duration: 3s;
+    }
+  }
+
+}
+/* ==========================================================================
    _PAGES
    ========================================================================== */
 .page {
@@ -1152,8 +1849,12 @@ h6 {&:extend(.h6); }
     top: auto;
     left: auto;
     opacity: 1 !important;
-    background: @color-page-0;
+    background: @color-section-0;
     .unselectable;
+
+    .mobile & {
+      //background-color: @m-color-section-0;
+    }
   }
 
   /** About */

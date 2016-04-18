@@ -147,22 +147,28 @@ $(document).ready(function () {
 	v.video = [
 		//{name: 'index-forward', src: v.path.video + 'index-forward', mp4: 4749.513, webm: 1309.349, duration: 28.88},
 		//{name: 'index-backward', src: v.path.video + 'index-backward', mp4: 4013.301, webm: 1216.921, duration: 28.88}
-		/*
-		 {name: 'about-intro', src: v.path.video + 'about-intro', mp4: 634.701, webm: 201.710, duration: 2.36},
-		 {name: 'about-loop', src: v.path.video + 'about-loop', mp4: 369.265, webm: 79.154, duration: 2.8},
-		 {name: 'process-intro', src: v.path.video + 'process-intro', mp4: 543.333, webm: 182.958, duration: 2.36},
-		 {name: 'process-loop', src: v.path.video + 'process-loop', mp4: 320.474, webm: 61.036, duration: 2.6},
-		 {name: 'news-intro', src: v.path.video + 'news-intro', mp4: 929.289, webm: 335.333, duration: 2.56},
-		 {name: 'news-loop', src: v.path.video + 'news-loop', mp4: 468.418, webm: 117.753, duration: 2.56},
-		 {name: 'skills-intro', src: v.path.video + 'skills-intro', mp4: 642.597, webm: 202.903, duration: 2.56},
-		 {name: 'skills-loop', src: v.path.video + 'skills-loop', mp4: 532.625, webm: 140.351, duration: 2.6},
-		 {name: 'viralize-intro', src: v.path.video + 'viralize-intro', mp4: 1001.844, webm: 319.256, duration: 2.56},
-		 {name: 'viralize-loop', src: v.path.video + 'viralize-loop', mp4: 640.254, webm: 218.743, duration: 2.08},
-		 {name: 'references-intro', src: v.path.video + 'references-intro', mp4: 359.206, webm: 93.870, duration: 2.56},
-		 {name: 'references-loop', src: v.path.video + 'references-loop', mp4: 246.142, webm: 52.603, duration: 2.6},
-		 {name: 'contact-intro', src: v.path.video + 'contact-intro', mp4: 491.160, webm: 196.676, duration: 2.56},
-		 {name: 'contact-loop', src: v.path.video + 'contact-loop', mp4: 197.780, webm: 50.846, duration: 2.6}
-		 */
+		[
+			{node: 'about', name: 'about-intro', src: v.path.video + 'about-intro', mp4: 634.701, webm: 201.710, duration: 2.36},
+			{node: 'about', name: 'about-loop', src: v.path.video + 'about-loop', mp4: 369.265, webm: 79.154, duration: 2.8}
+		], [
+			{node: 'process', name: 'process-intro', src: v.path.video + 'process-intro', mp4: 543.333, webm: 182.958, duration: 2.36},
+			{node: 'process', name: 'process-loop', src: v.path.video + 'process-loop', mp4: 320.474, webm: 61.036, duration: 2.6}
+		], [
+			{node: 'news', name: 'news-intro', src: v.path.video + 'news-intro', mp4: 929.289, webm: 335.333, duration: 2.56},
+			{node: 'news', name: 'news-loop', src: v.path.video + 'news-loop', mp4: 468.418, webm: 117.753, duration: 2.56}
+		], [
+			{node: 'skills', name: 'skills-intro', src: v.path.video + 'skills-intro', mp4: 642.597, webm: 202.903, duration: 2.56},
+			{node: 'skills', name: 'skills-loop', src: v.path.video + 'skills-loop', mp4: 532.625, webm: 140.351, duration: 2.6}
+		], [
+			{node: 'viralize', name: 'viralize-intro', src: v.path.video + 'viralize-intro', mp4: 1001.844, webm: 319.256, duration: 2.56},
+			{node: 'viralize', name: 'viralize-loop', src: v.path.video + 'viralize-loop', mp4: 640.254, webm: 218.743, duration: 2.08}
+		], [
+			{node: 'references', name: 'references-intro', src: v.path.video + 'references-intro', mp4: 359.206, webm: 93.870, duration: 2.56},
+			{node: 'references', name: 'references-loop', src: v.path.video + 'references-loop', mp4: 246.142, webm: 52.603, duration: 2.6}
+		], [
+			{node: 'contact', name: 'contact-intro', src: v.path.video + 'contact-intro', mp4: 491.160, webm: 196.676, duration: 2.56},
+			{node: 'contact', name: 'contact-loop', src: v.path.video + 'contact-loop', mp4: 197.780, webm: 50.846, duration: 2.6}
+		]
 	];
 
 	/** Start preloader */
@@ -178,12 +184,16 @@ function initPreloader() {
 		body.removeClass('preloading-hidden');
 		setTimeout(function () {
 			body.removeClass('preloading');
-			$.html5Loader({
-				filesToLoad: {
-					"files": files
-				},
-				onComplete: onLoadComplete
-			});
+			if (files.length > 0) {
+				$.html5Loader({
+					filesToLoad: {
+						"files": files
+					},
+					onComplete: onLoadComplete
+				});
+			} else {
+				onLoadComplete();
+			}
 		}, 100);
 		setTimeout(function () {
 			body.removeClass('loading-timeout');
@@ -232,24 +242,12 @@ function initPreloader() {
 
 	/** Build files array for html5loader */
 	var files = [];
-	files.push({"type": "IMAGE", "source": v.path.img + '/logo.svg'});
 
+	/** Preloading image sequences for mobile version */
 	if (version === 'mobile') {
 		$(v.sequence).each(function (i) {
 			files.push({"type": "IMAGE", "source": v.path.img + v.sequence[i].name});
 		});
-	} else {
-		/** Building audio tags */
-		setTimeout(function () {
-			v.audioWrap = $('<div class="audio"/>');
-			$(v.audio).each(function (i) {
-				v.audio[i].node = $('<audio/>').append('<source src="' + v.path.audio + v.audio[i].name + '.mp3" type="audio/mpeg" preload>');
-				v.audio[i].node[0].volume = v.audio[i].volume;
-				v.audio[i].node.appendTo(v.audioWrap);
-				v.audio[i].played = false;
-			});
-			v.audioWrap.appendTo(v.self);
-		}, 1000);
 	}
 
 	var img = new Image(), preloader = $('.preloader'), n = 'preloader.jpg';
@@ -562,19 +560,35 @@ function initVideo() {
 		v.disabled = false;
 		v.interval = [];
 
+		/** Building audio tags */
+		v.audioWrap = $('<div class="audio"/>');
+		$(v.audio).each(function (i) {
+			v.audio[i].node = $('<audio/>').append('<source src="' + v.path.audio + v.audio[i].name + '.mp3" type="audio/mpeg" preload>');
+			v.audio[i].node[0].volume = v.audio[i].volume;
+			v.audio[i].node.appendTo(v.audioWrap);
+			v.audio[i].played = false;
+		});
+		v.audioWrap.appendTo(v.self);
+
 		/** Building video tags */
-		/*
-		 v.videoWrap = $('<div class="video"/>');
-		 $(v.video).each(function (i) {
-		 v.video[i].node = $('<video class="' + v.video[i].name + '" preload="auto" muted width="320" height="180"/>');
-		 v.video[i].node.append('<source src="' + v.video[i].src + '.mp4" type="video/mp4">');
-		 v.video[i].node.append('<source src="' + v.video[i].src + '.webm" type="video/webm">');
-		 v.video[i].node.appendTo(v.videoWrap);
-		 });
-		 v.videoWrap.appendTo(v.self);
-		 */
 		$(v.video).each(function (i) {
-			$('.' + v.video[i].name).data('duration', v.video[i].duration);
+			var figure = $('<figure/>');
+			figure.addClass('video');
+			$(v.video[i]).each(function () {
+				vid = $('<video/>');
+				vid.attr({'width': '320', 'height': '180', 'poster': 'img/poster.png'}).attr('muted', true);
+				if (this.name.indexOf('intro') >= 0) {
+					$(vid).addClass('intro').addClass(this.name).addClass('visible').attr('preload', 'auto');
+				}
+				if (this.name.indexOf('loop') >= 0) {
+					$(vid).addClass('loop').addClass(this.name).attr('preload', 'none').attr('loop', true);
+				}
+				vid.append('<source src="' + this.src + '.mp4" type="video/mp4">');
+				vid.append('<source src="' + this.src + '.webm" type="video/webm">');
+				figure.append(vid);
+			});
+			//console.log(figure[0]);
+			figure.appendTo($('#' + v.video[i][0].node));
 		});
 
 		v.jqforward = $('.forward', v.self);

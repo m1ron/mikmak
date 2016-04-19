@@ -1331,6 +1331,9 @@ body[browser="safari"] .video video {
 .ui-hidden .dots {
   opacity: 0;
 }
+.mobile .dots {
+  display: none;
+}
 .dots > a {
   width: 30px;
   height: 10px;
@@ -8597,7 +8600,7 @@ body[browser="safari"] .video video {
   right: 0;
   bottom: 0;
   left: 0;
-  z-index: 0;
+  z-index: -1;
   -webkit-user-select: none;
   -khtml-user-select: none;
   -moz-user-select: -moz-none;
@@ -9214,25 +9217,25 @@ body[browser="chrome"]:not(.simple) .page.active {
     margin-bottom: 20px;
   }
 }
-body[browser="safari"] .page-about {
+body[browser="safari"]:not(.mobile) .page-about {
   background-color: #72a9b4;
 }
-body[browser="safari"] .page-process {
+body[browser="safari"]:not(.mobile) .page-process {
   background-color: #8ecb5c;
 }
-body[browser="safari"] .page-news {
+body[browser="safari"]:not(.mobile) .page-news {
   background-color: #ea94b5;
 }
-body[browser="safari"] .page-skills {
+body[browser="safari"]:not(.mobile) .page-skills {
   background-color: #cdc1c3;
 }
-body[browser="safari"] .page-viralize {
+body[browser="safari"]:not(.mobile) .page-viralize {
   background-color: #e6776c;
 }
-body[browser="safari"] .page-references {
+body[browser="safari"]:not(.mobile) .page-references {
   background-color: #a0a0a0;
 }
-body[browser="safari"] .page-contact {
+body[browser="safari"]:not(.mobile) .page-contact {
   background-color: #f9f0a7;
 }
 /* ==========================================================================

@@ -789,11 +789,11 @@ h6 {
   transform: rotate(90deg);
   -webkit-backface-visibility: hidden;
 }
-.header .toggle:hover {
+body:not(.mobile) .header .toggle:hover {
   background: #000;
 }
-.header .toggle:hover:before,
-.header .toggle:hover:after {
+body:not(.mobile) .header .toggle:hover:before,
+body:not(.mobile) .header .toggle:hover:after {
   background: #fff;
 }
 /* ==========================================================================

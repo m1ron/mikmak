@@ -434,7 +434,8 @@ h6 {&:extend(.h6); }
       background: @color-black;
     }
     &:after { .rotate(90deg); }
-    &:hover {
+
+    body:not(.mobile) &:hover {
       background: @color-black;
       &:before, &:after { background: @color-white; }
     }

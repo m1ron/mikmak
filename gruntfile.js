@@ -119,6 +119,12 @@ module.exports = function (grunt) {
 							src.css + 'vendor/jquery.fullpage.min.css'
 						],
 						dest: src.css + 'plugins.css'
+					}, {
+						src: [
+							src.css + 'plugins.css',
+							src.css + 'main.min.css'
+						],
+						dest: src.css + 'main.min.css'
 					}
 				]
 			}
@@ -134,6 +140,13 @@ module.exports = function (grunt) {
 						flatten: true,
 						src: src.css + 'vendor/normalize.css',
 						dest: src.css + 'vendor',
+						ext: '.min.css'
+					},
+					{
+						expand: true,
+						flatten: true,
+						src: src.css + 'main.css',
+						dest: src.css,
 						ext: '.min.css'
 					}
 				]

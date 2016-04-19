@@ -3117,6 +3117,5476 @@ body[browser="safari"] .video video {
     background-position: -3840px -2160px;
   }
 }
+@-webkit-keyframes sequence-about-inner {
+  0% {
+    background-position: 0px 0px;
+  }
+  2.12765957% {
+    background-position: 0px -461px;
+  }
+  4.25531915% {
+    background-position: 0px -922px;
+  }
+  6.38297872% {
+    background-position: 0px -1383px;
+  }
+  8.5106383% {
+    background-position: 0px -1844px;
+  }
+  10.63829787% {
+    background-position: 0px -2305px;
+  }
+  12.76595745% {
+    background-position: 0px -2766px;
+  }
+  14.89361702% {
+    background-position: 0px -3227px;
+  }
+  17.0212766% {
+    background-position: 0px -3688px;
+  }
+  19.14893617% {
+    background-position: 0px -4149px;
+  }
+  21.27659574% {
+    background-position: -640px 0px;
+  }
+  23.40425532% {
+    background-position: -640px -461px;
+  }
+  25.53191489% {
+    background-position: -640px -922px;
+  }
+  27.65957447% {
+    background-position: -640px -1383px;
+  }
+  29.78723404% {
+    background-position: -640px -1844px;
+  }
+  31.91489362% {
+    background-position: -640px -2305px;
+  }
+  34.04255319% {
+    background-position: -640px -2766px;
+  }
+  36.17021277% {
+    background-position: -640px -3227px;
+  }
+  38.29787234% {
+    background-position: -640px -3688px;
+  }
+  40.42553191% {
+    background-position: -640px -4149px;
+  }
+  42.55319149% {
+    background-position: -1280px 0px;
+  }
+  44.68085106% {
+    background-position: -1280px -461px;
+  }
+  46.80851064% {
+    background-position: -1280px -922px;
+  }
+  48.93617021% {
+    background-position: -1280px -1383px;
+  }
+  51.06382979% {
+    background-position: -1280px -1844px;
+  }
+  53.19148936% {
+    background-position: -1280px -2305px;
+  }
+  55.31914894% {
+    background-position: -1280px -2766px;
+  }
+  57.44680851% {
+    background-position: -1280px -3227px;
+  }
+  59.57446809% {
+    background-position: -1280px -3688px;
+  }
+  61.70212766% {
+    background-position: -1280px -4149px;
+  }
+  63.82978723% {
+    background-position: -1920px 0px;
+  }
+  65.95744681% {
+    background-position: -1920px -461px;
+  }
+  68.08510638% {
+    background-position: -1920px -922px;
+  }
+  70.21276596% {
+    background-position: -1920px -1383px;
+  }
+  72.34042553% {
+    background-position: -1920px -1844px;
+  }
+  74.46808511% {
+    background-position: -1920px -2305px;
+  }
+  76.59574468% {
+    background-position: -1920px -2766px;
+  }
+  78.72340426% {
+    background-position: -1920px -3227px;
+  }
+  80.85106383% {
+    background-position: -1920px -3688px;
+  }
+  82.9787234% {
+    background-position: -1920px -4149px;
+  }
+  85.10638298% {
+    background-position: -2560px 0px;
+  }
+  87.23404255% {
+    background-position: -2560px -461px;
+  }
+  89.36170213% {
+    background-position: -2560px -922px;
+  }
+  91.4893617% {
+    background-position: -2560px -1383px;
+  }
+  93.61702128% {
+    background-position: -2560px -1844px;
+  }
+  95.74468085% {
+    background-position: -2560px -2305px;
+  }
+  97.87234043% {
+    background-position: -2560px -2766px;
+  }
+  100% {
+    background-position: -2560px -3227px;
+  }
+}
+@-moz-keyframes sequence-about-inner {
+  0% {
+    background-position: 0px 0px;
+  }
+  2.12765957% {
+    background-position: 0px -461px;
+  }
+  4.25531915% {
+    background-position: 0px -922px;
+  }
+  6.38297872% {
+    background-position: 0px -1383px;
+  }
+  8.5106383% {
+    background-position: 0px -1844px;
+  }
+  10.63829787% {
+    background-position: 0px -2305px;
+  }
+  12.76595745% {
+    background-position: 0px -2766px;
+  }
+  14.89361702% {
+    background-position: 0px -3227px;
+  }
+  17.0212766% {
+    background-position: 0px -3688px;
+  }
+  19.14893617% {
+    background-position: 0px -4149px;
+  }
+  21.27659574% {
+    background-position: -640px 0px;
+  }
+  23.40425532% {
+    background-position: -640px -461px;
+  }
+  25.53191489% {
+    background-position: -640px -922px;
+  }
+  27.65957447% {
+    background-position: -640px -1383px;
+  }
+  29.78723404% {
+    background-position: -640px -1844px;
+  }
+  31.91489362% {
+    background-position: -640px -2305px;
+  }
+  34.04255319% {
+    background-position: -640px -2766px;
+  }
+  36.17021277% {
+    background-position: -640px -3227px;
+  }
+  38.29787234% {
+    background-position: -640px -3688px;
+  }
+  40.42553191% {
+    background-position: -640px -4149px;
+  }
+  42.55319149% {
+    background-position: -1280px 0px;
+  }
+  44.68085106% {
+    background-position: -1280px -461px;
+  }
+  46.80851064% {
+    background-position: -1280px -922px;
+  }
+  48.93617021% {
+    background-position: -1280px -1383px;
+  }
+  51.06382979% {
+    background-position: -1280px -1844px;
+  }
+  53.19148936% {
+    background-position: -1280px -2305px;
+  }
+  55.31914894% {
+    background-position: -1280px -2766px;
+  }
+  57.44680851% {
+    background-position: -1280px -3227px;
+  }
+  59.57446809% {
+    background-position: -1280px -3688px;
+  }
+  61.70212766% {
+    background-position: -1280px -4149px;
+  }
+  63.82978723% {
+    background-position: -1920px 0px;
+  }
+  65.95744681% {
+    background-position: -1920px -461px;
+  }
+  68.08510638% {
+    background-position: -1920px -922px;
+  }
+  70.21276596% {
+    background-position: -1920px -1383px;
+  }
+  72.34042553% {
+    background-position: -1920px -1844px;
+  }
+  74.46808511% {
+    background-position: -1920px -2305px;
+  }
+  76.59574468% {
+    background-position: -1920px -2766px;
+  }
+  78.72340426% {
+    background-position: -1920px -3227px;
+  }
+  80.85106383% {
+    background-position: -1920px -3688px;
+  }
+  82.9787234% {
+    background-position: -1920px -4149px;
+  }
+  85.10638298% {
+    background-position: -2560px 0px;
+  }
+  87.23404255% {
+    background-position: -2560px -461px;
+  }
+  89.36170213% {
+    background-position: -2560px -922px;
+  }
+  91.4893617% {
+    background-position: -2560px -1383px;
+  }
+  93.61702128% {
+    background-position: -2560px -1844px;
+  }
+  95.74468085% {
+    background-position: -2560px -2305px;
+  }
+  97.87234043% {
+    background-position: -2560px -2766px;
+  }
+  100% {
+    background-position: -2560px -3227px;
+  }
+}
+@-ms-keyframes sequence-about-inner {
+  0% {
+    background-position: 0px 0px;
+  }
+  2.12765957% {
+    background-position: 0px -461px;
+  }
+  4.25531915% {
+    background-position: 0px -922px;
+  }
+  6.38297872% {
+    background-position: 0px -1383px;
+  }
+  8.5106383% {
+    background-position: 0px -1844px;
+  }
+  10.63829787% {
+    background-position: 0px -2305px;
+  }
+  12.76595745% {
+    background-position: 0px -2766px;
+  }
+  14.89361702% {
+    background-position: 0px -3227px;
+  }
+  17.0212766% {
+    background-position: 0px -3688px;
+  }
+  19.14893617% {
+    background-position: 0px -4149px;
+  }
+  21.27659574% {
+    background-position: -640px 0px;
+  }
+  23.40425532% {
+    background-position: -640px -461px;
+  }
+  25.53191489% {
+    background-position: -640px -922px;
+  }
+  27.65957447% {
+    background-position: -640px -1383px;
+  }
+  29.78723404% {
+    background-position: -640px -1844px;
+  }
+  31.91489362% {
+    background-position: -640px -2305px;
+  }
+  34.04255319% {
+    background-position: -640px -2766px;
+  }
+  36.17021277% {
+    background-position: -640px -3227px;
+  }
+  38.29787234% {
+    background-position: -640px -3688px;
+  }
+  40.42553191% {
+    background-position: -640px -4149px;
+  }
+  42.55319149% {
+    background-position: -1280px 0px;
+  }
+  44.68085106% {
+    background-position: -1280px -461px;
+  }
+  46.80851064% {
+    background-position: -1280px -922px;
+  }
+  48.93617021% {
+    background-position: -1280px -1383px;
+  }
+  51.06382979% {
+    background-position: -1280px -1844px;
+  }
+  53.19148936% {
+    background-position: -1280px -2305px;
+  }
+  55.31914894% {
+    background-position: -1280px -2766px;
+  }
+  57.44680851% {
+    background-position: -1280px -3227px;
+  }
+  59.57446809% {
+    background-position: -1280px -3688px;
+  }
+  61.70212766% {
+    background-position: -1280px -4149px;
+  }
+  63.82978723% {
+    background-position: -1920px 0px;
+  }
+  65.95744681% {
+    background-position: -1920px -461px;
+  }
+  68.08510638% {
+    background-position: -1920px -922px;
+  }
+  70.21276596% {
+    background-position: -1920px -1383px;
+  }
+  72.34042553% {
+    background-position: -1920px -1844px;
+  }
+  74.46808511% {
+    background-position: -1920px -2305px;
+  }
+  76.59574468% {
+    background-position: -1920px -2766px;
+  }
+  78.72340426% {
+    background-position: -1920px -3227px;
+  }
+  80.85106383% {
+    background-position: -1920px -3688px;
+  }
+  82.9787234% {
+    background-position: -1920px -4149px;
+  }
+  85.10638298% {
+    background-position: -2560px 0px;
+  }
+  87.23404255% {
+    background-position: -2560px -461px;
+  }
+  89.36170213% {
+    background-position: -2560px -922px;
+  }
+  91.4893617% {
+    background-position: -2560px -1383px;
+  }
+  93.61702128% {
+    background-position: -2560px -1844px;
+  }
+  95.74468085% {
+    background-position: -2560px -2305px;
+  }
+  97.87234043% {
+    background-position: -2560px -2766px;
+  }
+  100% {
+    background-position: -2560px -3227px;
+  }
+}
+@-o-keyframes sequence-about-inner {
+  0% {
+    background-position: 0px 0px;
+  }
+  2.12765957% {
+    background-position: 0px -461px;
+  }
+  4.25531915% {
+    background-position: 0px -922px;
+  }
+  6.38297872% {
+    background-position: 0px -1383px;
+  }
+  8.5106383% {
+    background-position: 0px -1844px;
+  }
+  10.63829787% {
+    background-position: 0px -2305px;
+  }
+  12.76595745% {
+    background-position: 0px -2766px;
+  }
+  14.89361702% {
+    background-position: 0px -3227px;
+  }
+  17.0212766% {
+    background-position: 0px -3688px;
+  }
+  19.14893617% {
+    background-position: 0px -4149px;
+  }
+  21.27659574% {
+    background-position: -640px 0px;
+  }
+  23.40425532% {
+    background-position: -640px -461px;
+  }
+  25.53191489% {
+    background-position: -640px -922px;
+  }
+  27.65957447% {
+    background-position: -640px -1383px;
+  }
+  29.78723404% {
+    background-position: -640px -1844px;
+  }
+  31.91489362% {
+    background-position: -640px -2305px;
+  }
+  34.04255319% {
+    background-position: -640px -2766px;
+  }
+  36.17021277% {
+    background-position: -640px -3227px;
+  }
+  38.29787234% {
+    background-position: -640px -3688px;
+  }
+  40.42553191% {
+    background-position: -640px -4149px;
+  }
+  42.55319149% {
+    background-position: -1280px 0px;
+  }
+  44.68085106% {
+    background-position: -1280px -461px;
+  }
+  46.80851064% {
+    background-position: -1280px -922px;
+  }
+  48.93617021% {
+    background-position: -1280px -1383px;
+  }
+  51.06382979% {
+    background-position: -1280px -1844px;
+  }
+  53.19148936% {
+    background-position: -1280px -2305px;
+  }
+  55.31914894% {
+    background-position: -1280px -2766px;
+  }
+  57.44680851% {
+    background-position: -1280px -3227px;
+  }
+  59.57446809% {
+    background-position: -1280px -3688px;
+  }
+  61.70212766% {
+    background-position: -1280px -4149px;
+  }
+  63.82978723% {
+    background-position: -1920px 0px;
+  }
+  65.95744681% {
+    background-position: -1920px -461px;
+  }
+  68.08510638% {
+    background-position: -1920px -922px;
+  }
+  70.21276596% {
+    background-position: -1920px -1383px;
+  }
+  72.34042553% {
+    background-position: -1920px -1844px;
+  }
+  74.46808511% {
+    background-position: -1920px -2305px;
+  }
+  76.59574468% {
+    background-position: -1920px -2766px;
+  }
+  78.72340426% {
+    background-position: -1920px -3227px;
+  }
+  80.85106383% {
+    background-position: -1920px -3688px;
+  }
+  82.9787234% {
+    background-position: -1920px -4149px;
+  }
+  85.10638298% {
+    background-position: -2560px 0px;
+  }
+  87.23404255% {
+    background-position: -2560px -461px;
+  }
+  89.36170213% {
+    background-position: -2560px -922px;
+  }
+  91.4893617% {
+    background-position: -2560px -1383px;
+  }
+  93.61702128% {
+    background-position: -2560px -1844px;
+  }
+  95.74468085% {
+    background-position: -2560px -2305px;
+  }
+  97.87234043% {
+    background-position: -2560px -2766px;
+  }
+  100% {
+    background-position: -2560px -3227px;
+  }
+}
+@keyframes sequence-about-inner {
+  0% {
+    background-position: 0px 0px;
+  }
+  2.12765957% {
+    background-position: 0px -461px;
+  }
+  4.25531915% {
+    background-position: 0px -922px;
+  }
+  6.38297872% {
+    background-position: 0px -1383px;
+  }
+  8.5106383% {
+    background-position: 0px -1844px;
+  }
+  10.63829787% {
+    background-position: 0px -2305px;
+  }
+  12.76595745% {
+    background-position: 0px -2766px;
+  }
+  14.89361702% {
+    background-position: 0px -3227px;
+  }
+  17.0212766% {
+    background-position: 0px -3688px;
+  }
+  19.14893617% {
+    background-position: 0px -4149px;
+  }
+  21.27659574% {
+    background-position: -640px 0px;
+  }
+  23.40425532% {
+    background-position: -640px -461px;
+  }
+  25.53191489% {
+    background-position: -640px -922px;
+  }
+  27.65957447% {
+    background-position: -640px -1383px;
+  }
+  29.78723404% {
+    background-position: -640px -1844px;
+  }
+  31.91489362% {
+    background-position: -640px -2305px;
+  }
+  34.04255319% {
+    background-position: -640px -2766px;
+  }
+  36.17021277% {
+    background-position: -640px -3227px;
+  }
+  38.29787234% {
+    background-position: -640px -3688px;
+  }
+  40.42553191% {
+    background-position: -640px -4149px;
+  }
+  42.55319149% {
+    background-position: -1280px 0px;
+  }
+  44.68085106% {
+    background-position: -1280px -461px;
+  }
+  46.80851064% {
+    background-position: -1280px -922px;
+  }
+  48.93617021% {
+    background-position: -1280px -1383px;
+  }
+  51.06382979% {
+    background-position: -1280px -1844px;
+  }
+  53.19148936% {
+    background-position: -1280px -2305px;
+  }
+  55.31914894% {
+    background-position: -1280px -2766px;
+  }
+  57.44680851% {
+    background-position: -1280px -3227px;
+  }
+  59.57446809% {
+    background-position: -1280px -3688px;
+  }
+  61.70212766% {
+    background-position: -1280px -4149px;
+  }
+  63.82978723% {
+    background-position: -1920px 0px;
+  }
+  65.95744681% {
+    background-position: -1920px -461px;
+  }
+  68.08510638% {
+    background-position: -1920px -922px;
+  }
+  70.21276596% {
+    background-position: -1920px -1383px;
+  }
+  72.34042553% {
+    background-position: -1920px -1844px;
+  }
+  74.46808511% {
+    background-position: -1920px -2305px;
+  }
+  76.59574468% {
+    background-position: -1920px -2766px;
+  }
+  78.72340426% {
+    background-position: -1920px -3227px;
+  }
+  80.85106383% {
+    background-position: -1920px -3688px;
+  }
+  82.9787234% {
+    background-position: -1920px -4149px;
+  }
+  85.10638298% {
+    background-position: -2560px 0px;
+  }
+  87.23404255% {
+    background-position: -2560px -461px;
+  }
+  89.36170213% {
+    background-position: -2560px -922px;
+  }
+  91.4893617% {
+    background-position: -2560px -1383px;
+  }
+  93.61702128% {
+    background-position: -2560px -1844px;
+  }
+  95.74468085% {
+    background-position: -2560px -2305px;
+  }
+  97.87234043% {
+    background-position: -2560px -2766px;
+  }
+  100% {
+    background-position: -2560px -3227px;
+  }
+}
+@-webkit-keyframes sequence-process-inner {
+  0% {
+    background-position: 0px 0px;
+  }
+  1.96078431% {
+    background-position: 0px -461px;
+  }
+  3.92156863% {
+    background-position: 0px -922px;
+  }
+  5.88235294% {
+    background-position: 0px -1383px;
+  }
+  7.84313725% {
+    background-position: 0px -1844px;
+  }
+  9.80392157% {
+    background-position: 0px -2305px;
+  }
+  11.76470588% {
+    background-position: 0px -2766px;
+  }
+  13.7254902% {
+    background-position: 0px -3227px;
+  }
+  15.68627451% {
+    background-position: 0px -3688px;
+  }
+  17.64705882% {
+    background-position: 0px -4149px;
+  }
+  19.60784314% {
+    background-position: -640px 0px;
+  }
+  21.56862745% {
+    background-position: -640px -461px;
+  }
+  23.52941176% {
+    background-position: -640px -922px;
+  }
+  25.49019608% {
+    background-position: -640px -1383px;
+  }
+  27.45098039% {
+    background-position: -640px -1844px;
+  }
+  29.41176471% {
+    background-position: -640px -2305px;
+  }
+  31.37254902% {
+    background-position: -640px -2766px;
+  }
+  33.33333333% {
+    background-position: -640px -3227px;
+  }
+  35.29411765% {
+    background-position: -640px -3688px;
+  }
+  37.25490196% {
+    background-position: -640px -4149px;
+  }
+  39.21568627% {
+    background-position: -1280px 0px;
+  }
+  41.17647059% {
+    background-position: -1280px -461px;
+  }
+  43.1372549% {
+    background-position: -1280px -922px;
+  }
+  45.09803922% {
+    background-position: -1280px -1383px;
+  }
+  47.05882353% {
+    background-position: -1280px -1844px;
+  }
+  49.01960784% {
+    background-position: -1280px -2305px;
+  }
+  50.98039216% {
+    background-position: -1280px -2766px;
+  }
+  52.94117647% {
+    background-position: -1280px -3227px;
+  }
+  54.90196078% {
+    background-position: -1280px -3688px;
+  }
+  56.8627451% {
+    background-position: -1280px -4149px;
+  }
+  58.82352941% {
+    background-position: -1920px 0px;
+  }
+  60.78431373% {
+    background-position: -1920px -461px;
+  }
+  62.74509804% {
+    background-position: -1920px -922px;
+  }
+  64.70588235% {
+    background-position: -1920px -1383px;
+  }
+  66.66666667% {
+    background-position: -1920px -1844px;
+  }
+  68.62745098% {
+    background-position: -1920px -2305px;
+  }
+  70.58823529% {
+    background-position: -1920px -2766px;
+  }
+  72.54901961% {
+    background-position: -1920px -3227px;
+  }
+  74.50980392% {
+    background-position: -1920px -3688px;
+  }
+  76.47058824% {
+    background-position: -1920px -4149px;
+  }
+  78.43137255% {
+    background-position: -2560px 0px;
+  }
+  80.39215686% {
+    background-position: -2560px -461px;
+  }
+  82.35294118% {
+    background-position: -2560px -922px;
+  }
+  84.31372549% {
+    background-position: -2560px -1383px;
+  }
+  86.2745098% {
+    background-position: -2560px -1844px;
+  }
+  88.23529412% {
+    background-position: -2560px -2305px;
+  }
+  90.19607843% {
+    background-position: -2560px -2766px;
+  }
+  92.15686275% {
+    background-position: -2560px -3227px;
+  }
+  94.11764706% {
+    background-position: -2560px -3688px;
+  }
+  96.07843137% {
+    background-position: -2560px -4149px;
+  }
+  98.03921569% {
+    background-position: -3200px 0px;
+  }
+  100% {
+    background-position: -3200px -461px;
+  }
+}
+@-moz-keyframes sequence-process-inner {
+  0% {
+    background-position: 0px 0px;
+  }
+  1.96078431% {
+    background-position: 0px -461px;
+  }
+  3.92156863% {
+    background-position: 0px -922px;
+  }
+  5.88235294% {
+    background-position: 0px -1383px;
+  }
+  7.84313725% {
+    background-position: 0px -1844px;
+  }
+  9.80392157% {
+    background-position: 0px -2305px;
+  }
+  11.76470588% {
+    background-position: 0px -2766px;
+  }
+  13.7254902% {
+    background-position: 0px -3227px;
+  }
+  15.68627451% {
+    background-position: 0px -3688px;
+  }
+  17.64705882% {
+    background-position: 0px -4149px;
+  }
+  19.60784314% {
+    background-position: -640px 0px;
+  }
+  21.56862745% {
+    background-position: -640px -461px;
+  }
+  23.52941176% {
+    background-position: -640px -922px;
+  }
+  25.49019608% {
+    background-position: -640px -1383px;
+  }
+  27.45098039% {
+    background-position: -640px -1844px;
+  }
+  29.41176471% {
+    background-position: -640px -2305px;
+  }
+  31.37254902% {
+    background-position: -640px -2766px;
+  }
+  33.33333333% {
+    background-position: -640px -3227px;
+  }
+  35.29411765% {
+    background-position: -640px -3688px;
+  }
+  37.25490196% {
+    background-position: -640px -4149px;
+  }
+  39.21568627% {
+    background-position: -1280px 0px;
+  }
+  41.17647059% {
+    background-position: -1280px -461px;
+  }
+  43.1372549% {
+    background-position: -1280px -922px;
+  }
+  45.09803922% {
+    background-position: -1280px -1383px;
+  }
+  47.05882353% {
+    background-position: -1280px -1844px;
+  }
+  49.01960784% {
+    background-position: -1280px -2305px;
+  }
+  50.98039216% {
+    background-position: -1280px -2766px;
+  }
+  52.94117647% {
+    background-position: -1280px -3227px;
+  }
+  54.90196078% {
+    background-position: -1280px -3688px;
+  }
+  56.8627451% {
+    background-position: -1280px -4149px;
+  }
+  58.82352941% {
+    background-position: -1920px 0px;
+  }
+  60.78431373% {
+    background-position: -1920px -461px;
+  }
+  62.74509804% {
+    background-position: -1920px -922px;
+  }
+  64.70588235% {
+    background-position: -1920px -1383px;
+  }
+  66.66666667% {
+    background-position: -1920px -1844px;
+  }
+  68.62745098% {
+    background-position: -1920px -2305px;
+  }
+  70.58823529% {
+    background-position: -1920px -2766px;
+  }
+  72.54901961% {
+    background-position: -1920px -3227px;
+  }
+  74.50980392% {
+    background-position: -1920px -3688px;
+  }
+  76.47058824% {
+    background-position: -1920px -4149px;
+  }
+  78.43137255% {
+    background-position: -2560px 0px;
+  }
+  80.39215686% {
+    background-position: -2560px -461px;
+  }
+  82.35294118% {
+    background-position: -2560px -922px;
+  }
+  84.31372549% {
+    background-position: -2560px -1383px;
+  }
+  86.2745098% {
+    background-position: -2560px -1844px;
+  }
+  88.23529412% {
+    background-position: -2560px -2305px;
+  }
+  90.19607843% {
+    background-position: -2560px -2766px;
+  }
+  92.15686275% {
+    background-position: -2560px -3227px;
+  }
+  94.11764706% {
+    background-position: -2560px -3688px;
+  }
+  96.07843137% {
+    background-position: -2560px -4149px;
+  }
+  98.03921569% {
+    background-position: -3200px 0px;
+  }
+  100% {
+    background-position: -3200px -461px;
+  }
+}
+@-ms-keyframes sequence-process-inner {
+  0% {
+    background-position: 0px 0px;
+  }
+  1.96078431% {
+    background-position: 0px -461px;
+  }
+  3.92156863% {
+    background-position: 0px -922px;
+  }
+  5.88235294% {
+    background-position: 0px -1383px;
+  }
+  7.84313725% {
+    background-position: 0px -1844px;
+  }
+  9.80392157% {
+    background-position: 0px -2305px;
+  }
+  11.76470588% {
+    background-position: 0px -2766px;
+  }
+  13.7254902% {
+    background-position: 0px -3227px;
+  }
+  15.68627451% {
+    background-position: 0px -3688px;
+  }
+  17.64705882% {
+    background-position: 0px -4149px;
+  }
+  19.60784314% {
+    background-position: -640px 0px;
+  }
+  21.56862745% {
+    background-position: -640px -461px;
+  }
+  23.52941176% {
+    background-position: -640px -922px;
+  }
+  25.49019608% {
+    background-position: -640px -1383px;
+  }
+  27.45098039% {
+    background-position: -640px -1844px;
+  }
+  29.41176471% {
+    background-position: -640px -2305px;
+  }
+  31.37254902% {
+    background-position: -640px -2766px;
+  }
+  33.33333333% {
+    background-position: -640px -3227px;
+  }
+  35.29411765% {
+    background-position: -640px -3688px;
+  }
+  37.25490196% {
+    background-position: -640px -4149px;
+  }
+  39.21568627% {
+    background-position: -1280px 0px;
+  }
+  41.17647059% {
+    background-position: -1280px -461px;
+  }
+  43.1372549% {
+    background-position: -1280px -922px;
+  }
+  45.09803922% {
+    background-position: -1280px -1383px;
+  }
+  47.05882353% {
+    background-position: -1280px -1844px;
+  }
+  49.01960784% {
+    background-position: -1280px -2305px;
+  }
+  50.98039216% {
+    background-position: -1280px -2766px;
+  }
+  52.94117647% {
+    background-position: -1280px -3227px;
+  }
+  54.90196078% {
+    background-position: -1280px -3688px;
+  }
+  56.8627451% {
+    background-position: -1280px -4149px;
+  }
+  58.82352941% {
+    background-position: -1920px 0px;
+  }
+  60.78431373% {
+    background-position: -1920px -461px;
+  }
+  62.74509804% {
+    background-position: -1920px -922px;
+  }
+  64.70588235% {
+    background-position: -1920px -1383px;
+  }
+  66.66666667% {
+    background-position: -1920px -1844px;
+  }
+  68.62745098% {
+    background-position: -1920px -2305px;
+  }
+  70.58823529% {
+    background-position: -1920px -2766px;
+  }
+  72.54901961% {
+    background-position: -1920px -3227px;
+  }
+  74.50980392% {
+    background-position: -1920px -3688px;
+  }
+  76.47058824% {
+    background-position: -1920px -4149px;
+  }
+  78.43137255% {
+    background-position: -2560px 0px;
+  }
+  80.39215686% {
+    background-position: -2560px -461px;
+  }
+  82.35294118% {
+    background-position: -2560px -922px;
+  }
+  84.31372549% {
+    background-position: -2560px -1383px;
+  }
+  86.2745098% {
+    background-position: -2560px -1844px;
+  }
+  88.23529412% {
+    background-position: -2560px -2305px;
+  }
+  90.19607843% {
+    background-position: -2560px -2766px;
+  }
+  92.15686275% {
+    background-position: -2560px -3227px;
+  }
+  94.11764706% {
+    background-position: -2560px -3688px;
+  }
+  96.07843137% {
+    background-position: -2560px -4149px;
+  }
+  98.03921569% {
+    background-position: -3200px 0px;
+  }
+  100% {
+    background-position: -3200px -461px;
+  }
+}
+@-o-keyframes sequence-process-inner {
+  0% {
+    background-position: 0px 0px;
+  }
+  1.96078431% {
+    background-position: 0px -461px;
+  }
+  3.92156863% {
+    background-position: 0px -922px;
+  }
+  5.88235294% {
+    background-position: 0px -1383px;
+  }
+  7.84313725% {
+    background-position: 0px -1844px;
+  }
+  9.80392157% {
+    background-position: 0px -2305px;
+  }
+  11.76470588% {
+    background-position: 0px -2766px;
+  }
+  13.7254902% {
+    background-position: 0px -3227px;
+  }
+  15.68627451% {
+    background-position: 0px -3688px;
+  }
+  17.64705882% {
+    background-position: 0px -4149px;
+  }
+  19.60784314% {
+    background-position: -640px 0px;
+  }
+  21.56862745% {
+    background-position: -640px -461px;
+  }
+  23.52941176% {
+    background-position: -640px -922px;
+  }
+  25.49019608% {
+    background-position: -640px -1383px;
+  }
+  27.45098039% {
+    background-position: -640px -1844px;
+  }
+  29.41176471% {
+    background-position: -640px -2305px;
+  }
+  31.37254902% {
+    background-position: -640px -2766px;
+  }
+  33.33333333% {
+    background-position: -640px -3227px;
+  }
+  35.29411765% {
+    background-position: -640px -3688px;
+  }
+  37.25490196% {
+    background-position: -640px -4149px;
+  }
+  39.21568627% {
+    background-position: -1280px 0px;
+  }
+  41.17647059% {
+    background-position: -1280px -461px;
+  }
+  43.1372549% {
+    background-position: -1280px -922px;
+  }
+  45.09803922% {
+    background-position: -1280px -1383px;
+  }
+  47.05882353% {
+    background-position: -1280px -1844px;
+  }
+  49.01960784% {
+    background-position: -1280px -2305px;
+  }
+  50.98039216% {
+    background-position: -1280px -2766px;
+  }
+  52.94117647% {
+    background-position: -1280px -3227px;
+  }
+  54.90196078% {
+    background-position: -1280px -3688px;
+  }
+  56.8627451% {
+    background-position: -1280px -4149px;
+  }
+  58.82352941% {
+    background-position: -1920px 0px;
+  }
+  60.78431373% {
+    background-position: -1920px -461px;
+  }
+  62.74509804% {
+    background-position: -1920px -922px;
+  }
+  64.70588235% {
+    background-position: -1920px -1383px;
+  }
+  66.66666667% {
+    background-position: -1920px -1844px;
+  }
+  68.62745098% {
+    background-position: -1920px -2305px;
+  }
+  70.58823529% {
+    background-position: -1920px -2766px;
+  }
+  72.54901961% {
+    background-position: -1920px -3227px;
+  }
+  74.50980392% {
+    background-position: -1920px -3688px;
+  }
+  76.47058824% {
+    background-position: -1920px -4149px;
+  }
+  78.43137255% {
+    background-position: -2560px 0px;
+  }
+  80.39215686% {
+    background-position: -2560px -461px;
+  }
+  82.35294118% {
+    background-position: -2560px -922px;
+  }
+  84.31372549% {
+    background-position: -2560px -1383px;
+  }
+  86.2745098% {
+    background-position: -2560px -1844px;
+  }
+  88.23529412% {
+    background-position: -2560px -2305px;
+  }
+  90.19607843% {
+    background-position: -2560px -2766px;
+  }
+  92.15686275% {
+    background-position: -2560px -3227px;
+  }
+  94.11764706% {
+    background-position: -2560px -3688px;
+  }
+  96.07843137% {
+    background-position: -2560px -4149px;
+  }
+  98.03921569% {
+    background-position: -3200px 0px;
+  }
+  100% {
+    background-position: -3200px -461px;
+  }
+}
+@keyframes sequence-process-inner {
+  0% {
+    background-position: 0px 0px;
+  }
+  1.96078431% {
+    background-position: 0px -461px;
+  }
+  3.92156863% {
+    background-position: 0px -922px;
+  }
+  5.88235294% {
+    background-position: 0px -1383px;
+  }
+  7.84313725% {
+    background-position: 0px -1844px;
+  }
+  9.80392157% {
+    background-position: 0px -2305px;
+  }
+  11.76470588% {
+    background-position: 0px -2766px;
+  }
+  13.7254902% {
+    background-position: 0px -3227px;
+  }
+  15.68627451% {
+    background-position: 0px -3688px;
+  }
+  17.64705882% {
+    background-position: 0px -4149px;
+  }
+  19.60784314% {
+    background-position: -640px 0px;
+  }
+  21.56862745% {
+    background-position: -640px -461px;
+  }
+  23.52941176% {
+    background-position: -640px -922px;
+  }
+  25.49019608% {
+    background-position: -640px -1383px;
+  }
+  27.45098039% {
+    background-position: -640px -1844px;
+  }
+  29.41176471% {
+    background-position: -640px -2305px;
+  }
+  31.37254902% {
+    background-position: -640px -2766px;
+  }
+  33.33333333% {
+    background-position: -640px -3227px;
+  }
+  35.29411765% {
+    background-position: -640px -3688px;
+  }
+  37.25490196% {
+    background-position: -640px -4149px;
+  }
+  39.21568627% {
+    background-position: -1280px 0px;
+  }
+  41.17647059% {
+    background-position: -1280px -461px;
+  }
+  43.1372549% {
+    background-position: -1280px -922px;
+  }
+  45.09803922% {
+    background-position: -1280px -1383px;
+  }
+  47.05882353% {
+    background-position: -1280px -1844px;
+  }
+  49.01960784% {
+    background-position: -1280px -2305px;
+  }
+  50.98039216% {
+    background-position: -1280px -2766px;
+  }
+  52.94117647% {
+    background-position: -1280px -3227px;
+  }
+  54.90196078% {
+    background-position: -1280px -3688px;
+  }
+  56.8627451% {
+    background-position: -1280px -4149px;
+  }
+  58.82352941% {
+    background-position: -1920px 0px;
+  }
+  60.78431373% {
+    background-position: -1920px -461px;
+  }
+  62.74509804% {
+    background-position: -1920px -922px;
+  }
+  64.70588235% {
+    background-position: -1920px -1383px;
+  }
+  66.66666667% {
+    background-position: -1920px -1844px;
+  }
+  68.62745098% {
+    background-position: -1920px -2305px;
+  }
+  70.58823529% {
+    background-position: -1920px -2766px;
+  }
+  72.54901961% {
+    background-position: -1920px -3227px;
+  }
+  74.50980392% {
+    background-position: -1920px -3688px;
+  }
+  76.47058824% {
+    background-position: -1920px -4149px;
+  }
+  78.43137255% {
+    background-position: -2560px 0px;
+  }
+  80.39215686% {
+    background-position: -2560px -461px;
+  }
+  82.35294118% {
+    background-position: -2560px -922px;
+  }
+  84.31372549% {
+    background-position: -2560px -1383px;
+  }
+  86.2745098% {
+    background-position: -2560px -1844px;
+  }
+  88.23529412% {
+    background-position: -2560px -2305px;
+  }
+  90.19607843% {
+    background-position: -2560px -2766px;
+  }
+  92.15686275% {
+    background-position: -2560px -3227px;
+  }
+  94.11764706% {
+    background-position: -2560px -3688px;
+  }
+  96.07843137% {
+    background-position: -2560px -4149px;
+  }
+  98.03921569% {
+    background-position: -3200px 0px;
+  }
+  100% {
+    background-position: -3200px -461px;
+  }
+}
+@-webkit-keyframes sequence-news-inner {
+  0% {
+    background-position: 0px 0px;
+  }
+  1.96078431% {
+    background-position: 0px -461px;
+  }
+  3.92156863% {
+    background-position: 0px -922px;
+  }
+  5.88235294% {
+    background-position: 0px -1383px;
+  }
+  7.84313725% {
+    background-position: 0px -1844px;
+  }
+  9.80392157% {
+    background-position: 0px -2305px;
+  }
+  11.76470588% {
+    background-position: 0px -2766px;
+  }
+  13.7254902% {
+    background-position: 0px -3227px;
+  }
+  15.68627451% {
+    background-position: 0px -3688px;
+  }
+  17.64705882% {
+    background-position: 0px -4149px;
+  }
+  19.60784314% {
+    background-position: -640px 0px;
+  }
+  21.56862745% {
+    background-position: -640px -461px;
+  }
+  23.52941176% {
+    background-position: -640px -922px;
+  }
+  25.49019608% {
+    background-position: -640px -1383px;
+  }
+  27.45098039% {
+    background-position: -640px -1844px;
+  }
+  29.41176471% {
+    background-position: -640px -2305px;
+  }
+  31.37254902% {
+    background-position: -640px -2766px;
+  }
+  33.33333333% {
+    background-position: -640px -3227px;
+  }
+  35.29411765% {
+    background-position: -640px -3688px;
+  }
+  37.25490196% {
+    background-position: -640px -4149px;
+  }
+  39.21568627% {
+    background-position: -1280px 0px;
+  }
+  41.17647059% {
+    background-position: -1280px -461px;
+  }
+  43.1372549% {
+    background-position: -1280px -922px;
+  }
+  45.09803922% {
+    background-position: -1280px -1383px;
+  }
+  47.05882353% {
+    background-position: -1280px -1844px;
+  }
+  49.01960784% {
+    background-position: -1280px -2305px;
+  }
+  50.98039216% {
+    background-position: -1280px -2766px;
+  }
+  52.94117647% {
+    background-position: -1280px -3227px;
+  }
+  54.90196078% {
+    background-position: -1280px -3688px;
+  }
+  56.8627451% {
+    background-position: -1280px -4149px;
+  }
+  58.82352941% {
+    background-position: -1920px 0px;
+  }
+  60.78431373% {
+    background-position: -1920px -461px;
+  }
+  62.74509804% {
+    background-position: -1920px -922px;
+  }
+  64.70588235% {
+    background-position: -1920px -1383px;
+  }
+  66.66666667% {
+    background-position: -1920px -1844px;
+  }
+  68.62745098% {
+    background-position: -1920px -2305px;
+  }
+  70.58823529% {
+    background-position: -1920px -2766px;
+  }
+  72.54901961% {
+    background-position: -1920px -3227px;
+  }
+  74.50980392% {
+    background-position: -1920px -3688px;
+  }
+  76.47058824% {
+    background-position: -1920px -4149px;
+  }
+  78.43137255% {
+    background-position: -2560px 0px;
+  }
+  80.39215686% {
+    background-position: -2560px -461px;
+  }
+  82.35294118% {
+    background-position: -2560px -922px;
+  }
+  84.31372549% {
+    background-position: -2560px -1383px;
+  }
+  86.2745098% {
+    background-position: -2560px -1844px;
+  }
+  88.23529412% {
+    background-position: -2560px -2305px;
+  }
+  90.19607843% {
+    background-position: -2560px -2766px;
+  }
+  92.15686275% {
+    background-position: -2560px -3227px;
+  }
+  94.11764706% {
+    background-position: -2560px -3688px;
+  }
+  96.07843137% {
+    background-position: -2560px -4149px;
+  }
+  98.03921569% {
+    background-position: -3200px 0px;
+  }
+  100% {
+    background-position: -3200px -461px;
+  }
+}
+@-moz-keyframes sequence-news-inner {
+  0% {
+    background-position: 0px 0px;
+  }
+  1.96078431% {
+    background-position: 0px -461px;
+  }
+  3.92156863% {
+    background-position: 0px -922px;
+  }
+  5.88235294% {
+    background-position: 0px -1383px;
+  }
+  7.84313725% {
+    background-position: 0px -1844px;
+  }
+  9.80392157% {
+    background-position: 0px -2305px;
+  }
+  11.76470588% {
+    background-position: 0px -2766px;
+  }
+  13.7254902% {
+    background-position: 0px -3227px;
+  }
+  15.68627451% {
+    background-position: 0px -3688px;
+  }
+  17.64705882% {
+    background-position: 0px -4149px;
+  }
+  19.60784314% {
+    background-position: -640px 0px;
+  }
+  21.56862745% {
+    background-position: -640px -461px;
+  }
+  23.52941176% {
+    background-position: -640px -922px;
+  }
+  25.49019608% {
+    background-position: -640px -1383px;
+  }
+  27.45098039% {
+    background-position: -640px -1844px;
+  }
+  29.41176471% {
+    background-position: -640px -2305px;
+  }
+  31.37254902% {
+    background-position: -640px -2766px;
+  }
+  33.33333333% {
+    background-position: -640px -3227px;
+  }
+  35.29411765% {
+    background-position: -640px -3688px;
+  }
+  37.25490196% {
+    background-position: -640px -4149px;
+  }
+  39.21568627% {
+    background-position: -1280px 0px;
+  }
+  41.17647059% {
+    background-position: -1280px -461px;
+  }
+  43.1372549% {
+    background-position: -1280px -922px;
+  }
+  45.09803922% {
+    background-position: -1280px -1383px;
+  }
+  47.05882353% {
+    background-position: -1280px -1844px;
+  }
+  49.01960784% {
+    background-position: -1280px -2305px;
+  }
+  50.98039216% {
+    background-position: -1280px -2766px;
+  }
+  52.94117647% {
+    background-position: -1280px -3227px;
+  }
+  54.90196078% {
+    background-position: -1280px -3688px;
+  }
+  56.8627451% {
+    background-position: -1280px -4149px;
+  }
+  58.82352941% {
+    background-position: -1920px 0px;
+  }
+  60.78431373% {
+    background-position: -1920px -461px;
+  }
+  62.74509804% {
+    background-position: -1920px -922px;
+  }
+  64.70588235% {
+    background-position: -1920px -1383px;
+  }
+  66.66666667% {
+    background-position: -1920px -1844px;
+  }
+  68.62745098% {
+    background-position: -1920px -2305px;
+  }
+  70.58823529% {
+    background-position: -1920px -2766px;
+  }
+  72.54901961% {
+    background-position: -1920px -3227px;
+  }
+  74.50980392% {
+    background-position: -1920px -3688px;
+  }
+  76.47058824% {
+    background-position: -1920px -4149px;
+  }
+  78.43137255% {
+    background-position: -2560px 0px;
+  }
+  80.39215686% {
+    background-position: -2560px -461px;
+  }
+  82.35294118% {
+    background-position: -2560px -922px;
+  }
+  84.31372549% {
+    background-position: -2560px -1383px;
+  }
+  86.2745098% {
+    background-position: -2560px -1844px;
+  }
+  88.23529412% {
+    background-position: -2560px -2305px;
+  }
+  90.19607843% {
+    background-position: -2560px -2766px;
+  }
+  92.15686275% {
+    background-position: -2560px -3227px;
+  }
+  94.11764706% {
+    background-position: -2560px -3688px;
+  }
+  96.07843137% {
+    background-position: -2560px -4149px;
+  }
+  98.03921569% {
+    background-position: -3200px 0px;
+  }
+  100% {
+    background-position: -3200px -461px;
+  }
+}
+@-ms-keyframes sequence-news-inner {
+  0% {
+    background-position: 0px 0px;
+  }
+  1.96078431% {
+    background-position: 0px -461px;
+  }
+  3.92156863% {
+    background-position: 0px -922px;
+  }
+  5.88235294% {
+    background-position: 0px -1383px;
+  }
+  7.84313725% {
+    background-position: 0px -1844px;
+  }
+  9.80392157% {
+    background-position: 0px -2305px;
+  }
+  11.76470588% {
+    background-position: 0px -2766px;
+  }
+  13.7254902% {
+    background-position: 0px -3227px;
+  }
+  15.68627451% {
+    background-position: 0px -3688px;
+  }
+  17.64705882% {
+    background-position: 0px -4149px;
+  }
+  19.60784314% {
+    background-position: -640px 0px;
+  }
+  21.56862745% {
+    background-position: -640px -461px;
+  }
+  23.52941176% {
+    background-position: -640px -922px;
+  }
+  25.49019608% {
+    background-position: -640px -1383px;
+  }
+  27.45098039% {
+    background-position: -640px -1844px;
+  }
+  29.41176471% {
+    background-position: -640px -2305px;
+  }
+  31.37254902% {
+    background-position: -640px -2766px;
+  }
+  33.33333333% {
+    background-position: -640px -3227px;
+  }
+  35.29411765% {
+    background-position: -640px -3688px;
+  }
+  37.25490196% {
+    background-position: -640px -4149px;
+  }
+  39.21568627% {
+    background-position: -1280px 0px;
+  }
+  41.17647059% {
+    background-position: -1280px -461px;
+  }
+  43.1372549% {
+    background-position: -1280px -922px;
+  }
+  45.09803922% {
+    background-position: -1280px -1383px;
+  }
+  47.05882353% {
+    background-position: -1280px -1844px;
+  }
+  49.01960784% {
+    background-position: -1280px -2305px;
+  }
+  50.98039216% {
+    background-position: -1280px -2766px;
+  }
+  52.94117647% {
+    background-position: -1280px -3227px;
+  }
+  54.90196078% {
+    background-position: -1280px -3688px;
+  }
+  56.8627451% {
+    background-position: -1280px -4149px;
+  }
+  58.82352941% {
+    background-position: -1920px 0px;
+  }
+  60.78431373% {
+    background-position: -1920px -461px;
+  }
+  62.74509804% {
+    background-position: -1920px -922px;
+  }
+  64.70588235% {
+    background-position: -1920px -1383px;
+  }
+  66.66666667% {
+    background-position: -1920px -1844px;
+  }
+  68.62745098% {
+    background-position: -1920px -2305px;
+  }
+  70.58823529% {
+    background-position: -1920px -2766px;
+  }
+  72.54901961% {
+    background-position: -1920px -3227px;
+  }
+  74.50980392% {
+    background-position: -1920px -3688px;
+  }
+  76.47058824% {
+    background-position: -1920px -4149px;
+  }
+  78.43137255% {
+    background-position: -2560px 0px;
+  }
+  80.39215686% {
+    background-position: -2560px -461px;
+  }
+  82.35294118% {
+    background-position: -2560px -922px;
+  }
+  84.31372549% {
+    background-position: -2560px -1383px;
+  }
+  86.2745098% {
+    background-position: -2560px -1844px;
+  }
+  88.23529412% {
+    background-position: -2560px -2305px;
+  }
+  90.19607843% {
+    background-position: -2560px -2766px;
+  }
+  92.15686275% {
+    background-position: -2560px -3227px;
+  }
+  94.11764706% {
+    background-position: -2560px -3688px;
+  }
+  96.07843137% {
+    background-position: -2560px -4149px;
+  }
+  98.03921569% {
+    background-position: -3200px 0px;
+  }
+  100% {
+    background-position: -3200px -461px;
+  }
+}
+@-o-keyframes sequence-news-inner {
+  0% {
+    background-position: 0px 0px;
+  }
+  1.96078431% {
+    background-position: 0px -461px;
+  }
+  3.92156863% {
+    background-position: 0px -922px;
+  }
+  5.88235294% {
+    background-position: 0px -1383px;
+  }
+  7.84313725% {
+    background-position: 0px -1844px;
+  }
+  9.80392157% {
+    background-position: 0px -2305px;
+  }
+  11.76470588% {
+    background-position: 0px -2766px;
+  }
+  13.7254902% {
+    background-position: 0px -3227px;
+  }
+  15.68627451% {
+    background-position: 0px -3688px;
+  }
+  17.64705882% {
+    background-position: 0px -4149px;
+  }
+  19.60784314% {
+    background-position: -640px 0px;
+  }
+  21.56862745% {
+    background-position: -640px -461px;
+  }
+  23.52941176% {
+    background-position: -640px -922px;
+  }
+  25.49019608% {
+    background-position: -640px -1383px;
+  }
+  27.45098039% {
+    background-position: -640px -1844px;
+  }
+  29.41176471% {
+    background-position: -640px -2305px;
+  }
+  31.37254902% {
+    background-position: -640px -2766px;
+  }
+  33.33333333% {
+    background-position: -640px -3227px;
+  }
+  35.29411765% {
+    background-position: -640px -3688px;
+  }
+  37.25490196% {
+    background-position: -640px -4149px;
+  }
+  39.21568627% {
+    background-position: -1280px 0px;
+  }
+  41.17647059% {
+    background-position: -1280px -461px;
+  }
+  43.1372549% {
+    background-position: -1280px -922px;
+  }
+  45.09803922% {
+    background-position: -1280px -1383px;
+  }
+  47.05882353% {
+    background-position: -1280px -1844px;
+  }
+  49.01960784% {
+    background-position: -1280px -2305px;
+  }
+  50.98039216% {
+    background-position: -1280px -2766px;
+  }
+  52.94117647% {
+    background-position: -1280px -3227px;
+  }
+  54.90196078% {
+    background-position: -1280px -3688px;
+  }
+  56.8627451% {
+    background-position: -1280px -4149px;
+  }
+  58.82352941% {
+    background-position: -1920px 0px;
+  }
+  60.78431373% {
+    background-position: -1920px -461px;
+  }
+  62.74509804% {
+    background-position: -1920px -922px;
+  }
+  64.70588235% {
+    background-position: -1920px -1383px;
+  }
+  66.66666667% {
+    background-position: -1920px -1844px;
+  }
+  68.62745098% {
+    background-position: -1920px -2305px;
+  }
+  70.58823529% {
+    background-position: -1920px -2766px;
+  }
+  72.54901961% {
+    background-position: -1920px -3227px;
+  }
+  74.50980392% {
+    background-position: -1920px -3688px;
+  }
+  76.47058824% {
+    background-position: -1920px -4149px;
+  }
+  78.43137255% {
+    background-position: -2560px 0px;
+  }
+  80.39215686% {
+    background-position: -2560px -461px;
+  }
+  82.35294118% {
+    background-position: -2560px -922px;
+  }
+  84.31372549% {
+    background-position: -2560px -1383px;
+  }
+  86.2745098% {
+    background-position: -2560px -1844px;
+  }
+  88.23529412% {
+    background-position: -2560px -2305px;
+  }
+  90.19607843% {
+    background-position: -2560px -2766px;
+  }
+  92.15686275% {
+    background-position: -2560px -3227px;
+  }
+  94.11764706% {
+    background-position: -2560px -3688px;
+  }
+  96.07843137% {
+    background-position: -2560px -4149px;
+  }
+  98.03921569% {
+    background-position: -3200px 0px;
+  }
+  100% {
+    background-position: -3200px -461px;
+  }
+}
+@keyframes sequence-news-inner {
+  0% {
+    background-position: 0px 0px;
+  }
+  1.96078431% {
+    background-position: 0px -461px;
+  }
+  3.92156863% {
+    background-position: 0px -922px;
+  }
+  5.88235294% {
+    background-position: 0px -1383px;
+  }
+  7.84313725% {
+    background-position: 0px -1844px;
+  }
+  9.80392157% {
+    background-position: 0px -2305px;
+  }
+  11.76470588% {
+    background-position: 0px -2766px;
+  }
+  13.7254902% {
+    background-position: 0px -3227px;
+  }
+  15.68627451% {
+    background-position: 0px -3688px;
+  }
+  17.64705882% {
+    background-position: 0px -4149px;
+  }
+  19.60784314% {
+    background-position: -640px 0px;
+  }
+  21.56862745% {
+    background-position: -640px -461px;
+  }
+  23.52941176% {
+    background-position: -640px -922px;
+  }
+  25.49019608% {
+    background-position: -640px -1383px;
+  }
+  27.45098039% {
+    background-position: -640px -1844px;
+  }
+  29.41176471% {
+    background-position: -640px -2305px;
+  }
+  31.37254902% {
+    background-position: -640px -2766px;
+  }
+  33.33333333% {
+    background-position: -640px -3227px;
+  }
+  35.29411765% {
+    background-position: -640px -3688px;
+  }
+  37.25490196% {
+    background-position: -640px -4149px;
+  }
+  39.21568627% {
+    background-position: -1280px 0px;
+  }
+  41.17647059% {
+    background-position: -1280px -461px;
+  }
+  43.1372549% {
+    background-position: -1280px -922px;
+  }
+  45.09803922% {
+    background-position: -1280px -1383px;
+  }
+  47.05882353% {
+    background-position: -1280px -1844px;
+  }
+  49.01960784% {
+    background-position: -1280px -2305px;
+  }
+  50.98039216% {
+    background-position: -1280px -2766px;
+  }
+  52.94117647% {
+    background-position: -1280px -3227px;
+  }
+  54.90196078% {
+    background-position: -1280px -3688px;
+  }
+  56.8627451% {
+    background-position: -1280px -4149px;
+  }
+  58.82352941% {
+    background-position: -1920px 0px;
+  }
+  60.78431373% {
+    background-position: -1920px -461px;
+  }
+  62.74509804% {
+    background-position: -1920px -922px;
+  }
+  64.70588235% {
+    background-position: -1920px -1383px;
+  }
+  66.66666667% {
+    background-position: -1920px -1844px;
+  }
+  68.62745098% {
+    background-position: -1920px -2305px;
+  }
+  70.58823529% {
+    background-position: -1920px -2766px;
+  }
+  72.54901961% {
+    background-position: -1920px -3227px;
+  }
+  74.50980392% {
+    background-position: -1920px -3688px;
+  }
+  76.47058824% {
+    background-position: -1920px -4149px;
+  }
+  78.43137255% {
+    background-position: -2560px 0px;
+  }
+  80.39215686% {
+    background-position: -2560px -461px;
+  }
+  82.35294118% {
+    background-position: -2560px -922px;
+  }
+  84.31372549% {
+    background-position: -2560px -1383px;
+  }
+  86.2745098% {
+    background-position: -2560px -1844px;
+  }
+  88.23529412% {
+    background-position: -2560px -2305px;
+  }
+  90.19607843% {
+    background-position: -2560px -2766px;
+  }
+  92.15686275% {
+    background-position: -2560px -3227px;
+  }
+  94.11764706% {
+    background-position: -2560px -3688px;
+  }
+  96.07843137% {
+    background-position: -2560px -4149px;
+  }
+  98.03921569% {
+    background-position: -3200px 0px;
+  }
+  100% {
+    background-position: -3200px -461px;
+  }
+}
+@-webkit-keyframes sequence-skills-inner {
+  0% {
+    background-position: 0px 0px;
+  }
+  1.96078431% {
+    background-position: 0px -461px;
+  }
+  3.92156863% {
+    background-position: 0px -922px;
+  }
+  5.88235294% {
+    background-position: 0px -1383px;
+  }
+  7.84313725% {
+    background-position: 0px -1844px;
+  }
+  9.80392157% {
+    background-position: 0px -2305px;
+  }
+  11.76470588% {
+    background-position: 0px -2766px;
+  }
+  13.7254902% {
+    background-position: 0px -3227px;
+  }
+  15.68627451% {
+    background-position: 0px -3688px;
+  }
+  17.64705882% {
+    background-position: 0px -4149px;
+  }
+  19.60784314% {
+    background-position: -640px 0px;
+  }
+  21.56862745% {
+    background-position: -640px -461px;
+  }
+  23.52941176% {
+    background-position: -640px -922px;
+  }
+  25.49019608% {
+    background-position: -640px -1383px;
+  }
+  27.45098039% {
+    background-position: -640px -1844px;
+  }
+  29.41176471% {
+    background-position: -640px -2305px;
+  }
+  31.37254902% {
+    background-position: -640px -2766px;
+  }
+  33.33333333% {
+    background-position: -640px -3227px;
+  }
+  35.29411765% {
+    background-position: -640px -3688px;
+  }
+  37.25490196% {
+    background-position: -640px -4149px;
+  }
+  39.21568627% {
+    background-position: -1280px 0px;
+  }
+  41.17647059% {
+    background-position: -1280px -461px;
+  }
+  43.1372549% {
+    background-position: -1280px -922px;
+  }
+  45.09803922% {
+    background-position: -1280px -1383px;
+  }
+  47.05882353% {
+    background-position: -1280px -1844px;
+  }
+  49.01960784% {
+    background-position: -1280px -2305px;
+  }
+  50.98039216% {
+    background-position: -1280px -2766px;
+  }
+  52.94117647% {
+    background-position: -1280px -3227px;
+  }
+  54.90196078% {
+    background-position: -1280px -3688px;
+  }
+  56.8627451% {
+    background-position: -1280px -4149px;
+  }
+  58.82352941% {
+    background-position: -1920px 0px;
+  }
+  60.78431373% {
+    background-position: -1920px -461px;
+  }
+  62.74509804% {
+    background-position: -1920px -922px;
+  }
+  64.70588235% {
+    background-position: -1920px -1383px;
+  }
+  66.66666667% {
+    background-position: -1920px -1844px;
+  }
+  68.62745098% {
+    background-position: -1920px -2305px;
+  }
+  70.58823529% {
+    background-position: -1920px -2766px;
+  }
+  72.54901961% {
+    background-position: -1920px -3227px;
+  }
+  74.50980392% {
+    background-position: -1920px -3688px;
+  }
+  76.47058824% {
+    background-position: -1920px -4149px;
+  }
+  78.43137255% {
+    background-position: -2560px 0px;
+  }
+  80.39215686% {
+    background-position: -2560px -461px;
+  }
+  82.35294118% {
+    background-position: -2560px -922px;
+  }
+  84.31372549% {
+    background-position: -2560px -1383px;
+  }
+  86.2745098% {
+    background-position: -2560px -1844px;
+  }
+  88.23529412% {
+    background-position: -2560px -2305px;
+  }
+  90.19607843% {
+    background-position: -2560px -2766px;
+  }
+  92.15686275% {
+    background-position: -2560px -3227px;
+  }
+  94.11764706% {
+    background-position: -2560px -3688px;
+  }
+  96.07843137% {
+    background-position: -2560px -4149px;
+  }
+  98.03921569% {
+    background-position: -3200px 0px;
+  }
+  100% {
+    background-position: -3200px -461px;
+  }
+}
+@-moz-keyframes sequence-skills-inner {
+  0% {
+    background-position: 0px 0px;
+  }
+  1.96078431% {
+    background-position: 0px -461px;
+  }
+  3.92156863% {
+    background-position: 0px -922px;
+  }
+  5.88235294% {
+    background-position: 0px -1383px;
+  }
+  7.84313725% {
+    background-position: 0px -1844px;
+  }
+  9.80392157% {
+    background-position: 0px -2305px;
+  }
+  11.76470588% {
+    background-position: 0px -2766px;
+  }
+  13.7254902% {
+    background-position: 0px -3227px;
+  }
+  15.68627451% {
+    background-position: 0px -3688px;
+  }
+  17.64705882% {
+    background-position: 0px -4149px;
+  }
+  19.60784314% {
+    background-position: -640px 0px;
+  }
+  21.56862745% {
+    background-position: -640px -461px;
+  }
+  23.52941176% {
+    background-position: -640px -922px;
+  }
+  25.49019608% {
+    background-position: -640px -1383px;
+  }
+  27.45098039% {
+    background-position: -640px -1844px;
+  }
+  29.41176471% {
+    background-position: -640px -2305px;
+  }
+  31.37254902% {
+    background-position: -640px -2766px;
+  }
+  33.33333333% {
+    background-position: -640px -3227px;
+  }
+  35.29411765% {
+    background-position: -640px -3688px;
+  }
+  37.25490196% {
+    background-position: -640px -4149px;
+  }
+  39.21568627% {
+    background-position: -1280px 0px;
+  }
+  41.17647059% {
+    background-position: -1280px -461px;
+  }
+  43.1372549% {
+    background-position: -1280px -922px;
+  }
+  45.09803922% {
+    background-position: -1280px -1383px;
+  }
+  47.05882353% {
+    background-position: -1280px -1844px;
+  }
+  49.01960784% {
+    background-position: -1280px -2305px;
+  }
+  50.98039216% {
+    background-position: -1280px -2766px;
+  }
+  52.94117647% {
+    background-position: -1280px -3227px;
+  }
+  54.90196078% {
+    background-position: -1280px -3688px;
+  }
+  56.8627451% {
+    background-position: -1280px -4149px;
+  }
+  58.82352941% {
+    background-position: -1920px 0px;
+  }
+  60.78431373% {
+    background-position: -1920px -461px;
+  }
+  62.74509804% {
+    background-position: -1920px -922px;
+  }
+  64.70588235% {
+    background-position: -1920px -1383px;
+  }
+  66.66666667% {
+    background-position: -1920px -1844px;
+  }
+  68.62745098% {
+    background-position: -1920px -2305px;
+  }
+  70.58823529% {
+    background-position: -1920px -2766px;
+  }
+  72.54901961% {
+    background-position: -1920px -3227px;
+  }
+  74.50980392% {
+    background-position: -1920px -3688px;
+  }
+  76.47058824% {
+    background-position: -1920px -4149px;
+  }
+  78.43137255% {
+    background-position: -2560px 0px;
+  }
+  80.39215686% {
+    background-position: -2560px -461px;
+  }
+  82.35294118% {
+    background-position: -2560px -922px;
+  }
+  84.31372549% {
+    background-position: -2560px -1383px;
+  }
+  86.2745098% {
+    background-position: -2560px -1844px;
+  }
+  88.23529412% {
+    background-position: -2560px -2305px;
+  }
+  90.19607843% {
+    background-position: -2560px -2766px;
+  }
+  92.15686275% {
+    background-position: -2560px -3227px;
+  }
+  94.11764706% {
+    background-position: -2560px -3688px;
+  }
+  96.07843137% {
+    background-position: -2560px -4149px;
+  }
+  98.03921569% {
+    background-position: -3200px 0px;
+  }
+  100% {
+    background-position: -3200px -461px;
+  }
+}
+@-ms-keyframes sequence-skills-inner {
+  0% {
+    background-position: 0px 0px;
+  }
+  1.96078431% {
+    background-position: 0px -461px;
+  }
+  3.92156863% {
+    background-position: 0px -922px;
+  }
+  5.88235294% {
+    background-position: 0px -1383px;
+  }
+  7.84313725% {
+    background-position: 0px -1844px;
+  }
+  9.80392157% {
+    background-position: 0px -2305px;
+  }
+  11.76470588% {
+    background-position: 0px -2766px;
+  }
+  13.7254902% {
+    background-position: 0px -3227px;
+  }
+  15.68627451% {
+    background-position: 0px -3688px;
+  }
+  17.64705882% {
+    background-position: 0px -4149px;
+  }
+  19.60784314% {
+    background-position: -640px 0px;
+  }
+  21.56862745% {
+    background-position: -640px -461px;
+  }
+  23.52941176% {
+    background-position: -640px -922px;
+  }
+  25.49019608% {
+    background-position: -640px -1383px;
+  }
+  27.45098039% {
+    background-position: -640px -1844px;
+  }
+  29.41176471% {
+    background-position: -640px -2305px;
+  }
+  31.37254902% {
+    background-position: -640px -2766px;
+  }
+  33.33333333% {
+    background-position: -640px -3227px;
+  }
+  35.29411765% {
+    background-position: -640px -3688px;
+  }
+  37.25490196% {
+    background-position: -640px -4149px;
+  }
+  39.21568627% {
+    background-position: -1280px 0px;
+  }
+  41.17647059% {
+    background-position: -1280px -461px;
+  }
+  43.1372549% {
+    background-position: -1280px -922px;
+  }
+  45.09803922% {
+    background-position: -1280px -1383px;
+  }
+  47.05882353% {
+    background-position: -1280px -1844px;
+  }
+  49.01960784% {
+    background-position: -1280px -2305px;
+  }
+  50.98039216% {
+    background-position: -1280px -2766px;
+  }
+  52.94117647% {
+    background-position: -1280px -3227px;
+  }
+  54.90196078% {
+    background-position: -1280px -3688px;
+  }
+  56.8627451% {
+    background-position: -1280px -4149px;
+  }
+  58.82352941% {
+    background-position: -1920px 0px;
+  }
+  60.78431373% {
+    background-position: -1920px -461px;
+  }
+  62.74509804% {
+    background-position: -1920px -922px;
+  }
+  64.70588235% {
+    background-position: -1920px -1383px;
+  }
+  66.66666667% {
+    background-position: -1920px -1844px;
+  }
+  68.62745098% {
+    background-position: -1920px -2305px;
+  }
+  70.58823529% {
+    background-position: -1920px -2766px;
+  }
+  72.54901961% {
+    background-position: -1920px -3227px;
+  }
+  74.50980392% {
+    background-position: -1920px -3688px;
+  }
+  76.47058824% {
+    background-position: -1920px -4149px;
+  }
+  78.43137255% {
+    background-position: -2560px 0px;
+  }
+  80.39215686% {
+    background-position: -2560px -461px;
+  }
+  82.35294118% {
+    background-position: -2560px -922px;
+  }
+  84.31372549% {
+    background-position: -2560px -1383px;
+  }
+  86.2745098% {
+    background-position: -2560px -1844px;
+  }
+  88.23529412% {
+    background-position: -2560px -2305px;
+  }
+  90.19607843% {
+    background-position: -2560px -2766px;
+  }
+  92.15686275% {
+    background-position: -2560px -3227px;
+  }
+  94.11764706% {
+    background-position: -2560px -3688px;
+  }
+  96.07843137% {
+    background-position: -2560px -4149px;
+  }
+  98.03921569% {
+    background-position: -3200px 0px;
+  }
+  100% {
+    background-position: -3200px -461px;
+  }
+}
+@-o-keyframes sequence-skills-inner {
+  0% {
+    background-position: 0px 0px;
+  }
+  1.96078431% {
+    background-position: 0px -461px;
+  }
+  3.92156863% {
+    background-position: 0px -922px;
+  }
+  5.88235294% {
+    background-position: 0px -1383px;
+  }
+  7.84313725% {
+    background-position: 0px -1844px;
+  }
+  9.80392157% {
+    background-position: 0px -2305px;
+  }
+  11.76470588% {
+    background-position: 0px -2766px;
+  }
+  13.7254902% {
+    background-position: 0px -3227px;
+  }
+  15.68627451% {
+    background-position: 0px -3688px;
+  }
+  17.64705882% {
+    background-position: 0px -4149px;
+  }
+  19.60784314% {
+    background-position: -640px 0px;
+  }
+  21.56862745% {
+    background-position: -640px -461px;
+  }
+  23.52941176% {
+    background-position: -640px -922px;
+  }
+  25.49019608% {
+    background-position: -640px -1383px;
+  }
+  27.45098039% {
+    background-position: -640px -1844px;
+  }
+  29.41176471% {
+    background-position: -640px -2305px;
+  }
+  31.37254902% {
+    background-position: -640px -2766px;
+  }
+  33.33333333% {
+    background-position: -640px -3227px;
+  }
+  35.29411765% {
+    background-position: -640px -3688px;
+  }
+  37.25490196% {
+    background-position: -640px -4149px;
+  }
+  39.21568627% {
+    background-position: -1280px 0px;
+  }
+  41.17647059% {
+    background-position: -1280px -461px;
+  }
+  43.1372549% {
+    background-position: -1280px -922px;
+  }
+  45.09803922% {
+    background-position: -1280px -1383px;
+  }
+  47.05882353% {
+    background-position: -1280px -1844px;
+  }
+  49.01960784% {
+    background-position: -1280px -2305px;
+  }
+  50.98039216% {
+    background-position: -1280px -2766px;
+  }
+  52.94117647% {
+    background-position: -1280px -3227px;
+  }
+  54.90196078% {
+    background-position: -1280px -3688px;
+  }
+  56.8627451% {
+    background-position: -1280px -4149px;
+  }
+  58.82352941% {
+    background-position: -1920px 0px;
+  }
+  60.78431373% {
+    background-position: -1920px -461px;
+  }
+  62.74509804% {
+    background-position: -1920px -922px;
+  }
+  64.70588235% {
+    background-position: -1920px -1383px;
+  }
+  66.66666667% {
+    background-position: -1920px -1844px;
+  }
+  68.62745098% {
+    background-position: -1920px -2305px;
+  }
+  70.58823529% {
+    background-position: -1920px -2766px;
+  }
+  72.54901961% {
+    background-position: -1920px -3227px;
+  }
+  74.50980392% {
+    background-position: -1920px -3688px;
+  }
+  76.47058824% {
+    background-position: -1920px -4149px;
+  }
+  78.43137255% {
+    background-position: -2560px 0px;
+  }
+  80.39215686% {
+    background-position: -2560px -461px;
+  }
+  82.35294118% {
+    background-position: -2560px -922px;
+  }
+  84.31372549% {
+    background-position: -2560px -1383px;
+  }
+  86.2745098% {
+    background-position: -2560px -1844px;
+  }
+  88.23529412% {
+    background-position: -2560px -2305px;
+  }
+  90.19607843% {
+    background-position: -2560px -2766px;
+  }
+  92.15686275% {
+    background-position: -2560px -3227px;
+  }
+  94.11764706% {
+    background-position: -2560px -3688px;
+  }
+  96.07843137% {
+    background-position: -2560px -4149px;
+  }
+  98.03921569% {
+    background-position: -3200px 0px;
+  }
+  100% {
+    background-position: -3200px -461px;
+  }
+}
+@keyframes sequence-skills-inner {
+  0% {
+    background-position: 0px 0px;
+  }
+  1.96078431% {
+    background-position: 0px -461px;
+  }
+  3.92156863% {
+    background-position: 0px -922px;
+  }
+  5.88235294% {
+    background-position: 0px -1383px;
+  }
+  7.84313725% {
+    background-position: 0px -1844px;
+  }
+  9.80392157% {
+    background-position: 0px -2305px;
+  }
+  11.76470588% {
+    background-position: 0px -2766px;
+  }
+  13.7254902% {
+    background-position: 0px -3227px;
+  }
+  15.68627451% {
+    background-position: 0px -3688px;
+  }
+  17.64705882% {
+    background-position: 0px -4149px;
+  }
+  19.60784314% {
+    background-position: -640px 0px;
+  }
+  21.56862745% {
+    background-position: -640px -461px;
+  }
+  23.52941176% {
+    background-position: -640px -922px;
+  }
+  25.49019608% {
+    background-position: -640px -1383px;
+  }
+  27.45098039% {
+    background-position: -640px -1844px;
+  }
+  29.41176471% {
+    background-position: -640px -2305px;
+  }
+  31.37254902% {
+    background-position: -640px -2766px;
+  }
+  33.33333333% {
+    background-position: -640px -3227px;
+  }
+  35.29411765% {
+    background-position: -640px -3688px;
+  }
+  37.25490196% {
+    background-position: -640px -4149px;
+  }
+  39.21568627% {
+    background-position: -1280px 0px;
+  }
+  41.17647059% {
+    background-position: -1280px -461px;
+  }
+  43.1372549% {
+    background-position: -1280px -922px;
+  }
+  45.09803922% {
+    background-position: -1280px -1383px;
+  }
+  47.05882353% {
+    background-position: -1280px -1844px;
+  }
+  49.01960784% {
+    background-position: -1280px -2305px;
+  }
+  50.98039216% {
+    background-position: -1280px -2766px;
+  }
+  52.94117647% {
+    background-position: -1280px -3227px;
+  }
+  54.90196078% {
+    background-position: -1280px -3688px;
+  }
+  56.8627451% {
+    background-position: -1280px -4149px;
+  }
+  58.82352941% {
+    background-position: -1920px 0px;
+  }
+  60.78431373% {
+    background-position: -1920px -461px;
+  }
+  62.74509804% {
+    background-position: -1920px -922px;
+  }
+  64.70588235% {
+    background-position: -1920px -1383px;
+  }
+  66.66666667% {
+    background-position: -1920px -1844px;
+  }
+  68.62745098% {
+    background-position: -1920px -2305px;
+  }
+  70.58823529% {
+    background-position: -1920px -2766px;
+  }
+  72.54901961% {
+    background-position: -1920px -3227px;
+  }
+  74.50980392% {
+    background-position: -1920px -3688px;
+  }
+  76.47058824% {
+    background-position: -1920px -4149px;
+  }
+  78.43137255% {
+    background-position: -2560px 0px;
+  }
+  80.39215686% {
+    background-position: -2560px -461px;
+  }
+  82.35294118% {
+    background-position: -2560px -922px;
+  }
+  84.31372549% {
+    background-position: -2560px -1383px;
+  }
+  86.2745098% {
+    background-position: -2560px -1844px;
+  }
+  88.23529412% {
+    background-position: -2560px -2305px;
+  }
+  90.19607843% {
+    background-position: -2560px -2766px;
+  }
+  92.15686275% {
+    background-position: -2560px -3227px;
+  }
+  94.11764706% {
+    background-position: -2560px -3688px;
+  }
+  96.07843137% {
+    background-position: -2560px -4149px;
+  }
+  98.03921569% {
+    background-position: -3200px 0px;
+  }
+  100% {
+    background-position: -3200px -461px;
+  }
+}
+@-webkit-keyframes sequence-viralize-inner {
+  0% {
+    background-position: 0px 0px;
+  }
+  1.96078431% {
+    background-position: 0px -461px;
+  }
+  3.92156863% {
+    background-position: 0px -922px;
+  }
+  5.88235294% {
+    background-position: 0px -1383px;
+  }
+  7.84313725% {
+    background-position: 0px -1844px;
+  }
+  9.80392157% {
+    background-position: 0px -2305px;
+  }
+  11.76470588% {
+    background-position: 0px -2766px;
+  }
+  13.7254902% {
+    background-position: 0px -3227px;
+  }
+  15.68627451% {
+    background-position: 0px -3688px;
+  }
+  17.64705882% {
+    background-position: 0px -4149px;
+  }
+  19.60784314% {
+    background-position: -640px 0px;
+  }
+  21.56862745% {
+    background-position: -640px -461px;
+  }
+  23.52941176% {
+    background-position: -640px -922px;
+  }
+  25.49019608% {
+    background-position: -640px -1383px;
+  }
+  27.45098039% {
+    background-position: -640px -1844px;
+  }
+  29.41176471% {
+    background-position: -640px -2305px;
+  }
+  31.37254902% {
+    background-position: -640px -2766px;
+  }
+  33.33333333% {
+    background-position: -640px -3227px;
+  }
+  35.29411765% {
+    background-position: -640px -3688px;
+  }
+  37.25490196% {
+    background-position: -640px -4149px;
+  }
+  39.21568627% {
+    background-position: -1280px 0px;
+  }
+  41.17647059% {
+    background-position: -1280px -461px;
+  }
+  43.1372549% {
+    background-position: -1280px -922px;
+  }
+  45.09803922% {
+    background-position: -1280px -1383px;
+  }
+  47.05882353% {
+    background-position: -1280px -1844px;
+  }
+  49.01960784% {
+    background-position: -1280px -2305px;
+  }
+  50.98039216% {
+    background-position: -1280px -2766px;
+  }
+  52.94117647% {
+    background-position: -1280px -3227px;
+  }
+  54.90196078% {
+    background-position: -1280px -3688px;
+  }
+  56.8627451% {
+    background-position: -1280px -4149px;
+  }
+  58.82352941% {
+    background-position: -1920px 0px;
+  }
+  60.78431373% {
+    background-position: -1920px -461px;
+  }
+  62.74509804% {
+    background-position: -1920px -922px;
+  }
+  64.70588235% {
+    background-position: -1920px -1383px;
+  }
+  66.66666667% {
+    background-position: -1920px -1844px;
+  }
+  68.62745098% {
+    background-position: -1920px -2305px;
+  }
+  70.58823529% {
+    background-position: -1920px -2766px;
+  }
+  72.54901961% {
+    background-position: -1920px -3227px;
+  }
+  74.50980392% {
+    background-position: -1920px -3688px;
+  }
+  76.47058824% {
+    background-position: -1920px -4149px;
+  }
+  78.43137255% {
+    background-position: -2560px 0px;
+  }
+  80.39215686% {
+    background-position: -2560px -461px;
+  }
+  82.35294118% {
+    background-position: -2560px -922px;
+  }
+  84.31372549% {
+    background-position: -2560px -1383px;
+  }
+  86.2745098% {
+    background-position: -2560px -1844px;
+  }
+  88.23529412% {
+    background-position: -2560px -2305px;
+  }
+  90.19607843% {
+    background-position: -2560px -2766px;
+  }
+  92.15686275% {
+    background-position: -2560px -3227px;
+  }
+  94.11764706% {
+    background-position: -2560px -3688px;
+  }
+  96.07843137% {
+    background-position: -2560px -4149px;
+  }
+  98.03921569% {
+    background-position: -3200px 0px;
+  }
+  100% {
+    background-position: -3200px -461px;
+  }
+}
+@-moz-keyframes sequence-viralize-inner {
+  0% {
+    background-position: 0px 0px;
+  }
+  1.96078431% {
+    background-position: 0px -461px;
+  }
+  3.92156863% {
+    background-position: 0px -922px;
+  }
+  5.88235294% {
+    background-position: 0px -1383px;
+  }
+  7.84313725% {
+    background-position: 0px -1844px;
+  }
+  9.80392157% {
+    background-position: 0px -2305px;
+  }
+  11.76470588% {
+    background-position: 0px -2766px;
+  }
+  13.7254902% {
+    background-position: 0px -3227px;
+  }
+  15.68627451% {
+    background-position: 0px -3688px;
+  }
+  17.64705882% {
+    background-position: 0px -4149px;
+  }
+  19.60784314% {
+    background-position: -640px 0px;
+  }
+  21.56862745% {
+    background-position: -640px -461px;
+  }
+  23.52941176% {
+    background-position: -640px -922px;
+  }
+  25.49019608% {
+    background-position: -640px -1383px;
+  }
+  27.45098039% {
+    background-position: -640px -1844px;
+  }
+  29.41176471% {
+    background-position: -640px -2305px;
+  }
+  31.37254902% {
+    background-position: -640px -2766px;
+  }
+  33.33333333% {
+    background-position: -640px -3227px;
+  }
+  35.29411765% {
+    background-position: -640px -3688px;
+  }
+  37.25490196% {
+    background-position: -640px -4149px;
+  }
+  39.21568627% {
+    background-position: -1280px 0px;
+  }
+  41.17647059% {
+    background-position: -1280px -461px;
+  }
+  43.1372549% {
+    background-position: -1280px -922px;
+  }
+  45.09803922% {
+    background-position: -1280px -1383px;
+  }
+  47.05882353% {
+    background-position: -1280px -1844px;
+  }
+  49.01960784% {
+    background-position: -1280px -2305px;
+  }
+  50.98039216% {
+    background-position: -1280px -2766px;
+  }
+  52.94117647% {
+    background-position: -1280px -3227px;
+  }
+  54.90196078% {
+    background-position: -1280px -3688px;
+  }
+  56.8627451% {
+    background-position: -1280px -4149px;
+  }
+  58.82352941% {
+    background-position: -1920px 0px;
+  }
+  60.78431373% {
+    background-position: -1920px -461px;
+  }
+  62.74509804% {
+    background-position: -1920px -922px;
+  }
+  64.70588235% {
+    background-position: -1920px -1383px;
+  }
+  66.66666667% {
+    background-position: -1920px -1844px;
+  }
+  68.62745098% {
+    background-position: -1920px -2305px;
+  }
+  70.58823529% {
+    background-position: -1920px -2766px;
+  }
+  72.54901961% {
+    background-position: -1920px -3227px;
+  }
+  74.50980392% {
+    background-position: -1920px -3688px;
+  }
+  76.47058824% {
+    background-position: -1920px -4149px;
+  }
+  78.43137255% {
+    background-position: -2560px 0px;
+  }
+  80.39215686% {
+    background-position: -2560px -461px;
+  }
+  82.35294118% {
+    background-position: -2560px -922px;
+  }
+  84.31372549% {
+    background-position: -2560px -1383px;
+  }
+  86.2745098% {
+    background-position: -2560px -1844px;
+  }
+  88.23529412% {
+    background-position: -2560px -2305px;
+  }
+  90.19607843% {
+    background-position: -2560px -2766px;
+  }
+  92.15686275% {
+    background-position: -2560px -3227px;
+  }
+  94.11764706% {
+    background-position: -2560px -3688px;
+  }
+  96.07843137% {
+    background-position: -2560px -4149px;
+  }
+  98.03921569% {
+    background-position: -3200px 0px;
+  }
+  100% {
+    background-position: -3200px -461px;
+  }
+}
+@-ms-keyframes sequence-viralize-inner {
+  0% {
+    background-position: 0px 0px;
+  }
+  1.96078431% {
+    background-position: 0px -461px;
+  }
+  3.92156863% {
+    background-position: 0px -922px;
+  }
+  5.88235294% {
+    background-position: 0px -1383px;
+  }
+  7.84313725% {
+    background-position: 0px -1844px;
+  }
+  9.80392157% {
+    background-position: 0px -2305px;
+  }
+  11.76470588% {
+    background-position: 0px -2766px;
+  }
+  13.7254902% {
+    background-position: 0px -3227px;
+  }
+  15.68627451% {
+    background-position: 0px -3688px;
+  }
+  17.64705882% {
+    background-position: 0px -4149px;
+  }
+  19.60784314% {
+    background-position: -640px 0px;
+  }
+  21.56862745% {
+    background-position: -640px -461px;
+  }
+  23.52941176% {
+    background-position: -640px -922px;
+  }
+  25.49019608% {
+    background-position: -640px -1383px;
+  }
+  27.45098039% {
+    background-position: -640px -1844px;
+  }
+  29.41176471% {
+    background-position: -640px -2305px;
+  }
+  31.37254902% {
+    background-position: -640px -2766px;
+  }
+  33.33333333% {
+    background-position: -640px -3227px;
+  }
+  35.29411765% {
+    background-position: -640px -3688px;
+  }
+  37.25490196% {
+    background-position: -640px -4149px;
+  }
+  39.21568627% {
+    background-position: -1280px 0px;
+  }
+  41.17647059% {
+    background-position: -1280px -461px;
+  }
+  43.1372549% {
+    background-position: -1280px -922px;
+  }
+  45.09803922% {
+    background-position: -1280px -1383px;
+  }
+  47.05882353% {
+    background-position: -1280px -1844px;
+  }
+  49.01960784% {
+    background-position: -1280px -2305px;
+  }
+  50.98039216% {
+    background-position: -1280px -2766px;
+  }
+  52.94117647% {
+    background-position: -1280px -3227px;
+  }
+  54.90196078% {
+    background-position: -1280px -3688px;
+  }
+  56.8627451% {
+    background-position: -1280px -4149px;
+  }
+  58.82352941% {
+    background-position: -1920px 0px;
+  }
+  60.78431373% {
+    background-position: -1920px -461px;
+  }
+  62.74509804% {
+    background-position: -1920px -922px;
+  }
+  64.70588235% {
+    background-position: -1920px -1383px;
+  }
+  66.66666667% {
+    background-position: -1920px -1844px;
+  }
+  68.62745098% {
+    background-position: -1920px -2305px;
+  }
+  70.58823529% {
+    background-position: -1920px -2766px;
+  }
+  72.54901961% {
+    background-position: -1920px -3227px;
+  }
+  74.50980392% {
+    background-position: -1920px -3688px;
+  }
+  76.47058824% {
+    background-position: -1920px -4149px;
+  }
+  78.43137255% {
+    background-position: -2560px 0px;
+  }
+  80.39215686% {
+    background-position: -2560px -461px;
+  }
+  82.35294118% {
+    background-position: -2560px -922px;
+  }
+  84.31372549% {
+    background-position: -2560px -1383px;
+  }
+  86.2745098% {
+    background-position: -2560px -1844px;
+  }
+  88.23529412% {
+    background-position: -2560px -2305px;
+  }
+  90.19607843% {
+    background-position: -2560px -2766px;
+  }
+  92.15686275% {
+    background-position: -2560px -3227px;
+  }
+  94.11764706% {
+    background-position: -2560px -3688px;
+  }
+  96.07843137% {
+    background-position: -2560px -4149px;
+  }
+  98.03921569% {
+    background-position: -3200px 0px;
+  }
+  100% {
+    background-position: -3200px -461px;
+  }
+}
+@-o-keyframes sequence-viralize-inner {
+  0% {
+    background-position: 0px 0px;
+  }
+  1.96078431% {
+    background-position: 0px -461px;
+  }
+  3.92156863% {
+    background-position: 0px -922px;
+  }
+  5.88235294% {
+    background-position: 0px -1383px;
+  }
+  7.84313725% {
+    background-position: 0px -1844px;
+  }
+  9.80392157% {
+    background-position: 0px -2305px;
+  }
+  11.76470588% {
+    background-position: 0px -2766px;
+  }
+  13.7254902% {
+    background-position: 0px -3227px;
+  }
+  15.68627451% {
+    background-position: 0px -3688px;
+  }
+  17.64705882% {
+    background-position: 0px -4149px;
+  }
+  19.60784314% {
+    background-position: -640px 0px;
+  }
+  21.56862745% {
+    background-position: -640px -461px;
+  }
+  23.52941176% {
+    background-position: -640px -922px;
+  }
+  25.49019608% {
+    background-position: -640px -1383px;
+  }
+  27.45098039% {
+    background-position: -640px -1844px;
+  }
+  29.41176471% {
+    background-position: -640px -2305px;
+  }
+  31.37254902% {
+    background-position: -640px -2766px;
+  }
+  33.33333333% {
+    background-position: -640px -3227px;
+  }
+  35.29411765% {
+    background-position: -640px -3688px;
+  }
+  37.25490196% {
+    background-position: -640px -4149px;
+  }
+  39.21568627% {
+    background-position: -1280px 0px;
+  }
+  41.17647059% {
+    background-position: -1280px -461px;
+  }
+  43.1372549% {
+    background-position: -1280px -922px;
+  }
+  45.09803922% {
+    background-position: -1280px -1383px;
+  }
+  47.05882353% {
+    background-position: -1280px -1844px;
+  }
+  49.01960784% {
+    background-position: -1280px -2305px;
+  }
+  50.98039216% {
+    background-position: -1280px -2766px;
+  }
+  52.94117647% {
+    background-position: -1280px -3227px;
+  }
+  54.90196078% {
+    background-position: -1280px -3688px;
+  }
+  56.8627451% {
+    background-position: -1280px -4149px;
+  }
+  58.82352941% {
+    background-position: -1920px 0px;
+  }
+  60.78431373% {
+    background-position: -1920px -461px;
+  }
+  62.74509804% {
+    background-position: -1920px -922px;
+  }
+  64.70588235% {
+    background-position: -1920px -1383px;
+  }
+  66.66666667% {
+    background-position: -1920px -1844px;
+  }
+  68.62745098% {
+    background-position: -1920px -2305px;
+  }
+  70.58823529% {
+    background-position: -1920px -2766px;
+  }
+  72.54901961% {
+    background-position: -1920px -3227px;
+  }
+  74.50980392% {
+    background-position: -1920px -3688px;
+  }
+  76.47058824% {
+    background-position: -1920px -4149px;
+  }
+  78.43137255% {
+    background-position: -2560px 0px;
+  }
+  80.39215686% {
+    background-position: -2560px -461px;
+  }
+  82.35294118% {
+    background-position: -2560px -922px;
+  }
+  84.31372549% {
+    background-position: -2560px -1383px;
+  }
+  86.2745098% {
+    background-position: -2560px -1844px;
+  }
+  88.23529412% {
+    background-position: -2560px -2305px;
+  }
+  90.19607843% {
+    background-position: -2560px -2766px;
+  }
+  92.15686275% {
+    background-position: -2560px -3227px;
+  }
+  94.11764706% {
+    background-position: -2560px -3688px;
+  }
+  96.07843137% {
+    background-position: -2560px -4149px;
+  }
+  98.03921569% {
+    background-position: -3200px 0px;
+  }
+  100% {
+    background-position: -3200px -461px;
+  }
+}
+@keyframes sequence-viralize-inner {
+  0% {
+    background-position: 0px 0px;
+  }
+  1.96078431% {
+    background-position: 0px -461px;
+  }
+  3.92156863% {
+    background-position: 0px -922px;
+  }
+  5.88235294% {
+    background-position: 0px -1383px;
+  }
+  7.84313725% {
+    background-position: 0px -1844px;
+  }
+  9.80392157% {
+    background-position: 0px -2305px;
+  }
+  11.76470588% {
+    background-position: 0px -2766px;
+  }
+  13.7254902% {
+    background-position: 0px -3227px;
+  }
+  15.68627451% {
+    background-position: 0px -3688px;
+  }
+  17.64705882% {
+    background-position: 0px -4149px;
+  }
+  19.60784314% {
+    background-position: -640px 0px;
+  }
+  21.56862745% {
+    background-position: -640px -461px;
+  }
+  23.52941176% {
+    background-position: -640px -922px;
+  }
+  25.49019608% {
+    background-position: -640px -1383px;
+  }
+  27.45098039% {
+    background-position: -640px -1844px;
+  }
+  29.41176471% {
+    background-position: -640px -2305px;
+  }
+  31.37254902% {
+    background-position: -640px -2766px;
+  }
+  33.33333333% {
+    background-position: -640px -3227px;
+  }
+  35.29411765% {
+    background-position: -640px -3688px;
+  }
+  37.25490196% {
+    background-position: -640px -4149px;
+  }
+  39.21568627% {
+    background-position: -1280px 0px;
+  }
+  41.17647059% {
+    background-position: -1280px -461px;
+  }
+  43.1372549% {
+    background-position: -1280px -922px;
+  }
+  45.09803922% {
+    background-position: -1280px -1383px;
+  }
+  47.05882353% {
+    background-position: -1280px -1844px;
+  }
+  49.01960784% {
+    background-position: -1280px -2305px;
+  }
+  50.98039216% {
+    background-position: -1280px -2766px;
+  }
+  52.94117647% {
+    background-position: -1280px -3227px;
+  }
+  54.90196078% {
+    background-position: -1280px -3688px;
+  }
+  56.8627451% {
+    background-position: -1280px -4149px;
+  }
+  58.82352941% {
+    background-position: -1920px 0px;
+  }
+  60.78431373% {
+    background-position: -1920px -461px;
+  }
+  62.74509804% {
+    background-position: -1920px -922px;
+  }
+  64.70588235% {
+    background-position: -1920px -1383px;
+  }
+  66.66666667% {
+    background-position: -1920px -1844px;
+  }
+  68.62745098% {
+    background-position: -1920px -2305px;
+  }
+  70.58823529% {
+    background-position: -1920px -2766px;
+  }
+  72.54901961% {
+    background-position: -1920px -3227px;
+  }
+  74.50980392% {
+    background-position: -1920px -3688px;
+  }
+  76.47058824% {
+    background-position: -1920px -4149px;
+  }
+  78.43137255% {
+    background-position: -2560px 0px;
+  }
+  80.39215686% {
+    background-position: -2560px -461px;
+  }
+  82.35294118% {
+    background-position: -2560px -922px;
+  }
+  84.31372549% {
+    background-position: -2560px -1383px;
+  }
+  86.2745098% {
+    background-position: -2560px -1844px;
+  }
+  88.23529412% {
+    background-position: -2560px -2305px;
+  }
+  90.19607843% {
+    background-position: -2560px -2766px;
+  }
+  92.15686275% {
+    background-position: -2560px -3227px;
+  }
+  94.11764706% {
+    background-position: -2560px -3688px;
+  }
+  96.07843137% {
+    background-position: -2560px -4149px;
+  }
+  98.03921569% {
+    background-position: -3200px 0px;
+  }
+  100% {
+    background-position: -3200px -461px;
+  }
+}
+@-webkit-keyframes sequence-references-inner {
+  0% {
+    background-position: 0px 0px;
+  }
+  1.96078431% {
+    background-position: 0px -461px;
+  }
+  3.92156863% {
+    background-position: 0px -922px;
+  }
+  5.88235294% {
+    background-position: 0px -1383px;
+  }
+  7.84313725% {
+    background-position: 0px -1844px;
+  }
+  9.80392157% {
+    background-position: 0px -2305px;
+  }
+  11.76470588% {
+    background-position: 0px -2766px;
+  }
+  13.7254902% {
+    background-position: 0px -3227px;
+  }
+  15.68627451% {
+    background-position: 0px -3688px;
+  }
+  17.64705882% {
+    background-position: 0px -4149px;
+  }
+  19.60784314% {
+    background-position: -640px 0px;
+  }
+  21.56862745% {
+    background-position: -640px -461px;
+  }
+  23.52941176% {
+    background-position: -640px -922px;
+  }
+  25.49019608% {
+    background-position: -640px -1383px;
+  }
+  27.45098039% {
+    background-position: -640px -1844px;
+  }
+  29.41176471% {
+    background-position: -640px -2305px;
+  }
+  31.37254902% {
+    background-position: -640px -2766px;
+  }
+  33.33333333% {
+    background-position: -640px -3227px;
+  }
+  35.29411765% {
+    background-position: -640px -3688px;
+  }
+  37.25490196% {
+    background-position: -640px -4149px;
+  }
+  39.21568627% {
+    background-position: -1280px 0px;
+  }
+  41.17647059% {
+    background-position: -1280px -461px;
+  }
+  43.1372549% {
+    background-position: -1280px -922px;
+  }
+  45.09803922% {
+    background-position: -1280px -1383px;
+  }
+  47.05882353% {
+    background-position: -1280px -1844px;
+  }
+  49.01960784% {
+    background-position: -1280px -2305px;
+  }
+  50.98039216% {
+    background-position: -1280px -2766px;
+  }
+  52.94117647% {
+    background-position: -1280px -3227px;
+  }
+  54.90196078% {
+    background-position: -1280px -3688px;
+  }
+  56.8627451% {
+    background-position: -1280px -4149px;
+  }
+  58.82352941% {
+    background-position: -1920px 0px;
+  }
+  60.78431373% {
+    background-position: -1920px -461px;
+  }
+  62.74509804% {
+    background-position: -1920px -922px;
+  }
+  64.70588235% {
+    background-position: -1920px -1383px;
+  }
+  66.66666667% {
+    background-position: -1920px -1844px;
+  }
+  68.62745098% {
+    background-position: -1920px -2305px;
+  }
+  70.58823529% {
+    background-position: -1920px -2766px;
+  }
+  72.54901961% {
+    background-position: -1920px -3227px;
+  }
+  74.50980392% {
+    background-position: -1920px -3688px;
+  }
+  76.47058824% {
+    background-position: -1920px -4149px;
+  }
+  78.43137255% {
+    background-position: -2560px 0px;
+  }
+  80.39215686% {
+    background-position: -2560px -461px;
+  }
+  82.35294118% {
+    background-position: -2560px -922px;
+  }
+  84.31372549% {
+    background-position: -2560px -1383px;
+  }
+  86.2745098% {
+    background-position: -2560px -1844px;
+  }
+  88.23529412% {
+    background-position: -2560px -2305px;
+  }
+  90.19607843% {
+    background-position: -2560px -2766px;
+  }
+  92.15686275% {
+    background-position: -2560px -3227px;
+  }
+  94.11764706% {
+    background-position: -2560px -3688px;
+  }
+  96.07843137% {
+    background-position: -2560px -4149px;
+  }
+  98.03921569% {
+    background-position: -3200px 0px;
+  }
+  100% {
+    background-position: -3200px -461px;
+  }
+}
+@-moz-keyframes sequence-references-inner {
+  0% {
+    background-position: 0px 0px;
+  }
+  1.96078431% {
+    background-position: 0px -461px;
+  }
+  3.92156863% {
+    background-position: 0px -922px;
+  }
+  5.88235294% {
+    background-position: 0px -1383px;
+  }
+  7.84313725% {
+    background-position: 0px -1844px;
+  }
+  9.80392157% {
+    background-position: 0px -2305px;
+  }
+  11.76470588% {
+    background-position: 0px -2766px;
+  }
+  13.7254902% {
+    background-position: 0px -3227px;
+  }
+  15.68627451% {
+    background-position: 0px -3688px;
+  }
+  17.64705882% {
+    background-position: 0px -4149px;
+  }
+  19.60784314% {
+    background-position: -640px 0px;
+  }
+  21.56862745% {
+    background-position: -640px -461px;
+  }
+  23.52941176% {
+    background-position: -640px -922px;
+  }
+  25.49019608% {
+    background-position: -640px -1383px;
+  }
+  27.45098039% {
+    background-position: -640px -1844px;
+  }
+  29.41176471% {
+    background-position: -640px -2305px;
+  }
+  31.37254902% {
+    background-position: -640px -2766px;
+  }
+  33.33333333% {
+    background-position: -640px -3227px;
+  }
+  35.29411765% {
+    background-position: -640px -3688px;
+  }
+  37.25490196% {
+    background-position: -640px -4149px;
+  }
+  39.21568627% {
+    background-position: -1280px 0px;
+  }
+  41.17647059% {
+    background-position: -1280px -461px;
+  }
+  43.1372549% {
+    background-position: -1280px -922px;
+  }
+  45.09803922% {
+    background-position: -1280px -1383px;
+  }
+  47.05882353% {
+    background-position: -1280px -1844px;
+  }
+  49.01960784% {
+    background-position: -1280px -2305px;
+  }
+  50.98039216% {
+    background-position: -1280px -2766px;
+  }
+  52.94117647% {
+    background-position: -1280px -3227px;
+  }
+  54.90196078% {
+    background-position: -1280px -3688px;
+  }
+  56.8627451% {
+    background-position: -1280px -4149px;
+  }
+  58.82352941% {
+    background-position: -1920px 0px;
+  }
+  60.78431373% {
+    background-position: -1920px -461px;
+  }
+  62.74509804% {
+    background-position: -1920px -922px;
+  }
+  64.70588235% {
+    background-position: -1920px -1383px;
+  }
+  66.66666667% {
+    background-position: -1920px -1844px;
+  }
+  68.62745098% {
+    background-position: -1920px -2305px;
+  }
+  70.58823529% {
+    background-position: -1920px -2766px;
+  }
+  72.54901961% {
+    background-position: -1920px -3227px;
+  }
+  74.50980392% {
+    background-position: -1920px -3688px;
+  }
+  76.47058824% {
+    background-position: -1920px -4149px;
+  }
+  78.43137255% {
+    background-position: -2560px 0px;
+  }
+  80.39215686% {
+    background-position: -2560px -461px;
+  }
+  82.35294118% {
+    background-position: -2560px -922px;
+  }
+  84.31372549% {
+    background-position: -2560px -1383px;
+  }
+  86.2745098% {
+    background-position: -2560px -1844px;
+  }
+  88.23529412% {
+    background-position: -2560px -2305px;
+  }
+  90.19607843% {
+    background-position: -2560px -2766px;
+  }
+  92.15686275% {
+    background-position: -2560px -3227px;
+  }
+  94.11764706% {
+    background-position: -2560px -3688px;
+  }
+  96.07843137% {
+    background-position: -2560px -4149px;
+  }
+  98.03921569% {
+    background-position: -3200px 0px;
+  }
+  100% {
+    background-position: -3200px -461px;
+  }
+}
+@-ms-keyframes sequence-references-inner {
+  0% {
+    background-position: 0px 0px;
+  }
+  1.96078431% {
+    background-position: 0px -461px;
+  }
+  3.92156863% {
+    background-position: 0px -922px;
+  }
+  5.88235294% {
+    background-position: 0px -1383px;
+  }
+  7.84313725% {
+    background-position: 0px -1844px;
+  }
+  9.80392157% {
+    background-position: 0px -2305px;
+  }
+  11.76470588% {
+    background-position: 0px -2766px;
+  }
+  13.7254902% {
+    background-position: 0px -3227px;
+  }
+  15.68627451% {
+    background-position: 0px -3688px;
+  }
+  17.64705882% {
+    background-position: 0px -4149px;
+  }
+  19.60784314% {
+    background-position: -640px 0px;
+  }
+  21.56862745% {
+    background-position: -640px -461px;
+  }
+  23.52941176% {
+    background-position: -640px -922px;
+  }
+  25.49019608% {
+    background-position: -640px -1383px;
+  }
+  27.45098039% {
+    background-position: -640px -1844px;
+  }
+  29.41176471% {
+    background-position: -640px -2305px;
+  }
+  31.37254902% {
+    background-position: -640px -2766px;
+  }
+  33.33333333% {
+    background-position: -640px -3227px;
+  }
+  35.29411765% {
+    background-position: -640px -3688px;
+  }
+  37.25490196% {
+    background-position: -640px -4149px;
+  }
+  39.21568627% {
+    background-position: -1280px 0px;
+  }
+  41.17647059% {
+    background-position: -1280px -461px;
+  }
+  43.1372549% {
+    background-position: -1280px -922px;
+  }
+  45.09803922% {
+    background-position: -1280px -1383px;
+  }
+  47.05882353% {
+    background-position: -1280px -1844px;
+  }
+  49.01960784% {
+    background-position: -1280px -2305px;
+  }
+  50.98039216% {
+    background-position: -1280px -2766px;
+  }
+  52.94117647% {
+    background-position: -1280px -3227px;
+  }
+  54.90196078% {
+    background-position: -1280px -3688px;
+  }
+  56.8627451% {
+    background-position: -1280px -4149px;
+  }
+  58.82352941% {
+    background-position: -1920px 0px;
+  }
+  60.78431373% {
+    background-position: -1920px -461px;
+  }
+  62.74509804% {
+    background-position: -1920px -922px;
+  }
+  64.70588235% {
+    background-position: -1920px -1383px;
+  }
+  66.66666667% {
+    background-position: -1920px -1844px;
+  }
+  68.62745098% {
+    background-position: -1920px -2305px;
+  }
+  70.58823529% {
+    background-position: -1920px -2766px;
+  }
+  72.54901961% {
+    background-position: -1920px -3227px;
+  }
+  74.50980392% {
+    background-position: -1920px -3688px;
+  }
+  76.47058824% {
+    background-position: -1920px -4149px;
+  }
+  78.43137255% {
+    background-position: -2560px 0px;
+  }
+  80.39215686% {
+    background-position: -2560px -461px;
+  }
+  82.35294118% {
+    background-position: -2560px -922px;
+  }
+  84.31372549% {
+    background-position: -2560px -1383px;
+  }
+  86.2745098% {
+    background-position: -2560px -1844px;
+  }
+  88.23529412% {
+    background-position: -2560px -2305px;
+  }
+  90.19607843% {
+    background-position: -2560px -2766px;
+  }
+  92.15686275% {
+    background-position: -2560px -3227px;
+  }
+  94.11764706% {
+    background-position: -2560px -3688px;
+  }
+  96.07843137% {
+    background-position: -2560px -4149px;
+  }
+  98.03921569% {
+    background-position: -3200px 0px;
+  }
+  100% {
+    background-position: -3200px -461px;
+  }
+}
+@-o-keyframes sequence-references-inner {
+  0% {
+    background-position: 0px 0px;
+  }
+  1.96078431% {
+    background-position: 0px -461px;
+  }
+  3.92156863% {
+    background-position: 0px -922px;
+  }
+  5.88235294% {
+    background-position: 0px -1383px;
+  }
+  7.84313725% {
+    background-position: 0px -1844px;
+  }
+  9.80392157% {
+    background-position: 0px -2305px;
+  }
+  11.76470588% {
+    background-position: 0px -2766px;
+  }
+  13.7254902% {
+    background-position: 0px -3227px;
+  }
+  15.68627451% {
+    background-position: 0px -3688px;
+  }
+  17.64705882% {
+    background-position: 0px -4149px;
+  }
+  19.60784314% {
+    background-position: -640px 0px;
+  }
+  21.56862745% {
+    background-position: -640px -461px;
+  }
+  23.52941176% {
+    background-position: -640px -922px;
+  }
+  25.49019608% {
+    background-position: -640px -1383px;
+  }
+  27.45098039% {
+    background-position: -640px -1844px;
+  }
+  29.41176471% {
+    background-position: -640px -2305px;
+  }
+  31.37254902% {
+    background-position: -640px -2766px;
+  }
+  33.33333333% {
+    background-position: -640px -3227px;
+  }
+  35.29411765% {
+    background-position: -640px -3688px;
+  }
+  37.25490196% {
+    background-position: -640px -4149px;
+  }
+  39.21568627% {
+    background-position: -1280px 0px;
+  }
+  41.17647059% {
+    background-position: -1280px -461px;
+  }
+  43.1372549% {
+    background-position: -1280px -922px;
+  }
+  45.09803922% {
+    background-position: -1280px -1383px;
+  }
+  47.05882353% {
+    background-position: -1280px -1844px;
+  }
+  49.01960784% {
+    background-position: -1280px -2305px;
+  }
+  50.98039216% {
+    background-position: -1280px -2766px;
+  }
+  52.94117647% {
+    background-position: -1280px -3227px;
+  }
+  54.90196078% {
+    background-position: -1280px -3688px;
+  }
+  56.8627451% {
+    background-position: -1280px -4149px;
+  }
+  58.82352941% {
+    background-position: -1920px 0px;
+  }
+  60.78431373% {
+    background-position: -1920px -461px;
+  }
+  62.74509804% {
+    background-position: -1920px -922px;
+  }
+  64.70588235% {
+    background-position: -1920px -1383px;
+  }
+  66.66666667% {
+    background-position: -1920px -1844px;
+  }
+  68.62745098% {
+    background-position: -1920px -2305px;
+  }
+  70.58823529% {
+    background-position: -1920px -2766px;
+  }
+  72.54901961% {
+    background-position: -1920px -3227px;
+  }
+  74.50980392% {
+    background-position: -1920px -3688px;
+  }
+  76.47058824% {
+    background-position: -1920px -4149px;
+  }
+  78.43137255% {
+    background-position: -2560px 0px;
+  }
+  80.39215686% {
+    background-position: -2560px -461px;
+  }
+  82.35294118% {
+    background-position: -2560px -922px;
+  }
+  84.31372549% {
+    background-position: -2560px -1383px;
+  }
+  86.2745098% {
+    background-position: -2560px -1844px;
+  }
+  88.23529412% {
+    background-position: -2560px -2305px;
+  }
+  90.19607843% {
+    background-position: -2560px -2766px;
+  }
+  92.15686275% {
+    background-position: -2560px -3227px;
+  }
+  94.11764706% {
+    background-position: -2560px -3688px;
+  }
+  96.07843137% {
+    background-position: -2560px -4149px;
+  }
+  98.03921569% {
+    background-position: -3200px 0px;
+  }
+  100% {
+    background-position: -3200px -461px;
+  }
+}
+@keyframes sequence-references-inner {
+  0% {
+    background-position: 0px 0px;
+  }
+  1.96078431% {
+    background-position: 0px -461px;
+  }
+  3.92156863% {
+    background-position: 0px -922px;
+  }
+  5.88235294% {
+    background-position: 0px -1383px;
+  }
+  7.84313725% {
+    background-position: 0px -1844px;
+  }
+  9.80392157% {
+    background-position: 0px -2305px;
+  }
+  11.76470588% {
+    background-position: 0px -2766px;
+  }
+  13.7254902% {
+    background-position: 0px -3227px;
+  }
+  15.68627451% {
+    background-position: 0px -3688px;
+  }
+  17.64705882% {
+    background-position: 0px -4149px;
+  }
+  19.60784314% {
+    background-position: -640px 0px;
+  }
+  21.56862745% {
+    background-position: -640px -461px;
+  }
+  23.52941176% {
+    background-position: -640px -922px;
+  }
+  25.49019608% {
+    background-position: -640px -1383px;
+  }
+  27.45098039% {
+    background-position: -640px -1844px;
+  }
+  29.41176471% {
+    background-position: -640px -2305px;
+  }
+  31.37254902% {
+    background-position: -640px -2766px;
+  }
+  33.33333333% {
+    background-position: -640px -3227px;
+  }
+  35.29411765% {
+    background-position: -640px -3688px;
+  }
+  37.25490196% {
+    background-position: -640px -4149px;
+  }
+  39.21568627% {
+    background-position: -1280px 0px;
+  }
+  41.17647059% {
+    background-position: -1280px -461px;
+  }
+  43.1372549% {
+    background-position: -1280px -922px;
+  }
+  45.09803922% {
+    background-position: -1280px -1383px;
+  }
+  47.05882353% {
+    background-position: -1280px -1844px;
+  }
+  49.01960784% {
+    background-position: -1280px -2305px;
+  }
+  50.98039216% {
+    background-position: -1280px -2766px;
+  }
+  52.94117647% {
+    background-position: -1280px -3227px;
+  }
+  54.90196078% {
+    background-position: -1280px -3688px;
+  }
+  56.8627451% {
+    background-position: -1280px -4149px;
+  }
+  58.82352941% {
+    background-position: -1920px 0px;
+  }
+  60.78431373% {
+    background-position: -1920px -461px;
+  }
+  62.74509804% {
+    background-position: -1920px -922px;
+  }
+  64.70588235% {
+    background-position: -1920px -1383px;
+  }
+  66.66666667% {
+    background-position: -1920px -1844px;
+  }
+  68.62745098% {
+    background-position: -1920px -2305px;
+  }
+  70.58823529% {
+    background-position: -1920px -2766px;
+  }
+  72.54901961% {
+    background-position: -1920px -3227px;
+  }
+  74.50980392% {
+    background-position: -1920px -3688px;
+  }
+  76.47058824% {
+    background-position: -1920px -4149px;
+  }
+  78.43137255% {
+    background-position: -2560px 0px;
+  }
+  80.39215686% {
+    background-position: -2560px -461px;
+  }
+  82.35294118% {
+    background-position: -2560px -922px;
+  }
+  84.31372549% {
+    background-position: -2560px -1383px;
+  }
+  86.2745098% {
+    background-position: -2560px -1844px;
+  }
+  88.23529412% {
+    background-position: -2560px -2305px;
+  }
+  90.19607843% {
+    background-position: -2560px -2766px;
+  }
+  92.15686275% {
+    background-position: -2560px -3227px;
+  }
+  94.11764706% {
+    background-position: -2560px -3688px;
+  }
+  96.07843137% {
+    background-position: -2560px -4149px;
+  }
+  98.03921569% {
+    background-position: -3200px 0px;
+  }
+  100% {
+    background-position: -3200px -461px;
+  }
+}
+@-webkit-keyframes sequence-contact-inner {
+  0% {
+    background-position: 0px 0px;
+  }
+  1.96078431% {
+    background-position: 0px -461px;
+  }
+  3.92156863% {
+    background-position: 0px -922px;
+  }
+  5.88235294% {
+    background-position: 0px -1383px;
+  }
+  7.84313725% {
+    background-position: 0px -1844px;
+  }
+  9.80392157% {
+    background-position: 0px -2305px;
+  }
+  11.76470588% {
+    background-position: 0px -2766px;
+  }
+  13.7254902% {
+    background-position: 0px -3227px;
+  }
+  15.68627451% {
+    background-position: 0px -3688px;
+  }
+  17.64705882% {
+    background-position: 0px -4149px;
+  }
+  19.60784314% {
+    background-position: -640px 0px;
+  }
+  21.56862745% {
+    background-position: -640px -461px;
+  }
+  23.52941176% {
+    background-position: -640px -922px;
+  }
+  25.49019608% {
+    background-position: -640px -1383px;
+  }
+  27.45098039% {
+    background-position: -640px -1844px;
+  }
+  29.41176471% {
+    background-position: -640px -2305px;
+  }
+  31.37254902% {
+    background-position: -640px -2766px;
+  }
+  33.33333333% {
+    background-position: -640px -3227px;
+  }
+  35.29411765% {
+    background-position: -640px -3688px;
+  }
+  37.25490196% {
+    background-position: -640px -4149px;
+  }
+  39.21568627% {
+    background-position: -1280px 0px;
+  }
+  41.17647059% {
+    background-position: -1280px -461px;
+  }
+  43.1372549% {
+    background-position: -1280px -922px;
+  }
+  45.09803922% {
+    background-position: -1280px -1383px;
+  }
+  47.05882353% {
+    background-position: -1280px -1844px;
+  }
+  49.01960784% {
+    background-position: -1280px -2305px;
+  }
+  50.98039216% {
+    background-position: -1280px -2766px;
+  }
+  52.94117647% {
+    background-position: -1280px -3227px;
+  }
+  54.90196078% {
+    background-position: -1280px -3688px;
+  }
+  56.8627451% {
+    background-position: -1280px -4149px;
+  }
+  58.82352941% {
+    background-position: -1920px 0px;
+  }
+  60.78431373% {
+    background-position: -1920px -461px;
+  }
+  62.74509804% {
+    background-position: -1920px -922px;
+  }
+  64.70588235% {
+    background-position: -1920px -1383px;
+  }
+  66.66666667% {
+    background-position: -1920px -1844px;
+  }
+  68.62745098% {
+    background-position: -1920px -2305px;
+  }
+  70.58823529% {
+    background-position: -1920px -2766px;
+  }
+  72.54901961% {
+    background-position: -1920px -3227px;
+  }
+  74.50980392% {
+    background-position: -1920px -3688px;
+  }
+  76.47058824% {
+    background-position: -1920px -4149px;
+  }
+  78.43137255% {
+    background-position: -2560px 0px;
+  }
+  80.39215686% {
+    background-position: -2560px -461px;
+  }
+  82.35294118% {
+    background-position: -2560px -922px;
+  }
+  84.31372549% {
+    background-position: -2560px -1383px;
+  }
+  86.2745098% {
+    background-position: -2560px -1844px;
+  }
+  88.23529412% {
+    background-position: -2560px -2305px;
+  }
+  90.19607843% {
+    background-position: -2560px -2766px;
+  }
+  92.15686275% {
+    background-position: -2560px -3227px;
+  }
+  94.11764706% {
+    background-position: -2560px -3688px;
+  }
+  96.07843137% {
+    background-position: -2560px -4149px;
+  }
+  98.03921569% {
+    background-position: -3200px 0px;
+  }
+  100% {
+    background-position: -3200px -461px;
+  }
+}
+@-moz-keyframes sequence-contact-inner {
+  0% {
+    background-position: 0px 0px;
+  }
+  1.96078431% {
+    background-position: 0px -461px;
+  }
+  3.92156863% {
+    background-position: 0px -922px;
+  }
+  5.88235294% {
+    background-position: 0px -1383px;
+  }
+  7.84313725% {
+    background-position: 0px -1844px;
+  }
+  9.80392157% {
+    background-position: 0px -2305px;
+  }
+  11.76470588% {
+    background-position: 0px -2766px;
+  }
+  13.7254902% {
+    background-position: 0px -3227px;
+  }
+  15.68627451% {
+    background-position: 0px -3688px;
+  }
+  17.64705882% {
+    background-position: 0px -4149px;
+  }
+  19.60784314% {
+    background-position: -640px 0px;
+  }
+  21.56862745% {
+    background-position: -640px -461px;
+  }
+  23.52941176% {
+    background-position: -640px -922px;
+  }
+  25.49019608% {
+    background-position: -640px -1383px;
+  }
+  27.45098039% {
+    background-position: -640px -1844px;
+  }
+  29.41176471% {
+    background-position: -640px -2305px;
+  }
+  31.37254902% {
+    background-position: -640px -2766px;
+  }
+  33.33333333% {
+    background-position: -640px -3227px;
+  }
+  35.29411765% {
+    background-position: -640px -3688px;
+  }
+  37.25490196% {
+    background-position: -640px -4149px;
+  }
+  39.21568627% {
+    background-position: -1280px 0px;
+  }
+  41.17647059% {
+    background-position: -1280px -461px;
+  }
+  43.1372549% {
+    background-position: -1280px -922px;
+  }
+  45.09803922% {
+    background-position: -1280px -1383px;
+  }
+  47.05882353% {
+    background-position: -1280px -1844px;
+  }
+  49.01960784% {
+    background-position: -1280px -2305px;
+  }
+  50.98039216% {
+    background-position: -1280px -2766px;
+  }
+  52.94117647% {
+    background-position: -1280px -3227px;
+  }
+  54.90196078% {
+    background-position: -1280px -3688px;
+  }
+  56.8627451% {
+    background-position: -1280px -4149px;
+  }
+  58.82352941% {
+    background-position: -1920px 0px;
+  }
+  60.78431373% {
+    background-position: -1920px -461px;
+  }
+  62.74509804% {
+    background-position: -1920px -922px;
+  }
+  64.70588235% {
+    background-position: -1920px -1383px;
+  }
+  66.66666667% {
+    background-position: -1920px -1844px;
+  }
+  68.62745098% {
+    background-position: -1920px -2305px;
+  }
+  70.58823529% {
+    background-position: -1920px -2766px;
+  }
+  72.54901961% {
+    background-position: -1920px -3227px;
+  }
+  74.50980392% {
+    background-position: -1920px -3688px;
+  }
+  76.47058824% {
+    background-position: -1920px -4149px;
+  }
+  78.43137255% {
+    background-position: -2560px 0px;
+  }
+  80.39215686% {
+    background-position: -2560px -461px;
+  }
+  82.35294118% {
+    background-position: -2560px -922px;
+  }
+  84.31372549% {
+    background-position: -2560px -1383px;
+  }
+  86.2745098% {
+    background-position: -2560px -1844px;
+  }
+  88.23529412% {
+    background-position: -2560px -2305px;
+  }
+  90.19607843% {
+    background-position: -2560px -2766px;
+  }
+  92.15686275% {
+    background-position: -2560px -3227px;
+  }
+  94.11764706% {
+    background-position: -2560px -3688px;
+  }
+  96.07843137% {
+    background-position: -2560px -4149px;
+  }
+  98.03921569% {
+    background-position: -3200px 0px;
+  }
+  100% {
+    background-position: -3200px -461px;
+  }
+}
+@-ms-keyframes sequence-contact-inner {
+  0% {
+    background-position: 0px 0px;
+  }
+  1.96078431% {
+    background-position: 0px -461px;
+  }
+  3.92156863% {
+    background-position: 0px -922px;
+  }
+  5.88235294% {
+    background-position: 0px -1383px;
+  }
+  7.84313725% {
+    background-position: 0px -1844px;
+  }
+  9.80392157% {
+    background-position: 0px -2305px;
+  }
+  11.76470588% {
+    background-position: 0px -2766px;
+  }
+  13.7254902% {
+    background-position: 0px -3227px;
+  }
+  15.68627451% {
+    background-position: 0px -3688px;
+  }
+  17.64705882% {
+    background-position: 0px -4149px;
+  }
+  19.60784314% {
+    background-position: -640px 0px;
+  }
+  21.56862745% {
+    background-position: -640px -461px;
+  }
+  23.52941176% {
+    background-position: -640px -922px;
+  }
+  25.49019608% {
+    background-position: -640px -1383px;
+  }
+  27.45098039% {
+    background-position: -640px -1844px;
+  }
+  29.41176471% {
+    background-position: -640px -2305px;
+  }
+  31.37254902% {
+    background-position: -640px -2766px;
+  }
+  33.33333333% {
+    background-position: -640px -3227px;
+  }
+  35.29411765% {
+    background-position: -640px -3688px;
+  }
+  37.25490196% {
+    background-position: -640px -4149px;
+  }
+  39.21568627% {
+    background-position: -1280px 0px;
+  }
+  41.17647059% {
+    background-position: -1280px -461px;
+  }
+  43.1372549% {
+    background-position: -1280px -922px;
+  }
+  45.09803922% {
+    background-position: -1280px -1383px;
+  }
+  47.05882353% {
+    background-position: -1280px -1844px;
+  }
+  49.01960784% {
+    background-position: -1280px -2305px;
+  }
+  50.98039216% {
+    background-position: -1280px -2766px;
+  }
+  52.94117647% {
+    background-position: -1280px -3227px;
+  }
+  54.90196078% {
+    background-position: -1280px -3688px;
+  }
+  56.8627451% {
+    background-position: -1280px -4149px;
+  }
+  58.82352941% {
+    background-position: -1920px 0px;
+  }
+  60.78431373% {
+    background-position: -1920px -461px;
+  }
+  62.74509804% {
+    background-position: -1920px -922px;
+  }
+  64.70588235% {
+    background-position: -1920px -1383px;
+  }
+  66.66666667% {
+    background-position: -1920px -1844px;
+  }
+  68.62745098% {
+    background-position: -1920px -2305px;
+  }
+  70.58823529% {
+    background-position: -1920px -2766px;
+  }
+  72.54901961% {
+    background-position: -1920px -3227px;
+  }
+  74.50980392% {
+    background-position: -1920px -3688px;
+  }
+  76.47058824% {
+    background-position: -1920px -4149px;
+  }
+  78.43137255% {
+    background-position: -2560px 0px;
+  }
+  80.39215686% {
+    background-position: -2560px -461px;
+  }
+  82.35294118% {
+    background-position: -2560px -922px;
+  }
+  84.31372549% {
+    background-position: -2560px -1383px;
+  }
+  86.2745098% {
+    background-position: -2560px -1844px;
+  }
+  88.23529412% {
+    background-position: -2560px -2305px;
+  }
+  90.19607843% {
+    background-position: -2560px -2766px;
+  }
+  92.15686275% {
+    background-position: -2560px -3227px;
+  }
+  94.11764706% {
+    background-position: -2560px -3688px;
+  }
+  96.07843137% {
+    background-position: -2560px -4149px;
+  }
+  98.03921569% {
+    background-position: -3200px 0px;
+  }
+  100% {
+    background-position: -3200px -461px;
+  }
+}
+@-o-keyframes sequence-contact-inner {
+  0% {
+    background-position: 0px 0px;
+  }
+  1.96078431% {
+    background-position: 0px -461px;
+  }
+  3.92156863% {
+    background-position: 0px -922px;
+  }
+  5.88235294% {
+    background-position: 0px -1383px;
+  }
+  7.84313725% {
+    background-position: 0px -1844px;
+  }
+  9.80392157% {
+    background-position: 0px -2305px;
+  }
+  11.76470588% {
+    background-position: 0px -2766px;
+  }
+  13.7254902% {
+    background-position: 0px -3227px;
+  }
+  15.68627451% {
+    background-position: 0px -3688px;
+  }
+  17.64705882% {
+    background-position: 0px -4149px;
+  }
+  19.60784314% {
+    background-position: -640px 0px;
+  }
+  21.56862745% {
+    background-position: -640px -461px;
+  }
+  23.52941176% {
+    background-position: -640px -922px;
+  }
+  25.49019608% {
+    background-position: -640px -1383px;
+  }
+  27.45098039% {
+    background-position: -640px -1844px;
+  }
+  29.41176471% {
+    background-position: -640px -2305px;
+  }
+  31.37254902% {
+    background-position: -640px -2766px;
+  }
+  33.33333333% {
+    background-position: -640px -3227px;
+  }
+  35.29411765% {
+    background-position: -640px -3688px;
+  }
+  37.25490196% {
+    background-position: -640px -4149px;
+  }
+  39.21568627% {
+    background-position: -1280px 0px;
+  }
+  41.17647059% {
+    background-position: -1280px -461px;
+  }
+  43.1372549% {
+    background-position: -1280px -922px;
+  }
+  45.09803922% {
+    background-position: -1280px -1383px;
+  }
+  47.05882353% {
+    background-position: -1280px -1844px;
+  }
+  49.01960784% {
+    background-position: -1280px -2305px;
+  }
+  50.98039216% {
+    background-position: -1280px -2766px;
+  }
+  52.94117647% {
+    background-position: -1280px -3227px;
+  }
+  54.90196078% {
+    background-position: -1280px -3688px;
+  }
+  56.8627451% {
+    background-position: -1280px -4149px;
+  }
+  58.82352941% {
+    background-position: -1920px 0px;
+  }
+  60.78431373% {
+    background-position: -1920px -461px;
+  }
+  62.74509804% {
+    background-position: -1920px -922px;
+  }
+  64.70588235% {
+    background-position: -1920px -1383px;
+  }
+  66.66666667% {
+    background-position: -1920px -1844px;
+  }
+  68.62745098% {
+    background-position: -1920px -2305px;
+  }
+  70.58823529% {
+    background-position: -1920px -2766px;
+  }
+  72.54901961% {
+    background-position: -1920px -3227px;
+  }
+  74.50980392% {
+    background-position: -1920px -3688px;
+  }
+  76.47058824% {
+    background-position: -1920px -4149px;
+  }
+  78.43137255% {
+    background-position: -2560px 0px;
+  }
+  80.39215686% {
+    background-position: -2560px -461px;
+  }
+  82.35294118% {
+    background-position: -2560px -922px;
+  }
+  84.31372549% {
+    background-position: -2560px -1383px;
+  }
+  86.2745098% {
+    background-position: -2560px -1844px;
+  }
+  88.23529412% {
+    background-position: -2560px -2305px;
+  }
+  90.19607843% {
+    background-position: -2560px -2766px;
+  }
+  92.15686275% {
+    background-position: -2560px -3227px;
+  }
+  94.11764706% {
+    background-position: -2560px -3688px;
+  }
+  96.07843137% {
+    background-position: -2560px -4149px;
+  }
+  98.03921569% {
+    background-position: -3200px 0px;
+  }
+  100% {
+    background-position: -3200px -461px;
+  }
+}
+@keyframes sequence-contact-inner {
+  0% {
+    background-position: 0px 0px;
+  }
+  1.96078431% {
+    background-position: 0px -461px;
+  }
+  3.92156863% {
+    background-position: 0px -922px;
+  }
+  5.88235294% {
+    background-position: 0px -1383px;
+  }
+  7.84313725% {
+    background-position: 0px -1844px;
+  }
+  9.80392157% {
+    background-position: 0px -2305px;
+  }
+  11.76470588% {
+    background-position: 0px -2766px;
+  }
+  13.7254902% {
+    background-position: 0px -3227px;
+  }
+  15.68627451% {
+    background-position: 0px -3688px;
+  }
+  17.64705882% {
+    background-position: 0px -4149px;
+  }
+  19.60784314% {
+    background-position: -640px 0px;
+  }
+  21.56862745% {
+    background-position: -640px -461px;
+  }
+  23.52941176% {
+    background-position: -640px -922px;
+  }
+  25.49019608% {
+    background-position: -640px -1383px;
+  }
+  27.45098039% {
+    background-position: -640px -1844px;
+  }
+  29.41176471% {
+    background-position: -640px -2305px;
+  }
+  31.37254902% {
+    background-position: -640px -2766px;
+  }
+  33.33333333% {
+    background-position: -640px -3227px;
+  }
+  35.29411765% {
+    background-position: -640px -3688px;
+  }
+  37.25490196% {
+    background-position: -640px -4149px;
+  }
+  39.21568627% {
+    background-position: -1280px 0px;
+  }
+  41.17647059% {
+    background-position: -1280px -461px;
+  }
+  43.1372549% {
+    background-position: -1280px -922px;
+  }
+  45.09803922% {
+    background-position: -1280px -1383px;
+  }
+  47.05882353% {
+    background-position: -1280px -1844px;
+  }
+  49.01960784% {
+    background-position: -1280px -2305px;
+  }
+  50.98039216% {
+    background-position: -1280px -2766px;
+  }
+  52.94117647% {
+    background-position: -1280px -3227px;
+  }
+  54.90196078% {
+    background-position: -1280px -3688px;
+  }
+  56.8627451% {
+    background-position: -1280px -4149px;
+  }
+  58.82352941% {
+    background-position: -1920px 0px;
+  }
+  60.78431373% {
+    background-position: -1920px -461px;
+  }
+  62.74509804% {
+    background-position: -1920px -922px;
+  }
+  64.70588235% {
+    background-position: -1920px -1383px;
+  }
+  66.66666667% {
+    background-position: -1920px -1844px;
+  }
+  68.62745098% {
+    background-position: -1920px -2305px;
+  }
+  70.58823529% {
+    background-position: -1920px -2766px;
+  }
+  72.54901961% {
+    background-position: -1920px -3227px;
+  }
+  74.50980392% {
+    background-position: -1920px -3688px;
+  }
+  76.47058824% {
+    background-position: -1920px -4149px;
+  }
+  78.43137255% {
+    background-position: -2560px 0px;
+  }
+  80.39215686% {
+    background-position: -2560px -461px;
+  }
+  82.35294118% {
+    background-position: -2560px -922px;
+  }
+  84.31372549% {
+    background-position: -2560px -1383px;
+  }
+  86.2745098% {
+    background-position: -2560px -1844px;
+  }
+  88.23529412% {
+    background-position: -2560px -2305px;
+  }
+  90.19607843% {
+    background-position: -2560px -2766px;
+  }
+  92.15686275% {
+    background-position: -2560px -3227px;
+  }
+  94.11764706% {
+    background-position: -2560px -3688px;
+  }
+  96.07843137% {
+    background-position: -2560px -4149px;
+  }
+  98.03921569% {
+    background-position: -3200px 0px;
+  }
+  100% {
+    background-position: -3200px -461px;
+  }
+}
 .sequence {
   width: 100%;
   height: 100%;
@@ -3135,7 +8605,7 @@ body[browser="safari"] .video video {
   -o-user-select: none;
   user-select: none;
 }
-.sequence:before {
+.sequence .image {
   width: 640px;
   height: 360px;
   margin: -180px 0 0 -320px;
@@ -3146,74 +8616,123 @@ body[browser="safari"] .video video {
   top: 50%;
   left: 50%;
   z-index: 1;
-  background: url('../img/sequence/index-1.jpg') center center no-repeat;
+  background: url('../img/sequence/index-1.jpg') 0 0 no-repeat;
   background-size: 4480px 3600px;
-  animation: sequence-intro 0.4s step-start 0s infinite alternate;
+  animation: sequence-inner 0.4s step-start 0s infinite alternate;
   animation-play-state: paused;
   animation-fill-mode: both;
 }
-.playing.sequence:before {
+.playing.sequence .image {
   animation-play-state: running;
 }
-.paused.sequence:before {
+.paused.sequence .image {
   animation-play-state: paused;
 }
-.sequence-intro.sequence:before,
-.sequence-about.sequence:before {
+.sequence-inner.sequence .image,
+.sequence-about.sequence .image {
   background-image: url('../img/sequence/index-1.jpg');
   background-size: 4480px 3600px;
 }
-.sequence-intro.sequence:before {
-  animation-name: sequence-intro;
+.sequence-inner.sequence .image {
+  animation-name: sequence-inner;
   animation-duration: .4s;
 }
-.sequence-about.sequence:before {
+.sequence-about.sequence .image {
   animation-name: sequence-about;
   animation-duration: 3s;
 }
-.sequence-process.sequence:before,
-.sequence-news.sequence:before {
+.sequence-process.sequence .image,
+.sequence-news.sequence .image {
   background-image: url('../img/sequence/index-2.jpg');
   background-size: 5120px 3600px;
 }
-.sequence-process.sequence:before {
+.sequence-process.sequence .image {
   animation-name: sequence-process;
   animation-duration: 1.8s;
 }
-.sequence-news.sequence:before {
+.sequence-news.sequence .image {
   animation-name: sequence-news;
   animation-duration: 2.1s;
 }
-.sequence-skills.sequence:before {
+.sequence-skills.sequence .image {
   background-image: url('../img/sequence/index-3.jpg');
   background-size: 3840px 3600px;
   animation-name: sequence-skills;
   animation-duration: 2.35s;
 }
-.sequence-viralize.sequence:before {
+.sequence-viralize.sequence .image {
   background-image: url('../img/sequence/index-4.jpg');
   background-size: 7040px 7200px;
   animation-name: sequence-viralize;
   animation-duration: 10.55s;
 }
-.sequence-references.sequence:before,
-.sequence-contact.sequence:before {
+.sequence-references.sequence .image,
+.sequence-contact.sequence .image {
   background-image: url('../img/sequence/index-5.jpg');
   background-size: 7680px 3600px;
 }
-.sequence-references.sequence:before {
+.sequence-references.sequence .image {
   animation-name: sequence-references;
   animation-duration: 2.8s;
 }
-.sequence-contact.sequence:before {
+.sequence-contact.sequence .image {
   animation-name: sequence-contact;
   animation-duration: 2.6s;
 }
-.sequence-finish.sequence:before {
+.sequence-finish.sequence .image {
   background-image: url('../img/sequence/index-6.jpg');
   background-size: 4480px 3600px;
   animation-name: sequence-finish;
   animation-duration: 3s;
+}
+.intro.sequence .image {
+  animation-iteration-count: 1;
+  display: none;
+}
+.visible.intro.sequence .image {
+  display: block;
+}
+.sequence-about-inner.sequence .image {
+  background-image: url('../img/sequence/about.png');
+  background-size: 3200px 4610px;
+  animation-name: sequence-about-inner;
+  animation-duration: 2.35s;
+}
+.sequence-process-inner.sequence .image {
+  background-image: url('../img/sequence/process.png');
+  background-size: 3840px 4610px;
+  animation-name: sequence-process-inner;
+  animation-duration: 2.55s;
+}
+.sequence-news-inner.sequence .image {
+  background-image: url('../img/sequence/news.png');
+  background-size: 3840px 4610px;
+  animation-name: sequence-news-inner;
+  animation-duration: 2.55s;
+}
+.sequence-skills-inner.sequence .image {
+  background-image: url('../img/sequence/skills.png');
+  background-size: 3840px 4610px;
+  animation-name: sequence-skills-inner;
+  animation-duration: 2.55s;
+}
+.sequence-viralize-inner.sequence .image {
+  background-image: url('../img/sequence/viralize.png');
+  background-size: 3840px 4610px;
+  animation-name: sequence-viralize-inner;
+  animation-duration: 2.55s;
+}
+.sequence-references-inner.sequence .image {
+  background-image: url('../img/sequence/references.png');
+  background-size: 3840px 4610px;
+  animation-name: sequence-viralize-inner;
+  animation-duration: 2.55s;
+}
+.sequence-contact-inner.sequence .image {
+  background-image: url('../img/sequence/contact.png');
+  background-size: 3840px 4610px;
+  animation-name: sequence-contact-inner;
+  animation-duration: 2.55s;
 }
 /* ==========================================================================
    _PAGES
@@ -3493,6 +9012,9 @@ body[browser="chrome"]:not(.simple) .page.active {
 .page-about {
   background-color: #5f9fab;
 }
+.mobile .page-about {
+  background-color: #559aae;
+}
 .simple .page-about:before {
   background-image: url('../img/pages/about.png');
 }
@@ -3511,6 +9033,9 @@ body[browser="chrome"]:not(.simple) .page.active {
 .page-process {
   background-color: #7dc74c;
 }
+.mobile .page-process {
+  background-color: #77ba40;
+}
 .simple .page-process:before {
   background-image: url('../img/pages/process.png');
 }
@@ -3528,6 +9053,9 @@ body[browser="chrome"]:not(.simple) .page.active {
 }
 .page-news {
   background-color: #ec84ac;
+}
+.mobile .page-news {
+  background-color: #f68fab;
 }
 .simple .page-news:before {
   background-image: url('../img/pages/news.png');
@@ -3580,6 +9108,9 @@ body[browser="chrome"]:not(.simple) .page.active {
 .page-skills {
   background-color: #c6b8bb;
 }
+.mobile .page-skills {
+  background-color: #c7baba;
+}
 .simple .page-skills:before {
   background-image: url('../img/pages/skills.png');
 }
@@ -3598,6 +9129,9 @@ body[browser="chrome"]:not(.simple) .page.active {
 .page-viralize {
   background-color: #e9675e;
 }
+.mobile .page-viralize {
+  background-color: #f87258;
+}
 .simple .page-viralize:before {
   background-image: url('../img/pages/viralize.png');
 }
@@ -3614,6 +9148,9 @@ body[browser="chrome"]:not(.simple) .page.active {
   }
 }
 .page-references {
+  background-color: #959595;
+}
+.mobile .page-references {
   background-color: #959595;
 }
 .simple .page-references:before {
@@ -3652,6 +9189,9 @@ body[browser="chrome"]:not(.simple) .page.active {
 }
 .page-contact {
   background-color: #f9ee99;
+}
+.mobile .page-contact {
+  background-color: #fdeb90;
 }
 .simple .page-contact:before {
   background-image: url('../img/pages/contact.png');

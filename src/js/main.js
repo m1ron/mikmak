@@ -41,7 +41,7 @@ function detectVersion() {
 	if (check) {
 		version = 'mobile';
 	}
-	//version = 'mobile';
+	version = 'mobile';
 	if (version === 'simple') {
 		$('body').addClass('simple');
 	} else if (version === 'mobile') {
@@ -135,12 +135,12 @@ $(document).ready(function () {
 
 	/** Mobile files array */
 	v.sequence = [
-		{name: 'sequence/index-1.jpg'},
-		{name: 'sequence/index-2.jpg'},
-		{name: 'sequence/index-3.jpg'},
-		{name: 'sequence/index-4.jpg'},
-		{name: 'sequence/index-5.jpg'},
-		{name: 'sequence/index-6.jpg'}
+		{name: 'sequence/index-1.png'},
+		{name: 'sequence/index-2.png'},
+		{name: 'sequence/index-3.png'},
+		{name: 'sequence/index-4.png'},
+		{name: 'sequence/index-5.png'},
+		{name: 'sequence/index-6.png'}
 	];
 
 	/** Video files array */
@@ -465,11 +465,13 @@ function initMobile() {
 			files.push({"type": "IMAGE", "source": v.path.img + v.inners[i].name});
 		});
 
-		$.html5Loader({
-			filesToLoad: {
-				"files": files
-			}
-		});
+		setTimeout(function () {
+			$.html5Loader({
+				filesToLoad: {
+					"files": files
+				}
+			});
+		}, 400);
 
 		v.duration = 28.88;
 		v.active = 0;

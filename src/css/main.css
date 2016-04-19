@@ -8619,7 +8619,7 @@ body[browser="safari"] .video video {
   top: 50%;
   left: 50%;
   z-index: 1;
-  background: url('../img/sequence/index-1.jpg') 0 0 no-repeat;
+  background: url('../img/sequence/index-1.png') 0 0 no-repeat;
   background-size: 4480px 3600px;
   animation: sequence-intro 0.4s step-start 0s infinite alternate;
   animation-play-state: paused;
@@ -8636,7 +8636,7 @@ body[browser="safari"] .video video {
 }
 .sequence-intro.sequence .image,
 .sequence-about.sequence .image {
-  background-image: url('../img/sequence/index-1.jpg');
+  background-image: url('../img/sequence/index-1.png');
   background-size: 4480px 3600px;
 }
 .sequence-intro.sequence .image {
@@ -8649,7 +8649,7 @@ body[browser="safari"] .video video {
 }
 .sequence-process.sequence .image,
 .sequence-news.sequence .image {
-  background-image: url('../img/sequence/index-2.jpg');
+  background-image: url('../img/sequence/index-2.png');
   background-size: 5120px 3600px;
 }
 .sequence-process.sequence .image {
@@ -8661,20 +8661,20 @@ body[browser="safari"] .video video {
   animation-duration: 2.1s;
 }
 .sequence-skills.sequence .image {
-  background-image: url('../img/sequence/index-3.jpg');
+  background-image: url('../img/sequence/index-3.png');
   background-size: 3840px 3600px;
   animation-name: sequence-skills;
   animation-duration: 2.35s;
 }
 .sequence-viralize.sequence .image {
-  background-image: url('../img/sequence/index-4.jpg');
+  background-image: url('../img/sequence/index-4.png');
   background-size: 7040px 7200px;
   animation-name: sequence-viralize;
   animation-duration: 10.55s;
 }
 .sequence-references.sequence .image,
 .sequence-contact.sequence .image {
-  background-image: url('../img/sequence/index-5.jpg');
+  background-image: url('../img/sequence/index-5.png');
   background-size: 7680px 3600px;
 }
 .sequence-references.sequence .image {
@@ -8686,7 +8686,7 @@ body[browser="safari"] .video video {
   animation-duration: 2.6s;
 }
 .sequence-finish.sequence .image {
-  background-image: url('../img/sequence/index-6.jpg');
+  background-image: url('../img/sequence/index-6.png');
   background-size: 4480px 3600px;
   animation-name: sequence-finish;
   animation-duration: 3s;

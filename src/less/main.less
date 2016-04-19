@@ -1624,18 +1624,19 @@ h6 {&:extend(.h6); }
     z-index: 1;
     background: url('@{images}/sequence/index-1.jpg') 0 0 no-repeat;
     background-size: @sequence-width * 7 @sequence-height * @sequence-rows;
-    animation: sequence-inner .4s step-start 0s infinite alternate;
+    animation: sequence-intro .4s step-start 0s infinite alternate;
     animation-play-state: paused;
     animation-fill-mode: both;
 
     .playing& { animation-play-state: running; }
     .paused& { animation-play-state: paused; }
+    .reverse& { animation-direction: alternate-reverse; }
 
-    .sequence-inner&, .sequence-about& {
+    .sequence-intro&, .sequence-about& {
       background-image: url('@{images}/sequence/index-1.jpg');
       background-size: @sequence-width * 7 @sequence-height * @sequence-rows;
     }
-    .sequence-inner& { animation-name: sequence-inner; animation-duration: .4s; }
+    .sequence-intro& { animation-name: sequence-intro; animation-duration: .4s; }
     .sequence-about& { animation-name: sequence-about; animation-duration: 3s; }
 
     .sequence-process&, .sequence-news& {

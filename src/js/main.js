@@ -220,18 +220,6 @@ function initPreloader() {
 		}, 50);
 	}
 
-	/*
-	$(v.audio).each(function (i) {
-		files.push({"type": "AUDIO", "sources": {"mp3": {"source": v.path.audio + v.audio[i].name + '.mp3', "size": v.audio[i].mp3}}})
-	});
-	if (mobile) {
-	} else {
-		$(v.video).each(function (i) {
-			files.push({"type": "VIDEO", "sources": {"h264": {"source": v.video[i].src + '.mp4', "size": v.video[i].mp4}, "webm": {"source": v.video[i].src + '.webm', "size": v.video[i].webm}}})
-		});
-	}
-	*/
-
 	/** Build files array for html5loader */
 	var files = [];
 
@@ -497,7 +485,7 @@ function initMobile() {
 		v.dots.appendTo(self);
 
 		/** Play video section (integer) */
-		function playMobile(index) {
+		window.playMobile = function (index) {
 			v.disabled = true;
 			$(document).off('mousewheel', onWheelStart).off('touchstart', onTouchStart).off('touchmove', onTouchMove);
 
@@ -524,18 +512,25 @@ function initMobile() {
 			if (+duration >= 0) {
 				v.sequence.attr('class', 'sequence').addClass('sequence-' + v.sections[v.active].id).addClass('playing');
 				v.time = v.time + duration;
-				setTimeout(onMobilePaused, duration);
+				console.log(v.time);
+				setTimeout(function () {
+					onMobilePaused(false);
+				}, duration);
 			} else {
-				v.sequence.attr('class', 'sequence').addClass('sequence-' + v.sections[v.active].id).addClass('playing');
-				v.time = v.time - duration;
-				setTimeout(onMobilePaused, Math.abs(duration));
+				v.sequence.addClass('playing');
+				v.time = v.time - Math.abs(duration);
+				console.log(v.time);
+				setTimeout(function () {
+					onMobilePaused(true);
+				}, Math.abs(duration));
 			}
 		}
 
 
-		function onMobilePaused() {
-			if (v.active + 1 < v.sections.length) {
-				v.sequence.attr('class', 'sequence').addClass('sequence-' + v.sections[v.active + 1].id);
+		function onMobilePaused(rewind) {
+			//if (v.active + 1 < v.sections.length) {
+			if (rewind) {
+				v.sequence.attr('class', 'sequence').addClass('sequence-' + v.sections[v.active].id).addClass('reverse');
 			}
 			v.sequence.removeClass('playing');
 			$(document).on('mousewheel', onWheelStart).on('touchstart', onTouchStart).on('touchmove', onTouchMove);

@@ -8621,7 +8621,7 @@ body[browser="safari"] .video video {
   z-index: 1;
   background: url('../img/sequence/index-1.jpg') 0 0 no-repeat;
   background-size: 4480px 3600px;
-  animation: sequence-inner 0.4s step-start 0s infinite alternate;
+  animation: sequence-intro 0.4s step-start 0s infinite alternate;
   animation-play-state: paused;
   animation-fill-mode: both;
 }
@@ -8631,13 +8631,16 @@ body[browser="safari"] .video video {
 .paused.sequence .image {
   animation-play-state: paused;
 }
-.sequence-inner.sequence .image,
+.reverse.sequence .image {
+  animation-direction: alternate-reverse;
+}
+.sequence-intro.sequence .image,
 .sequence-about.sequence .image {
   background-image: url('../img/sequence/index-1.jpg');
   background-size: 4480px 3600px;
 }
-.sequence-inner.sequence .image {
-  animation-name: sequence-inner;
+.sequence-intro.sequence .image {
+  animation-name: sequence-intro;
   animation-duration: .4s;
 }
 .sequence-about.sequence .image {

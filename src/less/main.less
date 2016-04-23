@@ -1654,14 +1654,14 @@ h6 {&:extend(.h6); }
     }
 
     .sequence-viralize& {
-      background-image: url('@{images}/sequence/index-4.jpg');
+      background-image: url('@{images}/sequence/index-4.png');
       background-size: @sequence-width * 11 @sequence-height * @sequence-rows * 2;
       animation-name: sequence-viralize;
       animation-duration: 10.55s;
     }
 
     .sequence-references&, .sequence-contact& {
-      background-image: url('@{images}/sequence/index-5.jpg');
+      background-image: url('@{images}/sequence/index-5.png');
       background-size: @sequence-width * 12 @sequence-height * @sequence-rows;
     }
     .sequence-references& { animation-name: sequence-references; animation-duration: 2.8s; }
@@ -1970,23 +1970,20 @@ h6 {&:extend(.h6); }
   &-about {
     background-color: @color-page-1;
 
-    .mobile & {
-      background-color: @color-page-1-mobile;
-      .sequence {
-        top: -7vh; left: -20vw;
-        .portrait& { top: -15vh; left: 0; }
-      }
-    }
-
     .simple & {
       &:before { background-image: url('@{images}/pages/about.png'); }
+    }
+
+    .mobile & {
+      background-color: @color-page-1-mobile;
+      .portrait& .sequence { top: -22.5vh; left: 1.5vw; }
+      .landscape& .sequence { top: -6vh; left: -22vw; .scale(.6); }
     }
 
     @media @md {
       .content { padding-top: 65vh; }
       .white {
-        width: 435px;
-        margin-right: 7.5vh;
+        width: 435px; margin-right: 7.5vh;
         .space { max-height: 205px; }
       }
     }
@@ -1996,23 +1993,20 @@ h6 {&:extend(.h6); }
   &-process {
     background-color: @color-page-2;
 
-    .mobile & {
-      background-color: @color-page-2-mobile;
-      .sequence {
-        top: -7vh; left: -17vw;
-        .portrait& { top: -15vh; left: 0; }
-      }
-    }
-
     .simple & {
       &:before { background-image: url('@{images}/pages/process.png'); }
+    }
+
+    .mobile & {
+      background-color: @color-page-2-mobile;
+      .portrait& .sequence { top: -21vh; left: 6.5vw; }
+      .landscape& .sequence { top: -4vh; left: -19vw; .scale(.6); }
     }
 
     @media @md {
       .content { padding-top: 52vh; }
       .white {
-        width: 360px;
-        margin-right: 9.5vh;
+        width: 360px; margin-right: 9.5vh;
         .space { max-height: 250px; }
       }
     }
@@ -2021,14 +2015,6 @@ h6 {&:extend(.h6); }
   /** News */
   &-news {
     background-color: @color-page-3;
-
-    .mobile & {
-      background-color: @color-page-3-mobile;
-      .sequence {
-        top: -7vh; left: -24vw;
-        .portrait& { top: -15vh; left: 0; }
-      }
-    }
 
     .simple & {
       &:before {
@@ -2056,21 +2042,23 @@ h6 {&:extend(.h6); }
       }
     }
 
-    @media @md {
-      .content {
-        padding-top: 40vh;
-        margin: 0 auto;
+    .mobile & {
+      background-color: @color-page-3-mobile;
+      .portrait& {
+        .sequence { top: -30vh; left: 4vw; }
+        .content { padding-top: 43vh; }
       }
+      .landscape& .sequence { top: -10vh; left: -21vw; .scale(.6); }
+    }
+
+    @media @md {
+      .content { padding-top: 40vh; margin: 0 auto; }
       .white {
-        width: 605px !important;
-        margin-right: 0;
+        width: 605px !important; margin-right: 0;
         .space { max-height: 140px; }
       }
       .video {
-        video {
-          max-height: 999px;
-          margin-top: -32.6vh;
-        }
+        video { max-height: 999px; margin-top: -32.6vh; }
       }
     }
   }
@@ -2079,23 +2067,20 @@ h6 {&:extend(.h6); }
   &-skills {
     background-color: @color-page-4;
 
-    .mobile & {
-      background-color: @color-page-4-mobile;
-      .sequence {
-        top: -7vh; left: -24vw;
-        .portrait& { top: -20vh; left: 0; }
-      }
-    }
-
     .simple & {
       &:before { background-image: url('@{images}/pages/skills.png'); }
+    }
+
+    .mobile & {
+      background-color: @color-page-4-mobile;
+      .portrait& .sequence { top: -22vh; left: 0; }
+      .landscape& .sequence { top: -10.5vh; left: -20vw; .scale(.6); }
     }
 
     @media @md {
       .content { padding-top: 63.8vh; }
       .white {
-        width: 450px;
-        margin-right: 10.5vh;
+        width: 450px; margin-right: 10.5vh;
         .space { max-height: 205px; }
       }
     }
@@ -2105,23 +2090,20 @@ h6 {&:extend(.h6); }
   &-viralize {
     background-color: @color-page-5;
 
-    .mobile & {
-      background-color: @color-page-5-mobile;
-      .sequence {
-        top: -2vh; left: -18vw;
-        .portrait& { top: -17vh; left: 0; }
-      }
-    }
-
     .simple & {
       &:before { background-image: url('@{images}/pages/viralize.png'); }
+    }
+
+    .mobile & {
+      background-color: @color-page-5-mobile;
+      .portrait& .sequence { top: -20.5vh; left: 3vw; }
+      .landscape& .sequence { top: -1vh; left: -22vw; .scale(.6); }
     }
 
     @media @md {
       .content { padding-top: 68vh; }
       .white {
-        width: 385px;
-        margin-right: 23vh;
+        width: 385px; margin-right: 23vh;
         .space { max-height: 150px; }
       }
     }
@@ -2130,15 +2112,6 @@ h6 {&:extend(.h6); }
   /** References */
   &-references {
     background-color: @color-page-6;
-
-    .mobile & {
-      background-color: @color-page-6-mobile;
-      .sequence { top: -15vh; }
-      .content {
-        padding-top: 60vh;
-        .portrait& { padding-top: 50vh; }
-      }
-    }
 
     .simple & {
       &:before {
@@ -2150,23 +2123,34 @@ h6 {&:extend(.h6); }
       @media @xs {
         padding-top: 30vh;
       }
-      @media @sm {
-        .content { padding-top: 27vh; }
+      .content {
+        @media @sm {
+          padding-top: 27vh;
+        }
+        @media @md {
+          padding-top: 35vh;
+        }
+        @media @xl {
+          padding-top: 40vh;
+        }
       }
-      @media @md {
-        .content { padding-top: 35vh; }
+    }
+
+    .mobile & {
+      background-color: @color-page-6-mobile;
+      .portrait& {
+        .sequence { top: -23.5vh; left: -4vw; }
+        .content { padding-top: 50vh; }
       }
-      @media @xl {
-        .content { padding-top: 40vh; }
+      .landscape& {
+        .sequence { top: -16vh; left: 0; .scale(.6); }
+        .content { padding-top: 60vh; }
       }
     }
 
     @media @sm {
       .video {
-        video {
-          margin-top: -15vh;
-          max-height: 999px;
-        }
+        video { margin-top: -15vh; max-height: 999px; }
       }
     }
   }
@@ -2175,34 +2159,24 @@ h6 {&:extend(.h6); }
   &-contact {
     background-color: @color-page-7;
 
-    .mobile & {
-      background-color: @color-page-7-mobile;
-      .sequence {
-        top: -4vh; left: -15vw;
-        .portrait& { top: -18vh; left: 0; }
-      }
-      .white { padding-bottom: 30px; }
-    }
-
     .simple & {
       &:before { background-image: url('@{images}/pages/contact.png'); }
     }
 
-    .social {
-      position: absolute;
-      left: 0;
-      bottom: -3px;
+    .mobile & {
+      background-color: @color-page-7-mobile;
+      .portrait& .sequence { top: -25.5vh; left: 5.5vw; }
+      .landscape& .sequence { top: -4vh; left: -20vw; .scale(.6); }
+      .white { padding-bottom: 30px; }
     }
+
+    .social { position: absolute; left: 0; bottom: -3px; }
 
     @media @md {
       .content { padding-top: 30vh; }
       .white {
-        width: 330px;
-        margin-right: 15.7vh;
-        .space {
-          max-height: 200px;
-          margin-bottom: 20px;
-        }
+        width: 330px; margin-right: 15.7vh;
+        .space { max-height: 200px; margin-bottom: 20px; }
       }
     }
   }

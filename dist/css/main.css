@@ -8669,14 +8669,14 @@ body[browser="safari"] .video video {
   animation-duration: 2.35s;
 }
 .sequence-viralize.sequence .image {
-  background-image: url('../img/sequence/index-4.jpg');
+  background-image: url('../img/sequence/index-4.png');
   background-size: 7040px 7200px;
   animation-name: sequence-viralize;
   animation-duration: 10.55s;
 }
 .sequence-references.sequence .image,
 .sequence-contact.sequence .image {
-  background-image: url('../img/sequence/index-5.jpg');
+  background-image: url('../img/sequence/index-5.png');
   background-size: 7680px 3600px;
 }
 .sequence-references.sequence .image {
@@ -9020,19 +9020,25 @@ body[browser="chrome"]:not(.simple) .page.active {
 .page-about {
   background-color: #5f9fab;
 }
+.simple .page-about:before {
+  background-image: url('../img/pages/about.png');
+}
 .mobile .page-about {
   background-color: #559aae;
 }
-.mobile .page-about .sequence {
-  top: -7vh;
-  left: -20vw;
-}
 .portrait.mobile .page-about .sequence {
-  top: -15vh;
-  left: 0;
+  top: -22.5vh;
+  left: 1.5vw;
 }
-.simple .page-about:before {
-  background-image: url('../img/pages/about.png');
+.landscape.mobile .page-about .sequence {
+  top: -6vh;
+  left: -22vw;
+  -webkit-transform: scale(0.6);
+  -moz-transform: scale(0.6);
+  -ms-transform: scale(0.6);
+  -o-transform: scale(0.6);
+  transform: scale(0.6);
+  -webkit-backface-visibility: hidden;
 }
 @media (min-width: 970px) {
   .page-about .content {
@@ -9049,19 +9055,25 @@ body[browser="chrome"]:not(.simple) .page.active {
 .page-process {
   background-color: #7dc74c;
 }
+.simple .page-process:before {
+  background-image: url('../img/pages/process.png');
+}
 .mobile .page-process {
   background-color: #77ba40;
 }
-.mobile .page-process .sequence {
-  top: -7vh;
-  left: -17vw;
-}
 .portrait.mobile .page-process .sequence {
-  top: -15vh;
-  left: 0;
+  top: -21vh;
+  left: 6.5vw;
 }
-.simple .page-process:before {
-  background-image: url('../img/pages/process.png');
+.landscape.mobile .page-process .sequence {
+  top: -4vh;
+  left: -19vw;
+  -webkit-transform: scale(0.6);
+  -moz-transform: scale(0.6);
+  -ms-transform: scale(0.6);
+  -o-transform: scale(0.6);
+  transform: scale(0.6);
+  -webkit-backface-visibility: hidden;
 }
 @media (min-width: 970px) {
   .page-process .content {
@@ -9077,17 +9089,6 @@ body[browser="chrome"]:not(.simple) .page.active {
 }
 .page-news {
   background-color: #ec84ac;
-}
-.mobile .page-news {
-  background-color: #f68fab;
-}
-.mobile .page-news .sequence {
-  top: -7vh;
-  left: -24vw;
-}
-.portrait.mobile .page-news .sequence {
-  top: -15vh;
-  left: 0;
 }
 .simple .page-news:before {
   background-image: url('../img/pages/news.png');
@@ -9120,6 +9121,26 @@ body[browser="chrome"]:not(.simple) .page.active {
     padding-top: 60vh;
   }
 }
+.mobile .page-news {
+  background-color: #f68fab;
+}
+.portrait.mobile .page-news .sequence {
+  top: -30vh;
+  left: 4vw;
+}
+.portrait.mobile .page-news .content {
+  padding-top: 43vh;
+}
+.landscape.mobile .page-news .sequence {
+  top: -10vh;
+  left: -21vw;
+  -webkit-transform: scale(0.6);
+  -moz-transform: scale(0.6);
+  -ms-transform: scale(0.6);
+  -o-transform: scale(0.6);
+  transform: scale(0.6);
+  -webkit-backface-visibility: hidden;
+}
 @media (min-width: 970px) {
   .page-news .content {
     padding-top: 40vh;
@@ -9140,19 +9161,25 @@ body[browser="chrome"]:not(.simple) .page.active {
 .page-skills {
   background-color: #c6b8bb;
 }
+.simple .page-skills:before {
+  background-image: url('../img/pages/skills.png');
+}
 .mobile .page-skills {
   background-color: #c7baba;
 }
-.mobile .page-skills .sequence {
-  top: -7vh;
-  left: -24vw;
-}
 .portrait.mobile .page-skills .sequence {
-  top: -20vh;
+  top: -22vh;
   left: 0;
 }
-.simple .page-skills:before {
-  background-image: url('../img/pages/skills.png');
+.landscape.mobile .page-skills .sequence {
+  top: -10.5vh;
+  left: -20vw;
+  -webkit-transform: scale(0.6);
+  -moz-transform: scale(0.6);
+  -ms-transform: scale(0.6);
+  -o-transform: scale(0.6);
+  transform: scale(0.6);
+  -webkit-backface-visibility: hidden;
 }
 @media (min-width: 970px) {
   .page-skills .content {
@@ -9169,19 +9196,25 @@ body[browser="chrome"]:not(.simple) .page.active {
 .page-viralize {
   background-color: #e9675e;
 }
+.simple .page-viralize:before {
+  background-image: url('../img/pages/viralize.png');
+}
 .mobile .page-viralize {
   background-color: #f87258;
 }
-.mobile .page-viralize .sequence {
-  top: -2vh;
-  left: -18vw;
-}
 .portrait.mobile .page-viralize .sequence {
-  top: -17vh;
-  left: 0;
+  top: -20.5vh;
+  left: 3vw;
 }
-.simple .page-viralize:before {
-  background-image: url('../img/pages/viralize.png');
+.landscape.mobile .page-viralize .sequence {
+  top: -1vh;
+  left: -22vw;
+  -webkit-transform: scale(0.6);
+  -moz-transform: scale(0.6);
+  -ms-transform: scale(0.6);
+  -o-transform: scale(0.6);
+  transform: scale(0.6);
+  -webkit-backface-visibility: hidden;
 }
 @media (min-width: 970px) {
   .page-viralize .content {
@@ -9197,18 +9230,6 @@ body[browser="chrome"]:not(.simple) .page.active {
 }
 .page-references {
   background-color: #959595;
-}
-.mobile .page-references {
-  background-color: #959595;
-}
-.mobile .page-references .sequence {
-  top: -15vh;
-}
-.mobile .page-references .content {
-  padding-top: 60vh;
-}
-.portrait.mobile .page-references .content {
-  padding-top: 50vh;
 }
 .simple .page-references:before {
   background-image: url('../img/pages/references.png');
@@ -9238,6 +9259,29 @@ body[browser="chrome"]:not(.simple) .page.active {
     padding-top: 40vh;
   }
 }
+.mobile .page-references {
+  background-color: #959595;
+}
+.portrait.mobile .page-references .sequence {
+  top: -23.5vh;
+  left: -4vw;
+}
+.portrait.mobile .page-references .content {
+  padding-top: 50vh;
+}
+.landscape.mobile .page-references .sequence {
+  top: -16vh;
+  left: 0;
+  -webkit-transform: scale(0.6);
+  -moz-transform: scale(0.6);
+  -ms-transform: scale(0.6);
+  -o-transform: scale(0.6);
+  transform: scale(0.6);
+  -webkit-backface-visibility: hidden;
+}
+.landscape.mobile .page-references .content {
+  padding-top: 60vh;
+}
 @media (min-width: 750px) {
   .page-references .video video {
     margin-top: -15vh;
@@ -9247,22 +9291,28 @@ body[browser="chrome"]:not(.simple) .page.active {
 .page-contact {
   background-color: #f9ee99;
 }
+.simple .page-contact:before {
+  background-image: url('../img/pages/contact.png');
+}
 .mobile .page-contact {
   background-color: #fdeb90;
 }
-.mobile .page-contact .sequence {
-  top: -4vh;
-  left: -15vw;
-}
 .portrait.mobile .page-contact .sequence {
-  top: -18vh;
-  left: 0;
+  top: -25.5vh;
+  left: 5.5vw;
+}
+.landscape.mobile .page-contact .sequence {
+  top: -4vh;
+  left: -20vw;
+  -webkit-transform: scale(0.6);
+  -moz-transform: scale(0.6);
+  -ms-transform: scale(0.6);
+  -o-transform: scale(0.6);
+  transform: scale(0.6);
+  -webkit-backface-visibility: hidden;
 }
 .mobile .page-contact .white {
   padding-bottom: 30px;
-}
-.simple .page-contact:before {
-  background-image: url('../img/pages/contact.png');
 }
 .page-contact .social {
   position: absolute;

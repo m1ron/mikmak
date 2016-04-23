@@ -9,7 +9,11 @@ function detectPortrait() {
 		if (+g.className.indexOf('portrait') < 0) {
 			g.className += ' portrait';
 		}
+        g.className = g.className.replace('landscape', '');
 	} else {
+        if (+g.className.indexOf('landscape') < 0) {
+            g.className += ' landscape';
+        }
 		g.className = g.className.replace('portrait', '');
 	}
 }
@@ -42,6 +46,7 @@ function detectVersion() {
 		version = 'mobile';
 	}
 	//version = 'mobile';
+	//version = 'simple';
 	if (version === 'simple') {
 		$('body').addClass('simple');
 	} else if (version === 'mobile') {
@@ -138,8 +143,8 @@ $(document).ready(function () {
 		{name: 'sequence/index-1.png'},
 		{name: 'sequence/index-2.png'},
 		{name: 'sequence/index-3.png'},
-		{name: 'sequence/index-4.jpg'},
-		{name: 'sequence/index-5.jpg'},
+		{name: 'sequence/index-4.png'},
+		{name: 'sequence/index-5.png'},
 		{name: 'sequence/index-6.png'}
 	];
 
@@ -445,7 +450,7 @@ function initMobile() {
 			var _this = $(this), image = $('.image', _this), iw = image.width(), ih = image.height();
 			$(window).on('resize', function () {
 				if (_this.hasClass('intro') || _this.hasClass('loop')) {
-					m = w.width() / iw * 1.01;
+					m = w.width() / iw * 1.25;
 				} else {
 					x = w.width() / iw * 1.01;
 					y = w.height() / ih * 1.01;

@@ -1636,7 +1636,7 @@ h6 {&:extend(.h6); }
       background-image: url('@{images}/sequence/index-1.png');
       background-size: @sequence-width * 7 @sequence-height * @sequence-rows;
     }
-    .sequence-intro& { animation-name: sequence-intro; animation-duration: .4s; }
+    .sequence-intro& { animation-name: sequence-intro; animation-duration: .4s; animation-direction: normal; animation-iteration-count: 1; }
     .sequence-about& { animation-name: sequence-about; animation-duration: 3s; }
 
     .sequence-process&, .sequence-news& {
@@ -1654,14 +1654,14 @@ h6 {&:extend(.h6); }
     }
 
     .sequence-viralize& {
-      background-image: url('@{images}/sequence/index-4.png');
+      background-image: url('@{images}/sequence/index-4.jpg');
       background-size: @sequence-width * 11 @sequence-height * @sequence-rows * 2;
       animation-name: sequence-viralize;
       animation-duration: 10.55s;
     }
 
     .sequence-references&, .sequence-contact& {
-      background-image: url('@{images}/sequence/index-5.png');
+      background-image: url('@{images}/sequence/index-5.jpg');
       background-size: @sequence-width * 12 @sequence-height * @sequence-rows;
     }
     .sequence-references& { animation-name: sequence-references; animation-duration: 2.8s; }
@@ -1969,7 +1969,15 @@ h6 {&:extend(.h6); }
   /** About */
   &-about {
     background-color: @color-page-1;
-    .mobile & { background-color: @color-page-1-mobile; }
+
+    .mobile & {
+      background-color: @color-page-1-mobile;
+      .sequence {
+        top: -7vh; left: -20vw;
+        .portrait& { top: -15vh; left: 0; }
+      }
+    }
+
     .simple & {
       &:before { background-image: url('@{images}/pages/about.png'); }
     }
@@ -1987,7 +1995,15 @@ h6 {&:extend(.h6); }
   /** Process */
   &-process {
     background-color: @color-page-2;
-    .mobile & { background-color: @color-page-2-mobile; }
+
+    .mobile & {
+      background-color: @color-page-2-mobile;
+      .sequence {
+        top: -7vh; left: -17vw;
+        .portrait& { top: -15vh; left: 0; }
+      }
+    }
+
     .simple & {
       &:before { background-image: url('@{images}/pages/process.png'); }
     }
@@ -2005,7 +2021,15 @@ h6 {&:extend(.h6); }
   /** News */
   &-news {
     background-color: @color-page-3;
-    .mobile & { background-color: @color-page-3-mobile; }
+
+    .mobile & {
+      background-color: @color-page-3-mobile;
+      .sequence {
+        top: -7vh; left: -24vw;
+        .portrait& { top: -15vh; left: 0; }
+      }
+    }
+
     .simple & {
       &:before {
         background-image: url('@{images}/pages/news.png');
@@ -2054,7 +2078,15 @@ h6 {&:extend(.h6); }
   /** Skills */
   &-skills {
     background-color: @color-page-4;
-    .mobile & { background-color: @color-page-4-mobile; }
+
+    .mobile & {
+      background-color: @color-page-4-mobile;
+      .sequence {
+        top: -7vh; left: -24vw;
+        .portrait& { top: -20vh; left: 0; }
+      }
+    }
+
     .simple & {
       &:before { background-image: url('@{images}/pages/skills.png'); }
     }
@@ -2072,7 +2104,15 @@ h6 {&:extend(.h6); }
   /** Viralize */
   &-viralize {
     background-color: @color-page-5;
-    .mobile & { background-color: @color-page-5-mobile; }
+
+    .mobile & {
+      background-color: @color-page-5-mobile;
+      .sequence {
+        top: -2vh; left: -18vw;
+        .portrait& { top: -17vh; left: 0; }
+      }
+    }
+
     .simple & {
       &:before { background-image: url('@{images}/pages/viralize.png'); }
     }
@@ -2090,7 +2130,16 @@ h6 {&:extend(.h6); }
   /** References */
   &-references {
     background-color: @color-page-6;
-    .mobile & { background-color: @color-page-6-mobile; }
+
+    .mobile & {
+      background-color: @color-page-6-mobile;
+      .sequence { top: -15vh; }
+      .content {
+        padding-top: 60vh;
+        .portrait& { padding-top: 50vh; }
+      }
+    }
+
     .simple & {
       &:before {
         background-image: url('@{images}/pages/references.png');
@@ -2125,7 +2174,16 @@ h6 {&:extend(.h6); }
   /** Contact */
   &-contact {
     background-color: @color-page-7;
-    .mobile & { background-color: @color-page-7-mobile; }
+
+    .mobile & {
+      background-color: @color-page-7-mobile;
+      .sequence {
+        top: -4vh; left: -15vw;
+        .portrait& { top: -18vh; left: 0; }
+      }
+      .white { padding-bottom: 30px; }
+    }
+
     .simple & {
       &:before { background-image: url('@{images}/pages/contact.png'); }
     }

@@ -41,7 +41,7 @@ function detectVersion() {
 	if (check) {
 		version = 'mobile';
 	}
-	version = 'mobile';
+	//version = 'mobile';
 	if (version === 'simple') {
 		$('body').addClass('simple');
 	} else if (version === 'mobile') {
@@ -138,8 +138,8 @@ $(document).ready(function () {
 		{name: 'sequence/index-1.png'},
 		{name: 'sequence/index-2.png'},
 		{name: 'sequence/index-3.png'},
-		{name: 'sequence/index-4.png'},
-		{name: 'sequence/index-5.png'},
+		{name: 'sequence/index-4.jpg'},
+		{name: 'sequence/index-5.jpg'},
 		{name: 'sequence/index-6.png'}
 	];
 

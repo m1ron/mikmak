@@ -8642,6 +8642,8 @@ body[browser="safari"] .video video {
 .sequence-intro.sequence .image {
   animation-name: sequence-intro;
   animation-duration: .4s;
+  animation-direction: normal;
+  animation-iteration-count: 1;
 }
 .sequence-about.sequence .image {
   animation-name: sequence-about;
@@ -8667,14 +8669,14 @@ body[browser="safari"] .video video {
   animation-duration: 2.35s;
 }
 .sequence-viralize.sequence .image {
-  background-image: url('../img/sequence/index-4.png');
+  background-image: url('../img/sequence/index-4.jpg');
   background-size: 7040px 7200px;
   animation-name: sequence-viralize;
   animation-duration: 10.55s;
 }
 .sequence-references.sequence .image,
 .sequence-contact.sequence .image {
-  background-image: url('../img/sequence/index-5.png');
+  background-image: url('../img/sequence/index-5.jpg');
   background-size: 7680px 3600px;
 }
 .sequence-references.sequence .image {
@@ -9021,6 +9023,14 @@ body[browser="chrome"]:not(.simple) .page.active {
 .mobile .page-about {
   background-color: #559aae;
 }
+.mobile .page-about .sequence {
+  top: -7vh;
+  left: -20vw;
+}
+.portrait.mobile .page-about .sequence {
+  top: -15vh;
+  left: 0;
+}
 .simple .page-about:before {
   background-image: url('../img/pages/about.png');
 }
@@ -9042,6 +9052,14 @@ body[browser="chrome"]:not(.simple) .page.active {
 .mobile .page-process {
   background-color: #77ba40;
 }
+.mobile .page-process .sequence {
+  top: -7vh;
+  left: -17vw;
+}
+.portrait.mobile .page-process .sequence {
+  top: -15vh;
+  left: 0;
+}
 .simple .page-process:before {
   background-image: url('../img/pages/process.png');
 }
@@ -9062,6 +9080,14 @@ body[browser="chrome"]:not(.simple) .page.active {
 }
 .mobile .page-news {
   background-color: #f68fab;
+}
+.mobile .page-news .sequence {
+  top: -7vh;
+  left: -24vw;
+}
+.portrait.mobile .page-news .sequence {
+  top: -15vh;
+  left: 0;
 }
 .simple .page-news:before {
   background-image: url('../img/pages/news.png');
@@ -9117,6 +9143,14 @@ body[browser="chrome"]:not(.simple) .page.active {
 .mobile .page-skills {
   background-color: #c7baba;
 }
+.mobile .page-skills .sequence {
+  top: -7vh;
+  left: -24vw;
+}
+.portrait.mobile .page-skills .sequence {
+  top: -20vh;
+  left: 0;
+}
 .simple .page-skills:before {
   background-image: url('../img/pages/skills.png');
 }
@@ -9138,6 +9172,14 @@ body[browser="chrome"]:not(.simple) .page.active {
 .mobile .page-viralize {
   background-color: #f87258;
 }
+.mobile .page-viralize .sequence {
+  top: -2vh;
+  left: -18vw;
+}
+.portrait.mobile .page-viralize .sequence {
+  top: -17vh;
+  left: 0;
+}
 .simple .page-viralize:before {
   background-image: url('../img/pages/viralize.png');
 }
@@ -9158,6 +9200,15 @@ body[browser="chrome"]:not(.simple) .page.active {
 }
 .mobile .page-references {
   background-color: #959595;
+}
+.mobile .page-references .sequence {
+  top: -15vh;
+}
+.mobile .page-references .content {
+  padding-top: 60vh;
+}
+.portrait.mobile .page-references .content {
+  padding-top: 50vh;
 }
 .simple .page-references:before {
   background-image: url('../img/pages/references.png');
@@ -9198,6 +9249,17 @@ body[browser="chrome"]:not(.simple) .page.active {
 }
 .mobile .page-contact {
   background-color: #fdeb90;
+}
+.mobile .page-contact .sequence {
+  top: -4vh;
+  left: -15vw;
+}
+.portrait.mobile .page-contact .sequence {
+  top: -18vh;
+  left: 0;
+}
+.mobile .page-contact .white {
+  padding-bottom: 30px;
 }
 .simple .page-contact:before {
   background-image: url('../img/pages/contact.png');

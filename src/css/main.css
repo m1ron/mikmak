@@ -9040,6 +9040,22 @@ body[browser="chrome"]:not(.simple) .page.active {
   transform: scale(0.6);
   -webkit-backface-visibility: hidden;
 }
+@media (min-width: 750px) {
+  .portrait.mobile .page-about .sequence {
+    top: -10vh;
+    left: 0;
+  }
+  .landscape.mobile .page-about .sequence {
+    top: -10vh;
+    left: 0;
+    -webkit-transform: scale(0.75);
+    -moz-transform: scale(0.75);
+    -ms-transform: scale(0.75);
+    -o-transform: scale(0.75);
+    transform: scale(0.75);
+    -webkit-backface-visibility: hidden;
+  }
+}
 @media (min-width: 970px) {
   .page-about .content {
     padding-top: 65vh;
@@ -9074,6 +9090,22 @@ body[browser="chrome"]:not(.simple) .page.active {
   -o-transform: scale(0.6);
   transform: scale(0.6);
   -webkit-backface-visibility: hidden;
+}
+@media (min-width: 750px) {
+  .portrait.mobile .page-process .sequence {
+    top: -10vh;
+    left: 0;
+  }
+  .landscape.mobile .page-process .sequence {
+    top: -10vh;
+    left: 0;
+    -webkit-transform: scale(0.75);
+    -moz-transform: scale(0.75);
+    -ms-transform: scale(0.75);
+    -o-transform: scale(0.75);
+    transform: scale(0.75);
+    -webkit-backface-visibility: hidden;
+  }
 }
 @media (min-width: 970px) {
   .page-process .content {
@@ -9131,6 +9163,12 @@ body[browser="chrome"]:not(.simple) .page.active {
 .portrait.mobile .page-news .content {
   padding-top: 43vh;
 }
+@media (min-width: 750px) {
+  .portrait.mobile .page-news .sequence {
+    top: -35vh;
+    left: 2vw;
+  }
+}
 .landscape.mobile .page-news .sequence {
   top: -10vh;
   left: -21vw;
@@ -9148,6 +9186,21 @@ body[browser="chrome"]:not(.simple) .page.active {
   }
   .landscape.mobile .page-news .content {
     padding-top: 60vh;
+  }
+}
+@media (min-width: 750px) {
+  .landscape.mobile .page-news .sequence {
+    top: -35vh;
+    left: 5vw;
+    -webkit-transform: scale(0.75);
+    -moz-transform: scale(0.75);
+    -ms-transform: scale(0.75);
+    -o-transform: scale(0.75);
+    transform: scale(0.75);
+    -webkit-backface-visibility: hidden;
+  }
+  .landscape.mobile .page-news .content {
+    padding-top: 50vh;
   }
 }
 @media (min-width: 970px) {
@@ -9190,6 +9243,22 @@ body[browser="chrome"]:not(.simple) .page.active {
   transform: scale(0.6);
   -webkit-backface-visibility: hidden;
 }
+@media (min-width: 750px) {
+  .portrait.mobile .page-skills .sequence {
+    top: -10vh;
+    left: 0;
+  }
+  .landscape.mobile .page-skills .sequence {
+    top: -10vh;
+    left: 0;
+    -webkit-transform: scale(0.75);
+    -moz-transform: scale(0.75);
+    -ms-transform: scale(0.75);
+    -o-transform: scale(0.75);
+    transform: scale(0.75);
+    -webkit-backface-visibility: hidden;
+  }
+}
 @media (min-width: 970px) {
   .page-skills .content {
     padding-top: 63.8vh;
@@ -9224,6 +9293,22 @@ body[browser="chrome"]:not(.simple) .page.active {
   -o-transform: scale(0.6);
   transform: scale(0.6);
   -webkit-backface-visibility: hidden;
+}
+@media (min-width: 750px) {
+  .portrait.mobile .page-viralize .sequence {
+    top: -10vh;
+    left: 0;
+  }
+  .landscape.mobile .page-viralize .sequence {
+    top: -10vh;
+    left: 0;
+    -webkit-transform: scale(0.75);
+    -moz-transform: scale(0.75);
+    -ms-transform: scale(0.75);
+    -o-transform: scale(0.75);
+    transform: scale(0.75);
+    -webkit-backface-visibility: hidden;
+  }
 }
 @media (min-width: 970px) {
   .page-viralize .content {
@@ -9292,6 +9377,22 @@ body[browser="chrome"]:not(.simple) .page.active {
   padding-top: 60vh;
 }
 @media (min-width: 750px) {
+  .portrait.mobile .page-references .sequence {
+    top: -22vh;
+    left: 0;
+  }
+  .landscape.mobile .page-references .sequence {
+    top: -20vh;
+    left: 0;
+    -webkit-transform: scale(0.75);
+    -moz-transform: scale(0.75);
+    -ms-transform: scale(0.75);
+    -o-transform: scale(0.75);
+    transform: scale(0.75);
+    -webkit-backface-visibility: hidden;
+  }
+}
+@media (min-width: 750px) {
   .page-references .video video {
     margin-top: -15vh;
     max-height: 999px;
@@ -9322,6 +9423,22 @@ body[browser="chrome"]:not(.simple) .page.active {
 }
 .mobile .page-contact .white {
   padding-bottom: 30px;
+}
+@media (min-width: 750px) {
+  .portrait.mobile .page-contact .sequence {
+    top: -10vh;
+    left: 0;
+  }
+  .landscape.mobile .page-contact .sequence {
+    top: -10vh;
+    left: 0;
+    -webkit-transform: scale(0.75);
+    -moz-transform: scale(0.75);
+    -ms-transform: scale(0.75);
+    -o-transform: scale(0.75);
+    transform: scale(0.75);
+    -webkit-backface-visibility: hidden;
+  }
 }
 .page-contact .social {
   position: absolute;

@@ -1981,6 +1981,10 @@ h6 {&:extend(.h6); }
       background-color: @color-page-1-mobile;
       .portrait& .sequence { top: -22.5vh; left: 1.5vw; }
       .landscape& .sequence { top: -6vh; left: -22vw; .scale(.6); }
+      @media @sm {
+        .portrait& .sequence { top: -10vh; left: 0; }
+        .landscape& .sequence { top: -10vh; left: 0; .scale(.75); }
+      }
     }
 
     @media @md {
@@ -2004,6 +2008,10 @@ h6 {&:extend(.h6); }
       background-color: @color-page-2-mobile;
       .portrait& .sequence { top: -21vh; left: 6.5vw; }
       .landscape& .sequence { top: -4vh; left: -19vw; .scale(.6); }
+      @media @sm {
+        .portrait& .sequence { top: -10vh; left: 0; }
+        .landscape& .sequence { top: -10vh; left: 0; .scale(.75); }
+      }
     }
 
     @media @md {
@@ -2050,12 +2058,19 @@ h6 {&:extend(.h6); }
       .portrait& {
         .sequence { top: -30vh; left: 4vw; }
         .content { padding-top: 43vh; }
+        @media @sm {
+          .sequence { top: -35vh; left: 2vw; }
+        }
       }
       .landscape& {
         .sequence { top: -10vh; left: -21vw; .scale(.6); }
         @media @xsm {
           .sequence { top: -28vh; left: 0; }
           .content { padding-top: 60vh; }
+        }
+        @media @sm {
+          .sequence { top: -35vh; left: 5vw; .scale(.75); }
+          .content { padding-top: 50vh; }
         }
       }
     }
@@ -2084,6 +2099,10 @@ h6 {&:extend(.h6); }
       background-color: @color-page-4-mobile;
       .portrait& .sequence { top: -22vh; left: 0; }
       .landscape& .sequence { top: -7vh; left: -22vw; .scale(.6); }
+      @media @sm {
+        .portrait& .sequence { top: -10vh; left: 0; }
+        .landscape& .sequence { top: -10vh; left: 0; .scale(.75); }
+      }
     }
 
     @media @md {
@@ -2107,6 +2126,10 @@ h6 {&:extend(.h6); }
       background-color: @color-page-5-mobile;
       .portrait& .sequence { top: -20.5vh; left: 3vw; }
       .landscape& .sequence { top: -1vh; left: -22vw; .scale(.6); }
+      @media @sm {
+        .portrait& .sequence { top: -10vh; left: 0; }
+        .landscape& .sequence { top: -10vh; left: 0; .scale(.75); }
+      }
     }
 
     @media @md {
@@ -2155,6 +2178,10 @@ h6 {&:extend(.h6); }
         .sequence { top: -16vh; left: 0; .scale(.6); }
         .content { padding-top: 60vh; }
       }
+      @media @sm {
+        .portrait& .sequence { top: -22vh; left: 0; }
+        .landscape& .sequence { top: -20vh; left: 0; .scale(.75); }
+      }
     }
 
     @media @sm {
@@ -2177,6 +2204,10 @@ h6 {&:extend(.h6); }
       .portrait& .sequence { top: -25.5vh; left: 5.5vw; }
       .landscape& .sequence { top: -6vh; left: -20vw; .scale(.6); }
       .white { padding-bottom: 30px; }
+      @media @sm {
+        .portrait& .sequence { top: -10vh; left: 0; }
+        .landscape& .sequence { top: -10vh; left: 0; .scale(.75); }
+      }
     }
 
     .social { position: absolute; left: 0; bottom: -3px; }

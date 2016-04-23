@@ -8669,14 +8669,14 @@ body[browser="safari"] .video video {
   animation-duration: 2.35s;
 }
 .sequence-viralize.sequence .image {
-  background-image: url('../img/sequence/index-4.png');
+  background-image: url('../img/sequence/index-4.jpg');
   background-size: 7040px 7200px;
   animation-name: sequence-viralize;
   animation-duration: 10.55s;
 }
 .sequence-references.sequence .image,
 .sequence-contact.sequence .image {
-  background-image: url('../img/sequence/index-5.png');
+  background-image: url('../img/sequence/index-5.jpg');
   background-size: 7680px 3600px;
 }
 .sequence-references.sequence .image {

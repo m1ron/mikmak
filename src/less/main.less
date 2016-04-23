@@ -10,13 +10,16 @@
 @md-width: 970px;
 @lg-width: 1560px;
 
-@i5: ~"(max-width: 320px)";
-@i6: ~"(max-width: 414px)";
-@i6y: ~"(max-height: 414px)";
-@xss: ~"(max-width: 568px)";
+@xxs-max: ~"(max-width: 320px)";
+@xxsxs-max: ~"(max-width: 414px)";
+@xs-max: ~"(max-width: 568px)";
+@sm-max: ~"(max-width: 750px)";
+
+@iphone6-y: ~"(max-height: 414px)";
+
+@xxs: ~"(min-width: 320px)";
 @xs: ~"(min-width: 568px)";
-@xsi6: ~"(min-width: 650px)";
-@smm: ~"(max-width: 750px)";
+@xsm: ~"(min-width: 650px)";
 @sm: ~"(min-width: 750px)";
 @md: ~"(min-width: 970px)";
 @lg: ~"(min-width: 1280px)";
@@ -314,7 +317,7 @@ h6 {&:extend(.h6); }
     transition: opacity .5s ease;
     .scale(.5);
 
-    @media @i5 {
+    @media @xxs-max {
       width: 100%;
       top: 0;
       left: 0;
@@ -643,7 +646,7 @@ h6 {&:extend(.h6); }
 
     .simple & {
       background-size: contain !important;
-      @media @i6y {
+      @media @iphone6-y {
         background-size: auto 90% !important;
       }
     }
@@ -697,7 +700,7 @@ h6 {&:extend(.h6); }
       .simple & { background: @color-section-1 url('@{images}/sections/about.png') center center no-repeat; }
       .area {
         margin: -13.5vw 0 0 6vw;
-        @media @xss {
+        @media @xs-max {
           margin: -16vw 0 0 2vw;
         }
       }
@@ -710,7 +713,7 @@ h6 {&:extend(.h6); }
       .simple & { background: @color-section-3 url('@{images}/sections/news.png') center center no-repeat; }
       .area {
         margin: -2vw 0 0 18vw;
-        @media @xss {
+        @media @xs-max {
           margin: -12vw 0 0 8vw;
         }
       }
@@ -719,7 +722,7 @@ h6 {&:extend(.h6); }
       .simple & { background: @color-section-4 url('@{images}/sections/skills.png') center center no-repeat; }
       .area {
         margin: 7vw 0 0 16vw;
-        @media @xss {
+        @media @xs-max {
           margin-top: 1vw;
         }
       }
@@ -728,7 +731,7 @@ h6 {&:extend(.h6); }
       .simple & { background: @color-section-5 url('@{images}/sections/viralize.png') center center no-repeat; }
       .area {
         margin: -2vw 0 0 -35.5vw;
-        @media @xss {
+        @media @xs-max {
           margin-top: -10vw;
         }
       }
@@ -749,7 +752,7 @@ h6 {&:extend(.h6); }
       &-about {
         .area {
           margin-top: -21vw;
-          @media @i6 {
+          @media @xxsxs-max {
             width: 230px;
             margin: -35vw 0 0 -115px;
             right: auto;
@@ -759,7 +762,7 @@ h6 {&:extend(.h6); }
       &-process {
         .area {
           margin-top: -18vw;
-          @media @i6 {
+          @media @xxsxs-max {
             width: 220px;
             margin: 18vw 0 0 -110px;
             left: 50%;
@@ -770,7 +773,7 @@ h6 {&:extend(.h6); }
       &-news {
         .area {
           margin: -13vw 0 0 12vw;
-          @media @i6 {
+          @media @xxsxs-max {
             width: 170px;
             margin: -32vw 0 0 -85px;
             right: auto;
@@ -780,7 +783,7 @@ h6 {&:extend(.h6); }
       &-skills {
         .area {
           margin-top: 15vw;
-          @media @i6 {
+          @media @xxsxs-max {
             width: 160px;
             margin: 35vw 0 0 -80px;
             right: auto;
@@ -790,7 +793,7 @@ h6 {&:extend(.h6); }
       &-viralize {
         .area {
           margin-top: -10vw;
-          @media @i6 {
+          @media @xxsxs-max {
             width: 210px;
             margin: -25vw 0 0 -105px;
             right: auto;
@@ -800,7 +803,7 @@ h6 {&:extend(.h6); }
       &-references {
         .area {
           margin-top: -10vw;
-          @media @i6 {
+          @media @xxsxs-max {
             margin-top: -15vw;
             right: auto;
             left: 5%;
@@ -810,7 +813,7 @@ h6 {&:extend(.h6); }
       &-contact {
         .area {
           margin-top: -16vw;
-          @media @i6 {
+          @media @xxsxs-max {
             width: 150px;
             margin: -35vw 0 0 -75px;
             right: auto;
@@ -1775,7 +1778,7 @@ h6 {&:extend(.h6); }
     background-repeat: no-repeat;
     background-size: contain;
 
-    @media @i6 {
+    @media @xxsxs-max {
       .portrait & {
         top: 3vh;
         right: 0;
@@ -1803,7 +1806,7 @@ h6 {&:extend(.h6); }
 
     .simple & { transition-delay: .5s; }
 
-    @media @i6 {
+    @media @xxsxs-max {
       .portrait & { padding-top: 55vh; }
     }
     @media @sm {
@@ -1825,7 +1828,7 @@ h6 {&:extend(.h6); }
     line-height: 14px;
     background: @color-white;
 
-    @media @i6 {
+    @media @xxsxs-max {
       .portrait & { width: auto; float: none; }
     }
     @media @sm {
@@ -1849,7 +1852,7 @@ h6 {&:extend(.h6); }
       overflow-y: auto;
       -webkit-overflow-scrolling: touch;
 
-      @media @i6 {
+      @media @xxsxs-max {
         .portrait & { max-height: 35vh; }
       }
       @media @sm {
@@ -1937,7 +1940,7 @@ h6 {&:extend(.h6); }
     -webkit-overflow-scrolling: touch;
 
     .content {
-      @media @xsi6 {
+      @media @xsm {
         max-width: 580px;
         .white { width: 100%; }
       }
@@ -2048,7 +2051,13 @@ h6 {&:extend(.h6); }
         .sequence { top: -30vh; left: 4vw; }
         .content { padding-top: 43vh; }
       }
-      .landscape& .sequence { top: -10vh; left: -21vw; .scale(.6); }
+      .landscape& {
+        .sequence { top: -10vh; left: -21vw; .scale(.6); }
+        @media @xsm {
+          .sequence { top: -28vh; left: 0; }
+          .content { padding-top: 60vh; }
+        }
+      }
     }
 
     @media @md {
@@ -2074,7 +2083,7 @@ h6 {&:extend(.h6); }
     .mobile & {
       background-color: @color-page-4-mobile;
       .portrait& .sequence { top: -22vh; left: 0; }
-      .landscape& .sequence { top: -10.5vh; left: -20vw; .scale(.6); }
+      .landscape& .sequence { top: -7vh; left: -22vw; .scale(.6); }
     }
 
     @media @md {
@@ -2166,7 +2175,7 @@ h6 {&:extend(.h6); }
     .mobile & {
       background-color: @color-page-7-mobile;
       .portrait& .sequence { top: -25.5vh; left: 5.5vw; }
-      .landscape& .sequence { top: -4vh; left: -20vw; .scale(.6); }
+      .landscape& .sequence { top: -6vh; left: -20vw; .scale(.6); }
       .white { padding-bottom: 30px; }
     }
 
@@ -2319,7 +2328,7 @@ h6 {&:extend(.h6); }
       margin-bottom: 3px;
       &:last-child { margin-right: 0; }
 
-      @media @xsi6 {
+      @media @xsm {
         width: 138px;
         &:first-child, &:nth-child(5n) { width: 135px; }
       }
@@ -2362,7 +2371,7 @@ h6 {&:extend(.h6); }
       position: relative;
       background: #e1586e;
 
-      @media @xsi6 {
+      @media @xsm {
         margin: 5px;
         float: left;
       }

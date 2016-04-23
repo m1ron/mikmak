@@ -9141,6 +9141,15 @@ body[browser="chrome"]:not(.simple) .page.active {
   transform: scale(0.6);
   -webkit-backface-visibility: hidden;
 }
+@media (min-width: 650px) {
+  .landscape.mobile .page-news .sequence {
+    top: -28vh;
+    left: 0;
+  }
+  .landscape.mobile .page-news .content {
+    padding-top: 60vh;
+  }
+}
 @media (min-width: 970px) {
   .page-news .content {
     padding-top: 40vh;
@@ -9172,8 +9181,8 @@ body[browser="chrome"]:not(.simple) .page.active {
   left: 0;
 }
 .landscape.mobile .page-skills .sequence {
-  top: -10.5vh;
-  left: -20vw;
+  top: -7vh;
+  left: -22vw;
   -webkit-transform: scale(0.6);
   -moz-transform: scale(0.6);
   -ms-transform: scale(0.6);
@@ -9302,7 +9311,7 @@ body[browser="chrome"]:not(.simple) .page.active {
   left: 5.5vw;
 }
 .landscape.mobile .page-contact .sequence {
-  top: -4vh;
+  top: -6vh;
   left: -20vw;
   -webkit-transform: scale(0.6);
   -moz-transform: scale(0.6);

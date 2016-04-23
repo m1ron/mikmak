@@ -8700,43 +8700,43 @@ body[browser="safari"] .video video {
 .visible.intro.sequence .image {
   display: block;
 }
-.sequence-about-inner.sequence .image {
+body.load-inners .sequence-about-inner.sequence .image {
   background-image: url('../img/sequence/about.png');
   background-size: 3200px 4610px;
   animation-name: sequence-about-inner;
   animation-duration: 2.35s;
 }
-.sequence-process-inner.sequence .image {
+body.load-inners .sequence-process-inner.sequence .image {
   background-image: url('../img/sequence/process.png');
   background-size: 3840px 4610px;
   animation-name: sequence-process-inner;
   animation-duration: 2.55s;
 }
-.sequence-news-inner.sequence .image {
+body.load-inners .sequence-news-inner.sequence .image {
   background-image: url('../img/sequence/news.png');
   background-size: 3840px 4610px;
   animation-name: sequence-news-inner;
   animation-duration: 2.55s;
 }
-.sequence-skills-inner.sequence .image {
+body.load-inners .sequence-skills-inner.sequence .image {
   background-image: url('../img/sequence/skills.png');
   background-size: 3840px 4610px;
   animation-name: sequence-skills-inner;
   animation-duration: 2.55s;
 }
-.sequence-viralize-inner.sequence .image {
+body.load-inners .sequence-viralize-inner.sequence .image {
   background-image: url('../img/sequence/viralize.png');
   background-size: 3840px 4610px;
   animation-name: sequence-viralize-inner;
   animation-duration: 2.55s;
 }
-.sequence-references-inner.sequence .image {
+body.load-inners .sequence-references-inner.sequence .image {
   background-image: url('../img/sequence/references.png');
   background-size: 3840px 4610px;
   animation-name: sequence-viralize-inner;
   animation-duration: 2.55s;
 }
-.sequence-contact-inner.sequence .image {
+body.load-inners .sequence-contact-inner.sequence .image {
   background-image: url('../img/sequence/contact.png');
   background-size: 3840px 4610px;
   animation-name: sequence-contact-inner;

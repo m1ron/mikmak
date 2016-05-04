@@ -316,7 +316,6 @@ h6 {&:extend(.h6); }
     animation-name: preloader-animation;
     transition: opacity .5s ease;
     .scale(.5);
-
     /*
     @media @xxs-max {
       width: 100%;
@@ -2149,6 +2148,7 @@ h6 {&:extend(.h6); }
     .simple & {
       &:before {
         background-image: url('@{images}/pages/references.png');
+        .landscape& { right: 0; }
         @media @sm {
           margin-top: -20vh;
         }

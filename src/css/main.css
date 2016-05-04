@@ -9325,6 +9325,9 @@ body[browser="chrome"]:not(.simple) .page.active {
 .simple .page-references:before {
   background-image: url('../img/pages/references.png');
 }
+.landscape.simple .page-references:before {
+  right: 0;
+}
 @media (min-width: 750px) {
   .simple .page-references:before {
     margin-top: -20vh;

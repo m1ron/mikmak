@@ -1658,7 +1658,7 @@ h6 {&:extend(.h6); }
     }
 
     .sequence-viralize& {
-      background-image: url('@{images}/sequence/index-4.jpg');
+      background-image: url('@{images}/sequence/index-4.png');
       background-size: @sequence-width * 11 @sequence-height * @sequence-rows * 2;
       animation-name: sequence-viralize;
       animation-duration: 10.55s;
@@ -1676,6 +1676,16 @@ h6 {&:extend(.h6); }
       background-size: @sequence-width * 7 @sequence-height * @sequence-rows;
       animation-name: sequence-finish;
       animation-duration: 3s;
+    }
+
+    @media @sm {
+      background-image: url('@{images}/sequence/index-1b.jpg');
+      .sequence-intro&, .sequence-about& { background-image: url('@{images}/sequence/index-1b.jpg'); }
+      .sequence-process&, .sequence-news& { background-image: url('@{images}/sequence/index-2b.jpg'); }
+      .sequence-skills& { background-image: url('@{images}/sequence/index-3b.jpg'); }
+      .sequence-viralize& { background-image: url('@{images}/sequence/index-4b.jpg'); }
+      .sequence-references&, .sequence-contact& { background-image: url('@{images}/sequence/index-5b.jpg'); }
+      .sequence-finish& { background-image: url('@{images}/sequence/index-6b.jpg'); }
     }
 
     .intro& {

@@ -38,8 +38,12 @@ function detectBrowser() {
 
 function detectVersion() {
 	window.version = 'video';
+	window.iPad = false;
 	if (navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPad/i) || navigator.userAgent.match(/iPod/i)) {
 		version = 'mobile';
+		if (navigator.userAgent.match(/iPad/i)) {
+			iPad = true;
+		}
 	}
 	if (navigator.userAgent.match(/Android/i) || navigator.userAgent.match(/webOS/i) || navigator.userAgent.match(/BlackBerry/i) || navigator.userAgent.match(/Windows Phone/i)) {
 		version = 'simple';
@@ -144,6 +148,13 @@ $(document).ready(function () {
 		{name: 'sequence/index-2.png'},
 		{name: 'sequence/index-3.png'}
 	];
+	if (iPad) {
+		v.sequence = [
+			{name: 'sequence/index-1b.jpg'},
+			{name: 'sequence/index-2b.jpg'},
+			{name: 'sequence/index-3b.jpg'}
+		];
+	}
 
 	/** Video files array */
 	v.video = [
@@ -489,6 +500,13 @@ function initMobile() {
 			{"type": "IMAGE", "source": v.path.img + 'sequence/index-5.jpg'},
 			{"type": "IMAGE", "source": v.path.img + 'sequence/index-6.png'}
 		];
+		if (iPad) {
+			var filesIndex = [
+				{"type": "IMAGE", "source": v.path.img + 'sequence/index-4b.jpg'},
+				{"type": "IMAGE", "source": v.path.img + 'sequence/index-5b.jpg'},
+				{"type": "IMAGE", "source": v.path.img + 'sequence/index-6b.jpg'}
+			];
+		}
 		setTimeout(function () {
 			$.html5Loader({
 				filesToLoad: {

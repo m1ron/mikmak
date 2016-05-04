@@ -8669,7 +8669,7 @@ body[browser="safari"] .video video {
   animation-duration: 2.35s;
 }
 .sequence-viralize.sequence .image {
-  background-image: url('../img/sequence/index-4.jpg');
+  background-image: url('../img/sequence/index-4.png');
   background-size: 7040px 7200px;
   animation-name: sequence-viralize;
   animation-duration: 10.55s;
@@ -8692,6 +8692,32 @@ body[browser="safari"] .video video {
   background-size: 4480px 3600px;
   animation-name: sequence-finish;
   animation-duration: 3s;
+}
+@media (min-width: 750px) {
+  .sequence .image {
+    background-image: url('../img/sequence/index-1b.jpg');
+  }
+  .sequence-intro.sequence .image,
+  .sequence-about.sequence .image {
+    background-image: url('../img/sequence/index-1b.jpg');
+  }
+  .sequence-process.sequence .image,
+  .sequence-news.sequence .image {
+    background-image: url('../img/sequence/index-2b.jpg');
+  }
+  .sequence-skills.sequence .image {
+    background-image: url('../img/sequence/index-3b.jpg');
+  }
+  .sequence-viralize.sequence .image {
+    background-image: url('../img/sequence/index-4b.jpg');
+  }
+  .sequence-references.sequence .image,
+  .sequence-contact.sequence .image {
+    background-image: url('../img/sequence/index-5b.jpg');
+  }
+  .sequence-finish.sequence .image {
+    background-image: url('../img/sequence/index-6b.jpg');
+  }
 }
 .intro.sequence .image {
   animation-iteration-count: 1;

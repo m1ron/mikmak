@@ -1,5 +1,5 @@
 # Mikmak Studio
-* Creative portfolio with video and animations
+*Creative portfolio with video and animations*
 
 ###Technologies
 
